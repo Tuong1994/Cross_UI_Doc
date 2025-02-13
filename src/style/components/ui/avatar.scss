@@ -1,0 +1,140 @@
+.avatar {
+  position: relative;
+  .avatar-content {
+    width: $w-full;
+    height: $h-full;
+    background: $bg-slate;
+    border: 0.5px solid $bg-slate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    * {
+      margin: 0;
+    }
+  }
+  .avatar-dot {
+    width: $w-1;
+    height: $h-1;
+    border-radius: $rounded-full;
+    background: $bg-red;
+    border: 0.5px solid $bg-white;
+    position: absolute;
+    z-index: 1;
+  }
+  .avatar-badge {
+    width: $w-2;
+    height: $h-2;
+    border-radius: $rounded-full;
+    background: $bg-red;
+    border: 0.5px solid $bg-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $text-xxs;
+    color: $text-white;
+    position: absolute;
+    z-index: 1;
+  }
+  .avatar-badge-radius {
+    width: max-content;
+    padding: $p-1 - 0.8 $p-1 - 0.6;
+    border-radius: $rounded-xxl;
+    right: unset;
+    left: 75%;
+  }
+}
+
+// Shape
+.avatar-square {
+  .avatar-content {
+    border-radius: $rounded-md;
+  }
+  .avatar-dot {
+    top: -2px;
+    right: -1px;
+  }
+  .avatar-badge {
+    top: -10px;
+    right: -10px;
+  }
+}
+
+.avatar-circle {
+  .avatar-content {
+    border-radius: $rounded-full;
+  }
+  .avatar-dot {
+    top: 1px;
+    right: -1px;
+  }
+  .avatar-badge {
+    top: -5px;
+    right: -10px;
+  }
+}
+
+// Color
+.avatar-color {
+  .avatar-content {
+    * {
+      color: $text-white;
+    }
+  }
+}
+
+.avatar-blue {
+  .avatar-content {
+    border-color: $bg-blue;
+    background: $bg-blue;
+  }
+}
+
+.avatar-green {
+  .avatar-content {
+    border-color: $bg-green;
+    background: $bg-green;
+  }
+}
+
+.avatar-red {
+  .avatar-content {
+    border-color: $bg-red;
+    background: $bg-red;
+  }
+}
+
+.avatar-orange {
+  .avatar-content {
+    border-color: $bg-orange;
+    background: $bg-orange;
+  }
+}
+
+.avatar-yellow {
+  .avatar-content {
+    border-color: $bg-yellow;
+    background: $bg-yellow;
+  }
+}
+
+.avatar-pink {
+  .avatar-content {
+    border-color: $bg-pink;
+    background: $bg-pink;
+  }
+}
+
+.avatar-purple {
+  .avatar-content {
+    border-color: $bg-purple;
+    background: $bg-purple;
+  }
+}
+
+.avatar-black {
+  .avatar-content {
+    border-color: $bg-black;
+    background: $bg-black;
+  }
+}
