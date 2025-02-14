@@ -1,12 +1,132 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
+[
+  { id: 'button', label: 'Button', path: '/' },
+  { id: 'icon', label: 'Icon', path: '/' },
+  { id: 'typography', label: 'Typography', path: '/' },
+  { id: 'divider', label: 'Divider', path: '/' },
+  { id: 'flex', label: 'Flex', path: '/' },
+  { id: 'grid', label: 'Grid', path: '/' },
+  { id: 'layout', label: 'Layout', path: '/' },
+  { id: 'space', label: 'Space', path: '/' },
+  { id: 'breadcrumb', label: 'Breadcrumb', path: '/' },
+  { id: 'dropdown', label: 'Dropdown', path: '/' },
+  { id: 'pagination', label: 'Pagination', path: '/' },
+  { id: 'form', label: 'Form', path: '/' },
+  { id: 'input', label: 'Input', path: '/' },
+  { id: 'inputNumber', label: 'Input Number', path: '/' },
+  { id: 'inputPhone', label: 'Input Phone', path: '/' },
+  { id: 'inputPassword', label: 'Input Password', path: '/' },
+  { id: 'textarea', label: 'Textarea', path: '/' },
+  { id: 'select', label: 'Select', path: '/' },
+  { id: 'selectTag', label: 'Select Tag', path: '/' },
+  { id: 'treeSelect', label: 'Tree Select', path: '/' },
+  { id: 'datepicker', label: 'Datepicker', path: '/' },
+  { id: 'checkbox', label: 'Checkbox', path: '/' },
+  { id: 'radio', label: 'Radio', path: '/' },
+  { id: 'upload', label: 'Upload', path: '/' },
+  { id: 'avatar', label: 'Avatar', path: '/' },
+  { id: 'badge', label: 'Badge', path: '/' },
+  { id: 'card', label: 'Card', path: '/' },
+  { id: 'carousel', label: 'Carousel', path: '/' },
+  { id: 'image', label: 'Image', path: '/' },
+  { id: 'list', label: 'List', path: '/' },
+  { id: 'table', label: 'Table', path: '/' },
+  { id: 'tooltip', label: 'Tooltip', path: '/' },
+  { id: 'tabs', label: 'Tabs', path: '/' },
+  { id: 'accordion', label: 'Accordion', path: '/' },
+  { id: 'alert', label: 'Alert', path: '/' },
+  { id: 'message', label: 'Message', path: '/' },
+  { id: 'drawer', label: 'Drawer', path: '/' },
+  { id: 'modal', label: 'Modal', path: '/' },
+  { id: 'loading', label: 'Loading', path: '/' }
+]
+
 export const routePaths = {
-  HOME: '/'
+  HOME: '/',
+  BUTTON: '/button',
+  ICON: '/icon',
+  TYPOGRAPHY: '/typography',
+  DIVIDER: '/divider',
+  FLEX: '/flex',
+  GRID: '/grid',
+  LAYOUT: '/layout',
+  SPACE: '/space',
+  BREADCRUMB: '/breadcrumb',
+  DROPDOWN: '/dropdown',
+  PAGINATION: '/pagination',
+  FORM: '/form',
+  INPUT: '/input',
+  INPUTNUMBER: '/inputNumber',
+  INPUTPHONE: '/inputPhone',
+  INPUTPASSWORD: '/inputPassword',
+  TEXTAREA: '/textarea',
+  SELECT: '/select',
+  SELECTTAG: '/selectTag',
+  TREESELECT: '/treeSelect',
+  DATEPICKER: '/datepicker',
+  CHECKBOX: '/checkbox',
+  RADIO: '/radio',
+  UPLOAD: '/upload',
+  AVATAR: '/avatar',
+  BADGE: '/badge',
+  CARD: '/card',
+  CAROUSEL: '/carousel',
+  IMAGE: '/image',
+  LIST: '/list',
+  TABLE: '/table',
+  TOOLTIP: '/tooltip',
+  TABS: '/tabs',
+  ACCORDION: '/accordion',
+  ALERT: '/alert',
+  MESSAGE: '/message',
+  DRAWER: '/drawer',
+  MODAL: '/modal',
+  LOADING: '/loading'
 }
 
 export const routeNames = {
-  HOME: 'home'
+  HOME: 'home',
+  BUTTON: 'button',
+  ICON: 'icon',
+  TYPOGRAPHY: 'typography',
+  DIVIDER: 'divider',
+  FLEX: 'flex',
+  GRID: 'grid',
+  LAYOUT: 'layout',
+  SPACE: 'space',
+  BREADCRUMB: 'breadcrumb',
+  DROPDOWN: 'dropdown',
+  PAGINATION: 'pagination',
+  FORM: 'form',
+  INPUT: 'input',
+  INPUTNUMBER: 'inputNumber',
+  INPUTPHONE: 'inputPhone',
+  INPUTPASSWORD: 'inputPassword',
+  TEXTAREA: 'textarea',
+  SELECT: 'select',
+  SELECTTAG: 'selectTag',
+  TREESELECT: 'treeSelect',
+  DATEPICKER: 'datepicker',
+  CHECKBOX: 'checkbox',
+  RADIO: 'radio',
+  UPLOAD: 'upload',
+  AVATAR: 'avatar',
+  BADGE: 'badge',
+  CARD: 'card',
+  CAROUSEL: 'carousel',
+  IMAGE: 'image',
+  LIST: 'list',
+  TABLE: 'table',
+  TOOLTIP: 'tooltip',
+  TABS: 'tabs',
+  ACCORDION: 'accordion',
+  ALERT: 'alert',
+  MESSAGE: 'message',
+  DRAWER: 'drawer',
+  MODAL: 'modal',
+  LOADING: 'loading'
 }
 
 const router = createRouter({
@@ -18,12 +138,9 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      path: routePaths.TABLE,
+      name: routeNames.TABLE,
+      component: () => import('../views/TableView.vue')
     }
   ]
 })

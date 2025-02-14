@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, withDefaults, toRefs, useSlots, type StyleValue } from 'vue'
+import { computed, withDefaults, toRefs, useSlots, type StyleValue, type VNode } from 'vue'
 import { iconName } from '@/components/UI/Icon/constant.ts'
 import { useOverflow, useRender } from '@/hooks'
 import Icon from '@/components/UI/Icon/Icon.vue'
@@ -14,6 +14,12 @@ export interface DrawerProps {
   open?: boolean
   full?: boolean
   hasHead?: boolean
+}
+
+type DrawerSlots = {
+  head?: () => VNode;
+  body?: () => VNode;
+  default?: () => VNode;
 }
 
 const props = withDefaults(defineProps<DrawerProps>(), {
@@ -31,7 +37,7 @@ const render = useRender(open)
 
 useOverflow(open)
 
-const slots = useSlots()
+const slots = useSlots() as DrawerSlots
 
 const backDropActiveClassName = computed<string>(() => (props.open ? 'drawer-backdrop-active' : ''))
 
