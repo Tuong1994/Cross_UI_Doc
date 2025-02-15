@@ -13,6 +13,9 @@
     &:hover {
       overflow-y: auto;
     }
+    @include respond(lgTablet) {
+      overflow-y: auto;
+    }
   }
   .side-action {
     width: $w-10 * 2.5;

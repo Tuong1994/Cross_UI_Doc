@@ -3,6 +3,7 @@ import { computed, withDefaults, toRefs, useSlots, type StyleValue, type VNode }
 import { iconName } from '@/components/UI/Icon/constant.ts'
 import { useOverflow, useRender } from '@/hooks'
 import Icon from '@/components/UI/Icon/Icon.vue'
+import useLayoutStore from '../Layout/LayoutStore'
 
 export interface DrawerProps {
   rootClassName?: string
@@ -35,9 +36,13 @@ const { open } = toRefs(props)
 
 const render = useRender(open)
 
+const layout = useLayoutStore()
+
 useOverflow(open)
 
 const slots = useSlots() as DrawerSlots
+
+const themeClassName = computed<string>(() => `drawer-${layout.theme}`)
 
 const backDropActiveClassName = computed<string>(() => (props.open ? 'drawer-backdrop-active' : ''))
 
@@ -61,7 +66,7 @@ const handleClose = () => emits('onClose')
     <div
       v-if="render"
       :style="rootStyle"
-      :class="['drawer', fullClassName, drawerActiveClassName, rootClassName]"
+      :class="['drawer', themeClassName, fullClassName, drawerActiveClassName, rootClassName]"
     >
       <div v-if="hasHead" :style="headStyle" :class="['drawer-head', headFlexClassName, headClassName]">
         <slot name="head"></slot>

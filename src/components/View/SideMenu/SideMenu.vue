@@ -17,7 +17,7 @@ const themeClassName = computed<string>(() => `side-menu-${layout.theme}`)
 <template>
   <div :class="['side-menu', themeClassName]">
     <div v-for="menu in menus" :key="menu.id" class="menu-group">
-      <Paragraph variant='secondary' rootClassName="group-category">{{ menu.category }}</Paragraph>
+      <Paragraph strong variant='secondary'>{{ menu.category }}</Paragraph>
       <Divider rootClassName="group-divider"/>
       <SideMenuItem v-for="item in menu.items" :key="item.id" :item="item" />
     </div>
