@@ -1,0 +1,12 @@
+.home-menu {
+  margin-top: $m-3;
+  .menu-group {
+    margin-bottom: $m-2;
+    .group-category {
+        margin-bottom: $m-1;
+    }
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
