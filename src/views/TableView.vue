@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Table, Image } from '@/components/UI'
 import type { TableColumns } from '@/components/UI/Table/type'
 
 interface TableData {
@@ -92,16 +93,16 @@ const columns: TableColumns<TableData> = [
 </script>
 
 <template>
-  <!-- <Table
-      hasRowSelection
-      hasExpand
-      hasPagination
-      :paginationProps="{ hasContent: true }"
-      :dataSource="dataSource"
-      :columns="columns"
-    >
-      <template #expand="com">
-        <Table :dataSource="com.expand.data.child" :columns="columns" />
-      </template>
-    </Table> -->
+  <!-- hasRowSelection
+  hasExpand
+  hasPagination
+  :paginationProps="{ hasContent: true }" -->
+  <Table
+    :dataSource="dataSource"
+    :columns="columns"
+  >
+    <!-- <template #expand="com">
+      <Table :dataSource="com.expand.data.child" :columns="columns" />
+    </template> -->
+  </Table>
 </template>

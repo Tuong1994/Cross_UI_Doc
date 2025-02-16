@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
+import { RouterLink } from 'vue-router'
 import { Divider, Typography, Flex, Button, Card } from '@/components/UI'
 import { Input } from '@/components/Control'
+import type { SideMenuItems } from '@/components/View/SideMenu/type'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 import useLangStore from '@/stores/LangStore'
 import useMenu from '@/components/View/SideMenu/hooks/useMenu'
-import { RouterLink } from 'vue-router'
-import type { SideMenuItems } from '@/components/View/SideMenu/type'
 
 const { Title, Paragraph } = Typography
 

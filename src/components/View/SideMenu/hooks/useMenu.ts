@@ -1,4 +1,5 @@
 import { computed } from 'vue'
+import { routePaths } from '@/router'
 import type { SideMenuItems } from '../type'
 import useLangStore from '@/stores/LangStore'
 
@@ -64,7 +65,7 @@ const useMenu = () => {
         { id: 'carousel', label: 'Carousel', path: '/' },
         { id: 'image', label: 'Image', path: '/' },
         { id: 'list', label: 'List', path: '/' },
-        { id: 'table', label: 'Table', path: '/' },
+        { id: 'table', label: 'Table', path: routePaths.TABLE },
         { id: 'tooltip', label: 'Tooltip', path: '/' },
         { id: 'tabs', label: 'Tabs', path: '/' },
         { id: 'accordion', label: 'Accordion', path: '/' }
