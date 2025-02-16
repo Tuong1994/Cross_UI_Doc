@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { Divider, Typography, Flex, Button } from '@/components/UI'
+import { computed, ref } from 'vue'
+import { Divider, Typography, Flex, Button, Card } from '@/components/UI'
 import { Input } from '@/components/Control'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 import useLangStore from '@/stores/LangStore'
 import useMenu from '@/components/View/SideMenu/hooks/useMenu'
 import { RouterLink } from 'vue-router'
+import type { SideMenuItems } from '@/components/View/SideMenu/type'
 
 const { Title, Paragraph } = Typography
 
@@ -18,13 +19,21 @@ const layout = useLayoutStore()
 const menus = useMenu()
 
 const search = ref<string>('')
+
+const filterMenus = computed<SideMenuItems>(() => {
+  if (!search.value) return menus.value
+  const newMenus = menus.value.map((menu) => ({
+    ...menu,
+    items: menu.items.filter((item) => item.label.toLowerCase().includes(search.value.toLowerCase()))
+  })).filter(menu => menu.items.length > 0)
+  return newMenus
+})
 </script>
 
 <template>
   <Title>Vue Components</Title>
   <Paragraph>
-    Provides plenty of UI components to enrich your web applications, and we will improve components
-    experience consistently.
+    {{ t.lang.home.desc }}
   </Paragraph>
   <Divider />
   <FlexRow>
@@ -38,19 +47,21 @@ const search = ref<string>('')
     </FlexCol>
   </FlexRow>
   <div class="home-menu">
-    <div v-for="menu in menus" :key="menu.id" class="menu-group">
-      <Paragraph strong :size="18" variant="secondary" rootClassName="group-category">
-        {{ menu.category }}
-      </Paragraph>
-      <FlexRow>
-        <FlexCol v-for="item in menu.items" :key="item.id">
-          <RouterLink :to="String(item.path)">
-            <Button :color="layout.color" ghost>
-              {{ item.label }}
-            </Button>
-          </RouterLink>
-        </FlexCol>
-      </FlexRow>
-    </div>
+    <Card v-for="menu in filterMenus" :key="menu.id" class="menu-group" hoverable>
+      <template #body>
+        <Paragraph strong :size="18" variant="secondary" rootClassName="group-category">
+          {{ menu.category }}
+        </Paragraph>
+        <FlexRow>
+          <FlexCol v-for="item in menu.items" :key="item.id">
+            <RouterLink :to="String(item.path)">
+              <Button :color="layout.color" ghost>
+                {{ item.label }}
+              </Button>
+            </RouterLink>
+          </FlexCol>
+        </FlexRow>
+      </template>
+    </Card>
   </div>
 </template>
