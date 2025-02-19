@@ -69,7 +69,8 @@ const common_en = {
     update: 'Update',
     remove: 'Remove',
     filter: 'Filter',
-    cancel: 'Cancel'
+    cancel: 'Cancel',
+    copy: 'Copy',
   },
   table: {
     head: {

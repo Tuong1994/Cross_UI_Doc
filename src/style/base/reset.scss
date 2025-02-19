@@ -42,3 +42,8 @@ textarea {
 textarea {
   resize: none;
 }
+
+pre,
+pre code {
+  white-space: normal !important; /* Ensures the code wraps properly */
+}

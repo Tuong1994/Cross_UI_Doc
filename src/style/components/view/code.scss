@@ -1,0 +1,29 @@
+// Code block
+.code-block {
+  .block-head {
+  }
+  .block-content {
+    transition: background-color $transition-time-sm $transition-fn;
+  }
+}
+
+// Code Line
+.code-line {
+  min-width: max-content;
+  margin: $m-1 0;
+  &:hover .line-action {
+    opacity: 1;
+  }
+  .line-content {
+    transition: background-color $transition-time-sm $transition-fn;
+  }
+  .line-action {
+    opacity: 0;
+    transition: opacity $transition-time-sm $transition-fn;
+  }
+}
+
+.hljs {
+  padding: $p-1 - 0.5 !important;
+  border-radius: $rounded;
+}

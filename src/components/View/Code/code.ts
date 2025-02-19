@@ -1,11 +1,9 @@
-<script setup lang="ts">
-import { Typography, Table, Space, Image } from '@/components/UI'
-import type { TableColumns } from '@/components/UI/Table/type'
-import CodeBlock from '@/components/View/Code/CodeBlock.vue'
-import CodeLine from '@/components/View/Code/CodeLine.vue'
-import useLangStore from '@/stores/LangStore'
+import utils from '@/utils'
 
-const { Title, Paragraph } = Typography
+export const rawCode = `  
+<script setup lang="ts">
+import { Table, Image } from '@/components/UI'
+import type { TableColumns } from '@/components/UI/Table/type'
 
 interface TableData {
   id: string
@@ -13,8 +11,6 @@ interface TableData {
   productName: string
   child: TableData[]
 }
-
-const t = useLangStore()
 
 const dataSource: TableData[] = [
   {
@@ -100,29 +96,10 @@ const columns: TableColumns<TableData> = [
 </script>
 
 <template>
-  <Title>Table</Title>
-  <Paragraph>
-    {{ t.lang.table.desc }}
-  </Paragraph>
-
-  <Space aligns="middle">
-    <Paragraph variant="secondary">Import</Paragraph>
-    <CodeLine code="import { Table } from @/components/UI" />
-  </Space>
   <Table
     :dataSource="dataSource"
     :columns="columns"
-    hasRowSelection
-    hasExpand
-    hasPagination
-    :paginationProps="{ hasContent: true }"
-  >
-    <template #expand="com">
-      <Table :dataSource="com.expand.data.child" :columns="columns" />
-    </template>
-  </Table>
-
-  <CodeBlock>
-   
-  </CodeBlock>
+  />
 </template>
+`
+export const highlightedCode = utils.escapeHtml(rawCode)

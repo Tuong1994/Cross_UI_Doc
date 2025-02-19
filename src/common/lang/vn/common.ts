@@ -69,7 +69,8 @@ const common_vn = {
     update: 'Cập nhật',
     remove: 'Xóa',
     filter: 'Lọc',
-    cancel: 'Hủy'
+    cancel: 'Hủy',
+    copy: 'Sao chép',
   },
   table: {
     head: {

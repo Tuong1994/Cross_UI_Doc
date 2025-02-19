@@ -16,6 +16,19 @@ const utils = {
     const node = ref.value
     if (node.style.maxHeight) node.style.maxHeight = ''
     else node.style.maxHeight = `${node.scrollHeight}px`
+  },
+
+  escapeHtml: (str: string) => {
+    return str.replace(/[&<>"']/g, (match) => {
+      const escapeMap: { [key: string]: string } = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      }
+      return escapeMap[match] || match
+    })
   }
 }
 

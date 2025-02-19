@@ -1,7 +1,10 @@
 <script setup lang="ts">
-import { Layout, Section } from '@/components/UI'
+import { Layout, Section, Flex } from '@/components/UI'
 import Header from '../Header/Header.vue'
 import SideMenu from '../SideMenu/SideMenu.vue'
+import SideCataLog from '../SideCataLog/SideCataLog.vue';
+
+const { FlexRow, FlexCol } = Flex
 
 const { Container, Body, Side, Content } = Layout
 </script>
@@ -15,7 +18,14 @@ const { Container, Body, Side, Content } = Layout
       </Side>
       <Content>
         <Section>
-          <slot></slot>
+          <FlexRow>
+            <FlexCol :span="20">
+              <slot></slot>
+            </FlexCol>
+            <FlexCol :span="4">
+              <SideCataLog />
+            </FlexCol>
+          </FlexRow>
         </Section>
       </Content>
     </Body>
