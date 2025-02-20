@@ -15,6 +15,7 @@
     opacity: 1;
   }
   .line-content {
+    white-space: normal;
     transition: background-color $transition-time-sm $transition-fn;
   }
   .line-action {

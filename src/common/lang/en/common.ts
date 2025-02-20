@@ -71,6 +71,7 @@ const common_en = {
     filter: 'Filter',
     cancel: 'Cancel',
     copy: 'Copy',
+    copied: 'Copied',
   },
   table: {
     head: {

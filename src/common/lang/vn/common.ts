@@ -71,6 +71,7 @@ const common_vn = {
     filter: 'Lọc',
     cancel: 'Hủy',
     copy: 'Sao chép',
+    copied: 'Đã sao chép'
   },
   table: {
     head: {

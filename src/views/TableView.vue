@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Typography, Table, Space, Image } from '@/components/UI'
 import type { TableColumns } from '@/components/UI/Table/type'
+import { tableBasicCode } from '@/features/Table/code'
 import CodeBlock from '@/components/View/Code/CodeBlock.vue'
 import CodeLine from '@/components/View/Code/CodeLine.vue'
 import useLangStore from '@/stores/LangStore'
@@ -122,7 +123,5 @@ const columns: TableColumns<TableData> = [
     </template>
   </Table>
 
-  <CodeBlock>
-   
-  </CodeBlock>
+  <CodeBlock :code="tableBasicCode" />
 </template>

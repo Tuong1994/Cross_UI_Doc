@@ -1,6 +1,4 @@
-import utils from '@/utils'
-
-export const rawCode = `  
+export const tableBasicCode = `  
 <script setup lang="ts">
 import { Table, Image } from '@/components/UI'
 import type { TableColumns } from '@/components/UI/Table/type'
@@ -102,4 +100,3 @@ const columns: TableColumns<TableData> = [
   />
 </template>
 `
-export const highlightedCode = utils.escapeHtml(rawCode)

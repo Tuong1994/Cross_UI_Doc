@@ -18,26 +18,38 @@ const t = useLangStore()
 
 const layout = useLayoutStore()
 
-const highlightedCode = ref<string>(utils.escapeHtml(props.code))
+const isCopy = ref<boolean>(false)
+
+const content = ref<string>(utils.escapeHtml(props.code))
+
+const handleCopy = () => {
+  navigator.clipboard
+    .writeText(props.code)
+    .then(() => {
+      isCopy.value = true
+      setTimeout(() => (isCopy.value = false), 2000)
+    })
+    .catch(() => console.log('False to copy'))
+}
 </script>
 
 <template>
   <FlexRow rootClassName="code-line" aligns="middle">
     <FlexCol>
-      <div v-highlight class="line-content">
-        <pre>
-          <code v-html="highlightedCode"></code>
-      </pre>
+      <div v-highlight>
+        <pre class="line-content">
+          <code v-html="content"></code>
+        </pre>
       </div>
     </FlexCol>
     <FlexCol>
-      <Button :color="layout.color" rootClassName="line-action">
+      <Button :color="layout.color" rootClassName="line-action" @click="handleCopy">
         <Tooltip placement="right">
           <template #title>
             <Icon :iconName="iconName.PENCIL_ALT" />
           </template>
           <template #content>
-            {{ t.lang.common.actions.copy }}
+            {{ t.lang.common.actions[isCopy ? 'copied' : 'copy'] }}
           </template>
         </Tooltip>
       </Button>
