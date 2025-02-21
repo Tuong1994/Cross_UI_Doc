@@ -46,7 +46,7 @@ const handleCopy = () => {
       <Button :color="layout.color" rootClassName="line-action" @click="handleCopy">
         <Tooltip placement="right">
           <template #title>
-            <Icon :iconName="iconName.PENCIL_ALT" />
+            <Icon :iconName="iconName.COPY" />
           </template>
           <template #content>
             {{ t.lang.common.actions[isCopy ? 'copied' : 'copy'] }}

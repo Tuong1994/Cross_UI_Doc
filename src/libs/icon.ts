@@ -60,6 +60,8 @@ import {
   faHardDrive,
   faLayerGroup,
   faMoon,
+  faCode,
+  faCopy,
 } from '@fortawesome/free-solid-svg-icons'
 
 export const iconList = () => {
@@ -123,6 +125,8 @@ export const iconList = () => {
     faHeart,
     faHardDrive,
     faLayerGroup,
-    faMoon
+    faMoon,
+    faCode,
+    faCopy,
   )
 }

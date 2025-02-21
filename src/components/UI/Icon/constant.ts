@@ -63,5 +63,7 @@ export const iconName = {
   HEART: 'heart',
   HARD_DRIVE: 'hard-drive',
   LAYER_GROUP: 'layer-group',
-  MOON: 'moon'
+  MOON: 'moon',
+  CODE: 'code',
+  COPY: 'copy'
 }

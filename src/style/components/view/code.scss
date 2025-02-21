@@ -1,6 +1,16 @@
 // Code block
 .code-block {
-  .block-head {
+  position: relative;
+  &:hover .block-action {
+    opacity: 1;
+  }
+  .block-action {
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity $transition-time-sm $transition-fn;
   }
   .block-content {
     transition: background-color $transition-time-sm $transition-fn;
