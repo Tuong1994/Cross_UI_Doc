@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Table, Image } from '@/components/UI'
-import { tableBasicCode } from './code'
+import { tableExpandCode } from './code'
 import type { TableColor, TableColumns } from '@/components/UI/Table/type'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore';
@@ -98,11 +98,16 @@ const columns: TableColumns<TableData> = [
 </script>
 
 <template>
-  <ShowCase title="Basic" :code="tableBasicCode">
+  <ShowCase title="Expand Table" :code="tableExpandCode">
     <Table
       :dataSource="dataSource"
       :columns="columns"
       :color="layout.color as TableColor"
-    />
+      hasExpand
+    >
+      <template #expand="com">
+        <Table :dataSource="com.expand.data.child" :columns="columns" :color="layout.color as TableColor" />
+      </template>
+    </Table>
   </ShowCase>
 </template>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { Typography, Table, Space, Image } from '@/components/UI'
+import { Typography, Space } from '@/components/UI'
 import TableBasic from '@/features/Table/Basic/TableBasic.vue'
-import CodeBlock from '@/components/View/Code/CodeBlock.vue'
+import TableExpand  from "@/features/Table/TableExpand/TableExpand.vue"
 import CodeLine from '@/components/View/Code/CodeLine.vue'
 import useLangStore from '@/stores/LangStore'
 
@@ -22,4 +22,6 @@ const t = useLangStore()
   </Space>
 
   <TableBasic />
+
+  <TableExpand />
 </template>
