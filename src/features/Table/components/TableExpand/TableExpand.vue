@@ -3,6 +3,7 @@ import { Table, Image } from '@/components/UI'
 import { tableExpandCode } from './code'
 import type { TableColumns } from '@/components/UI/Table/type'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
+import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 
 interface TableData {
@@ -98,11 +99,13 @@ const columns: TableColumns<TableData> = [
 </script>
 
 <template>
-  <ShowCase title="Expand Table" :code="tableExpandCode">
-    <Table :dataSource="dataSource" :columns="columns" :color="layout.color" hasExpand>
-      <template #expand="com">
-        <Table :dataSource="com.expand.data.child" :columns="columns" :color="layout.color" />
-      </template>
-    </Table>
-  </ShowCase>
+  <AnchorContent id="expand">
+    <ShowCase title="Expand Table" :code="tableExpandCode">
+      <Table :dataSource="dataSource" :columns="columns" :color="layout.color" hasExpand>
+        <template #expand="com">
+          <Table :dataSource="com.expand.data.child" :columns="columns" :color="layout.color" />
+        </template>
+      </Table>
+    </ShowCase>
+  </AnchorContent>
 </template>

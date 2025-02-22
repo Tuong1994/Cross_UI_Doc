@@ -4,6 +4,7 @@ import { Input, Select } from '@/components/Control'
 import { tableFilterCode } from './code'
 import type { TableColumns } from '@/components/UI/Table/type'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
+import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 
 interface TableData {
@@ -56,14 +57,16 @@ const columns: TableColumns<TableData> = [
 </script>
 
 <template>
-  <ShowCase title="Filter" :code="tableFilterCode">
-    <Table hasFilter :color="layout.color" :dataSource="dataSource" :columns="columns">
-      <template #filter>
-        <Space>
-          <Input :color="layout.color" sizes="sm" />
-          <Select :color="layout.color" sizes="sm" />
-        </Space>
-      </template>
-    </Table>
-  </ShowCase>
+  <AnchorContent id="filter">
+    <ShowCase title="Filter" :code="tableFilterCode">
+      <Table hasFilter :color="layout.color" :dataSource="dataSource" :columns="columns">
+        <template #filter>
+          <Space>
+            <Input :color="layout.color" sizes="sm" />
+            <Select :color="layout.color" sizes="sm" />
+          </Space>
+        </template>
+      </Table>
+    </ShowCase>
+  </AnchorContent>
 </template>

@@ -1,0 +1,73 @@
+.menu-link {
+  display: block;
+  padding: $p-1 0;
+  cursor: pointer;
+  font-size: $text-xs;
+  transition: all $transition-time-sm $transition-fn;
+  * {
+    font-size: $text-xs;
+  }
+}
+
+.menu-link-blue {
+  &:hover {
+    color: $text-blue;
+    * {
+      color: $text-blue;
+    }
+  }
+}
+
+.menu-link-green.menu-link-active {
+  &:hover {
+    color: $text-green;
+    * {
+      color: $text-green;
+    }
+  }
+}
+
+.menu-link-red {
+  &:hover {
+    color: $text-red;
+    * {
+      color: $text-red;
+    }
+  }
+}
+
+.menu-link-orange {
+  &:hover {
+    color: $text-orange;
+    * {
+      color: $text-orange;
+    }
+  }
+}
+
+.menu-link-yellow {
+  &:hover {
+    color: $text-yellow;
+    * {
+      color: $text-yellow;
+    }
+  }
+}
+
+.menu-link-purple {
+  &:hover {
+    color: $text-purple;
+    * {
+      color: $text-purple;
+    }
+  }
+}
+
+.menu-link-pink {
+  &:hover {
+    color: $text-pink;
+    * {
+      color: $text-pink;
+    }
+  }
+}

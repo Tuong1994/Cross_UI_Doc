@@ -2,6 +2,7 @@
   width: $w-full;
   min-height: $h-screen;
   background: $bg-white;
+  position: relative;
   transition: all $transition-time-sm $transition-fn;
 }
 
@@ -30,6 +31,6 @@
   }
   pre code.hljs,
   pre code[class*='hljs-'] {
-    color: unset !important;  /* Remove inherited color */
+    color: unset !important; /* Remove inherited color */
   }
 }

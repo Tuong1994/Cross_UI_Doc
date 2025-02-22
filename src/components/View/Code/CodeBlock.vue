@@ -2,7 +2,7 @@
 import { ref, defineProps } from 'vue'
 import { Tooltip, Button, Icon } from '@/components/UI'
 import { iconName } from '@/components/UI/Icon/constant'
-import utils from '@/utils'
+import { escapeHtml } from './escapeHtml'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 import useLangStore from '@/stores/LangStore'
 
@@ -18,7 +18,7 @@ const layout = useLayoutStore()
 
 const isCopy = ref<boolean>(false)
 
-const content = ref<string>(utils.escapeHtml(props.code))
+const content = ref<string>(escapeHtml(props.code))
 
 const handleCopy = () => {
   navigator.clipboard

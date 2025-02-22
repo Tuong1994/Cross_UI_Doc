@@ -1,0 +1,14 @@
+.side-catalog {
+  width: $w-10 * 2;
+  background: $bg-white;
+  padding-left: $p-2;
+  border-left: 1px solid $bg-slate;
+  position: fixed;
+  top: 8rem;
+  right: 0;
+  transition: background-color $transition-time-sm $transition-fn;
+}
+
+.side-catalog-dark {
+  background: $bg-dark;
+}
