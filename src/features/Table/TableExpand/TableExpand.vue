@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { Table, Image } from '@/components/UI'
 import { tableExpandCode } from './code'
-import type { TableColor, TableColumns } from '@/components/UI/Table/type'
+import type { TableColumns } from '@/components/UI/Table/type'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
-import useLayoutStore from '@/components/UI/Layout/LayoutStore';
+import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 
 interface TableData {
   id: string
@@ -99,14 +99,9 @@ const columns: TableColumns<TableData> = [
 
 <template>
   <ShowCase title="Expand Table" :code="tableExpandCode">
-    <Table
-      :dataSource="dataSource"
-      :columns="columns"
-      :color="layout.color as TableColor"
-      hasExpand
-    >
+    <Table :dataSource="dataSource" :columns="columns" :color="layout.color" hasExpand>
       <template #expand="com">
-        <Table :dataSource="com.expand.data.child" :columns="columns" :color="layout.color as TableColor" />
+        <Table :dataSource="com.expand.data.child" :columns="columns" :color="layout.color" />
       </template>
     </Table>
   </ShowCase>

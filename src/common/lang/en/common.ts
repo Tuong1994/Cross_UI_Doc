@@ -1,4 +1,5 @@
 const common_en = {
+  examples: 'Examples',
   header: {
     mode: {
       light: 'Light',

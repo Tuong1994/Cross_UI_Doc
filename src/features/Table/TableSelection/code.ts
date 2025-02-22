@@ -1,17 +1,13 @@
+export const tableSelectionCode = `  
 <script setup lang="ts">
 import { Table, Image } from '@/components/UI'
-import { tableBasicCode } from './code'
 import type { TableColumns } from '@/components/UI/Table/type'
-import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
-import useLayoutStore from '@/components/UI/Layout/LayoutStore';
 
 interface TableData {
   id: string
   content: string
   productName: string
 }
-
-const layout = useLayoutStore()
 
 const dataSource: TableData[] = [
   {
@@ -55,11 +51,10 @@ const columns: TableColumns<TableData> = [
 </script>
 
 <template>
-  <ShowCase title="Basic" :code="tableBasicCode">
-    <Table
-      :dataSource="dataSource"
-      :columns="columns"
-      :color="layout.color"
-    />
-  </ShowCase>
+  <Table
+    hasRowSelection
+    :dataSource="dataSource"
+    :columns="columns"
+  />
 </template>
+`

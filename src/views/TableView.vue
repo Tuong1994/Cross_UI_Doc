@@ -1,27 +1,17 @@
 <script setup lang="ts">
-import { Typography, Space } from '@/components/UI'
+import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
 import TableBasic from '@/features/Table/Basic/TableBasic.vue'
-import TableExpand  from "@/features/Table/TableExpand/TableExpand.vue"
-import CodeLine from '@/components/View/Code/CodeLine.vue'
+import TableExpand from '@/features/Table/TableExpand/TableExpand.vue'
+import TableSelection from '@/features/Table/TableSelection/TableSelection.vue';
 import useLangStore from '@/stores/LangStore'
-
-const { Title, Paragraph } = Typography
 
 const t = useLangStore()
 </script>
 
 <template>
-  <Title>Table</Title>
-  <Paragraph>
-    {{ t.lang.table.desc }}
-  </Paragraph>
-
-  <Space aligns="middle">
-    <Paragraph variant="secondary">Import</Paragraph>
-    <CodeLine code="import { Table } from @/components/UI" />
-  </Space>
-
-  <TableBasic />
-
-  <TableExpand />
+  <PageLayout title="Table" importCode="import { Table } from @/components/UI" :desc="t.lang.table.desc">
+    <TableBasic />
+    <TableSelection />
+    <TableExpand />
+  </PageLayout>
 </template>

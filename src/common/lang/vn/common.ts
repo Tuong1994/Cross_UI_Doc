@@ -1,4 +1,5 @@
 const common_vn = {
+  examples: 'Các ví dụ',
   header: {
     mode: {
       light: 'Sáng',

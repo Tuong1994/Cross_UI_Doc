@@ -22,9 +22,9 @@ const handleOpenCode = () => showCode.value = !showCode.value
 </script>
 
 <template>
-  <Card>
+  <Card rootClassName="show-case">
     <template #head>
-      <Paragraph>
+      <Paragraph :size="16" :weight="600">
         {{ title }}
       </Paragraph>
     </template>

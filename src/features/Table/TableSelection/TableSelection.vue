@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { Table, Image } from '@/components/UI'
-import { tableBasicCode } from './code'
+import { tableSelectionCode } from './code'
 import type { TableColumns } from '@/components/UI/Table/type'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
-import useLayoutStore from '@/components/UI/Layout/LayoutStore';
+import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 
 interface TableData {
   id: string
@@ -17,17 +17,17 @@ const dataSource: TableData[] = [
   {
     id: '1',
     content: 'This is a comment 1',
-    productName: 'Product 1',
+    productName: 'Product 1'
   },
   {
     id: '2',
     content: 'This is a comment 2',
-    productName: 'Product 2',
+    productName: 'Product 2'
   },
   {
     id: '3',
     content: 'This is a comment 3',
-    productName: 'Product 3',
+    productName: 'Product 3'
   }
 ]
 
@@ -55,11 +55,7 @@ const columns: TableColumns<TableData> = [
 </script>
 
 <template>
-  <ShowCase title="Basic" :code="tableBasicCode">
-    <Table
-      :dataSource="dataSource"
-      :columns="columns"
-      :color="layout.color"
-    />
+  <ShowCase title="Selection" :code="tableSelectionCode">
+    <Table hasRowSelection :dataSource="dataSource" :columns="columns" :color="layout.color" />
   </ShowCase>
 </template>

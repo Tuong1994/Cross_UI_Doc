@@ -28,4 +28,8 @@
   * {
     color: $text-white;
   }
+  pre code.hljs,
+  pre code[class*='hljs-'] {
+    color: unset !important;  /* Remove inherited color */
+  }
 }
