@@ -71,6 +71,7 @@ const common_vn = {
     remove: 'Xóa',
     filter: 'Lọc',
     cancel: 'Hủy',
+    get: 'Lây',
     copy: 'Sao chép',
     copied: 'Đã sao chép'
   },

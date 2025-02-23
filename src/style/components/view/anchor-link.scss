@@ -9,6 +9,7 @@
   }
 }
 
+// Color
 .menu-link-blue {
   &:hover {
     color: $text-blue;
@@ -18,7 +19,7 @@
   }
 }
 
-.menu-link-green.menu-link-active {
+.menu-link-green {
   &:hover {
     color: $text-green;
     * {
@@ -69,5 +70,55 @@
     * {
       color: $text-pink;
     }
+  }
+}
+
+// Active
+.menu-link-blue.menu-link-active {
+  color: $text-blue;
+  * {
+    color: $text-blue;
+  }
+}
+
+.menu-link-green.menu-link-active {
+  color: $text-green;
+  * {
+    color: $text-green;
+  }
+}
+
+.menu-link-red.menu-link-active {
+  color: $text-red;
+  * {
+    color: $text-red;
+  }
+}
+
+.menu-link-orange.menu-link-active {
+  color: $text-orange;
+  * {
+    color: $text-orange;
+  }
+}
+
+.menu-link-yellow.menu-link-active {
+  color: $text-yellow;
+  * {
+    color: $text-yellow;
+  }
+}
+
+.menu-link-purple.menu-link-active {
+  color: $text-purple;
+  * {
+    color: $text-purple;
+  }
+}
+
+.menu-link-pink.menu-link-active {
+  color: $text-pink;
+  * {
+    color: $text-pink;
   }
 }

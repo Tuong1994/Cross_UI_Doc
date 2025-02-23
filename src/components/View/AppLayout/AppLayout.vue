@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, watchEffect } from 'vue'
 import { Layout, Section, Flex } from '@/components/UI'
 import { useRouter } from 'vue-router'
 import { routeNames } from '@/router'
+import { useViewPoint } from '@/hooks'
 import Header from '../Header/Header.vue'
 import SideMenu from '../SideMenu/SideMenu.vue'
 import SideCatalog from '../SideCatalog/SideCatalog.vue'
@@ -13,7 +14,15 @@ const { Container, Body, Side, Content } = Layout
 
 const { currentRoute } = useRouter()
 
-const showCatalog = computed<boolean>(() => Boolean(currentRoute.value.name !== routeNames.HOME))
+const { isPhone, isSmTablet } = useViewPoint()
+
+const responsive = computed<boolean>(() => Boolean(isPhone.value || isSmTablet.value))
+
+const showCatalog = computed<boolean>(() =>
+  Boolean(currentRoute.value.name !== routeNames.HOME && !responsive.value)
+)
+
+watchEffect(() => console.log(showCatalog.value))
 </script>
 
 <template>
@@ -26,7 +35,7 @@ const showCatalog = computed<boolean>(() => Boolean(currentRoute.value.name !== 
       <Content>
         <Section>
           <FlexRow>
-            <FlexCol :span="20">
+            <FlexCol :xs="24" :span="20">
               <slot></slot>
             </FlexCol>
           </FlexRow>

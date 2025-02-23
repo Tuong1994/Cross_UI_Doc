@@ -31,6 +31,9 @@
   .line-action {
     opacity: 0;
     transition: opacity $transition-time-sm $transition-fn;
+    @include respond(mdPhone) {
+      opacity: 1;
+    }
   }
 }
 

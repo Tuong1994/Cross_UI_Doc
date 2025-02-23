@@ -71,6 +71,7 @@ const common_en = {
     remove: 'Remove',
     filter: 'Filter',
     cancel: 'Cancel',
+    get: 'Get',
     copy: 'Copy',
     copied: 'Copied',
   },
