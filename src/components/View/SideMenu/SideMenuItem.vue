@@ -14,7 +14,7 @@ const props = defineProps<SideMenuItemProps>()
 
 const { currentRoute } = useRouter()
 
-const isSelected = computed<boolean>(() => false)
+const isSelected = computed<boolean>(() => currentRoute.value.name === props.item.id)
 
 const selectedClassName = computed<string>(() => (isSelected.value ? 'group-item-selected' : ''))
 </script>

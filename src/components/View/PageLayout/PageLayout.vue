@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
-import { Typography, Space, Divider } from '@/components/UI'
+import { Typography, Space, Divider, Flex } from '@/components/UI'
 import CodeLine from '../Code/CodeLine.vue'
 import useLangStore from '@/stores/LangStore'
+import SideCatalogMobile from '../SideCatalog/SideCatalogMobile.vue'
 
 const { Title, Paragraph } = Typography
+
+const { FlexRow, FlexCol } = Flex
 
 interface PageLayoutProps {
   title?: string
@@ -18,9 +21,16 @@ const t = useLangStore()
 </script>
 
 <template>
-  <Title>
-    {{ title }}
-  </Title>
+  <FlexRow aligns="middle" rootClassName="page-layout-head">
+    <FlexCol>
+      <Title>
+        {{ title }}
+      </Title>
+    </FlexCol>
+    <FlexCol :span="0">
+      <SideCatalogMobile />
+    </FlexCol>
+  </FlexRow>
   <Paragraph>
     {{ desc }}
   </Paragraph>

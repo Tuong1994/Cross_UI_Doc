@@ -12,3 +12,9 @@
 .side-catalog-dark {
   background: $bg-dark;
 }
+
+.side-catalog-mobile {
+  .mobile-dropdown {
+    padding: $p-1;
+  }
+}

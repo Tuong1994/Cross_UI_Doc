@@ -1,27 +1,17 @@
 <script setup lang="ts">
-import { computed, watch } from 'vue'
-import { useRouter } from 'vue-router'
-import { routeNames } from '@/router'
-import { tableCataLogs } from '@/features/Table/repository/catalogs'
+import { computed } from 'vue'
 import MenuLink from '../AnchorLink/MenuLink.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
+import useCatalog from './useCatalog'
 import useCatalogStore from './CatalogStore'
-
-const { currentRoute } = useRouter()
 
 const layout = useLayoutStore()
 
 const catalogStore = useCatalogStore()
 
-const themeClassName = computed<string>(() => `side-catalog-${layout.theme}`)
+useCatalog()
 
-watch(
-  currentRoute,
-  (newRoute) => {
-    if (newRoute.name === routeNames.TABLE) return catalogStore.setCatalogs(tableCataLogs)
-  },
-  { immediate: true }
-)
+const themeClassName = computed<string>(() => `side-catalog-${layout.theme}`)
 </script>
 
 <template>

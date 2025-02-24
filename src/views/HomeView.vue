@@ -6,7 +6,7 @@ import { Input } from '@/components/Control'
 import type { SideMenuItems } from '@/components/View/SideMenu/type'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 import useLangStore from '@/stores/LangStore'
-import useMenu from '@/components/View/SideMenu/hooks/useMenu'
+import useMenu from '@/components/View/SideMenu/useMenu'
 
 const { Title, Paragraph } = Typography
 

@@ -16,15 +16,74 @@
         background: $bg-slate;
       }
     }
-    .group-item-selected {
-      background: $bg-green-rgba-sm;
-      p {
-        color: $text-green;
-      }
+  }
+}
+
+// Color
+.side-menu-blue {
+  .group-item-selected {
+    background: $bg-blue-rgba-sm;
+    p {
+      color: $text-blue;
     }
   }
 }
 
+.side-menu-green {
+  .group-item-selected {
+    background: $bg-green-rgba-sm;
+    p {
+      color: $text-green;
+    }
+  }
+}
+
+.side-menu-red {
+  .group-item-selected {
+    background: $bg-red-rgba-sm;
+    p {
+      color: $text-red;
+    }
+  }
+}
+
+.side-menu-orange {
+  .group-item-selected {
+    background: $bg-orange-rgba-sm;
+    p {
+      color: $text-orange;
+    }
+  }
+}
+
+.side-menu-yellow {
+  .group-item-selected {
+    background: $bg-yellow-rgba-sm;
+    p {
+      color: $text-yellow;
+    }
+  }
+}
+
+.side-menu-purple {
+  .group-item-selected {
+    background: $bg-purple-rgba-sm;
+    p {
+      color: $text-purple;
+    }
+  }
+}
+
+.side-menu-pink {
+  .group-item-selected {
+    background: $bg-pink-rgba-sm;
+    p {
+      color: $text-pink;
+    }
+  }
+}
+
+// Theme
 .side-menu-dark {
   .menu-group {
     .group-item {
