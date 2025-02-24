@@ -1,10 +1,10 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import type { CatalogItems } from './type'
+import type { Catalog, } from './type'
 
 const useCatalogStore = defineStore('catalog', () => {
-  const catalogs = ref<CatalogItems>([])
-  const setCatalogs = (items: CatalogItems) => (catalogs.value = items)
+  const catalogs = ref<Catalog[]>([])
+  const setCatalogs = (items: Catalog[]) => (catalogs.value = items)
   return { catalogs, setCatalogs }
 })
 

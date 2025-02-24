@@ -5,6 +5,7 @@ import TableFilter from '@/features/Table/components/TableFilter/TableFilter.vue
 import TableExpand from '@/features/Table/components/TableExpand/TableExpand.vue'
 import TableSelection from '@/features/Table/components/TableSelection/TableSelection.vue'
 import TablePagination from '@/features/Table/components/TablePagination/TablePagination.vue'
+import TableApi from '@/features/Table/components/TableApi/TableApi.vue'
 import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
@@ -12,10 +13,15 @@ const t = useLangStore()
 
 <template>
   <PageLayout title="Table" importCode="import { Table } from @/components/UI" :desc="t.lang.table.desc">
-    <TableBasic />
-    <TableSelection />
-    <TableFilter />
-    <TablePagination />
-    <TableExpand />
+    <template #showcase>
+      <TableBasic />
+      <TableSelection />
+      <TableFilter />
+      <TablePagination />
+      <TableExpand />
+    </template>
+    <template #api>
+      <TableApi />
+    </template>
   </PageLayout>
 </template>

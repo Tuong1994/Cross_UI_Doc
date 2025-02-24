@@ -42,5 +42,8 @@ const t = useLangStore()
     {{ t.lang.common.examples }}
   </Paragraph>
   <Divider />
-  <slot></slot>
+  <slot name="showcase"></slot>
+  <Paragraph :size="18" :weight="600"> API </Paragraph>
+  <Divider />
+  <slot name="api"></slot>
 </template>

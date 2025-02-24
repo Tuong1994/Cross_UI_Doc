@@ -24,3 +24,11 @@ export type ComponentJustify = 'start' | 'center' | 'end' | 'between' | 'around'
 export type ComponentAligns = 'top' | 'middle' | 'bottom' | 'baseline'
 
 export type ComponentPlacement = 'left' | 'right' | 'top' | 'bottom'
+
+export type ComponentApi = {
+  id: string
+  props: string
+  desc: string
+  type: string
+  default: string
+}

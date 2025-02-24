@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Table, Image } from '@/components/UI'
 import { tableExpandCode } from './code'
-import { tableCataLogIds } from '../../repository/catalogs'
+import { tableCataLogIds } from '../../repository/catalogIds'
 import type { TableColumns } from '@/components/UI/Table/type'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'

@@ -2,7 +2,7 @@
 import { Table, Image, Space } from '@/components/UI'
 import { Input, Select } from '@/components/Control'
 import { tableFilterCode } from './code'
-import { tableCataLogIds } from '../../repository/catalogs'
+import { tableCataLogIds } from '../../repository/catalogIds'
 import type { TableColumns } from '@/components/UI/Table/type'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'

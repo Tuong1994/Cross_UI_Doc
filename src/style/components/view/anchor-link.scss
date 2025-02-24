@@ -1,6 +1,6 @@
 .menu-link {
   display: block;
-  padding: $p-1 0;
+  padding: $p-1 - 0.5 0;
   cursor: pointer;
   font-size: $text-xs;
   transition: all $transition-time-sm $transition-fn;

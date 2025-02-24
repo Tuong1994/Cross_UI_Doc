@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { Dropdown, Button, Icon } from '@/components/UI'
+import { Typography, Dropdown, Button, Icon } from '@/components/UI'
 import { iconName } from '@/components/UI/Icon/constant'
 import MenuLink from '../AnchorLink/MenuLink.vue'
 import useCatalogStore from './CatalogStore'
 import useCatalog from './useCatalog'
+
+const { Paragraph } = Typography
 
 const catalogStore = useCatalogStore()
 
@@ -19,9 +21,16 @@ useCatalog()
     </template>
     <template #dropdown>
       <div class="mobile-dropdown">
-        <MenuLink v-for="cataLog in catalogStore.catalogs" :key="cataLog.id" :id="cataLog.id">
-          {{ cataLog.title }}
-        </MenuLink>
+        <template v-for="cataLog in catalogStore.catalogs">
+          <Paragraph variant="secondary">
+            {{ cataLog.groupTitle }}
+          </Paragraph>
+          <div class="dropdown-group">
+            <MenuLink v-for="item in cataLog.items" :key="item.id" :id="item.id">
+              {{ item.title }}
+            </MenuLink>
+          </div>
+        </template>
       </div>
     </template>
   </Dropdown>

@@ -7,6 +7,9 @@
   top: 8rem;
   right: 0;
   transition: background-color $transition-time-sm $transition-fn;
+  .catalog-group {
+    padding-left: $p-1;
+  }
 }
 
 .side-catalog-dark {
@@ -16,5 +19,8 @@
 .side-catalog-mobile {
   .mobile-dropdown {
     padding: $p-1;
+    .dropdown-group {
+      padding-left: $p-1;
+    }
   }
 }

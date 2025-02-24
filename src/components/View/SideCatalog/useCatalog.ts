@@ -1,21 +1,19 @@
-import { watch } from 'vue'
+import { watchEffect } from 'vue'
 import { useRouter } from 'vue-router'
 import { routeNames } from '@/router'
-import { tableCataLogs } from '@/features/Table/repository/catalogs'
 import useCatalogStore from './CatalogStore'
+import useTableCatalogs from '@/features/Table/hooks/useTableCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
 
   const { currentRoute } = useRouter()
 
-  watch(
-    currentRoute,
-    (newRoute) => {
-      if (newRoute.name === routeNames.TABLE) return catalogStore.setCatalogs(tableCataLogs)
-    },
-    { immediate: true }
-  )
+  const tableCataLogs = useTableCatalogs()
+
+  watchEffect(() => {
+    if (currentRoute.value.name === routeNames.TABLE) return catalogStore.setCatalogs(tableCataLogs.value)
+  })
 }
 
 export default useCatalog
