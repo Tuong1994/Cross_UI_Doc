@@ -29,6 +29,9 @@ export type ComponentApi = {
   id: string
   props: string
   desc: string
-  type: string
+  type: {
+    elType: 'default' | 'anchor'
+    codes: string[]
+  }
   default: string
 }

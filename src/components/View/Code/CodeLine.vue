@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, defineProps } from 'vue'
+import { ref, computed, defineProps, withDefaults, type StyleValue } from 'vue'
 import { Icon, Flex, Tooltip, Button } from '@/components/UI'
 import { iconName } from '@/components/UI/Icon/constant'
 import { escapeHtml } from './escapeHtml'
@@ -11,9 +11,14 @@ const { FlexRow, FlexCol } = Flex
 
 interface CodeLineProps {
   code: string
+  hasCopy?: boolean
+  size?: number
 }
 
-const props = defineProps<CodeLineProps>()
+const props = withDefaults(defineProps<CodeLineProps>(), {
+  hasCopy: true,
+  size: 14
+})
 
 const t = useLangStore()
 
@@ -26,6 +31,8 @@ const isCopy = ref<boolean>(false)
 const content = ref<string>(escapeHtml(props.code))
 
 const responsive = computed<boolean>(() => isPhone.value || isLgPhone.value)
+
+const codeStyle = computed<StyleValue>(() => ({ fontSize: `${props.size}px` }))
 
 const handleCopy = () => {
   navigator.clipboard
@@ -43,11 +50,11 @@ const handleCopy = () => {
     <FlexCol :xs="0">
       <div v-highlight>
         <pre class="line-content">
-          <code v-html="content"></code>
+          <code :style="codeStyle" v-html="content"></code>
         </pre>
       </div>
     </FlexCol>
-    <FlexCol>
+    <FlexCol v-if="hasCopy">
       <Button :color="layout.color" rootClassName="line-action" @click="handleCopy">
         <Tooltip placement="right">
           <template #title>

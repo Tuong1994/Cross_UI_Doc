@@ -3,5 +3,7 @@ export const tableCataLogIds = {
   SELECTION: 'selection',
   FILTER: 'filter',
   PAGINATION: 'pagination',
-  EXPAND: 'expand'
+  EXPAND: 'expand',
+  TABLE_API: 'table-api',
+  COLUMN_API: 'column-api',
 } as const

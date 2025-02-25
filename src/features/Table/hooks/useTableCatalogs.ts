@@ -1,16 +1,7 @@
 import { computed } from 'vue'
+import { tableCataLogIds } from '../repository/catalogIds'
 import type { Catalog, CatalogItems } from '@/components/View/SideCatalog/type'
 import useLangStore from '@/stores/LangStore'
-
-export const tableCataLogIds = {
-  BASIC: 'basic',
-  SELECTION: 'selection',
-  FILTER: 'filter',
-  PAGINATION: 'pagination',
-  EXPAND: 'expand',
-  TABLE_API: 'Table',
-  COLUMN_API: 'Column'
-} as const
 
 const useTableCatalogs = () => {
   const t = useLangStore()
