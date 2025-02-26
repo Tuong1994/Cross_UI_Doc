@@ -85,6 +85,10 @@ const common_en = {
       address: 'Address',
       image: 'Image',
       status: 'Status',
+      props: 'Property',
+      desc: 'Description',
+      type: 'Type',
+      default: 'Default',
       createdAt: 'Created date',
       updatedAt: 'Updated date'
     }

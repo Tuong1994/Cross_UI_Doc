@@ -85,8 +85,12 @@ const common_vn = {
       address: 'Địa chỉ',
       image: 'Hình ảnh',
       status: 'Trạng thái',
+      props: 'Thuộc tính',
+      desc: 'Mô tả',
+      type: 'Kiểu dữ liệu',
+      default: 'Mặc định',
       createdAt: 'Ngày tạo',
-      updatedAt: 'Ngày cập nhật'
+      updatedAt: 'Ngày cập nhật',
     }
   },
   pagination: {

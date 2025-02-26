@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { Table, Typography } from '@/components/UI'
 import { tableCataLogIds } from '../../repository/catalogIds'
 import type { ComponentApi } from '@/common/type'
@@ -7,16 +8,19 @@ import type { ParagraphProps } from '@/components/UI/Typography/Paragraph.vue'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import CodeTableCell from '@/components/View/Code/CodeTableCell.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
+import useLangStore from '@/stores/LangStore'
 
 const { Paragraph } = Typography
 
+const t = useLangStore()
+
 const layout = useLayoutStore()
 
-const dataSource: ComponentApi[] = [
+const dataSource = computed<ComponentApi[]>(() => [
   {
     id: 'dataSource',
     props: 'dataSource',
-    desc: 'Data record array to be displayed',
+    desc: t.lang.table.api.tableDesc.dataSource,
     type: {
       elType: 'default',
       codes: ['object[]']
@@ -26,7 +30,7 @@ const dataSource: ComponentApi[] = [
   {
     id: 'columns',
     props: 'columns',
-    desc: 'Columns of table',
+    desc: t.lang.table.api.tableDesc.columns,
     type: {
       elType: 'anchor',
       codes: ['TableColumns']
@@ -36,7 +40,7 @@ const dataSource: ComponentApi[] = [
   {
     id: 'selection',
     props: 'hasRowSelection',
-    desc: 'Enabled row selection',
+    desc: t.lang.table.api.tableDesc.hasRowSelection,
     type: {
       elType: 'default',
       codes: ['boolean']
@@ -46,7 +50,7 @@ const dataSource: ComponentApi[] = [
   {
     id: 'expand',
     props: 'hasExpand',
-    desc: 'Enabled expand for nested table',
+    desc: t.lang.table.api.tableDesc.hasExpand,
     type: {
       elType: 'default',
       codes: ['boolean']
@@ -56,7 +60,7 @@ const dataSource: ComponentApi[] = [
   {
     id: 'pagination',
     props: 'hasPagination',
-    desc: 'Enabled for paging',
+    desc: t.lang.table.api.tableDesc.hasPagination,
     type: {
       elType: 'default',
       codes: ['boolean']
@@ -66,7 +70,7 @@ const dataSource: ComponentApi[] = [
   {
     id: 'filter',
     props: 'hasFilter',
-    desc: 'Enabled filter section',
+    desc: t.lang.table.api.tableDesc.hasFilter,
     type: {
       elType: 'default',
       codes: ['boolean']
@@ -76,7 +80,7 @@ const dataSource: ComponentApi[] = [
   {
     id: 'loading',
     props: 'loading',
-    desc: 'Loading status of table',
+    desc: t.lang.table.api.tableDesc.loading,
     type: {
       elType: 'default',
       codes: ['boolean']
@@ -86,7 +90,7 @@ const dataSource: ComponentApi[] = [
   {
     id: 'rowKey',
     props: 'rowKey',
-    desc: 'Row unique key',
+    desc: t.lang.table.api.tableDesc.rowKey,
     type: {
       elType: 'default',
       codes: ['string']
@@ -96,7 +100,7 @@ const dataSource: ComponentApi[] = [
   {
     id: 'color',
     props: 'color',
-    desc: 'Color of table',
+    desc: t.lang.table.api.tableDesc.color,
     type: {
       elType: 'default',
       codes: ['blue', 'green', 'red', 'orange', 'yellow', 'pink', 'purple']
@@ -106,7 +110,7 @@ const dataSource: ComponentApi[] = [
   {
     id: 'rootClassName',
     props: 'rootClassName',
-    desc: 'Class of container',
+    desc: t.lang.table.api.tableDesc.rootClassName,
     type: {
       elType: 'default',
       codes: ['string']
@@ -116,7 +120,7 @@ const dataSource: ComponentApi[] = [
   {
     id: 'tableClassName',
     props: 'tableClassName',
-    desc: 'Class of table',
+    desc: t.lang.table.api.tableDesc.tableClassName,
     type: {
       elType: 'default',
       codes: ['string']
@@ -126,7 +130,7 @@ const dataSource: ComponentApi[] = [
   {
     id: 'rootStyle',
     props: 'rootStyle',
-    desc: 'Inline style of container',
+    desc: t.lang.table.api.tableDesc.rootStyle,
     type: {
       elType: 'default',
       codes: ['StyleValue']
@@ -136,7 +140,7 @@ const dataSource: ComponentApi[] = [
   {
     id: 'tableStyle',
     props: 'tableStyle',
-    desc: 'Inline style of table',
+    desc: t.lang.table.api.tableDesc.tableStyle,
     type: {
       elType: 'default',
       codes: ['StyleValue']
@@ -146,19 +150,19 @@ const dataSource: ComponentApi[] = [
   {
     id: 'paginationProps',
     props: 'paginationProps',
-    desc: 'Props of pagination',
+    desc: t.lang.table.api.tableDesc.paginationProps,
     type: {
       elType: 'anchor',
       codes: ['PaginationProps']
     },
     default: '-'
   }
-]
+])
 
-const columns: TableColumns<ComponentApi> = [
+const columns = computed<TableColumns<ComponentApi>>(() => [
   {
     id: 'props',
-    title: 'Property',
+    title: t.lang.common.table.head.props,
     dataIndex: 'props',
     component: (record) => ({
       node: Paragraph,
@@ -168,7 +172,7 @@ const columns: TableColumns<ComponentApi> = [
   },
   {
     id: 'desc',
-    title: 'Description',
+    title: t.lang.common.table.head.desc,
     dataIndex: 'desc',
     component: (record) => ({
       node: Paragraph,
@@ -178,7 +182,7 @@ const columns: TableColumns<ComponentApi> = [
   },
   {
     id: 'type',
-    title: 'Type',
+    title: t.lang.common.table.head.type,
     dataIndex: 'type',
     component: (record) => ({
       node: CodeTableCell,
@@ -187,7 +191,7 @@ const columns: TableColumns<ComponentApi> = [
   },
   {
     id: 'default',
-    title: 'Default',
+    title: t.lang.common.table.head.default,
     dataIndex: 'default',
     component: (record) => ({
       node: Paragraph,
@@ -195,11 +199,11 @@ const columns: TableColumns<ComponentApi> = [
       props: { size: 12 } as ParagraphProps
     })
   }
-]
+])
 </script>
 
 <template>
-  <AnchorContent :id="tableCataLogIds.TABLE_API">
+  <AnchorContent :id="tableCataLogIds.TABLE_API" rootClassName="section-space">
     <Paragraph :lineHeight="40">Table</Paragraph>
     <Table :color="layout.color" :dataSource="dataSource" :columns="columns" />
   </AnchorContent>
