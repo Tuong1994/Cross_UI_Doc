@@ -23,6 +23,11 @@ const table_vn = {
       dataIndex: 'Trường hiển thị của bản ghi dữ liệu',
       component: 'Hiển thị component động của cột',
       render: 'Hiển thị HTML của cột bằng v-html'
+    },
+    componentDesc: {
+      node: 'Hiển thị thành phần động',
+      slotContent: 'Hiển thị nội dung trong thành phần động',
+      props: 'Thuộc tính của thành phần động'
     }
   }
 }

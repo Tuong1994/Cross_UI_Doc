@@ -1,69 +1,48 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { Typography, Table } from '@/components/UI'
+import { Table, Typography } from '@/components/UI'
 import { tableCataLogIds } from '../../repository/catalogIds'
-import type { TableColumns } from '@/components/UI/Table/type'
 import type { ComponentApi } from '@/common/type'
+import type { TableColumns } from '@/components/UI/Table/type'
 import type { ParagraphProps } from '@/components/UI/Typography/Paragraph.vue'
-import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import CodeTableCell, { type CodeTableCellProps } from '@/components/View/Code/CodeTableCell.vue'
-import useLangStore from '@/stores/LangStore'
+import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
+import useLangStore from '@/stores/LangStore'
 
 const { Paragraph } = Typography
 
-const t = useLangStore()
-
 const layout = useLayoutStore()
+
+const t = useLangStore()
 
 const dataSource = computed<ComponentApi[]>(() => [
   {
-    id: 'id',
-    props: 'id',
-    desc: t.lang.table.api.columnDesc.id,
+    id: 'node',
+    props: 'node',
+    desc: t.lang.table.api.componentDesc.node,
     type: {
-      codes: ['string'],
+      codes: ['any'],
       elType: 'default'
     },
     default: '-'
   },
   {
-    id: 'title',
-    props: 'title',
-    desc: t.lang.table.api.columnDesc.title,
+    id: 'slotContent',
+    props: 'slotContent',
+    desc: t.lang.table.api.componentDesc.slotContent,
     type: {
-      codes: ['string'],
+      codes: ['any | undefined'],
       elType: 'default'
     },
     default: '-'
   },
   {
-    id: 'dataIndex',
-    props: 'dataIndex',
-    desc: t.lang.table.api.columnDesc.dataIndex,
+    id: 'props',
+    props: 'props',
+    desc: t.lang.table.api.componentDesc.props,
     type: {
-      codes: ['keyof Record'],
-      elType: 'default'
-    },
-    default: '-'
-  },
-  {
-    id: 'component',
-    props: 'component',
-    desc: t.lang.table.api.columnDesc.component,
-    type: {
-      codes: ['(record: Record, idx: number) => TableComponent'],
-      elType: 'anchor',
-      link: tableCataLogIds.COMPONENT_API
-    },
-    default: '-'
-  },
-  {
-    id: 'render',
-    props: 'render',
-    desc: t.lang.table.api.columnDesc.render,
-    type: {
-      codes: ['(record: Record, idx: number) => string'],
+      codes: ['any | undefined'],
       elType: 'default'
     },
     default: '-'
@@ -97,11 +76,7 @@ const columns = computed<TableColumns<ComponentApi>>(() => [
     dataIndex: 'type',
     component: (record) => ({
       node: CodeTableCell,
-      props: {
-        codes: record.type.codes,
-        elType: record.type.elType,
-        link: record.type.link
-      } as CodeTableCellProps
+      props: { codes: record.type.codes, elType: record.type.elType } as CodeTableCellProps
     })
   },
   {
@@ -118,8 +93,8 @@ const columns = computed<TableColumns<ComponentApi>>(() => [
 </script>
 
 <template>
-  <AnchorContent :id="tableCataLogIds.COLUMN_API" rootClassName="section-space">
-    <Paragraph :lineHeight="40">Column</Paragraph>
+  <AnchorContent :id="tableCataLogIds.COMPONENT_API">
+    <Paragraph :lineHeight="40">Table Component</Paragraph>
     <Table :color="layout.color" :dataSource="dataSource" :columns="columns" />
   </AnchorContent>
 </template>

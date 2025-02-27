@@ -6,7 +6,7 @@ import type { ComponentApi } from '@/common/type'
 import type { TableColumns } from '@/components/UI/Table/type'
 import type { ParagraphProps } from '@/components/UI/Typography/Paragraph.vue'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
-import CodeTableCell from '@/components/View/Code/CodeTableCell.vue'
+import CodeTableCell, { type CodeTableCellProps } from '@/components/View/Code/CodeTableCell.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 import useLangStore from '@/stores/LangStore'
 
@@ -33,6 +33,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.table.api.tableDesc.columns,
     type: {
       elType: 'anchor',
+      link: tableCataLogIds.COLUMN_API,
       codes: ['TableColumns']
     },
     default: '[]'
@@ -152,7 +153,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'paginationProps',
     desc: t.lang.table.api.tableDesc.paginationProps,
     type: {
-      elType: 'anchor',
+      elType: 'router',
       codes: ['PaginationProps']
     },
     default: '-'
@@ -186,7 +187,11 @@ const columns = computed<TableColumns<ComponentApi>>(() => [
     dataIndex: 'type',
     component: (record) => ({
       node: CodeTableCell,
-      props: { codes: record.type.codes, elType: record.type.elType }
+      props: {
+        codes: record.type.codes,
+        elType: record.type.elType,
+        link: record.type.link
+      } as CodeTableCellProps
     })
   },
   {

@@ -23,6 +23,11 @@ const table_en = {
       dataIndex: 'Display field of the data record',
       component: 'Display dynamic component of column',
       render: 'Display HTML of column using v-html'
+    },
+    componentDesc: {
+      node: 'Display dynamic component',
+      slotContent: 'Display content within dynamic component',
+      props: 'Props of dynamic component'
     }
   }
 }

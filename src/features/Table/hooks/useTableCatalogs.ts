@@ -16,7 +16,8 @@ const useTableCatalogs = () => {
 
   const apiCatalogs: CatalogItems = [
     { id: tableCataLogIds.TABLE_API, title: 'Table' },
-    { id: tableCataLogIds.COLUMN_API, title: 'Column' }
+    { id: tableCataLogIds.COLUMN_API, title: 'Column' },
+    { id: tableCataLogIds.COMPONENT_API, title: 'Table Component' }
   ]
 
   const tableCataLogs = computed<Catalog[]>(() => [

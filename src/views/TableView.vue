@@ -7,6 +7,7 @@ import TableSelection from '@/features/Table/components/TableSelection/TableSele
 import TablePagination from '@/features/Table/components/TablePagination/TablePagination.vue'
 import TableApi from '@/features/Table/components/TableApi/TableApi.vue'
 import TableColumnApi from '@/features/Table/components/TableApi/TableColumnApi.vue'
+import TableComponentApi from '@/features/Table/components/TableApi/TableComponentApi.vue'
 import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
@@ -24,6 +25,7 @@ const t = useLangStore()
     <template #api>
       <TableApi />
       <TableColumnApi />
+      <TableComponentApi />
     </template>
   </PageLayout>
 </template>
