@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { Table, Typography } from '@/components/UI'
 import { tableCataLogIds } from '../../repository/catalogIds'
+import { ECodeElType } from '@/components/View/Code/enum'
 import type { ComponentApi } from '@/common/type'
 import type { TableColumns } from '@/components/UI/Table/type'
 import type { ParagraphProps } from '@/components/UI/Typography/Paragraph.vue'
@@ -23,7 +24,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.table.api.componentDesc.node,
     type: {
       codes: ['any'],
-      elType: 'default'
+      elType: ECodeElType.DEFAULT
     },
     default: '-'
   },
@@ -33,7 +34,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.table.api.componentDesc.slotContent,
     type: {
       codes: ['any | undefined'],
-      elType: 'default'
+      elType: ECodeElType.DEFAULT
     },
     default: '-'
   },
@@ -43,7 +44,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.table.api.componentDesc.props,
     type: {
       codes: ['any | undefined'],
-      elType: 'default'
+      elType: ECodeElType.DEFAULT
     },
     default: '-'
   }

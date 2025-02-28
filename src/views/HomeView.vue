@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { RouterLink } from 'vue-router'
-import { Divider, Typography, Flex, Button, Card } from '@/components/UI'
+import { Divider, Typography, Flex, Button, Card, Icon } from '@/components/UI'
 import { Input } from '@/components/Control'
+import { iconName } from '@/components/UI/Icon/constant'
 import type { SideMenuItems } from '@/components/View/SideMenu/type'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 import useLangStore from '@/stores/LangStore'
@@ -22,10 +23,12 @@ const search = ref<string>('')
 
 const filterMenus = computed<SideMenuItems>(() => {
   if (!search.value) return menus.value
-  const newMenus = menus.value.map((menu) => ({
-    ...menu,
-    items: menu.items.filter((item) => item.label.toLowerCase().includes(search.value.toLowerCase()))
-  })).filter(menu => menu.items.length > 0)
+  const newMenus = menus.value
+    .map((menu) => ({
+      ...menu,
+      items: menu.items.filter((item) => item.label.toLowerCase().includes(search.value.toLowerCase()))
+    }))
+    .filter((menu) => menu.items.length > 0)
   return newMenus
 })
 </script>
@@ -37,13 +40,12 @@ const filterMenus = computed<SideMenuItems>(() => {
   </Paragraph>
   <Divider />
   <FlexRow>
-    <FlexCol :span="10">
-      <Input v-model="search" :placeholder="t.lang.common.form.placeholder.search" :color="layout.color" />
-    </FlexCol>
-    <FlexCol>
-      <Button :color="layout.color">
-        {{ t.lang.common.form.placeholder.search }}
-      </Button>
+    <FlexCol :xs="24" :md="14" :lg="14" :span="10">
+      <Input v-model="search" :placeholder="t.lang.common.form.placeholder.search" :color="layout.color">
+        <template #addonBefore>
+          <Icon :iconName="iconName.SEARCH" />
+        </template>
+      </Input>
     </FlexCol>
   </FlexRow>
   <div class="home-menu">

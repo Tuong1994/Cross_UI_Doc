@@ -33,7 +33,7 @@ const useMenu = () => {
       items: [
         { id: routeNames.BREADCRUMB, label: 'Breadcrumb', path: '/' },
         { id: routeNames.DROPDOWN, label: 'Dropdown', path: '/' },
-        { id: routeNames.PAGINATION, label: 'Pagination', path: '/' }
+        { id: routeNames.PAGINATION, label: 'Pagination', path: routePaths.PAGINATION }
       ]
     },
     {
@@ -67,7 +67,7 @@ const useMenu = () => {
         { id: routeNames.LIST, label: 'List', path: '/' },
         { id: routeNames.TABLE, label: 'Table', path: routePaths.TABLE },
         { id: routeNames.TOOLTIP, label: 'Tooltip', path: '/' },
-        { id: routeNames.TABS, label: 'Tabs', path: '/' },
+        { id: routeNames.TABS, label: 'Tabs', path: routeNames.TABS },
         { id: routeNames.ACCORDION, label: 'Accordion', path: '/' }
       ]
     },

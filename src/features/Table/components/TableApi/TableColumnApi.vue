@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { Typography, Table } from '@/components/UI'
 import { tableCataLogIds } from '../../repository/catalogIds'
+import { ECodeElType } from '@/components/View/Code/enum'
 import type { TableColumns } from '@/components/UI/Table/type'
 import type { ComponentApi } from '@/common/type'
 import type { ParagraphProps } from '@/components/UI/Typography/Paragraph.vue'
@@ -23,7 +24,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.table.api.columnDesc.id,
     type: {
       codes: ['string'],
-      elType: 'default'
+      elType: ECodeElType.DEFAULT
     },
     default: '-'
   },
@@ -33,7 +34,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.table.api.columnDesc.title,
     type: {
       codes: ['string'],
-      elType: 'default'
+      elType: ECodeElType.DEFAULT
     },
     default: '-'
   },
@@ -43,7 +44,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.table.api.columnDesc.dataIndex,
     type: {
       codes: ['keyof Record'],
-      elType: 'default'
+      elType: ECodeElType.DEFAULT
     },
     default: '-'
   },
@@ -53,7 +54,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.table.api.columnDesc.component,
     type: {
       codes: ['(record: Record, idx: number) => TableComponent'],
-      elType: 'anchor',
+      elType: ECodeElType.ANCHOR,
       link: tableCataLogIds.COMPONENT_API
     },
     default: '-'
@@ -64,7 +65,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.table.api.columnDesc.render,
     type: {
       codes: ['(record: Record, idx: number) => string'],
-      elType: 'default'
+      elType: ECodeElType.DEFAULT
     },
     default: '-'
   }

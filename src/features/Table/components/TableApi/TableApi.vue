@@ -2,6 +2,8 @@
 import { computed } from 'vue'
 import { Table, Typography } from '@/components/UI'
 import { tableCataLogIds } from '../../repository/catalogIds'
+import { routePaths } from '@/router'
+import { ECodeElType } from '@/components/View/Code/enum'
 import type { ComponentApi } from '@/common/type'
 import type { TableColumns } from '@/components/UI/Table/type'
 import type { ParagraphProps } from '@/components/UI/Typography/Paragraph.vue'
@@ -22,7 +24,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'dataSource',
     desc: t.lang.table.api.tableDesc.dataSource,
     type: {
-      elType: 'default',
+      elType: ECodeElType.DEFAULT,
       codes: ['object[]']
     },
     default: '[]'
@@ -32,7 +34,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'columns',
     desc: t.lang.table.api.tableDesc.columns,
     type: {
-      elType: 'anchor',
+      elType: ECodeElType.ANCHOR,
       link: tableCataLogIds.COLUMN_API,
       codes: ['TableColumns']
     },
@@ -43,7 +45,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'hasRowSelection',
     desc: t.lang.table.api.tableDesc.hasRowSelection,
     type: {
-      elType: 'default',
+      elType: ECodeElType.DEFAULT,
       codes: ['boolean']
     },
     default: 'false'
@@ -53,7 +55,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'hasExpand',
     desc: t.lang.table.api.tableDesc.hasExpand,
     type: {
-      elType: 'default',
+      elType: ECodeElType.DEFAULT,
       codes: ['boolean']
     },
     default: 'false'
@@ -63,7 +65,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'hasPagination',
     desc: t.lang.table.api.tableDesc.hasPagination,
     type: {
-      elType: 'default',
+      elType: ECodeElType.DEFAULT,
       codes: ['boolean']
     },
     default: 'false'
@@ -73,7 +75,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'hasFilter',
     desc: t.lang.table.api.tableDesc.hasFilter,
     type: {
-      elType: 'default',
+      elType: ECodeElType.DEFAULT,
       codes: ['boolean']
     },
     default: 'false'
@@ -83,7 +85,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'loading',
     desc: t.lang.table.api.tableDesc.loading,
     type: {
-      elType: 'default',
+      elType: ECodeElType.DEFAULT,
       codes: ['boolean']
     },
     default: 'false'
@@ -93,7 +95,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'rowKey',
     desc: t.lang.table.api.tableDesc.rowKey,
     type: {
-      elType: 'default',
+      elType: ECodeElType.DEFAULT,
       codes: ['string']
     },
     default: '-'
@@ -103,7 +105,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'color',
     desc: t.lang.table.api.tableDesc.color,
     type: {
-      elType: 'default',
+      elType: ECodeElType.DEFAULT,
       codes: ['blue', 'green', 'red', 'orange', 'yellow', 'pink', 'purple']
     },
     default: 'blue'
@@ -113,7 +115,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'rootClassName',
     desc: t.lang.table.api.tableDesc.rootClassName,
     type: {
-      elType: 'default',
+      elType: ECodeElType.DEFAULT,
       codes: ['string']
     },
     default: '-'
@@ -123,7 +125,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'tableClassName',
     desc: t.lang.table.api.tableDesc.tableClassName,
     type: {
-      elType: 'default',
+      elType: ECodeElType.DEFAULT,
       codes: ['string']
     },
     default: '-'
@@ -133,7 +135,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'rootStyle',
     desc: t.lang.table.api.tableDesc.rootStyle,
     type: {
-      elType: 'default',
+      elType: ECodeElType.DEFAULT,
       codes: ['StyleValue']
     },
     default: '-'
@@ -143,7 +145,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'tableStyle',
     desc: t.lang.table.api.tableDesc.tableStyle,
     type: {
-      elType: 'default',
+      elType: ECodeElType.DEFAULT,
       codes: ['StyleValue']
     },
     default: '-'
@@ -153,7 +155,8 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'paginationProps',
     desc: t.lang.table.api.tableDesc.paginationProps,
     type: {
-      elType: 'router',
+      elType: ECodeElType.ROUTER,
+      link: routePaths.PAGINATION,
       codes: ['PaginationProps']
     },
     default: '-'

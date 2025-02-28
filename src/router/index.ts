@@ -96,9 +96,19 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: routePaths.TABS,
+      name: routeNames.TABS,
+      component: () => import('../views/TabsView.vue')
+    },
+    {
       path: routePaths.TABLE,
       name: routeNames.TABLE,
       component: () => import('../views/TableView.vue')
+    },
+    {
+      path: routePaths.PAGINATION,
+      name: routeNames.PAGINATION,
+      component: () => import('../views/PaginationView.vue')
     }
   ]
 })
