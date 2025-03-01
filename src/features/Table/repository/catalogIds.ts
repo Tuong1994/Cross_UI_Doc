@@ -1,4 +1,4 @@
-export const tableCataLogIds = {
+export const tableCatalogIds = {
   BASIC: 'basic',
   SELECTION: 'selection',
   FILTER: 'filter',

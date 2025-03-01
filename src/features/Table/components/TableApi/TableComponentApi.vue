@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { Table, Typography } from '@/components/UI'
-import { tableCataLogIds } from '../../repository/catalogIds'
+import { tableCatalogIds } from '../../repository/catalogIds'
 import { ECodeElType } from '@/components/View/Code/enum'
 import type { ComponentApi } from '@/common/type'
 import type { TableColumns } from '@/components/UI/Table/type'
@@ -94,7 +94,7 @@ const columns = computed<TableColumns<ComponentApi>>(() => [
 </script>
 
 <template>
-  <AnchorContent :id="tableCataLogIds.COMPONENT_API">
+  <AnchorContent :id="tableCatalogIds.COMPONENT_API">
     <Paragraph :lineHeight="40">Table Component</Paragraph>
     <Table :color="layout.color" :dataSource="dataSource" :columns="columns" />
   </AnchorContent>

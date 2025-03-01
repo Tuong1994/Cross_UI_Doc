@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { Table, Typography } from '@/components/UI'
-import { tableCataLogIds } from '../../repository/catalogIds'
+import { tableCatalogIds } from '../../repository/catalogIds'
 import { routePaths } from '@/router'
 import { ECodeElType } from '@/components/View/Code/enum'
 import type { ComponentApi } from '@/common/type'
@@ -35,7 +35,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.table.api.tableDesc.columns,
     type: {
       elType: ECodeElType.ANCHOR,
-      link: tableCataLogIds.COLUMN_API,
+      link: tableCatalogIds.COLUMN_API,
       codes: ['TableColumns']
     },
     default: '[]'
@@ -211,7 +211,7 @@ const columns = computed<TableColumns<ComponentApi>>(() => [
 </script>
 
 <template>
-  <AnchorContent :id="tableCataLogIds.TABLE_API" rootClassName="section-space">
+  <AnchorContent :id="tableCatalogIds.TABLE_API" rootClassName="section-space">
     <Paragraph :lineHeight="40">Table</Paragraph>
     <Table :color="layout.color" :dataSource="dataSource" :columns="columns" />
   </AnchorContent>

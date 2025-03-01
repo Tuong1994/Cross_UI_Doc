@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Table, Image } from '@/components/UI'
 import { tableSelectionCode } from './code'
-import { tableCataLogIds } from '../../repository/catalogIds'
+import { tableCatalogIds } from '../../repository/catalogIds'
 import type { TableColumns } from '@/components/UI/Table/type'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -57,7 +57,7 @@ const columns: TableColumns<TableData> = [
 </script>
 
 <template>
-  <AnchorContent :id="tableCataLogIds.SELECTION">
+  <AnchorContent :id="tableCatalogIds.SELECTION">
     <ShowCase title="Selection" :code="tableSelectionCode">
       <Table hasRowSelection :dataSource="dataSource" :columns="columns" :color="layout.color" />
     </ShowCase>
