@@ -27,6 +27,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['object[]']
     },
+    required: 'yes',
     default: '[]'
   },
   {
@@ -38,6 +39,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       link: tableCatalogIds.COLUMN_API,
       codes: ['TableColumns']
     },
+    required: 'yes',
     default: '[]'
   },
   {
@@ -48,6 +50,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['boolean']
     },
+    required: 'no',
     default: 'false'
   },
   {
@@ -58,6 +61,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['boolean']
     },
+    required: 'no',
     default: 'false'
   },
   {
@@ -68,6 +72,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['boolean']
     },
+    required: 'no',
     default: 'false'
   },
   {
@@ -78,6 +83,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['boolean']
     },
+    required: 'no',
     default: 'false'
   },
   {
@@ -88,6 +94,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['boolean']
     },
+    required: 'no',
     default: 'false'
   },
   {
@@ -98,6 +105,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['string']
     },
+    required: 'no',
     default: '-'
   },
   {
@@ -108,6 +116,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['blue', 'green', 'red', 'orange', 'yellow', 'pink', 'purple']
     },
+    required: 'no',
     default: 'blue'
   },
   {
@@ -118,6 +127,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['string']
     },
+    required: 'no',
     default: '-'
   },
   {
@@ -128,6 +138,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['string']
     },
+    required: 'no',
     default: '-'
   },
   {
@@ -138,6 +149,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['StyleValue']
     },
+    required: 'no',
     default: '-'
   },
   {
@@ -148,6 +160,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['StyleValue']
     },
+    required: 'no',
     default: '-'
   },
   {
@@ -159,6 +172,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       link: routePaths.PAGINATION,
       codes: ['PaginationProps']
     },
+    required: 'no',
     default: '-'
   },
   {
@@ -169,6 +183,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['(keys: [string | number]) => void']
     },
+    required: 'no',
     default: '-'
   },
   {
@@ -179,6 +194,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['(page: number) => void']
     },
+    required: 'no',
     default: '-'
   },
   {
@@ -189,6 +205,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['() => void']
     },
+    required: 'no',
     default: '-'
   },
   {
@@ -199,6 +216,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['() => void']
     },
+    required: 'no',
     default: '-'
   }
 ])
@@ -235,6 +253,16 @@ const columns = computed<TableColumns<ComponentApi>>(() => [
         elType: record.type.elType,
         link: record.type.link
       } as CodeTableCellProps
+    })
+  },
+  {
+    id: 'required',
+    title: t.lang.common.table.head.required,
+    dataIndex: 'required',
+    component: (record) => ({
+      node: Paragraph,
+      slotContent: record.required,
+      props: { size: 12 } as ParagraphProps
     })
   },
   {

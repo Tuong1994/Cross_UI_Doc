@@ -1,56 +1,64 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { Table, Typography } from '@/components/UI'
-import { tableCatalogIds } from '../../repository/catalogIds'
 import { ECodeElType } from '@/components/View/Code/enum'
+import { tabsCatalogIds } from '../../respository/catalogIds'
 import type { ComponentApi } from '@/common/type'
 import type { TableColumns } from '@/components/UI/Table/type'
 import type { ParagraphProps } from '@/components/UI/Typography/Paragraph.vue'
 import CodeTableCell, { type CodeTableCellProps } from '@/components/View/Code/CodeTableCell.vue'
-import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 import useLangStore from '@/stores/LangStore'
+import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 
 const { Paragraph } = Typography
 
+const t = useLangStore()
+
 const layout = useLayoutStore()
 
-const t = useLangStore()
+// rootClassName?: string
+//   headClassName?: string
+//   contentClassName?: string
+//   rootStyle?: StyleValue
+//   headStyle?: StyleValue
+//   contentStyle?: StyleValue
 
 const dataSource = computed<ComponentApi[]>(() => [
   {
-    id: 'node',
-    props: 'node',
-    desc: t.lang.table.api.componentDesc.node,
+    id: 'type',
+    props: 'type',
+    desc: 'Type of tabs',
     type: {
-      codes: ['any'],
-      elType: ECodeElType.DEFAULT
+      elType: ECodeElType.DEFAULT,
+      codes: ['horizontal', 'vertical']
     },
     required: 'yes',
-    default: '-'
+    default: 'horizontal'
   },
   {
-    id: 'slotContent',
-    props: 'slotContent',
-    desc: t.lang.table.api.componentDesc.slotContent,
+    id: 'items',
+    props: 'items',
+    desc: 'List of tabs need to display',
     type: {
-      codes: ['any | undefined'],
-      elType: ECodeElType.DEFAULT
+      elType: ECodeElType.ANCHOR,
+      link: tabsCatalogIds.ITEMS_API,
+      codes: ['TabsItems']
     },
-    required: 'no',
-    default: '-'
+    required: 'yes',
+    default: '[]'
   },
   {
-    id: 'props',
-    props: 'props',
-    desc: t.lang.table.api.componentDesc.props,
+    id: 'color',
+    props: 'color',
+    desc: 'Color of tabs',
     type: {
-      codes: ['any | undefined'],
-      elType: ECodeElType.DEFAULT
+      elType: ECodeElType.DEFAULT,
+      codes: ['blue', 'green', 'red', 'orange', 'yellow', 'pink', 'purple']
     },
     required: 'no',
-    default: '-'
-  }
+    default: 'blue'
+  },
 ])
 
 const columns = computed<TableColumns<ComponentApi>>(() => [
@@ -80,7 +88,11 @@ const columns = computed<TableColumns<ComponentApi>>(() => [
     dataIndex: 'type',
     component: (record) => ({
       node: CodeTableCell,
-      props: { codes: record.type.codes, elType: record.type.elType } as CodeTableCellProps
+      props: {
+        codes: record.type.codes,
+        elType: record.type.elType,
+        link: record.type.link
+      } as CodeTableCellProps
     })
   },
   {
@@ -107,8 +119,8 @@ const columns = computed<TableColumns<ComponentApi>>(() => [
 </script>
 
 <template>
-  <AnchorContent :id="tableCatalogIds.COMPONENT_API">
-    <Paragraph :lineHeight="40">Table Component</Paragraph>
+  <AnchorContent :id="tabsCatalogIds.TABS_API">
+    <Paragraph :lineHeight="40">Tabs</Paragraph>
     <Table :color="layout.color" :dataSource="dataSource" :columns="columns" />
   </AnchorContent>
 </template>

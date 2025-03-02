@@ -89,6 +89,7 @@ const common_en = {
       desc: 'Description',
       type: 'Type',
       default: 'Default',
+      required: 'Required',
       createdAt: 'Created date',
       updatedAt: 'Updated date'
     }

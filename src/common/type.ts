@@ -29,10 +29,11 @@ export type ComponentApi = {
   id: string
   props: string
   desc: string
-  type: {
-    elType: 'default' | 'anchor' | 'router',
-    codes: string[]
-    link?: string;
-  }
   default: string
+  required: string
+  type: {
+    elType: 'default' | 'anchor' | 'router'
+    codes: string[]
+    link?: string
+  }
 }

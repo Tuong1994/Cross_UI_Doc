@@ -89,6 +89,7 @@ const common_vn = {
       desc: 'Mô tả',
       type: 'Kiểu dữ liệu',
       default: 'Mặc định',
+      required: 'Bắt buộc',
       createdAt: 'Ngày tạo',
       updatedAt: 'Ngày cập nhật',
     }
