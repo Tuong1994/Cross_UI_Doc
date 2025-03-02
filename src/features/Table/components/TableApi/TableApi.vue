@@ -160,6 +160,46 @@ const dataSource = computed<ComponentApi[]>(() => [
       codes: ['PaginationProps']
     },
     default: '-'
+  },
+  {
+    id: 'onRowSelect',
+    props: 'onRowSelect',
+    desc: t.lang.table.api.tableDesc.onRowSelect,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['(keys: [string | number]) => void']
+    },
+    default: '-'
+  },
+  {
+    id: 'onChangePage',
+    props: 'onChangePage',
+    desc: t.lang.table.api.tableDesc.onChangePage,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['(page: number) => void']
+    },
+    default: '-'
+  },
+  {
+    id: 'onFilter',
+    props: 'onFilter',
+    desc: t.lang.table.api.tableDesc.onFilter,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['() => void']
+    },
+    default: '-'
+  },
+  {
+    id: 'onCancelFilter',
+    props: 'onCancelFilter',
+    desc: t.lang.table.api.tableDesc.onCancelFilter,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['() => void']
+    },
+    default: '-'
   }
 ])
 

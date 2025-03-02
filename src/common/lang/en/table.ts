@@ -15,7 +15,11 @@ const table_en = {
       tableClassName: 'Class of table',
       rootStyle: 'Inline style of container',
       tableStyle: 'Inline style of table',
-      paginationProps: 'Props of pagination'
+      paginationProps: 'Props of pagination',
+      onRowSelect: 'Select table rows',
+      onChangePage: 'Trigger when change page',
+      onFilter: 'Save filter values',
+      onCancelFilter: 'Reset filter values'
     },
     columnDesc: {
       id: 'Unique Id for each column',

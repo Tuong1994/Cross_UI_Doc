@@ -15,7 +15,11 @@ const table_vn = {
       tableClassName: 'Lớp của bảng',
       rootStyle: 'Kiểu nội tuyến của vùng chứa',
       tableStyle: 'Kiểu nội tuyến của bảng',
-      paginationProps: 'Thuộc tính phân trang'
+      paginationProps: 'Thuộc tính phân trang',
+      onRowSelect: 'Chọn hàng bảng',
+      onChangePage: 'Kích hoạt khi thay đổi trang',
+      onFilter: 'Lưu giá trị bộ lọc',
+      onCancelFilter: 'Đặt lại giá trị bộ lọc'
     },
     columnDesc: {
       id: 'ID duy nhất cho mỗi cột',
