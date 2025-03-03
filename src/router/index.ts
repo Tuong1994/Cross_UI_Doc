@@ -96,6 +96,11 @@ const router = createRouter({
       component: HomeView
     },
     {
+      path: routePaths.BUTTON,
+      name: routeNames.BUTTON,
+      component: () => import('../views/ButtonView.vue')
+    },
+    {
       path: routePaths.TABS,
       name: routeNames.TABS,
       component: () => import('../views/TabsView.vue')

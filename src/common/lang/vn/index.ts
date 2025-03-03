@@ -1,3 +1,4 @@
+import button_vn from './button'
 import common_vn from './common'
 import home_vn from './home'
 import menu_vn from './menu'
@@ -9,7 +10,8 @@ const vn = {
   menu: menu_vn,
   home: home_vn,
   table: table_vn,
-  tabs: tabs_vn
+  tabs: tabs_vn,
+  button: button_vn
 }
 
 export type VN = typeof vn
