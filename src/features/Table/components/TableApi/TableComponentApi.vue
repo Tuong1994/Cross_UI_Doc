@@ -26,7 +26,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       codes: ['any'],
       elType: ECodeElType.DEFAULT
     },
-    required: 'yes',
+    required: t.lang.common.required.yes,
     default: '-'
   },
   {
@@ -37,7 +37,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       codes: ['any | undefined'],
       elType: ECodeElType.DEFAULT
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: '-'
   },
   {
@@ -48,7 +48,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       codes: ['any | undefined'],
       elType: ECodeElType.DEFAULT
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: '-'
   }
 ])

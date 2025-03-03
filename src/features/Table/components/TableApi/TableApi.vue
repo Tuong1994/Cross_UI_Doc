@@ -27,7 +27,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['object[]']
     },
-    required: 'yes',
+    required: t.lang.common.required.yes,
     default: '[]'
   },
   {
@@ -39,7 +39,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       link: tableCatalogIds.COLUMN_API,
       codes: ['TableColumns']
     },
-    required: 'yes',
+    required: t.lang.common.required.yes,
     default: '[]'
   },
   {
@@ -50,7 +50,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['boolean']
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: 'false'
   },
   {
@@ -61,7 +61,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['boolean']
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: 'false'
   },
   {
@@ -72,7 +72,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['boolean']
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: 'false'
   },
   {
@@ -83,7 +83,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['boolean']
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: 'false'
   },
   {
@@ -94,7 +94,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['boolean']
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: 'false'
   },
   {
@@ -105,7 +105,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['string']
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: '-'
   },
   {
@@ -116,7 +116,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['blue', 'green', 'red', 'orange', 'yellow', 'pink', 'purple']
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: 'blue'
   },
   {
@@ -127,7 +127,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['string']
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: '-'
   },
   {
@@ -138,7 +138,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['string']
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: '-'
   },
   {
@@ -149,7 +149,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['StyleValue']
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: '-'
   },
   {
@@ -160,7 +160,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['StyleValue']
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: '-'
   },
   {
@@ -172,7 +172,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       link: routePaths.PAGINATION,
       codes: ['PaginationProps']
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: '-'
   },
   {
@@ -183,7 +183,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['(keys: [string | number]) => void']
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: '-'
   },
   {
@@ -194,7 +194,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['(page: number) => void']
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: '-'
   },
   {
@@ -205,7 +205,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['() => void']
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: '-'
   },
   {
@@ -216,7 +216,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.DEFAULT,
       codes: ['() => void']
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: '-'
   }
 ])

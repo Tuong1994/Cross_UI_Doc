@@ -1,5 +1,9 @@
 const common_en = {
   examples: 'Examples',
+  required: {
+    yes: 'yes',
+    no: 'no'
+  },
   header: {
     mode: {
       light: 'Light',
@@ -73,7 +77,7 @@ const common_en = {
     cancel: 'Cancel',
     get: 'Get',
     copy: 'Copy',
-    copied: 'Copied',
+    copied: 'Copied'
   },
   table: {
     head: {

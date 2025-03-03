@@ -11,7 +11,10 @@ const useTabsCatalogs = () => {
     { id: tabsCatalogIds.VERTICAL, title: 'Vertical' }
   ]
 
-  const apiCatalogs: CatalogItems = [{ id: tabsCatalogIds.TABS_API, title: 'Tabs' }]
+  const apiCatalogs: CatalogItems = [
+    { id: tabsCatalogIds.TABS_API, title: 'Tabs' },
+    { id: tabsCatalogIds.ITEM_API, title: 'Item' },
+  ]
 
   const tabsCatalogs = computed<Catalog[]>(() => [
     { id: 'examples', groupTitle: t.lang.common.examples, items: exampleCatalogs },

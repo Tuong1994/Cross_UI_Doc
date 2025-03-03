@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { Table, Typography } from '@/components/UI'
-import { ECodeElType } from '@/components/View/Code/enum'
 import { tabsCatalogIds } from '../../respository/catalogIds'
+import { ECodeElType } from '@/components/View/Code/enum'
+import type { ParagraphProps } from '@/components/UI/Typography/Paragraph.vue'
 import type { ComponentApi } from '@/common/type'
 import type { TableColumns } from '@/components/UI/Table/type'
-import type { ParagraphProps } from '@/components/UI/Typography/Paragraph.vue'
 import CodeTableCell, { type CodeTableCellProps } from '@/components/View/Code/CodeTableCell.vue'
-import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 import useLangStore from '@/stores/LangStore'
+import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 
 const { Paragraph } = Typography
@@ -17,114 +17,52 @@ const t = useLangStore()
 
 const layout = useLayoutStore()
 
+// id: string
+//   label: string
+//   labelIcon?: string
+//   comName: string
+
 const dataSource = computed<ComponentApi[]>(() => [
   {
-    id: 'type',
-    props: 'type',
-    desc: t.lang.tabs.api.tabsDesc.type,
+    id: 'id',
+    props: 'id',
+    desc: t.lang.tabs.api.itemDesc.id,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['horizontal', 'vertical']
+      codes: ['string']
     },
     required: t.lang.common.required.yes,
-    default: 'horizontal'
+    default: '-'
   },
   {
-    id: 'items',
-    props: 'items',
-    desc: t.lang.tabs.api.tabsDesc.items,
+    id: 'label',
+    props: 'label',
+    desc: t.lang.tabs.api.itemDesc.label,
     type: {
-      elType: ECodeElType.ANCHOR,
-      link: tabsCatalogIds.ITEM_API,
-      codes: ['TabsItems']
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
     },
     required: t.lang.common.required.yes,
-    default: '[]'
+    default: '-'
   },
   {
-    id: 'color',
-    props: 'color',
-    desc: t.lang.tabs.api.tabsDesc.color,
-    type: {
-      elType: ECodeElType.DEFAULT,
-      codes: ['blue', 'green', 'red', 'orange', 'yellow', 'pink', 'purple']
-    },
-    required: t.lang.common.required.no,
-    default: 'blue'
-  },
-  {
-    id: 'rootClassName',
-    props: 'rootClassName',
-    desc: t.lang.tabs.api.tabsDesc.rootClassName,
+    id: 'comName',
+    props: 'comName',
+    desc: t.lang.tabs.api.itemDesc.comName,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['string']
     },
-    required: t.lang.common.required.no,
+    required: t.lang.common.required.yes,
     default: '-'
   },
   {
-    id: 'headClassName',
-    props: 'headClassName',
-    desc: t.lang.tabs.api.tabsDesc.headClassName,
+    id: 'labelIcon',
+    props: 'labelIcon',
+    desc: t.lang.tabs.api.itemDesc.labelIcon,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['string']
-    },
-    required: t.lang.common.required.no,
-    default: '-'
-  },
-  {
-    id: 'contentClassName',
-    props: 'contentClassName',
-    desc: t.lang.tabs.api.tabsDesc.contentClassName,
-    type: {
-      elType: ECodeElType.DEFAULT,
-      codes: ['string']
-    },
-    required: t.lang.common.required.no,
-    default: '-'
-  },
-  {
-    id: 'rootStyle',
-    props: 'rootStyle',
-    desc: t.lang.tabs.api.tabsDesc.rootStyle,
-    type: {
-      elType: ECodeElType.DEFAULT,
-      codes: ['StyleValue']
-    },
-    required: t.lang.common.required.no,
-    default: '-'
-  },
-  {
-    id: 'headStyle',
-    props: 'headStyle',
-    desc: t.lang.tabs.api.tabsDesc.headStyle,
-    type: {
-      elType: ECodeElType.DEFAULT,
-      codes: ['StyleValue']
-    },
-    required: t.lang.common.required.no,
-    default: '-'
-  },
-  {
-    id: 'contentStyle',
-    props: 'contentStyle',
-    desc: t.lang.tabs.api.tabsDesc.contentStyle,
-    type: {
-      elType: ECodeElType.DEFAULT,
-      codes: ['StyleValue']
-    },
-    required: t.lang.common.required.no,
-    default: '-'
-  },
-  {
-    id: 'onSelectTab',
-    props: 'onSelectTab',
-    desc: t.lang.tabs.api.tabsDesc.onSelectTab,
-    type: {
-      elType: ECodeElType.DEFAULT,
-      codes: ['(tab: TabsItem) => void']
     },
     required: t.lang.common.required.no,
     default: '-'
@@ -189,8 +127,8 @@ const columns = computed<TableColumns<ComponentApi>>(() => [
 </script>
 
 <template>
-  <AnchorContent :id="tabsCatalogIds.TABS_API" rootClassName="section-space">
-    <Paragraph :lineHeight="40">Tabs</Paragraph>
+  <AnchorContent :id="tabsCatalogIds.ITEM_API">
+    <Paragraph :lineHeight="40">Item</Paragraph>
     <Table :color="layout.color" :dataSource="dataSource" :columns="columns" />
   </AnchorContent>
 </template>

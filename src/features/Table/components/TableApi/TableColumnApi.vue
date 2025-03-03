@@ -26,7 +26,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       codes: ['string'],
       elType: ECodeElType.DEFAULT
     },
-    required: 'yes',
+    required: t.lang.common.required.yes,
     default: '-'
   },
   {
@@ -37,7 +37,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       codes: ['string'],
       elType: ECodeElType.DEFAULT
     },
-    required: 'yes',
+    required: t.lang.common.required.yes,
     default: '-'
   },
   {
@@ -48,7 +48,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       codes: ['keyof Record'],
       elType: ECodeElType.DEFAULT
     },
-    required: 'yes',
+    required: t.lang.common.required.yes,
     default: '-'
   },
   {
@@ -60,7 +60,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       elType: ECodeElType.ANCHOR,
       link: tableCatalogIds.COMPONENT_API
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: '-'
   },
   {
@@ -71,7 +71,7 @@ const dataSource = computed<ComponentApi[]>(() => [
       codes: ['(record: Record, idx: number) => string'],
       elType: ECodeElType.DEFAULT
     },
-    required: 'no',
+    required: t.lang.common.required.no,
     default: '-'
   }
 ])
