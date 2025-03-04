@@ -168,7 +168,7 @@ const dataSource = computed<ComponentApi[]>(() => [
   },
   {
     id: 'onRowSelect',
-    props: 'onRowSelect',
+    props: '@onRowSelect',
     desc: t.lang.table.api.tableDesc.onRowSelect,
     type: {
       elType: ECodeElType.DEFAULT,
@@ -179,7 +179,7 @@ const dataSource = computed<ComponentApi[]>(() => [
   },
   {
     id: 'onChangePage',
-    props: 'onChangePage',
+    props: '@onChangePage',
     desc: t.lang.table.api.tableDesc.onChangePage,
     type: {
       elType: ECodeElType.DEFAULT,
@@ -190,7 +190,7 @@ const dataSource = computed<ComponentApi[]>(() => [
   },
   {
     id: 'onFilter',
-    props: 'onFilter',
+    props: '@onFilter',
     desc: t.lang.table.api.tableDesc.onFilter,
     type: {
       elType: ECodeElType.DEFAULT,
@@ -201,7 +201,7 @@ const dataSource = computed<ComponentApi[]>(() => [
   },
   {
     id: 'onCancelFilter',
-    props: 'onCancelFilter',
+    props: '@onCancelFilter',
     desc: t.lang.table.api.tableDesc.onCancelFilter,
     type: {
       elType: ECodeElType.DEFAULT,

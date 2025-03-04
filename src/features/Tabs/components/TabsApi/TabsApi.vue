@@ -111,7 +111,7 @@ const dataSource = computed<ComponentApi[]>(() => [
   },
   {
     id: 'onSelectTab',
-    props: 'onSelectTab',
+    props: '@onSelectTab',
     desc: t.lang.tabs.api.tabsDesc.onSelectTab,
     type: {
       elType: ECodeElType.DEFAULT,

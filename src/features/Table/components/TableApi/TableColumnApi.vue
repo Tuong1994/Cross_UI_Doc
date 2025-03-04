@@ -44,7 +44,7 @@ const dataSource = computed<ComponentApi[]>(() => [
   },
   {
     id: 'component',
-    props: 'component',
+    props: '@component',
     desc: t.lang.table.api.columnDesc.component,
     type: {
       codes: ['(record: Record, idx: number) => TableComponent'],
@@ -56,7 +56,7 @@ const dataSource = computed<ComponentApi[]>(() => [
   },
   {
     id: 'render',
-    props: 'render',
+    props: '@render',
     desc: t.lang.table.api.columnDesc.render,
     type: {
       codes: ['(record: Record, idx: number) => string'],
