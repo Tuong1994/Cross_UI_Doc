@@ -1,5 +1,6 @@
 import button_vn from './button'
 import common_vn from './common'
+import grid_vn from './grid'
 import home_vn from './home'
 import menu_vn from './menu'
 import table_vn from './table'
@@ -11,7 +12,8 @@ const vn = {
   home: home_vn,
   table: table_vn,
   tabs: tabs_vn,
-  button: button_vn
+  button: button_vn,
+  grid: grid_vn
 }
 
 export type VN = typeof vn

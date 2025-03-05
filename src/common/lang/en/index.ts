@@ -1,5 +1,6 @@
 import button_en from './button'
 import common_en from './common'
+import grid_en from './grid'
 import home_en from './home'
 import menu_en from './menu'
 import table_en from './table'
@@ -12,6 +13,7 @@ const en = {
   table: table_en,
   tabs: tabs_en,
   button: button_en,
+  grid: grid_en
 }
 
 export type EN = typeof en
