@@ -89,6 +89,6 @@ const columns = computed<TableColumns<ComponentApi>>(() => [
     <Paragraph :lineHeight="40">
       {{ title }}
     </Paragraph>
-    <Table :color="layout.color" :dataSource="dataSource" :columns="columns" />
+    <Table rootClassName="table-layout" :color="layout.color" :dataSource="dataSource" :columns="columns" />
   </AnchorContent>
 </template>

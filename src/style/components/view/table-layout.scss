@@ -1,0 +1,13 @@
+.table-layout {
+  tbody {
+    tr {
+      td {
+        &:nth-child(2) {
+          .table-cell {
+            min-width: $w-10 * 2;
+          }
+        }
+      }
+    }
+  }
+}

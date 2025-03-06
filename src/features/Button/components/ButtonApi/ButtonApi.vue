@@ -9,16 +9,6 @@ import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 
-// rootClassName?: string
-//   shape?: ControlShape
-//   sizes?: ComponentSize
-//   color?: Exclude<ComponentColor, 'white' | 'gray'>
-//   ghost?: boolean
-//   loading?: boolean
-//   disabled?: boolean
-//   text?: boolean
-//   type?: ButtonType
-
 const dataSource = computed<ComponentApi[]>(() => [
   {
     id: 'type',
