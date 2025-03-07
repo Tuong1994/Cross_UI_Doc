@@ -3,6 +3,7 @@ import common_vn from './common'
 import grid_vn from './grid'
 import home_vn from './home'
 import menu_vn from './menu'
+import pagination_vn from './pagination'
 import table_vn from './table'
 import tabs_vn from './tabs'
 
@@ -13,7 +14,8 @@ const vn = {
   table: table_vn,
   tabs: tabs_vn,
   button: button_vn,
-  grid: grid_vn
+  grid: grid_vn,
+  pagination: pagination_vn
 }
 
 export type VN = typeof vn

@@ -3,6 +3,7 @@ import common_en from './common'
 import grid_en from './grid'
 import home_en from './home'
 import menu_en from './menu'
+import pagination_en from './pagination'
 import table_en from './table'
 import tabs_en from './tabs'
 
@@ -13,7 +14,8 @@ const en = {
   table: table_en,
   tabs: tabs_en,
   button: button_en,
-  grid: grid_en
+  grid: grid_en,
+  pagination: pagination_en
 }
 
 export type EN = typeof en
