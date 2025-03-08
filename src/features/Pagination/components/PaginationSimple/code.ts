@@ -1,9 +1,9 @@
-export const paginationContentCode = `
+export const paginationSimpleCode = `
 <script setup lang="ts">
     import { Pagination } from '@/components/UI'
 </script>
 
 <template>
-  <Pagination hasContent :total="50" />
+  <Pagination simple :total="50" />
 </template>
 `

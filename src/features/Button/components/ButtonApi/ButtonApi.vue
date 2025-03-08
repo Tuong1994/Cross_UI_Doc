@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { routePaths } from '@/router'
 import { ECodeElType } from '@/components/View/Code/enum'
 import { buttonCatalogIds } from '../../repository/catalogIds'
 import type { ComponentApi } from '@/common/type'

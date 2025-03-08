@@ -11,6 +11,7 @@ const usePaginationCatalogs = () => {
     { id: paginationCatalogIds.COLOR, title: 'Color' },
     { id: paginationCatalogIds.SHAPE, title: 'Shape' },
     { id: paginationCatalogIds.GHOST, title: 'Ghost' },
+    { id: paginationCatalogIds.CONTENT, title: 'Content' },
     { id: paginationCatalogIds.SIMPLE, title: 'Simple' }
   ]
 
