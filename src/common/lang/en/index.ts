@@ -2,6 +2,7 @@ import button_en from './button'
 import common_en from './common'
 import grid_en from './grid'
 import home_en from './home'
+import icon_en from './icon'
 import menu_en from './menu'
 import pagination_en from './pagination'
 import table_en from './table'
@@ -15,7 +16,8 @@ const en = {
   tabs: tabs_en,
   button: button_en,
   grid: grid_en,
-  pagination: pagination_en
+  pagination: pagination_en,
+  icon: icon_en
 }
 
 export type EN = typeof en

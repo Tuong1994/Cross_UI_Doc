@@ -1,22 +1,12 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { paginationCatalogIds } from '../../repository/catalogIds'
+import { ECodeElType } from '@/components/View/Code/enum'
 import type { ComponentApi } from '@/common/type'
 import TableLayout from '@/components/View/TableLayout/TableLayout.vue'
 import useLangStore from '@/stores/LangStore'
-import { ECodeElType } from '@/components/View/Code/enum'
 
 const t = useLangStore()
-
-// rootClassName?: string
-//   rootStyle?: StyleValue
-//   total?: number
-//   limit?: number
-//   ghost?: boolean
-//   simple?: boolean
-//   hasContent?: boolean
-//   color?: PaginationColor
-//   shape?: PaginationShape
 
 const dataSource = computed<ComponentApi[]>(() => [
   {

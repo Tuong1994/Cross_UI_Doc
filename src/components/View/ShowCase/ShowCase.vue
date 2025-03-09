@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { defineProps, ref } from 'vue';
+import { computed, defineProps, ref } from 'vue'
 import { Card, Space, Button, Tooltip, Icon, Divider, Typography } from '@/components/UI'
 import { iconName } from '@/components/UI/Icon/constant'
-import CodeBlock from '../Code/CodeBlock.vue';
-import useLayoutStore from '@/components/UI/Layout/LayoutStore';
+import CodeBlock from '../Code/CodeBlock.vue'
+import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 
 const { Paragraph } = Typography
 
 interface ShowCaseProps {
-  title?: string;
-  code: string;
+  title?: string
+  code: string
 }
 
 defineProps<ShowCaseProps>()
@@ -18,11 +18,13 @@ const layout = useLayoutStore()
 
 const showCode = ref<boolean>(false)
 
-const handleOpenCode = () => showCode.value = !showCode.value
+const rootClassName = computed<string>(() => `show-case show-case-${layout.theme}`)
+
+const handleOpenCode = () => (showCode.value = !showCode.value)
 </script>
 
 <template>
-  <Card rootClassName="show-case">
+  <Card :rootClassName="rootClassName">
     <template #head>
       <Paragraph :size="16" :weight="600">
         {{ title }}

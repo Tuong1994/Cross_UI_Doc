@@ -1,3 +1,10 @@
 .show-case {
-    margin-bottom: $m-3;
+  margin-bottom: $m-3;
+  border: unset;
+  box-shadow: 1px 0 5px $bg-gray;
+  transition: all $transition-time-sm $transition-fn;
+}
+
+.show-case-dark {
+  box-shadow: 1px 0 5px $bg-black;
 }

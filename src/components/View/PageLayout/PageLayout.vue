@@ -12,7 +12,7 @@ const { FlexRow, FlexCol } = Flex
 interface PageLayoutProps {
   title?: string
   desc?: string
-  importCode?: string
+  importCode?: string | string[]
 }
 
 defineProps<PageLayoutProps>()
@@ -34,7 +34,13 @@ const t = useLangStore()
   <Paragraph>
     {{ desc }}
   </Paragraph>
-  <Space aligns="middle" rootClassName="page-layout-import">
+  <div v-if="Array.isArray(importCode)" class="page-layout-import">
+    <Space v-for="(code, idx) in importCode" :key="idx" aligns="middle">
+      <Paragraph variant="secondary">Import</Paragraph>
+      <CodeLine :code="code" />
+    </Space>
+  </div>
+  <Space v-else aligns="middle" rootClassName="page-layout-import">
     <Paragraph variant="secondary">Import</Paragraph>
     <CodeLine :code="importCode as string" />
   </Space>

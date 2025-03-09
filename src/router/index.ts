@@ -101,6 +101,11 @@ const router = createRouter({
       component: () => import('../views/ButtonView.vue')
     },
     {
+      path: routePaths.ICON,
+      name: routeNames.ICON,
+      component: () => import('../views/IconView.vue')
+    },
+    {
       path: routePaths.GRID,
       name: routeNames.GRID,
       component: () => import('../views/GridView.vue')
