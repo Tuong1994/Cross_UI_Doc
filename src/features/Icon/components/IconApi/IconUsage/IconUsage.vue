@@ -40,7 +40,7 @@ const t = useLangStore()
     </Card>
     <Card rootClassName="section-space">
       <template #head>
-        <Paragraph italic variant="secondary">@/components/UI/Icon/constant</Paragraph>
+        <Paragraph italic variant="secondary">@/components/UI/Icon/constant.ts</Paragraph>
       </template>
       <template #body>
         <Paragraph>
