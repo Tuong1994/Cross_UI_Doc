@@ -124,6 +124,11 @@ const router = createRouter({
       path: routePaths.PAGINATION,
       name: routeNames.PAGINATION,
       component: () => import('../views/PaginationView.vue')
+    },
+    {
+      path: routePaths.FORM,
+      name: routeNames.FORM,
+      component: () => import('../views/FormView.vue')
     }
   ]
 })

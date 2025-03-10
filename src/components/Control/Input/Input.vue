@@ -8,7 +8,6 @@ import Icon from '@/components/UI/Icon/Icon.vue'
 import NoteMessage from '@/components/UI/NoteMessage/NoteMessage.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 import useLangStore from '@/stores/LangStore'
-import type { FormStore } from '../Form/FormStore'
 
 export interface InputProps {
   rootClassName?: string
