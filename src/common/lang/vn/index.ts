@@ -1,5 +1,6 @@
 import button_vn from './button'
 import common_vn from './common'
+import form_vn from './form'
 import grid_vn from './grid'
 import home_vn from './home'
 import icon_vn from './icon'
@@ -17,7 +18,8 @@ const vn = {
   button: button_vn,
   grid: grid_vn,
   pagination: pagination_vn,
-  icon: icon_vn
+  icon: icon_vn,
+  form: form_vn
 }
 
 export type VN = typeof vn

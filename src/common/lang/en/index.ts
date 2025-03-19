@@ -1,5 +1,6 @@
 import button_en from './button'
 import common_en from './common'
+import form_en from './form'
 import grid_en from './grid'
 import home_en from './home'
 import icon_en from './icon'
@@ -17,7 +18,8 @@ const en = {
   button: button_en,
   grid: grid_en,
   pagination: pagination_en,
-  icon: icon_en
+  icon: icon_en,
+  form: form_en
 }
 
 export type EN = typeof en

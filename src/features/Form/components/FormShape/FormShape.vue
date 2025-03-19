@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { Button, Card, Flex } from '@/components/UI'
 import { Form, Input, InputPassword } from '@/components/Control'
+import { Card, Button, Flex } from '@/components/UI'
 import { formCatalogIds } from '../../repository/catalogIds'
-import { formSizeCode } from './code'
-import type { ComponentSize } from '@/common/type'
+import { formShapeCode } from './code'
+import type { ControlShape } from '@/components/Control/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
@@ -22,20 +22,20 @@ const initialValues: Data = {
   password: ''
 }
 
-const sizes: ComponentSize[] = ['sm', 'md', 'lg']
+const shapes: ControlShape[] = ['round', 'square']
 
 const handleFinish = (data: Data) => console.log(data)
 </script>
 
 <template>
-  <AnchorContent :id="formCatalogIds.SIZE">
-    <ShowCase title="Size" :code="formSizeCode">
+  <AnchorContent :id="formCatalogIds.SHAPE">
+    <ShowCase title="Shape" :code="formShapeCode">
       <FlexRow>
-        <FlexCol v-for="size in sizes" :key="size" :span="8">
+        <FlexCol v-for="shape in shapes" :key="shape" :span="12">
           <Card>
             <template #body>
               <Form
-                :sizes="size"
+                :shape="shape"
                 :color="layout.color"
                 :initialValues="initialValues"
                 :autoFocusValidation="false"
@@ -47,7 +47,7 @@ const handleFinish = (data: Data) => console.log(data)
                 <InputPassword name="password">
                   <template #label>Password</template>
                 </InputPassword>
-                <Button type="submit">Submit</Button>
+                <Button type="submit" :shape="shape">Submit</Button>
               </Form>
             </template>
           </Card>
