@@ -8,6 +8,7 @@ import menu_en from './menu'
 import pagination_en from './pagination'
 import table_en from './table'
 import tabs_en from './tabs'
+import typography_en from './typography'
 
 const en = {
   common: common_en,
@@ -19,7 +20,8 @@ const en = {
   grid: grid_en,
   pagination: pagination_en,
   icon: icon_en,
-  form: form_en
+  form: form_en,
+  typography: typography_en
 }
 
 export type EN = typeof en

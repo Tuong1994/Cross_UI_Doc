@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
 import IconBasic from '@/features/Icon/components/IconBasic/IconBasic.vue'
-import IconUsage from '@/features/Icon/components/IconApi/IconUsage/IconUsage.vue'
+import IconUsage from '@/features/Icon/components/IconUsage/IconUsage.vue'
 import IconApi from '@/features/Icon/components/IconApi/IconApi.vue'
 
 const importCodes = [

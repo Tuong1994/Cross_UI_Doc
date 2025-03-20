@@ -8,6 +8,7 @@ import menu_vn from './menu'
 import pagination_vn from './pagination'
 import table_vn from './table'
 import tabs_vn from './tabs'
+import typography_vn from './typography'
 
 const vn = {
   common: common_vn,
@@ -19,7 +20,8 @@ const vn = {
   grid: grid_vn,
   pagination: pagination_vn,
   icon: icon_vn,
-  form: form_vn
+  form: form_vn,
+  typography: typography_vn
 }
 
 export type VN = typeof vn

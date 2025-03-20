@@ -106,6 +106,11 @@ const router = createRouter({
       component: () => import('../views/IconView.vue')
     },
     {
+      path: routePaths.TYPOGRAPHY,
+      name: routeNames.TYPOGRAPHY,
+      component: () => import('../views/TypographyView.vue')
+    },
+    {
       path: routePaths.GRID,
       name: routeNames.GRID,
       component: () => import('../views/GridView.vue')
@@ -129,7 +134,7 @@ const router = createRouter({
       path: routePaths.FORM,
       name: routeNames.FORM,
       component: () => import('../views/FormView.vue')
-    }
+    },
   ]
 })
 

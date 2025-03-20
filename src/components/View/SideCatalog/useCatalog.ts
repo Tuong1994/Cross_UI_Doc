@@ -9,6 +9,7 @@ import useGridCatalogs from '@/features/Grid/hooks/useGridCatalogs'
 import usePaginationCatalogs from '@/features/Pagination/hooks/usePaginationCatalogs'
 import useIconCatalogs from '@/features/Icon/hooks/useIconCatalogs'
 import useFormCatalogs from '@/features/Form/hooks/useFormCatalogs'
+import useTypographyCatalogs from '@/features/Typography/hooks/useTypographyCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -18,6 +19,8 @@ const useCatalog = () => {
   const buttonCatalogs = useButtonCatalogs()
 
   const iconCatalogs = useIconCatalogs()
+
+  const typographyCatalogs = useTypographyCatalogs()
 
   const gridCatalogs = useGridCatalogs()
 
@@ -33,6 +36,7 @@ const useCatalog = () => {
     const routeName = currentRoute.value.name
     if (routeName === routeNames.BUTTON) return catalogStore.setCatalogs(buttonCatalogs.value)
     if (routeName === routeNames.ICON) return catalogStore.setCatalogs(iconCatalogs.value)
+    if (routeName === routeNames.TYPOGRAPHY) return catalogStore.setCatalogs(typographyCatalogs.value)
     if (routeName === routeNames.GRID) return catalogStore.setCatalogs(gridCatalogs.value)
     if (routeName === routeNames.PAGINATION) return catalogStore.setCatalogs(paginationCatalogs.value)
     if (routeName === routeNames.FORM) return catalogStore.setCatalogs(formCatalogs.value)

@@ -36,12 +36,10 @@ const t = useLangStore()
   </Paragraph>
   <div v-if="Array.isArray(importCode)" class="page-layout-import">
     <Space v-for="(code, idx) in importCode" :key="idx" aligns="middle">
-      <Paragraph variant="secondary">Import</Paragraph>
       <CodeLine :code="code" />
     </Space>
   </div>
   <Space v-else aligns="middle" rootClassName="page-layout-import">
-    <Paragraph variant="secondary">Import</Paragraph>
     <CodeLine :code="importCode as string" />
   </Space>
   <Paragraph :size="18" :weight="600">
