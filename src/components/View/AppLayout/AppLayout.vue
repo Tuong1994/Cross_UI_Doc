@@ -36,7 +36,7 @@ const showCatalog = computed<boolean>(() =>
       <Content>
         <Section>
           <FlexRow>
-            <FlexCol :xs="24" :md="24" :lg="24" :span="20">
+            <FlexCol :xs="24" :md="24" :lg="24" :span="showCatalog ? 20 : 24">
               <slot></slot>
             </FlexCol>
           </FlexRow>
