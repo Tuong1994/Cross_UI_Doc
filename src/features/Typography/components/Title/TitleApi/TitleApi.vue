@@ -14,9 +14,8 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'level',
     desc: t.lang.typography.api.titleDesc.level,
     type: {
-      elType: ECodeElType.ANCHOR,
-      link: typographyCatalogIds.TITLE_LEVEL_API,
-      codes: ['TitleLevel']
+      elType: ECodeElType.DEFAULT,
+      codes: ['1', '2', '3', '4', '5', '6']
     },
     required: t.lang.common.required.no,
     default: '1'
@@ -26,9 +25,8 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'aligns',
     desc: t.lang.typography.api.titleDesc.aligns,
     type: {
-      elType: ECodeElType.ANCHOR,
-      link: typographyCatalogIds.TITLE_ALIGNS_API,
-      codes: ['TitleAligns']
+      elType: ECodeElType.DEFAULT,
+      codes: ['left', 'center', 'right']
     },
     required: t.lang.common.required.no,
     default: 'left'
@@ -38,9 +36,8 @@ const dataSource = computed<ComponentApi[]>(() => [
     props: 'variant',
     desc: t.lang.typography.api.titleDesc.variant,
     type: {
-      elType: ECodeElType.ANCHOR,
-      link: typographyCatalogIds.TITLE_VARIANT_API,
-      codes: ['TitleVariant']
+      elType: ECodeElType.DEFAULT,
+      codes: ['default', 'secondary', 'success', 'warning', 'danger']
     },
     required: t.lang.common.required.no,
     default: 'default'

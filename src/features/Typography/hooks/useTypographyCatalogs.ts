@@ -14,14 +14,22 @@ const useTypographyCatalogs = () => {
     { id: typographyCatalogIds.TITLE_WEIGHT, title: 'Title weight' },
     { id: typographyCatalogIds.TITLE_ITALIC, title: 'Title italic' },
     { id: typographyCatalogIds.TITLE_UNDERLINE, title: 'Title underline' },
-    { id: typographyCatalogIds.TITLE_REMOVE, title: 'Title remove' }
+    { id: typographyCatalogIds.TITLE_REMOVE, title: 'Title remove' },
+    { id: typographyCatalogIds.PARAGRAPH_BASIC, title: 'Paragraph basic' },
+    { id: typographyCatalogIds.PARAGRAPH_SIZE, title: 'Paragraph size' },
+    { id: typographyCatalogIds.PARAGRAPH_STRONG, title: 'Paragraph strong' },
+    { id: typographyCatalogIds.PARAGRAPH_MARK, title: 'Paragraph mark' },
+    { id: typographyCatalogIds.PARAGRAPH_LINE_HEIGHT, title: 'Paragraph line height' },
+    { id: typographyCatalogIds.PARAGRAPH_VARIANT, title: 'Paragraph variant' },
+    { id: typographyCatalogIds.PARAGRAPH_ALIGNS, title: 'Paragraph aligns' },
+    { id: typographyCatalogIds.PARAGRAPH_WEIGHT, title: 'Paragraph weight' },
+    { id: typographyCatalogIds.PARAGRAPH_ITALIC, title: 'Paragraph italic' },
+    { id: typographyCatalogIds.PARAGRAPH_UNDERLINE, title: 'Paragraph underline' },
+    { id: typographyCatalogIds.PARAGRAPH_REMOVE, title: 'Paragraph remove' }
   ]
 
   const apiCatalogs: CatalogItems = [
     { id: typographyCatalogIds.TITLE_API, title: 'Title' },
-    { id: typographyCatalogIds.TITLE_LEVEL_API, title: 'Title level' },
-    { id: typographyCatalogIds.TITLE_VARIANT_API, title: 'Title variant' },
-    { id: typographyCatalogIds.TITLE_ALIGNS_API, title: 'Title aligns' },
     { id: typographyCatalogIds.PARAGRAPH_API, title: 'Paragraph' }
   ]
 
