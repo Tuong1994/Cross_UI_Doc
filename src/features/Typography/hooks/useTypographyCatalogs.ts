@@ -19,6 +19,9 @@ const useTypographyCatalogs = () => {
 
   const apiCatalogs: CatalogItems = [
     { id: typographyCatalogIds.TITLE_API, title: 'Title' },
+    { id: typographyCatalogIds.TITLE_LEVEL_API, title: 'Title level' },
+    { id: typographyCatalogIds.TITLE_VARIANT_API, title: 'Title variant' },
+    { id: typographyCatalogIds.TITLE_ALIGNS_API, title: 'Title aligns' },
     { id: typographyCatalogIds.PARAGRAPH_API, title: 'Paragraph' }
   ]
 

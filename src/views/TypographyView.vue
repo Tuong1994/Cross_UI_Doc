@@ -1,7 +1,14 @@
 <script setup lang="ts">
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
+import TitleAligns from '@/features/Typography/components/Title/TitleAligns/TitleAligns.vue'
 import TitleBasic from '@/features/Typography/components/Title/TitleBasic/TitleBasic.vue'
+import TitleItalic from '@/features/Typography/components/Title/TitleItalic/TitleItalic.vue'
 import TitleLevel from '@/features/Typography/components/Title/TitleLevel/TitleLevel.vue'
+import TitleUnderline from '@/features/Typography/components/Title/TitleUnderline/TitleUnderline.vue'
+import TitleVariant from '@/features/Typography/components/Title/TitleVariant/TitleVariant.vue'
+import TitleWeight from '@/features/Typography/components/Title/TitleWeight/TitleWeight.vue'
+import TitleRemove from '@/features/Typography/components/Title/TitleRemove/TitleRemove.vue'
+import TitleApi from '@/features/Typography/components/Title/TitleApi/TitleApi.vue'
 import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
@@ -17,7 +24,15 @@ const importCodes = [
     <template #showcase>
       <TitleBasic />
       <TitleLevel />
+      <TitleVariant />
+      <TitleAligns />
+      <TitleWeight />
+      <TitleItalic />
+      <TitleUnderline />
+      <TitleRemove />
     </template>
-    <template #api></template>
+    <template #api>
+      <TitleApi />
+    </template>
   </PageLayout>
 </template>
