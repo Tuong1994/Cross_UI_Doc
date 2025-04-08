@@ -12,8 +12,10 @@ import TitleApi from '@/features/Typography/components/Title/TitleApi/TitleApi.v
 import ParagraphBasic from '@/features/Typography/components/Paragraph/ParagraphBasic/ParagraphBasic.vue'
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
 import ParagraphSize from '@/features/Typography/components/Paragraph/ParagraphSize/ParagraphSize.vue'
-
+import ParagraphStrong from '@/features/Typography/components/Paragraph/ParagraphStrong/ParagraphStrong.vue'
+import ParagraphMark from '@/features/Typography/components/Paragraph/ParagraphMark/ParagraphMark.vue'
 import useLangStore from '@/stores/LangStore'
+
 
 const t = useLangStore()
 
@@ -37,6 +39,8 @@ const importCodes = [
       <Divider />
       <ParagraphBasic />
       <ParagraphSize />
+      <ParagraphStrong />
+      <ParagraphMark />
     </template>
     <template #api>
       <TitleApi />
