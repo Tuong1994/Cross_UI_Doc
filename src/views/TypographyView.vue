@@ -14,8 +14,15 @@ import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
 import ParagraphSize from '@/features/Typography/components/Paragraph/ParagraphSize/ParagraphSize.vue'
 import ParagraphStrong from '@/features/Typography/components/Paragraph/ParagraphStrong/ParagraphStrong.vue'
 import ParagraphMark from '@/features/Typography/components/Paragraph/ParagraphMark/ParagraphMark.vue'
+import ParagraphLineHeight from '@/features/Typography/components/Paragraph/ParagraphLineHeight/ParagraphLineHeight.vue'
+import ParagraphVariant from '@/features/Typography/components/Paragraph/ParagraphVariant/ParagraphVariant.vue'
+import ParagraphAligns from '@/features/Typography/components/Paragraph/ParagraphAligns/ParagraphAligns.vue'
+import ParagraphWeight from '@/features/Typography/components/Paragraph/ParagraphWeight/ParagraphWeight.vue'
+import ParagraphItalic from '@/features/Typography/components/Paragraph/ParagraphItalic/ParagraphItalic.vue'
+import ParagraphUnderline from '@/features/Typography/components/Paragraph/ParagraphUnderline/ParagraphUnderline.vue'
+import ParagraphRemove from '@/features/Typography/components/Paragraph/ParagraphRemove/ParagraphRemove.vue'
+import ParagraphApi from '@/features/Typography/components/Paragraph/ParagraphApi/ParagraphApi.vue'
 import useLangStore from '@/stores/LangStore'
-
 
 const t = useLangStore()
 
@@ -41,9 +48,17 @@ const importCodes = [
       <ParagraphSize />
       <ParagraphStrong />
       <ParagraphMark />
+      <ParagraphLineHeight />
+      <ParagraphVariant />
+      <ParagraphAligns />
+      <ParagraphWeight />
+      <ParagraphItalic />
+      <ParagraphUnderline />
+      <ParagraphRemove />
     </template>
     <template #api>
       <TitleApi />
+      <ParagraphApi />
     </template>
   </PageLayout>
 </template>

@@ -10,20 +10,9 @@ const t = useLangStore()
 
 const dataSource = computed<ComponentApi[]>(() => [
   {
-    id: 'level',
-    props: 'level',
-    desc: t.lang.typography.api.titleDesc.level,
-    type: {
-      elType: ECodeElType.DEFAULT,
-      codes: ['1', '2', '3', '4', '5', '6']
-    },
-    required: t.lang.common.required.no,
-    default: '1'
-  },
-  {
     id: 'aligns',
     props: 'aligns',
-    desc: t.lang.typography.api.titleDesc.aligns,
+    desc: t.lang.typography.api.paragraphDesc.aligns,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['left', 'center', 'right', 'justify']
@@ -32,9 +21,53 @@ const dataSource = computed<ComponentApi[]>(() => [
     default: 'left'
   },
   {
+    id: 'size',
+    props: 'size',
+    desc: t.lang.typography.api.paragraphDesc.size,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['number']
+    },
+    required: t.lang.common.required.no,
+    default: '14'
+  },
+  {
+    id: 'lineHeight',
+    props: 'lineHeight',
+    desc: t.lang.typography.api.paragraphDesc.lineHeight,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['number']
+    },
+    required: t.lang.common.required.no,
+    default: '25'
+  },
+  {
+    id: 'mark',
+    props: 'mark',
+    desc: t.lang.typography.api.paragraphDesc.mark,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'strong',
+    props: 'strong',
+    desc: t.lang.typography.api.paragraphDesc.strong,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
     id: 'variant',
     props: 'variant',
-    desc: t.lang.typography.api.titleDesc.variant,
+    desc: t.lang.typography.api.paragraphDesc.variant,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['default', 'secondary', 'success', 'warning', 'danger']
@@ -45,18 +78,18 @@ const dataSource = computed<ComponentApi[]>(() => [
   {
     id: 'weight',
     props: 'weight',
-    desc: t.lang.typography.api.titleDesc.weight,
+    desc: t.lang.typography.api.paragraphDesc.weight,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['number']
     },
     required: t.lang.common.required.no,
-    default: '500'
+    default: '400'
   },
   {
     id: 'italic',
     props: 'italic',
-    desc: t.lang.typography.api.titleDesc.italic,
+    desc: t.lang.typography.api.paragraphDesc.italic,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['boolean']
@@ -67,7 +100,7 @@ const dataSource = computed<ComponentApi[]>(() => [
   {
     id: 'underline',
     props: 'underline',
-    desc: t.lang.typography.api.titleDesc.underline,
+    desc: t.lang.typography.api.paragraphDesc.underline,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['boolean']
@@ -78,7 +111,7 @@ const dataSource = computed<ComponentApi[]>(() => [
   {
     id: 'remove',
     props: 'remove',
-    desc: t.lang.typography.api.titleDesc.remove,
+    desc: t.lang.typography.api.paragraphDesc.remove,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['boolean']
@@ -89,7 +122,7 @@ const dataSource = computed<ComponentApi[]>(() => [
   {
     id: 'rootClassName',
     props: 'rootClassName',
-    desc: t.lang.typography.api.titleDesc.rootClassName,
+    desc: t.lang.typography.api.paragraphDesc.rootClassName,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['string']
@@ -100,7 +133,7 @@ const dataSource = computed<ComponentApi[]>(() => [
   {
     id: 'rootStyle',
     props: 'rootStyle',
-    desc: t.lang.typography.api.titleDesc.rootStyle,
+    desc: t.lang.typography.api.paragraphDesc.rootStyle,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['StyleValue']
@@ -112,10 +145,5 @@ const dataSource = computed<ComponentApi[]>(() => [
 </script>
 
 <template>
-  <TableLayout
-    title="Title"
-    rootClassName="section-space"
-    :id="typographyCatalogIds.TITLE_API"
-    :dataSource="dataSource"
-  />
+  <TableLayout title="Paragraph" :dataSource="dataSource" :id="typographyCatalogIds.PARAGRAPH_API" />
 </template>
