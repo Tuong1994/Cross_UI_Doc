@@ -1,5 +1,6 @@
 import button_vn from './button'
 import common_vn from './common'
+import divider_vn from './divider'
 import form_vn from './form'
 import grid_vn from './grid'
 import home_vn from './home'
@@ -21,7 +22,8 @@ const vn = {
   pagination: pagination_vn,
   icon: icon_vn,
   form: form_vn,
-  typography: typography_vn
+  typography: typography_vn,
+  divider: divider_vn
 }
 
 export type VN = typeof vn

@@ -111,6 +111,11 @@ const router = createRouter({
       component: () => import('../views/TypographyView.vue')
     },
     {
+      path: routePaths.DIVIDER,
+      name: routeNames.DIVIDER,
+      component: () => import('../views/DividerView.vue')
+    },
+    {
       path: routePaths.GRID,
       name: routeNames.GRID,
       component: () => import('../views/GridView.vue')
