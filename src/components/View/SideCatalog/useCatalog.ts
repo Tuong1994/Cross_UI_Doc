@@ -11,6 +11,7 @@ import useIconCatalogs from '@/features/Icon/hooks/useIconCatalogs'
 import useFormCatalogs from '@/features/Form/hooks/useFormCatalogs'
 import useTypographyCatalogs from '@/features/Typography/hooks/useTypographyCatalogs'
 import useDividerCatalogs from '@/features/Divider/hooks/useDividerCatalogs'
+import useFlexCatalogs from '@/features/Flex/hooks/useFlexCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -24,6 +25,8 @@ const useCatalog = () => {
   const typographyCatalogs = useTypographyCatalogs()
 
   const dividerCatalogs = useDividerCatalogs()
+
+  const flexCatalogs = useFlexCatalogs()
 
   const gridCatalogs = useGridCatalogs()
 
@@ -41,6 +44,7 @@ const useCatalog = () => {
     if (routeName === routeNames.ICON) return catalogStore.setCatalogs(iconCatalogs.value)
     if (routeName === routeNames.TYPOGRAPHY) return catalogStore.setCatalogs(typographyCatalogs.value)
     if (routeName === routeNames.DIVIDER) return catalogStore.setCatalogs(dividerCatalogs.value)
+    if (routeName === routeNames.FLEX) return catalogStore.setCatalogs(flexCatalogs.value)
     if (routeName === routeNames.GRID) return catalogStore.setCatalogs(gridCatalogs.value)
     if (routeName === routeNames.PAGINATION) return catalogStore.setCatalogs(paginationCatalogs.value)
     if (routeName === routeNames.FORM) return catalogStore.setCatalogs(formCatalogs.value)

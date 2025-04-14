@@ -1,6 +1,7 @@
 import button_en from './button'
 import common_en from './common'
 import divider_en from './divider'
+import flex_en from './flex'
 import form_en from './form'
 import grid_en from './grid'
 import home_en from './home'
@@ -23,7 +24,8 @@ const en = {
   icon: icon_en,
   form: form_en,
   typography: typography_en,
-  divider: divider_en
+  divider: divider_en,
+  flex: flex_en
 }
 
 export type EN = typeof en

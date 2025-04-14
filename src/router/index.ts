@@ -116,6 +116,11 @@ const router = createRouter({
       component: () => import('../views/DividerView.vue')
     },
     {
+      path: routePaths.FLEX,
+      name: routeNames.FLEX,
+      component: () => import('../views/FlexView.vue')
+    },
+    {
       path: routePaths.GRID,
       name: routeNames.GRID,
       component: () => import('../views/GridView.vue')
