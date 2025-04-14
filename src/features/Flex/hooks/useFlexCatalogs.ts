@@ -6,7 +6,12 @@ import useLangStore from '@/stores/LangStore'
 const useFlexCatalogs = () => {
   const t = useLangStore()
 
-  const examplesCatalogs: CatalogItems = [{ id: flexCatalogIds.BASIC, title: 'Basic' }]
+  const examplesCatalogs: CatalogItems = [
+    { id: flexCatalogIds.BASIC, title: 'Basic' },
+    { id: flexCatalogIds.JUSTIFY, title: 'Justify' },
+    { id: flexCatalogIds.ALIGNS, title: 'Aligns' },
+    { id: flexCatalogIds.GUTTERS, title: 'Gutters' },
+  ]
 
   const apiCatalogs: CatalogItems = [{ id: flexCatalogIds.FLEX_API, title: 'Flex' }]
 
