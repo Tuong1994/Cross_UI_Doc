@@ -1,43 +1,43 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { dividerCatalogIds } from '@/features/Divider/repository/catalogIds'
+import { flexCatalogIds } from '@/features/Flex/repository/catalogIds'
 import { ECodeElType } from '@/components/View/Code/enum'
 import type { ComponentApi } from '@/common/type'
-import useLangStore from '@/stores/LangStore'
 import TableLayout from '@/components/View/TableLayout/TableLayout.vue'
+import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 
 const dataSource = computed<ComponentApi[]>(() => [
   {
-    id: 'type',
-    props: 'type',
-    desc: t.lang.divider.api.dividerDesc.type,
+    id: 'justify',
+    props: 'justify',
+    desc: t.lang.flex.api.flexRowDesc.justify,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['horizontal', 'vertical']
+      codes: ['start', 'center', 'end', 'between', 'around', 'evenly']
     },
     required: t.lang.common.required.no,
-    default: 'horizontal'
+    default: 'start'
   },
   {
-    id: 'placement',
-    props: 'placement',
-    desc: t.lang.divider.api.dividerDesc.placement,
+    id: 'aligns',
+    props: 'aligns',
+    desc: t.lang.flex.api.flexRowDesc.aligns,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['left', 'center', 'right']
+      codes: ['top', 'middle', 'bottom', 'baseline']
     },
     required: t.lang.common.required.no,
-    default: 'left'
+    default: 'top'
   },
   {
-    id: 'plain',
-    props: 'plain',
-    desc: t.lang.divider.api.dividerDesc.plain,
+    id: 'gutters',
+    props: 'gutters',
+    desc: t.lang.flex.api.flexRowDesc.gutters,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['boolean']
+      codes: ['[number?, number?]']
     },
     required: t.lang.common.required.no,
     default: '-'
@@ -45,7 +45,7 @@ const dataSource = computed<ComponentApi[]>(() => [
   {
     id: 'rootClassName',
     props: 'rootClassName',
-    desc: t.lang.divider.api.dividerDesc.rootClassName,
+    desc: t.lang.flex.api.flexRowDesc.rootClassName,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['string']
@@ -56,17 +56,22 @@ const dataSource = computed<ComponentApi[]>(() => [
   {
     id: 'rootStyle',
     props: 'rootStyle',
-    desc: t.lang.divider.api.dividerDesc.rootStyle,
+    desc: t.lang.flex.api.flexRowDesc.rootStyle,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['StyleValue']
     },
     required: t.lang.common.required.no,
     default: '-'
-  },
+  }
 ])
 </script>
 
 <template>
-  <TableLayout title="Divider" :dataSource="dataSource" :id="dividerCatalogIds.DIVIDER_API" />
+  <TableLayout
+    title="Flex row"
+    rootClassName="section-space"
+    :dataSource="dataSource"
+    :id="flexCatalogIds.FLEX_ROW_API"
+  />
 </template>

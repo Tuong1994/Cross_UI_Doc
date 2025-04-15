@@ -10,10 +10,13 @@ const useFlexCatalogs = () => {
     { id: flexCatalogIds.BASIC, title: 'Basic' },
     { id: flexCatalogIds.JUSTIFY, title: 'Justify' },
     { id: flexCatalogIds.ALIGNS, title: 'Aligns' },
-    { id: flexCatalogIds.GUTTERS, title: 'Gutters' },
+    { id: flexCatalogIds.GUTTERS, title: 'Gutters' }
   ]
 
-  const apiCatalogs: CatalogItems = [{ id: flexCatalogIds.FLEX_API, title: 'Flex' }]
+  const apiCatalogs: CatalogItems = [
+    { id: flexCatalogIds.FLEX_ROW_API, title: 'Flex row' },
+    { id: flexCatalogIds.FLEX_COL_API, title: 'Flex col' }
+  ]
 
   const flexCatalogs = computed<Catalog[]>(() => [
     { id: 'examples', groupTitle: t.lang.common.examples, items: examplesCatalogs },
