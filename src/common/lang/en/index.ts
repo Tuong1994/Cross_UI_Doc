@@ -8,6 +8,7 @@ import home_en from './home'
 import icon_en from './icon'
 import menu_en from './menu'
 import pagination_en from './pagination'
+import space_en from './space'
 import table_en from './table'
 import tabs_en from './tabs'
 import typography_en from './typography'
@@ -25,7 +26,8 @@ const en = {
   form: form_en,
   typography: typography_en,
   divider: divider_en,
-  flex: flex_en
+  flex: flex_en,
+  space: space_en,
 }
 
 export type EN = typeof en

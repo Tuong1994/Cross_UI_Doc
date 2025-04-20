@@ -12,6 +12,7 @@ import useFormCatalogs from '@/features/Form/hooks/useFormCatalogs'
 import useTypographyCatalogs from '@/features/Typography/hooks/useTypographyCatalogs'
 import useDividerCatalogs from '@/features/Divider/hooks/useDividerCatalogs'
 import useFlexCatalogs from '@/features/Flex/hooks/useFlexCatalogs'
+import useSpaceCatalogs from '@/features/Space/hooks/useSpaceCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -30,6 +31,8 @@ const useCatalog = () => {
 
   const gridCatalogs = useGridCatalogs()
 
+  const spaceCatalogs = useSpaceCatalogs()
+
   const paginationCatalogs = usePaginationCatalogs()
 
   const formCatalogs = useFormCatalogs()
@@ -46,6 +49,7 @@ const useCatalog = () => {
     if (routeName === routeNames.DIVIDER) return catalogStore.setCatalogs(dividerCatalogs.value)
     if (routeName === routeNames.FLEX) return catalogStore.setCatalogs(flexCatalogs.value)
     if (routeName === routeNames.GRID) return catalogStore.setCatalogs(gridCatalogs.value)
+    if (routeName === routeNames.SPACE) return catalogStore.setCatalogs(spaceCatalogs.value)
     if (routeName === routeNames.PAGINATION) return catalogStore.setCatalogs(paginationCatalogs.value)
     if (routeName === routeNames.FORM) return catalogStore.setCatalogs(formCatalogs.value)
     if (routeName === routeNames.TABS) return catalogStore.setCatalogs(tabsCatalogs.value)

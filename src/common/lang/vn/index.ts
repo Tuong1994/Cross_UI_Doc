@@ -8,6 +8,7 @@ import home_vn from './home'
 import icon_vn from './icon'
 import menu_vn from './menu'
 import pagination_vn from './pagination'
+import space_vn from './space'
 import table_vn from './table'
 import tabs_vn from './tabs'
 import typography_vn from './typography'
@@ -25,7 +26,8 @@ const vn = {
   form: form_vn,
   typography: typography_vn,
   divider: divider_vn,
-  flex: flex_vn
+  flex: flex_vn,
+  space: space_vn
 }
 
 export type VN = typeof vn
