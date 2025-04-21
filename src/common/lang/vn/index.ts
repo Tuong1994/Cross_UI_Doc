@@ -1,3 +1,4 @@
+import breadcrumb_vn from './breadcrumb'
 import button_vn from './button'
 import common_vn from './common'
 import divider_vn from './divider'
@@ -27,7 +28,8 @@ const vn = {
   typography: typography_vn,
   divider: divider_vn,
   flex: flex_vn,
-  space: space_vn
+  space: space_vn,
+  breadcrumb: breadcrumb_vn
 }
 
 export type VN = typeof vn

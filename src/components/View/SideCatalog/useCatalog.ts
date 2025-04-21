@@ -13,6 +13,7 @@ import useTypographyCatalogs from '@/features/Typography/hooks/useTypographyCata
 import useDividerCatalogs from '@/features/Divider/hooks/useDividerCatalogs'
 import useFlexCatalogs from '@/features/Flex/hooks/useFlexCatalogs'
 import useSpaceCatalogs from '@/features/Space/hooks/useSpaceCatalogs'
+import useBreadcrumbCatalogs from '@/features/Breadcrumb/hooks/useBreadcrumbCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -33,6 +34,8 @@ const useCatalog = () => {
 
   const spaceCatalogs = useSpaceCatalogs()
 
+  const breadcrumbCatalogs = useBreadcrumbCatalogs()
+
   const paginationCatalogs = usePaginationCatalogs()
 
   const formCatalogs = useFormCatalogs()
@@ -50,6 +53,7 @@ const useCatalog = () => {
     if (routeName === routeNames.FLEX) return catalogStore.setCatalogs(flexCatalogs.value)
     if (routeName === routeNames.GRID) return catalogStore.setCatalogs(gridCatalogs.value)
     if (routeName === routeNames.SPACE) return catalogStore.setCatalogs(spaceCatalogs.value)
+    if (routeName === routeNames.BREADCRUMB) return catalogStore.setCatalogs(breadcrumbCatalogs.value)
     if (routeName === routeNames.PAGINATION) return catalogStore.setCatalogs(paginationCatalogs.value)
     if (routeName === routeNames.FORM) return catalogStore.setCatalogs(formCatalogs.value)
     if (routeName === routeNames.TABS) return catalogStore.setCatalogs(tabsCatalogs.value)

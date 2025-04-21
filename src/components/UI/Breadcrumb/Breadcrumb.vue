@@ -12,7 +12,7 @@ export interface BreadcrumbProps {
   items?: BreadcrumbItems
 }
 
-const props = withDefaults(defineProps<BreadcrumbProps>(), {
+withDefaults(defineProps<BreadcrumbProps>(), {
   rootClassName: '',
   itemClassName: '',
   items: () => []

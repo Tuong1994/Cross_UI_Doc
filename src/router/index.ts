@@ -131,6 +131,11 @@ const router = createRouter({
       component: () => import('../views/SpaceView.vue')
     },
     {
+      path: routePaths.BREADCRUMB,
+      name: routeNames.BREADCRUMB,
+      component: () => import('../views/BreadcrumbView.vue')
+    },
+    {
       path: routePaths.TABS,
       name: routeNames.TABS,
       component: () => import('../views/TabsView.vue')

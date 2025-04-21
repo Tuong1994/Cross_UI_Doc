@@ -1,3 +1,4 @@
+import breadcrumb_en from './breadcrumb'
 import button_en from './button'
 import common_en from './common'
 import divider_en from './divider'
@@ -28,6 +29,7 @@ const en = {
   divider: divider_en,
   flex: flex_en,
   space: space_en,
+  breadcrumb: breadcrumb_en
 }
 
 export type EN = typeof en
