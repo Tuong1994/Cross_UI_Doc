@@ -2,6 +2,7 @@ import breadcrumb_vn from './breadcrumb'
 import button_vn from './button'
 import common_vn from './common'
 import divider_vn from './divider'
+import dropdown_vn from './dropdown'
 import flex_vn from './flex'
 import form_vn from './form'
 import grid_vn from './grid'
@@ -29,7 +30,8 @@ const vn = {
   divider: divider_vn,
   flex: flex_vn,
   space: space_vn,
-  breadcrumb: breadcrumb_vn
+  breadcrumb: breadcrumb_vn,
+  dropdown: dropdown_vn
 }
 
 export type VN = typeof vn

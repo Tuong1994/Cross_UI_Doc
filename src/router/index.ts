@@ -136,6 +136,11 @@ const router = createRouter({
       component: () => import('../views/BreadcrumbView.vue')
     },
     {
+      path: routePaths.DROPDOWN,
+      name: routeNames.DROPDOWN,
+      component: () => import('../views/DropdownView.vue')
+    },
+    {
       path: routePaths.TABS,
       name: routeNames.TABS,
       component: () => import('../views/TabsView.vue')
