@@ -15,6 +15,7 @@ import useFlexCatalogs from '@/features/Flex/hooks/useFlexCatalogs'
 import useSpaceCatalogs from '@/features/Space/hooks/useSpaceCatalogs'
 import useBreadcrumbCatalogs from '@/features/Breadcrumb/hooks/useBreadcrumbCatalogs'
 import useDropdownCatalogs from '@/features/Dropdown/hooks/useDropdownCatalogs'
+import useAvatarCatalogs from '@/features/Avatar/hooks/useAvatarCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -41,6 +42,8 @@ const useCatalog = () => {
 
   const paginationCatalogs = usePaginationCatalogs()
 
+  const avatarCatalogs = useAvatarCatalogs()
+
   const formCatalogs = useFormCatalogs()
 
   const tableCatalogs = useTableCatalogs()
@@ -59,6 +62,7 @@ const useCatalog = () => {
     if (routeName === routeNames.BREADCRUMB) return catalogStore.setCatalogs(breadcrumbCatalogs.value)
     if (routeName === routeNames.DROPDOWN) return catalogStore.setCatalogs(dropdownCatalogs.value)
     if (routeName === routeNames.PAGINATION) return catalogStore.setCatalogs(paginationCatalogs.value)
+    if (routeName === routeNames.AVATAR) return catalogStore.setCatalogs(avatarCatalogs.value)
     if (routeName === routeNames.FORM) return catalogStore.setCatalogs(formCatalogs.value)
     if (routeName === routeNames.TABS) return catalogStore.setCatalogs(tabsCatalogs.value)
     if (routeName === routeNames.TABLE) return catalogStore.setCatalogs(tableCatalogs.value)

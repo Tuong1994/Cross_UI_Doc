@@ -156,6 +156,11 @@ const router = createRouter({
       component: () => import('../views/PaginationView.vue')
     },
     {
+      path: routePaths.AVATAR,
+      name: routeNames.AVATAR,
+      component: () => import('../views/AvatarView.vue')
+    },
+    {
       path: routePaths.FORM,
       name: routeNames.FORM,
       component: () => import('../views/FormView.vue')

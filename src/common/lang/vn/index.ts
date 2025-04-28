@@ -1,3 +1,4 @@
+import avatar_vn from './avatar'
 import breadcrumb_vn from './breadcrumb'
 import button_vn from './button'
 import common_vn from './common'
@@ -31,7 +32,8 @@ const vn = {
   flex: flex_vn,
   space: space_vn,
   breadcrumb: breadcrumb_vn,
-  dropdown: dropdown_vn
+  dropdown: dropdown_vn,
+  avatar: avatar_vn
 }
 
 export type VN = typeof vn
