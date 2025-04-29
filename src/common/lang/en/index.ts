@@ -1,4 +1,5 @@
 import avatar_en from './avatar'
+import badge_en from './badge'
 import breadcrumb_en from './breadcrumb'
 import button_en from './button'
 import common_en from './common'
@@ -33,7 +34,8 @@ const en = {
   space: space_en,
   breadcrumb: breadcrumb_en,
   dropdown: dropdown_en,
-  avatar: avatar_en
+  avatar: avatar_en,
+  badge: badge_en
 }
 
 export type EN = typeof en

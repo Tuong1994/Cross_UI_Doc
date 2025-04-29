@@ -161,6 +161,11 @@ const router = createRouter({
       component: () => import('../views/AvatarView.vue')
     },
     {
+      path: routePaths.BADGE,
+      name: routeNames.BADGE,
+      component: () => import('../views/BadgeView.vue')
+    },
+    {
       path: routePaths.FORM,
       name: routeNames.FORM,
       component: () => import('../views/FormView.vue')
