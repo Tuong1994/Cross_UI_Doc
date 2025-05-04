@@ -1,4 +1,7 @@
 export const badgeCatalogIds = {
-    BASIC: 'basic',
-    BADGE_API: 'badge-api'
+  BASIC: 'basic',
+  COLOR: 'color',
+  GHOST: 'ghost',
+  SHAPE: 'shape',
+  BADGE_API: 'badge-api'
 } as const

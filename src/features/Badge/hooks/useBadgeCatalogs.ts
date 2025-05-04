@@ -6,7 +6,12 @@ import useLangStore from '@/stores/LangStore'
 const useBadgeCatalogs = () => {
   const t = useLangStore()
 
-  const examplesCatalogs: CatalogItems = [{ id: badgeCatalogIds.BASIC, title: 'Basic' }]
+  const examplesCatalogs: CatalogItems = [
+    { id: badgeCatalogIds.BASIC, title: 'Basic' },
+    { id: badgeCatalogIds.COLOR, title: 'Color' },
+    { id: badgeCatalogIds.GHOST, title: 'Ghost' },
+    { id: badgeCatalogIds.SHAPE, title: 'Shape' }
+  ]
 
   const apiCatalogs: CatalogItems = [{ id: badgeCatalogIds.BADGE_API, title: 'Badge' }]
 
