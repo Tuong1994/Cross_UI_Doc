@@ -2,6 +2,7 @@ import avatar_vn from './avatar'
 import badge_vn from './badge'
 import breadcrumb_vn from './breadcrumb'
 import button_vn from './button'
+import card_vn from './card'
 import common_vn from './common'
 import divider_vn from './divider'
 import dropdown_vn from './dropdown'
@@ -35,7 +36,8 @@ const vn = {
   breadcrumb: breadcrumb_vn,
   dropdown: dropdown_vn,
   avatar: avatar_vn,
-  badge: badge_vn
+  badge: badge_vn,
+  card: card_vn
 }
 
 export type VN = typeof vn

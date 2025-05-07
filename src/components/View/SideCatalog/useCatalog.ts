@@ -17,6 +17,7 @@ import useBreadcrumbCatalogs from '@/features/Breadcrumb/hooks/useBreadcrumbCata
 import useDropdownCatalogs from '@/features/Dropdown/hooks/useDropdownCatalogs'
 import useAvatarCatalogs from '@/features/Avatar/hooks/useAvatarCatalogs'
 import useBadgeCatalogs from '@/features/Badge/hooks/useBadgeCatalogs'
+import useCardCatalogs from '@/features/Card/hooks/useCardCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -47,6 +48,8 @@ const useCatalog = () => {
 
   const badgeCatalogs = useBadgeCatalogs()
 
+  const cardCatalogs = useCardCatalogs()
+
   const formCatalogs = useFormCatalogs()
 
   const tableCatalogs = useTableCatalogs()
@@ -67,6 +70,7 @@ const useCatalog = () => {
     if (routeName === routeNames.PAGINATION) return catalogStore.setCatalogs(paginationCatalogs.value)
     if (routeName === routeNames.AVATAR) return catalogStore.setCatalogs(avatarCatalogs.value)
     if (routeName === routeNames.BADGE) return catalogStore.setCatalogs(badgeCatalogs.value)
+    if (routeName === routeNames.CARD) return catalogStore.setCatalogs(cardCatalogs.value)
     if (routeName === routeNames.FORM) return catalogStore.setCatalogs(formCatalogs.value)
     if (routeName === routeNames.TABS) return catalogStore.setCatalogs(tabsCatalogs.value)
     if (routeName === routeNames.TABLE) return catalogStore.setCatalogs(tableCatalogs.value)
