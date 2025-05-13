@@ -3,6 +3,7 @@ import badge_en from './badge'
 import breadcrumb_en from './breadcrumb'
 import button_en from './button'
 import card_en from './card'
+import carousel_en from './carousel'
 import common_en from './common'
 import divider_en from './divider'
 import dropdown_en from './dropdown'
@@ -37,7 +38,8 @@ const en = {
   dropdown: dropdown_en,
   avatar: avatar_en,
   badge: badge_en,
-  card: card_en
+  card: card_en,
+  carousel: carousel_en
 }
 
 export type EN = typeof en
