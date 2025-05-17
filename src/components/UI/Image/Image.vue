@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, withDefaults, toRefs, type StyleValue } from 'vue'
 import type { ComponentSize } from '@/common/type.ts'
+import type { ControlColor } from '@/components/Control/type';
 import ImageLoading from './ImageLoading.vue'
 import ImageView from './ImageView.vue'
 
@@ -22,6 +23,7 @@ export interface ImageProps {
   hasView?: boolean
   hasRemove?: boolean
   hasCheck?: boolean
+  checkboxColor?: ControlColor
 }
 
 const props = withDefaults(defineProps<ImageProps>(), {
@@ -91,6 +93,7 @@ const handleCheck = (checked: boolean) => {
       :hasView="hasView"
       :hasRemove="hasRemove"
       :hasCheck="hasCheck"
+      :checkboxColor="checkboxColor"
       @onLoad="handleLoad"
       @onRemove="handleRemove"
       @onCheck="handleCheck"

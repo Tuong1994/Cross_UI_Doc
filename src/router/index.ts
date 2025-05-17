@@ -176,6 +176,11 @@ const router = createRouter({
       component: () => import('../views/CarouselView.vue')
     },
     {
+      path: routePaths.IMAGE,
+      name: routeNames.IMAGE,
+      component: () => import('../views/ImageView.vue')
+    },
+    {
       path: routePaths.FORM,
       name: routeNames.FORM,
       component: () => import('../views/FormView.vue')

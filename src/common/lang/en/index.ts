@@ -12,6 +12,7 @@ import form_en from './form'
 import grid_en from './grid'
 import home_en from './home'
 import icon_en from './icon'
+import image_en from './image'
 import menu_en from './menu'
 import pagination_en from './pagination'
 import space_en from './space'
@@ -39,7 +40,8 @@ const en = {
   avatar: avatar_en,
   badge: badge_en,
   card: card_en,
-  carousel: carousel_en
+  carousel: carousel_en,
+  image: image_en
 }
 
 export type EN = typeof en
