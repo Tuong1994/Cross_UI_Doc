@@ -4,6 +4,7 @@ import ImageBasic from '@/features/Image/components/ImageBasic/ImageBasic.vue'
 import ImageFeatures from '@/features/Image/components/ImageFeatures/ImageFeatures.vue'
 import ImageObjectFit from '@/features/Image/components/ImageObjectFit/ImageObjectFit.vue'
 import ImageSize from '@/features/Image/components/ImageSize/ImageSize.vue'
+import ImageApi from '@/features/Image/components/ImageApi/ImageApi.vue'
 import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
@@ -17,6 +18,8 @@ const t = useLangStore()
       <ImageObjectFit />
       <ImageFeatures />
     </template>
-    <template #api></template>
+    <template #api>
+      <ImageApi />
+    </template>
   </PageLayout>
 </template>

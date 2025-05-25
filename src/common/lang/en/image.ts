@@ -7,18 +7,18 @@ const image_en = {
   },
   api: {
     imageDesc: {
-      rootClassName: '',
-      rootStyle: '',
-      size: '',
-      imgWidth: '',
-      imgHeight: '',
-      objectFit: '',
-      lazyType: '',
-      src: '',
-      hasView: '',
-      hasRemove: '',
-      hasCheck: '',
-      checkboxColor: ''
+      rootClassName: 'Class name of container',
+      rootStyle: 'Inline style of container',
+      size: 'Size of image',
+      imgWidth: 'Width of image',
+      imgHeight: 'Height of image',
+      objectFit: 'Resized image to fit its container',
+      lazyType: 'Type of loading image',
+      src: 'URL of image need to show',
+      hasView: 'Enabled image viewer',
+      hasRemove: 'Enabled image removable',
+      hasCheck: 'Enabled image checkable',
+      checkboxColor: 'Image checkbox color'
     }
   }
 }
