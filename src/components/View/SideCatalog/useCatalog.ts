@@ -20,6 +20,7 @@ import useBadgeCatalogs from '@/features/Badge/hooks/useBadgeCatalogs'
 import useCardCatalogs from '@/features/Card/hooks/useCardCatalogs'
 import useCarouselCatalogs from '@/features/Carousel/hooks/useCarouselCatalogs'
 import useImageCatalogs from '@/features/Image/hooks/useImageCatalogs'
+import useListCatalogs from '@/features/List/hooks/useListCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -56,6 +57,8 @@ const useCatalog = () => {
 
   const imageCatalogs = useImageCatalogs()
 
+  const listCatalogs = useListCatalogs()
+
   const formCatalogs = useFormCatalogs()
 
   const tableCatalogs = useTableCatalogs()
@@ -79,6 +82,7 @@ const useCatalog = () => {
     if (routeName === routeNames.CARD) return catalogStore.setCatalogs(cardCatalogs.value)
     if (routeName === routeNames.CAROUSEL) return catalogStore.setCatalogs(carouselCatalogs.value)
     if (routeName === routeNames.IMAGE) return catalogStore.setCatalogs(imageCatalogs.value)
+    if (routeName === routeNames.LIST) return catalogStore.setCatalogs(listCatalogs.value)
     if (routeName === routeNames.FORM) return catalogStore.setCatalogs(formCatalogs.value)
     if (routeName === routeNames.TABS) return catalogStore.setCatalogs(tabsCatalogs.value)
     if (routeName === routeNames.TABLE) return catalogStore.setCatalogs(tableCatalogs.value)

@@ -13,6 +13,7 @@ import grid_vn from './grid'
 import home_vn from './home'
 import icon_vn from './icon'
 import image_vn from './image'
+import list_vn from './list'
 import menu_vn from './menu'
 import pagination_vn from './pagination'
 import space_vn from './space'
@@ -41,7 +42,8 @@ const vn = {
   badge: badge_vn,
   card: card_vn,
   carousel: carousel_vn,
-  image: image_vn
+  image: image_vn,
+  list: list_vn
 }
 
 export type VN = typeof vn

@@ -181,6 +181,11 @@ const router = createRouter({
       component: () => import('../views/ImageView.vue')
     },
     {
+      path: routePaths.LIST,
+      name: routeNames.LIST,
+      component: () => import('../views/ListView.vue')
+    },
+    {
       path: routePaths.FORM,
       name: routeNames.FORM,
       component: () => import('../views/FormView.vue')
