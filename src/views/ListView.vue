@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
+import ListApi from '@/features/List/components/ListApi/ListApi.vue'
+import ListItemApi from '@/features/List/components/ListApi/ListItemApi.vue'
 import ListBasic from '@/features/List/components/ListBasic/ListBasic.vue'
 import ListHead from '@/features/List/components/ListHead/ListHead.vue'
 import ListIcon from '@/features/List/components/ListIcon/ListIcon.vue'
@@ -17,6 +19,9 @@ const importCodes = ['import { UList } from "@/components/UI"', 'const { List, L
       <ListHead />
       <ListIcon />
     </template>
-    <template #api></template>
+    <template #api>
+      <ListApi />
+      <ListItemApi />
+    </template>
   </PageLayout>
 </template>
