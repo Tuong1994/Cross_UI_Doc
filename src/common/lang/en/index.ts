@@ -19,6 +19,7 @@ import pagination_en from './pagination'
 import space_en from './space'
 import table_en from './table'
 import tabs_en from './tabs'
+import tooltip_en from './tooltip'
 import typography_en from './typography'
 
 const en = {
@@ -43,7 +44,8 @@ const en = {
   card: card_en,
   carousel: carousel_en,
   image: image_en,
-  list: list_en
+  list: list_en,
+  tooltip: tooltip_en
 }
 
 export type EN = typeof en

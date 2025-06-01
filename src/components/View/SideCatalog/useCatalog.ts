@@ -21,6 +21,7 @@ import useCardCatalogs from '@/features/Card/hooks/useCardCatalogs'
 import useCarouselCatalogs from '@/features/Carousel/hooks/useCarouselCatalogs'
 import useImageCatalogs from '@/features/Image/hooks/useImageCatalogs'
 import useListCatalogs from '@/features/List/hooks/useListCatalogs'
+import useTooltipCatalogs from '@/features/Tooltip/hooks/useTooltipCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -59,11 +60,13 @@ const useCatalog = () => {
 
   const listCatalogs = useListCatalogs()
 
-  const formCatalogs = useFormCatalogs()
-
   const tableCatalogs = useTableCatalogs()
 
+  const tooltipCatalogs = useTooltipCatalogs()
+
   const tabsCatalogs = useTabsCatalogs()
+
+  const formCatalogs = useFormCatalogs()
 
   watchEffect(() => {
     const routeName = currentRoute.value.name
@@ -83,9 +86,10 @@ const useCatalog = () => {
     if (routeName === routeNames.CAROUSEL) return catalogStore.setCatalogs(carouselCatalogs.value)
     if (routeName === routeNames.IMAGE) return catalogStore.setCatalogs(imageCatalogs.value)
     if (routeName === routeNames.LIST) return catalogStore.setCatalogs(listCatalogs.value)
-    if (routeName === routeNames.FORM) return catalogStore.setCatalogs(formCatalogs.value)
-    if (routeName === routeNames.TABS) return catalogStore.setCatalogs(tabsCatalogs.value)
     if (routeName === routeNames.TABLE) return catalogStore.setCatalogs(tableCatalogs.value)
+    if (routeName === routeNames.TOOLTIP) return catalogStore.setCatalogs(tooltipCatalogs.value)
+    if (routeName === routeNames.TABS) return catalogStore.setCatalogs(tabsCatalogs.value)
+    if (routeName === routeNames.FORM) return catalogStore.setCatalogs(formCatalogs.value)
   })
 }
 

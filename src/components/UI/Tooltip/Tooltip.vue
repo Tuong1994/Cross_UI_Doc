@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, withDefaults, type StyleValue, useSlots } from 'vue'
-import type { ComponentPlacement, ComponentColor } from '@/common/type.ts'
+import type { ComponentPlacement } from '@/common/type'
+import type { TooltipColor } from './type'
 
 export interface TooltipProps {
   rootClassName?: string
@@ -10,7 +11,7 @@ export interface TooltipProps {
   titleStyle?: StyleValue
   contentStyle?: StyleValue
   placement?: ComponentPlacement
-  color?: Exclude<ComponentColor, 'white' | 'gray'>
+  color?: TooltipColor
 }
 
 const props = withDefaults(defineProps<TooltipProps>(), {
@@ -29,7 +30,7 @@ const hasContent = computed<boolean>(() => slots.content !== undefined)
 
 const placementClassName = computed<string>(() => `tooltip-${props.placement}`)
 
-const colorClassName = computed<string>(() => `toolip-${props.color}`)
+const colorClassName = computed<string>(() => `tooltip-${props.color}`)
 
 const arrowColorClassName = computed<string>(() => `title-arrow-${props.color}`)
 

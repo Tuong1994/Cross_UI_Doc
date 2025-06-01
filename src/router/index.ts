@@ -186,6 +186,11 @@ const router = createRouter({
       component: () => import('../views/ListView.vue')
     },
     {
+      path: routePaths.TOOLTIP,
+      name: routeNames.TOOLTIP,
+      component: () => import('../views/TooltipView.vue')
+    },
+    {
       path: routePaths.FORM,
       name: routeNames.FORM,
       component: () => import('../views/FormView.vue')

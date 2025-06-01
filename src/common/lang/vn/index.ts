@@ -19,6 +19,7 @@ import pagination_vn from './pagination'
 import space_vn from './space'
 import table_vn from './table'
 import tabs_vn from './tabs'
+import tooltip_vn from './tooltip'
 import typography_vn from './typography'
 
 const vn = {
@@ -43,7 +44,8 @@ const vn = {
   card: card_vn,
   carousel: carousel_vn,
   image: image_vn,
-  list: list_vn
+  list: list_vn,
+  tooltip: tooltip_vn
 }
 
 export type VN = typeof vn
