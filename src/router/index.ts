@@ -191,10 +191,15 @@ const router = createRouter({
       component: () => import('../views/TooltipView.vue')
     },
     {
+      path: routePaths.ACCORDION,
+      name: routeNames.ACCORDION,
+      component: () => import('../views/AccordionView.vue')
+    },
+    {
       path: routePaths.FORM,
       name: routeNames.FORM,
       component: () => import('../views/FormView.vue')
-    },
+    }
   ]
 })
 

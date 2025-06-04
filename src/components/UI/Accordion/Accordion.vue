@@ -3,6 +3,7 @@ import { ref, computed, withDefaults, useSlots, watch, toRef, type StyleValue } 
 import { iconName } from '@/components/UI/Icon/constant.ts'
 import Icon from '@/components/UI/Icon/Icon.vue'
 import useLayoutStore from '../Layout/LayoutStore'
+import utils from '@/utils'
 
 type AccordionType = 'default' | 'group'
 
@@ -24,7 +25,6 @@ export interface AccordionProps {
 }
 
 const props = withDefaults(defineProps<AccordionProps>(), {
-  contentId: 'accordionContent',
   rootClassName: '',
   labelClassName: '',
   contentClassName: '',
@@ -46,6 +46,8 @@ const layout = useLayoutStore()
 
 const collapse = ref<boolean>(false)
 
+const contentId = ref<string>(props.contentId ? props.contentId : utils.uuid())
+
 const hasExtraLabel = computed<boolean>(() => slots.extraLabel !== undefined)
 
 const hasContent = computed<boolean>(() => slots.default !== undefined)
@@ -60,7 +62,7 @@ const themeClassName = computed<string>(() => `accordion-${layout.theme}`)
 
 const handleCollapse = () => {
   if (props.type !== 'default') return
-  const el = document.getElementById(props.contentId)
+  const el = document.getElementById(contentId.value)
   if (!el) return
   if (el.style.maxHeight) el.style.maxHeight = ''
   else el.style.maxHeight = `${el.scrollHeight}px`
@@ -72,7 +74,7 @@ const handleSelect = () => emits('onSelect')
 watch(collapse, (newValue) => emits('onCollapse', newValue))
 
 watch(isCollapsed, (newValue) => {
-  const el = document.getElementById(props.contentId)
+  const el = document.getElementById(contentId.value)
   if (!el) return
   if (!newValue) el.style.maxHeight = ''
   else el.style.maxHeight = `${el.scrollHeight}px`

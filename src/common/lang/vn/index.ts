@@ -1,3 +1,4 @@
+import accordion_vn from './accordion'
 import avatar_vn from './avatar'
 import badge_vn from './badge'
 import breadcrumb_vn from './breadcrumb'
@@ -45,7 +46,8 @@ const vn = {
   carousel: carousel_vn,
   image: image_vn,
   list: list_vn,
-  tooltip: tooltip_vn
+  tooltip: tooltip_vn,
+  accordion: accordion_vn
 }
 
 export type VN = typeof vn

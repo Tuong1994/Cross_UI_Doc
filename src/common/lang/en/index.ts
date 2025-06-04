@@ -1,3 +1,4 @@
+import accordion_en from './accordion'
 import avatar_en from './avatar'
 import badge_en from './badge'
 import breadcrumb_en from './breadcrumb'
@@ -45,7 +46,8 @@ const en = {
   carousel: carousel_en,
   image: image_en,
   list: list_en,
-  tooltip: tooltip_en
+  tooltip: tooltip_en,
+  accordion: accordion_en
 }
 
 export type EN = typeof en
