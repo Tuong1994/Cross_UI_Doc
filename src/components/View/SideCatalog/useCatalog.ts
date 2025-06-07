@@ -23,6 +23,7 @@ import useImageCatalogs from '@/features/Image/hooks/useImageCatalogs'
 import useListCatalogs from '@/features/List/hooks/useListCatalogs'
 import useTooltipCatalogs from '@/features/Tooltip/hooks/useTooltipCatalogs'
 import useAccordionCatalogs from '@/features/Accordion/hooks/useAccordionCatalogs'
+import useAlertCatalogs from '@/features/Alert/hooks/useAlertCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -69,6 +70,8 @@ const useCatalog = () => {
 
   const accordionCatalogs = useAccordionCatalogs()
 
+  const alertCatalogs = useAlertCatalogs()
+
   const formCatalogs = useFormCatalogs()
 
   watchEffect(() => {
@@ -93,6 +96,7 @@ const useCatalog = () => {
     if (routeName === routeNames.TOOLTIP) return catalogStore.setCatalogs(tooltipCatalogs.value)
     if (routeName === routeNames.TABS) return catalogStore.setCatalogs(tabsCatalogs.value)
     if (routeName === routeNames.ACCORDION) return catalogStore.setCatalogs(accordionCatalogs.value)
+    if (routeName === routeNames.ALERT) return catalogStore.setCatalogs(alertCatalogs.value)
     if (routeName === routeNames.FORM) return catalogStore.setCatalogs(formCatalogs.value)
   })
 }

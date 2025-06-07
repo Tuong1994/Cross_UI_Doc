@@ -1,0 +1,23 @@
+<script setup lang="ts">
+import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
+import AlertApi from '@/features/Alert/components/AlertApi/AlertApi.vue';
+import AlertBasic from '@/features/Alert/components/AlertBasic/AlertBasic.vue';
+import AlertHook from '@/features/Alert/components/AlertHook/AlertHook.vue';
+import AlertType from '@/features/Alert/components/AlertType/AlertType.vue';
+import useLangStore from '@/stores/LangStore'
+
+const t = useLangStore()
+</script>
+
+<template>
+  <PageLayout title="Alert" importCode="import { Alert } from '@/components/UI'" :desc="t.lang.alert.desc">
+    <template #showcase>
+      <AlertBasic />
+      <AlertType />
+      <AlertHook />
+    </template>
+    <template #api>
+      <AlertApi />
+    </template>
+  </PageLayout>
+</template>

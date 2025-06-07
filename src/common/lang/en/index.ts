@@ -1,4 +1,5 @@
 import accordion_en from './accordion'
+import alert_en from './alert'
 import avatar_en from './avatar'
 import badge_en from './badge'
 import breadcrumb_en from './breadcrumb'
@@ -47,7 +48,8 @@ const en = {
   image: image_en,
   list: list_en,
   tooltip: tooltip_en,
-  accordion: accordion_en
+  accordion: accordion_en,
+  alert: alert_en
 }
 
 export type EN = typeof en

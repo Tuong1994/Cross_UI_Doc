@@ -196,6 +196,11 @@ const router = createRouter({
       component: () => import('../views/AccordionView.vue')
     },
     {
+      path: routePaths.ALERT,
+      name: routeNames.ALERT,
+      component: () => import('../views/AlertView.vue')
+    },
+    {
       path: routePaths.FORM,
       name: routeNames.FORM,
       component: () => import('../views/FormView.vue')
