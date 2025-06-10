@@ -33,7 +33,7 @@ const t = useLangStore()
     </Card>
     <Card rootClassName="section-space">
       <template #head>
-        <Paragraph :size="16">alertStore</Paragraph>
+        <Paragraph :size="16">AlertStore</Paragraph>
         <Paragraph italic variant="secondary">@/components/UI/Alert/AlertStore</Paragraph>
       </template>
       <template #body>

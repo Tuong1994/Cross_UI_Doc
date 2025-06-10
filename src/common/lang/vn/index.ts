@@ -21,6 +21,7 @@ import pagination_vn from './pagination'
 import space_vn from './space'
 import table_vn from './table'
 import tabs_vn from './tabs'
+import toast_vn from './toast'
 import tooltip_vn from './tooltip'
 import typography_vn from './typography'
 
@@ -49,7 +50,8 @@ const vn = {
   list: list_vn,
   tooltip: tooltip_vn,
   accordion: accordion_vn,
-  alert: alert_vn
+  alert: alert_vn,
+  toast: toast_vn
 }
 
 export type VN = typeof vn
