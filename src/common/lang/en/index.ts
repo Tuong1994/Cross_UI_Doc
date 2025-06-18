@@ -8,6 +8,7 @@ import card_en from './card'
 import carousel_en from './carousel'
 import common_en from './common'
 import divider_en from './divider'
+import drawer_en from './drawer'
 import dropdown_en from './dropdown'
 import flex_en from './flex'
 import form_en from './form'
@@ -51,7 +52,8 @@ const en = {
   tooltip: tooltip_en,
   accordion: accordion_en,
   alert: alert_en,
-  toast: toast_en
+  toast: toast_en,
+  drawer: drawer_en
 }
 
 export type EN = typeof en

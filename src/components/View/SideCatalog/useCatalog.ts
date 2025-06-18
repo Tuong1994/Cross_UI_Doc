@@ -24,6 +24,8 @@ import useListCatalogs from '@/features/List/hooks/useListCatalogs'
 import useTooltipCatalogs from '@/features/Tooltip/hooks/useTooltipCatalogs'
 import useAccordionCatalogs from '@/features/Accordion/hooks/useAccordionCatalogs'
 import useAlertCatalogs from '@/features/Alert/hooks/useAlertCatalogs'
+import useToastCatalogs from '@/features/ToastMessage/hooks/useToastCatalogs'
+import useDrawerCatalogs from '@/features/Drawer/hooks/useDrawerCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -72,6 +74,10 @@ const useCatalog = () => {
 
   const alertCatalogs = useAlertCatalogs()
 
+  const toastCatalogs = useToastCatalogs()
+
+  const drawerCatalogs = useDrawerCatalogs()
+
   const formCatalogs = useFormCatalogs()
 
   watchEffect(() => {
@@ -97,6 +103,8 @@ const useCatalog = () => {
     if (routeName === routeNames.TABS) return catalogStore.setCatalogs(tabsCatalogs.value)
     if (routeName === routeNames.ACCORDION) return catalogStore.setCatalogs(accordionCatalogs.value)
     if (routeName === routeNames.ALERT) return catalogStore.setCatalogs(alertCatalogs.value)
+    if (routeName === routeNames.MESSAGE) return catalogStore.setCatalogs(toastCatalogs.value)
+    if (routeName === routeNames.DRAWER) return catalogStore.setCatalogs(drawerCatalogs.value)
     if (routeName === routeNames.FORM) return catalogStore.setCatalogs(formCatalogs.value)
   })
 }

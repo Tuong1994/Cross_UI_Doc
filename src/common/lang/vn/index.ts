@@ -8,6 +8,7 @@ import card_vn from './card'
 import carousel_vn from './carousel'
 import common_vn from './common'
 import divider_vn from './divider'
+import drawer_vn from './drawer'
 import dropdown_vn from './dropdown'
 import flex_vn from './flex'
 import form_vn from './form'
@@ -51,7 +52,8 @@ const vn = {
   tooltip: tooltip_vn,
   accordion: accordion_vn,
   alert: alert_vn,
-  toast: toast_vn
+  toast: toast_vn,
+  drawer: drawer_vn,
 }
 
 export type VN = typeof vn

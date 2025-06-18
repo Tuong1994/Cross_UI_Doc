@@ -206,6 +206,11 @@ const router = createRouter({
       component: () => import('../views/ToastMessageView.vue')
     },
     {
+      path: routePaths.DRAWER,
+      name: routeNames.DRAWER,
+      component: () => import('../views/DrawerView.vue')
+    },
+    {
       path: routePaths.FORM,
       name: routeNames.FORM,
       component: () => import('../views/FormView.vue')
