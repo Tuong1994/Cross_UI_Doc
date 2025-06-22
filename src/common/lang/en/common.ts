@@ -1,5 +1,10 @@
 const common_en = {
   examples: 'Examples',
+  size: {
+    sm: 'Small',
+    md: 'Medium',
+    lg: 'Large'
+  },
   required: {
     yes: 'yes',
     no: 'no'

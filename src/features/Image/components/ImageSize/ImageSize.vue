@@ -1,20 +1,22 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { Divider, Image } from '@/components/UI'
 import { imageSizeCode } from './code'
 import { imageCatalogIds } from '@/features/Image/repository/catalogIds'
+import type { ComponentSize } from '@/common/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 
-const imageSizes = ['sm', 'md', 'lg']
+const imageSizes = computed<ComponentSize[]>(() => ['sm', 'md', 'lg'])
 
 const dividerContent = (size: string) => {
   const content: Record<string, string> = {
-    sm: t.lang.image.size.sm,
-    md: t.lang.image.size.md,
-    lg: t.lang.image.size.lg
+    sm: t.lang.common.size.sm,
+    md: t.lang.common.size.md,
+    lg: t.lang.common.size.lg
   }
   return content[size]
 }

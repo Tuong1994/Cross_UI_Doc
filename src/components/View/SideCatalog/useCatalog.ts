@@ -26,6 +26,7 @@ import useAccordionCatalogs from '@/features/Accordion/hooks/useAccordionCatalog
 import useAlertCatalogs from '@/features/Alert/hooks/useAlertCatalogs'
 import useToastCatalogs from '@/features/ToastMessage/hooks/useToastCatalogs'
 import useDrawerCatalogs from '@/features/Drawer/hooks/useDrawerCatalogs'
+import useModalCatalogs from '@/features/Modal/hooks/useModalCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -78,6 +79,8 @@ const useCatalog = () => {
 
   const drawerCatalogs = useDrawerCatalogs()
 
+  const modalCatalogs = useModalCatalogs()
+
   const formCatalogs = useFormCatalogs()
 
   watchEffect(() => {
@@ -105,6 +108,7 @@ const useCatalog = () => {
     if (routeName === routeNames.ALERT) return catalogStore.setCatalogs(alertCatalogs.value)
     if (routeName === routeNames.MESSAGE) return catalogStore.setCatalogs(toastCatalogs.value)
     if (routeName === routeNames.DRAWER) return catalogStore.setCatalogs(drawerCatalogs.value)
+    if (routeName === routeNames.MODAL) return catalogStore.setCatalogs(modalCatalogs.value)
     if (routeName === routeNames.FORM) return catalogStore.setCatalogs(formCatalogs.value)
   })
 }

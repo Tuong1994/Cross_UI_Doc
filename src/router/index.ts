@@ -211,6 +211,11 @@ const router = createRouter({
       component: () => import('../views/DrawerView.vue')
     },
     {
+      path: routePaths.MODAL,
+      name: routeNames.MODAL,
+      component: () => import('../views/ModalView.vue')
+    },
+    {
       path: routePaths.FORM,
       name: routeNames.FORM,
       component: () => import('../views/FormView.vue')

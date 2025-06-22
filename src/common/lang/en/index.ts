@@ -18,6 +18,7 @@ import icon_en from './icon'
 import image_en from './image'
 import list_en from './list'
 import menu_en from './menu'
+import modal_en from './modal'
 import pagination_en from './pagination'
 import space_en from './space'
 import table_en from './table'
@@ -53,7 +54,8 @@ const en = {
   accordion: accordion_en,
   alert: alert_en,
   toast: toast_en,
-  drawer: drawer_en
+  drawer: drawer_en,
+  modal: modal_en
 }
 
 export type EN = typeof en

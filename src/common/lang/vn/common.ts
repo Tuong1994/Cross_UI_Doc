@@ -1,5 +1,10 @@
 const common_vn = {
   examples: 'Các ví dụ',
+  size: {
+    sm: 'Nhỏ',
+    md: 'Trung bình',
+    lg: 'Lớn'
+  },
   required: {
     yes: 'có',
     no: 'không'
@@ -95,7 +100,7 @@ const common_vn = {
       default: 'Mặc định',
       required: 'Bắt buộc',
       createdAt: 'Ngày tạo',
-      updatedAt: 'Ngày cập nhật',
+      updatedAt: 'Ngày cập nhật'
     }
   },
   pagination: {

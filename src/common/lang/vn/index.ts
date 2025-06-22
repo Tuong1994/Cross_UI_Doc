@@ -18,6 +18,7 @@ import icon_vn from './icon'
 import image_vn from './image'
 import list_vn from './list'
 import menu_vn from './menu'
+import modal_vn from './modal'
 import pagination_vn from './pagination'
 import space_vn from './space'
 import table_vn from './table'
@@ -54,6 +55,7 @@ const vn = {
   alert: alert_vn,
   toast: toast_vn,
   drawer: drawer_vn,
+  modal: modal_vn
 }
 
 export type VN = typeof vn

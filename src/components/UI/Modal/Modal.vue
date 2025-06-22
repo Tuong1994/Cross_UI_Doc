@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref, computed, withDefaults, useSlots, toRefs, watchEffect, type StyleValue } from 'vue'
 import { iconName } from '@/components/UI/Icon/constant.ts'
-import type { ComponentColor, ComponentSize } from '@/common/type'
 import { useRender, useOverflow } from '@/hooks'
+import type { ComponentColor, ComponentSize } from '@/common/type'
 import Button, { type ButtonProps } from '@/components/UI/Button/Button.vue'
 import Icon from '@/components/UI/Icon/Icon.vue'
 import useLayoutStore from '../Layout/LayoutStore'
@@ -89,8 +89,8 @@ watchEffect(() => {
   const modals = document.querySelectorAll('.modal-active')
   if (modals.length === 1) return
   if (modalRef.value && modalBackdropRef.value) {
-    const modalzIndex = 35 + modals.length
-    const backdropszIndex = 34 + modals.length
+    const modalzIndex = 50 + modals.length
+    const backdropszIndex = 49 + modals.length
     modalRef.value.style.zIndex = `${modalzIndex}`
     modalBackdropRef.value.style.zIndex = `${backdropszIndex}`
   }

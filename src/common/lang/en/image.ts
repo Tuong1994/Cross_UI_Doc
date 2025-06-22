@@ -1,10 +1,5 @@
 const image_en = {
   desc: 'Preview-able image',
-  size: {
-    sm: 'Small',
-    md: 'Medium',
-    lg: 'Large'
-  },
   api: {
     imageDesc: {
       rootClassName: 'Class name of container',
