@@ -27,6 +27,7 @@ import useAlertCatalogs from '@/features/Alert/hooks/useAlertCatalogs'
 import useToastCatalogs from '@/features/ToastMessage/hooks/useToastCatalogs'
 import useDrawerCatalogs from '@/features/Drawer/hooks/useDrawerCatalogs'
 import useModalCatalogs from '@/features/Modal/hooks/useModalCatalogs'
+import useLoadingCatalogs from '@/features/Loading/hooks/useLoadingCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -81,6 +82,8 @@ const useCatalog = () => {
 
   const modalCatalogs = useModalCatalogs()
 
+  const loadingCatalogs = useLoadingCatalogs()
+
   const formCatalogs = useFormCatalogs()
 
   watchEffect(() => {
@@ -109,6 +112,7 @@ const useCatalog = () => {
     if (routeName === routeNames.MESSAGE) return catalogStore.setCatalogs(toastCatalogs.value)
     if (routeName === routeNames.DRAWER) return catalogStore.setCatalogs(drawerCatalogs.value)
     if (routeName === routeNames.MODAL) return catalogStore.setCatalogs(modalCatalogs.value)
+    if (routeName === routeNames.LOADING) return catalogStore.setCatalogs(loadingCatalogs.value)
     if (routeName === routeNames.FORM) return catalogStore.setCatalogs(formCatalogs.value)
   })
 }

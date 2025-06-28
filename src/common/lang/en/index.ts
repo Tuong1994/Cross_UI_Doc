@@ -17,6 +17,7 @@ import home_en from './home'
 import icon_en from './icon'
 import image_en from './image'
 import list_en from './list'
+import loading_en from './loading'
 import menu_en from './menu'
 import modal_en from './modal'
 import pagination_en from './pagination'
@@ -55,7 +56,8 @@ const en = {
   alert: alert_en,
   toast: toast_en,
   drawer: drawer_en,
-  modal: modal_en
+  modal: modal_en,
+  loading: loading_en
 }
 
 export type EN = typeof en

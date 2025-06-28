@@ -6,7 +6,11 @@ import useLangStore from '@/stores/LangStore'
 const useModalCatalogs = () => {
   const t = useLangStore()
 
-  const examplesCatalogs: CatalogItems = [{ id: modalCatalogIds.BASIC, title: 'Basic' }]
+  const examplesCatalogs: CatalogItems = [
+    { id: modalCatalogIds.BASIC, title: 'Basic' },
+    { id: modalCatalogIds.COLOR, title: 'Color' },
+    { id: modalCatalogIds.SIZE, title: 'Size' }
+  ]
 
   const apiCatalogs: CatalogItems = [{ id: modalCatalogIds.MODAL_API, title: 'Modal' }]
 
