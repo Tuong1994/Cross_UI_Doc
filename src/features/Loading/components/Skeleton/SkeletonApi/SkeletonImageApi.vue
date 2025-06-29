@@ -10,52 +10,57 @@ const t = useLangStore()
 
 const dataSource = computed<ComponentApi[]>(() => [
   {
-    id: 'color',
-    props: 'color',
-    desc: t.lang.loading.api.spinnerDesc.color,
+    id: 'width',
+    props: 'width',
+    desc: t.lang.loading.api.skeletonTypeDesc.width,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['blue', 'green', 'red', 'orange', 'yellow', 'purple', 'pink', 'white', 'black']
+      codes: ['number', 'string']
     },
     required: t.lang.common.required.no,
-    default: 'blue'
+    default: '-'
+  },
+  {
+    id: 'height',
+    props: 'height',
+    desc: t.lang.loading.api.skeletonTypeDesc.height,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['number', 'string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
   },
   {
     id: 'size',
     props: 'size',
-    desc: t.lang.loading.api.spinnerDesc.size,
+    desc: t.lang.loading.api.skeletonTypeDesc.size,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['number']
     },
     required: t.lang.common.required.no,
-    default: '15'
+    default: '100'
   },
   {
-    id: 'type',
-    props: 'type',
-    desc: t.lang.loading.api.spinnerDesc.type,
+    id: 'shape',
+    props: 'shape',
+    desc: t.lang.loading.api.skeletonTypeDesc.shape,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['default', 'bubble']
+      codes: ['square', 'round']
     },
     required: t.lang.common.required.no,
-    default: 'default'
-  },
-  {
-    id: 'rootClassName',
-    props: 'rootClassName',
-    desc: t.lang.loading.api.spinnerDesc.rootClassName,
-    type: {
-      elType: ECodeElType.DEFAULT,
-      codes: ['string']
-    },
-    required: t.lang.common.required.no,
-    default: '-'
+    default: 'square'
   }
 ])
 </script>
 
 <template>
-  <TableLayout title="Spinner" rootClassName="section-space" :dataSource="dataSource" :id="loadingCatalogIds.SPINNER_API" />
+  <TableLayout
+    title="Skeleton Image"
+    rootClassName="section-space"
+    :dataSource="dataSource"
+    :id="loadingCatalogIds.SKELETON_IMAGE_API"
+  />
 </template>

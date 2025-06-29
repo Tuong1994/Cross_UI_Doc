@@ -10,52 +10,57 @@ const t = useLangStore()
 
 const dataSource = computed<ComponentApi[]>(() => [
   {
-    id: 'color',
-    props: 'color',
-    desc: t.lang.loading.api.spinnerDesc.color,
+    id: 'width',
+    props: 'width',
+    desc: t.lang.loading.api.skeletonTypeDesc.width,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['blue', 'green', 'red', 'orange', 'yellow', 'purple', 'pink', 'white', 'black']
+      codes: ['number', 'string']
     },
     required: t.lang.common.required.no,
-    default: 'blue'
+    default: '-'
   },
   {
-    id: 'size',
-    props: 'size',
-    desc: t.lang.loading.api.spinnerDesc.size,
+    id: 'height',
+    props: 'height',
+    desc: t.lang.loading.api.skeletonTypeDesc.height,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['number', 'string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'shape',
+    props: 'shape',
+    desc: t.lang.loading.api.skeletonTypeDesc.shape,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['square', 'round']
+    },
+    required: t.lang.common.required.no,
+    default: 'square'
+  },
+  {
+    id: 'lines',
+    props: 'lines',
+    desc: t.lang.loading.api.skeletonTypeDesc.lines,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['number']
     },
     required: t.lang.common.required.no,
-    default: '15'
-  },
-  {
-    id: 'type',
-    props: 'type',
-    desc: t.lang.loading.api.spinnerDesc.type,
-    type: {
-      elType: ECodeElType.DEFAULT,
-      codes: ['default', 'bubble']
-    },
-    required: t.lang.common.required.no,
-    default: 'default'
-  },
-  {
-    id: 'rootClassName',
-    props: 'rootClassName',
-    desc: t.lang.loading.api.spinnerDesc.rootClassName,
-    type: {
-      elType: ECodeElType.DEFAULT,
-      codes: ['string']
-    },
-    required: t.lang.common.required.no,
-    default: '-'
+    default: '4'
   }
 ])
 </script>
 
 <template>
-  <TableLayout title="Spinner" rootClassName="section-space" :dataSource="dataSource" :id="loadingCatalogIds.SPINNER_API" />
+  <TableLayout
+    title="Skeleton Paragraph"
+    rootClassName="section-space"
+    :dataSource="dataSource"
+    :id="loadingCatalogIds.SKELETON_PARAGRAPH_API"
+  />
 </template>

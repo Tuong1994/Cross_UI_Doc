@@ -1,5 +1,13 @@
 <script setup lang="ts">
+import { Divider } from '@/components/UI'
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
+import SkeletonApi from '@/features/Loading/components/Skeleton/SkeletonApi/SkeletonApi.vue'
+import SkeletonButtonApi from '@/features/Loading/components/Skeleton/SkeletonApi/SkeletonButtonApi.vue'
+import SkeletonImageApi from '@/features/Loading/components/Skeleton/SkeletonApi/SkeletonImageApi.vue'
+import SkeletonParagraphApi from '@/features/Loading/components/Skeleton/SkeletonApi/SkeletonParagraphApi.vue'
+import SkeletonTitleApi from '@/features/Loading/components/Skeleton/SkeletonApi/SkeletonTitleApi.vue'
+import SkeletonBasic from '@/features/Loading/components/Skeleton/SkeletonBasic/SkeletonBasic.vue'
+import SkeletonType from '@/features/Loading/components/Skeleton/SkeletonType/SkeletonType.vue'
 import SpinnerApi from '@/features/Loading/components/Spinner/SpinnerApi/SpinnerApi.vue'
 import SpinnerBasic from '@/features/Loading/components/Spinner/SpinnerBasic/SpinnerBasic.vue'
 import SpinnerColor from '@/features/Loading/components/Spinner/SpinnerColor/SpinnerColor.vue'
@@ -19,9 +27,17 @@ const importCodes = ["import { Loading } from '@/components/UI'", 'const { Spinn
       <SpinnerColor />
       <SpinnerSize />
       <SpinnerType />
+      <Divider />
+      <SkeletonBasic />
+      <SkeletonType />
     </template>
     <template #api>
       <SpinnerApi />
+      <SkeletonApi />
+      <SkeletonTitleApi />
+      <SkeletonParagraphApi />
+      <SkeletonImageApi />
+      <SkeletonButtonApi />
     </template>
   </PageLayout>
 </template>

@@ -6,6 +6,18 @@ const loading_vn = {
       color: 'Màu sắc của spinner',
       size: 'Kích thước của spinner (Chỉ áp dụng cho loại mặc định)',
       type: 'Loại spinner'
+    },
+    skeletonDesc: {
+      type: 'Loại skeleton',
+      rootClassName: 'Tên class của vùng chứa',
+      rootStyle: 'Style nội tuyến của vùng chứa'
+    },
+    skeletonTypeDesc: {
+      width: 'Chiều rộng của skeleton',
+      height: 'Chiều cao của skeleton',
+      size: 'Kích thước của skeleton',
+      shape: 'Hình dạng của skeleton',
+      lines: 'Số dòng skeleton dạng đoạn văn'
     }
   }
 }
