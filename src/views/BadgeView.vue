@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
-import BadgeApi from '@/features/Badge/components/BadgeApi/BadgeApi.vue'
-import BadgeBasic from '@/features/Badge/components/BadgeBasic/BadgeBasic.vue'
-import BadgeColor from '@/features/Badge/components/BadgeColor/BadgeColor.vue'
-import BadgeGhost from '@/features/Badge/components/BadgeGhost/BadgeGhost.vue'
-import BadgeShape from '@/features/Badge/components/BadgeShape/BadgeShape.vue'
+import BadgeApi from '@/features/UI/Badge/components/BadgeApi/BadgeApi.vue'
+import BadgeBasic from '@/features/UI/Badge/components/BadgeBasic/BadgeBasic.vue'
+import BadgeColor from '@/features/UI/Badge/components/BadgeColor/BadgeColor.vue'
+import BadgeGhost from '@/features/UI/Badge/components/BadgeGhost/BadgeGhost.vue'
+import BadgeShape from '@/features/UI/Badge/components/BadgeShape/BadgeShape.vue'
 import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()

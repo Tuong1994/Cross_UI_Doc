@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
-import ButtonApi from '@/features/Button/components/ButtonApi/ButtonApi.vue'
-import ButtonBasic from '@/features/Button/components/ButtonBasic/ButtonBasic.vue'
-import ButtonColor from '@/features/Button/components/ButtonColor/ButtonColor.vue'
-import ButtonDisabled from '@/features/Button/components/ButtonDisabled/ButtonDisabled.vue'
-import ButtonLoading from '@/features/Button/components/ButtonLoading/ButtonLoading.vue'
-import ButtonShape from '@/features/Button/components/ButtonShape/ButtonShape.vue'
-import ButtonSize from '@/features/Button/components/ButtonSize/ButtonSize.vue'
-import ButtonText from '@/features/Button/components/ButtonText/ButtonText.vue'
+import ButtonApi from '@/features/UI/Button/components/ButtonApi/ButtonApi.vue'
+import ButtonBasic from '@/features/UI/Button/components/ButtonBasic/ButtonBasic.vue'
+import ButtonColor from '@/features/UI/Button/components/ButtonColor/ButtonColor.vue'
+import ButtonDisabled from '@/features/UI/Button/components/ButtonDisabled/ButtonDisabled.vue'
+import ButtonLoading from '@/features/UI/Button/components/ButtonLoading/ButtonLoading.vue'
+import ButtonShape from '@/features/UI/Button/components/ButtonShape/ButtonShape.vue'
+import ButtonSize from '@/features/UI/Button/components/ButtonSize/ButtonSize.vue'
+import ButtonText from '@/features/UI/Button/components/ButtonText/ButtonText.vue'
 import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()

@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
-import AvatarApi from '@/features/Avatar/components/AvatarApi/AvatarApi.vue'
-import AvatarBadge from '@/features/Avatar/components/AvatarBadge/AvatarBadge.vue'
-import AvatarBasic from '@/features/Avatar/components/AvatarBasic/AvatarBasic.vue'
-import AvatarColor from '@/features/Avatar/components/AvatarColor/AvatarColor.vue'
-import AvatarDot from '@/features/Avatar/components/AvatarDot/AvatarDot.vue'
-import AvatarLetter from '@/features/Avatar/components/AvatarLetter/AvatarLetter.vue'
-import AvatarShape from '@/features/Avatar/components/AvatarShape/AvatarShape.vue'
-import AvatarSize from '@/features/Avatar/components/AvatarSize/AvatarSize.vue'
+import AvatarApi from '@/features/UI/Avatar/components/AvatarApi/AvatarApi.vue'
+import AvatarBadge from '@/features/UI/Avatar/components/AvatarBadge/AvatarBadge.vue'
+import AvatarBasic from '@/features/UI/Avatar/components/AvatarBasic/AvatarBasic.vue'
+import AvatarColor from '@/features/UI/Avatar/components/AvatarColor/AvatarColor.vue'
+import AvatarDot from '@/features/UI/Avatar/components/AvatarDot/AvatarDot.vue'
+import AvatarLetter from '@/features/UI/Avatar/components/AvatarLetter/AvatarLetter.vue'
+import AvatarShape from '@/features/UI/Avatar/components/AvatarShape/AvatarShape.vue'
+import AvatarSize from '@/features/UI/Avatar/components/AvatarSize/AvatarSize.vue'
 import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()

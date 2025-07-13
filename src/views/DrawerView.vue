@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
-import DrawerApi from '@/features/Drawer/components/DrawerApi/DrawerApi.vue'
-import DrawerBasic from '@/features/Drawer/components/DrawerBasic/DrawerBasic.vue'
-import DrawerFullSize from '@/features/Drawer/components/DrawerFullSize/DrawerFullSize.vue'
-import DrawerNoHead from '@/features/Drawer/components/DrawerNoHead/DrawerNoHead.vue'
+import DrawerApi from '@/features/UI/Drawer/components/DrawerApi/DrawerApi.vue'
+import DrawerBasic from '@/features/UI/Drawer/components/DrawerBasic/DrawerBasic.vue'
+import DrawerFullSize from '@/features/UI/Drawer/components/DrawerFullSize/DrawerFullSize.vue'
+import DrawerNoHead from '@/features/UI/Drawer/components/DrawerNoHead/DrawerNoHead.vue'
 import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()

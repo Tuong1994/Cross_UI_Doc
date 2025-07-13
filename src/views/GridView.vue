@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
-import GridApi from '@/features/Grid/components/GridApi/GridApi.vue'
-import GridBasic from '@/features/Grid/components/GridBasic/GridBasic.vue'
-import GridGap from '@/features/Grid/components/GridGap/GridGap.vue'
+import GridApi from '@/features/UI/Grid/components/GridApi/GridApi.vue'
+import GridBasic from '@/features/UI/Grid/components/GridBasic/GridBasic.vue'
+import GridGap from '@/features/UI/Grid/components/GridGap/GridGap.vue'
 import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()

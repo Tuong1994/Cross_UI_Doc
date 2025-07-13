@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
-import TableBasic from '@/features/Table/components/TableBasic/TableBasic.vue'
-import TableFilter from '@/features/Table/components/TableFilter/TableFilter.vue'
-import TableExpand from '@/features/Table/components/TableExpand/TableExpand.vue'
-import TableSelection from '@/features/Table/components/TableSelection/TableSelection.vue'
-import TablePagination from '@/features/Table/components/TablePagination/TablePagination.vue'
-import TableApi from '@/features/Table/components/TableApi/TableApi.vue'
-import TableColumnApi from '@/features/Table/components/TableApi/TableColumnApi.vue'
-import TableComponentApi from '@/features/Table/components/TableApi/TableComponentApi.vue'
+import TableBasic from '@/features/UI/Table/components/TableBasic/TableBasic.vue'
+import TableFilter from '@/features/UI/Table/components/TableFilter/TableFilter.vue'
+import TableExpand from '@/features/UI/Table/components/TableExpand/TableExpand.vue'
+import TableSelection from '@/features/UI/Table/components/TableSelection/TableSelection.vue'
+import TablePagination from '@/features/UI/Table/components/TablePagination/TablePagination.vue'
+import TableApi from '@/features/UI/Table/components/TableApi/TableApi.vue'
+import TableColumnApi from '@/features/UI/Table/components/TableApi/TableColumnApi.vue'
+import TableComponentApi from '@/features/UI/Table/components/TableApi/TableComponentApi.vue'
 import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()

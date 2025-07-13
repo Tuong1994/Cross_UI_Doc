@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
-import TooltipApi from '@/features/Tooltip/components/TooltipApi/TooltipApi.vue'
-import TooltipBasic from '@/features/Tooltip/components/TooltipBasic/TooltipBasic.vue'
-import TooltipColor from '@/features/Tooltip/components/TooltipColor/TooltipColor.vue'
-import TooltipPlacement from '@/features/Tooltip/components/TooltipPlacement/TooltipPlacement.vue'
+import TooltipApi from '@/features/UI/Tooltip/components/TooltipApi/TooltipApi.vue'
+import TooltipBasic from '@/features/UI/Tooltip/components/TooltipBasic/TooltipBasic.vue'
+import TooltipColor from '@/features/UI/Tooltip/components/TooltipColor/TooltipColor.vue'
+import TooltipPlacement from '@/features/UI/Tooltip/components/TooltipPlacement/TooltipPlacement.vue'
 import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()

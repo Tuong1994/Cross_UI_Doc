@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
-import TabsApi from '@/features/Tabs/components/TabsApi/TabsApi.vue';
-import TabsItemApi from '@/features/Tabs/components/TabsApi/TabsItemApi.vue';
-import TabsHorizontal from '@/features/Tabs/components/TabsHorizontal/TabsHorizontal.vue';
-import TabsVertical from '@/features/Tabs/components/TabsVertical/TabsVertical.vue';
+import TabsApi from '@/features/UI/Tabs/components/TabsApi/TabsApi.vue';
+import TabsItemApi from '@/features/UI/Tabs/components/TabsApi/TabsItemApi.vue';
+import TabsHorizontal from '@/features/UI/Tabs/components/TabsHorizontal/TabsHorizontal.vue';
+import TabsVertical from '@/features/UI/Tabs/components/TabsVertical/TabsVertical.vue';
 import useLangStore from '@/stores/LangStore';
 
 const t = useLangStore()

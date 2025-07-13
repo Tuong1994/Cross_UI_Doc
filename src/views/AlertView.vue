@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
-import AlertApi from '@/features/Alert/components/AlertApi/AlertApi.vue'
-import AlertBasic from '@/features/Alert/components/AlertBasic/AlertBasic.vue'
-import AlertHook from '@/features/Alert/components/AlertHook/AlertHook.vue'
-import AlertType from '@/features/Alert/components/AlertType/AlertType.vue'
+import AlertApi from '@/features/UI/Alert/components/AlertApi/AlertApi.vue'
+import AlertBasic from '@/features/UI/Alert/components/AlertBasic/AlertBasic.vue'
+import AlertHook from '@/features/UI/Alert/components/AlertHook/AlertHook.vue'
+import AlertType from '@/features/UI/Alert/components/AlertType/AlertType.vue'
 import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()

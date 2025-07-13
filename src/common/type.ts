@@ -1,5 +1,5 @@
 import type { VN } from './lang/vn'
-import type { EN } from './lang/en'
+import type { EN } from './lang/en/ui'
 
 export type Lang = VN | EN
 
