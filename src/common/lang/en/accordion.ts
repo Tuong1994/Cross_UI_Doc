@@ -15,7 +15,9 @@ const accordion_en = {
       type: 'Type of accordion, default and group',
       bordered: 'Enabled bordered for accordion',
       showLabelIcon: 'Show or hide label collapse icon',
-      isCollapsed: 'Enabled content to collapsed'
+      isCollapsed: 'Enabled content to collapsed',
+      onCollapse: 'Trigger when clicked',
+      onSelect: 'Used for group type, trigger when clicked specific accordion'
     }
   }
 }

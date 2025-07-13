@@ -9,7 +9,8 @@ const dropdown_en = {
       labelStyle: 'Inline style of label',
       placement: 'Dropdown placement',
       items: 'Dropdown item list',
-      trigger: 'Dropdown trigger type'
+      trigger: 'Dropdown trigger type',
+      onDropdown: 'Trigger when dropdown is clicked or hovered'
     },
     itemDesc: {
       id: 'Unique ID of item',

@@ -10,7 +10,8 @@ const drawer_vn = {
       bodyStyle: 'Style nội tuyến của phần nội dung',
       open: 'Hiển thị hoặc ẩn drawer',
       full: 'Bật chế độ hiển thị toàn màn hình cho drawer',
-      hasHead: 'Hiển thị hoặc ẩn phần đầu (header)'
+      hasHead: 'Hiển thị hoặc ẩn phần đầu (header)',
+      onClose: 'Kích hoạt để đóng'
     }
   }
 }

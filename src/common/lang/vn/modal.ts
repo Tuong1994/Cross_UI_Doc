@@ -21,7 +21,9 @@ const modal_vn = {
       okButtonTitle: 'Tiêu đề cho nút xác nhận',
       cancelButtonTitle: 'Tiêu đề cho nút đóng',
       okButtonProps: 'Thuộc tính của nút xác nhận',
-      cancelButtonProps: 'Thuộc tính của nút đóng'
+      cancelButtonProps: 'Thuộc tính của nút đóng',
+      onOk: 'Kích hoạt khi nút OK được nhấp',
+      onCancel: 'Kích hoạt khi nút Hủy được nhấp'
     }
   }
 }

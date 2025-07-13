@@ -21,7 +21,9 @@ const modal_en = {
       okButtonTitle: 'Title for submit button',
       cancelButtonTitle: 'Title for close button',
       okButtonProps: 'The submit button props',
-      cancelButtonProps: 'The close button props'
+      cancelButtonProps: 'The close button props',
+      onOk: 'Trigger when the OK button is clicked',
+      onCancel: 'Trigger when the Cancel button is clicked'
     }
   }
 }

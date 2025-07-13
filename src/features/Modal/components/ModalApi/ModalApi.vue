@@ -232,6 +232,28 @@ const dataSource = computed<ComponentApi[]>(() => [
     required: t.lang.common.required.no,
     default: '-'
   },
+  {
+    id: 'onOk',
+    props: 'onOk',
+    desc: t.lang.modal.api.modalDesc.onOk,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['() => void']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'onCancel',
+    props: 'onCancel',
+    desc: t.lang.modal.api.modalDesc.onCancel,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['() => void']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
 ])
 </script>
 

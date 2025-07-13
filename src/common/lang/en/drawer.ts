@@ -10,7 +10,8 @@ const drawer_en = {
       bodyStyle: 'Inline style body',
       open: 'Show or hide drawer',
       full: 'Enabled full size of drawer',
-      hasHead: 'Show or hide header'
+      hasHead: 'Show or hide header',
+      onClose: 'Trigger to closed'
     }
   }
 }

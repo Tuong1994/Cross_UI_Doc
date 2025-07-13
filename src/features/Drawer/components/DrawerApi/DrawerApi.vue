@@ -107,6 +107,17 @@ const dataSource = computed<ComponentApi[]>(() => [
     },
     required: t.lang.common.required.no,
     default: '-'
+  },
+  {
+    id: 'onClose',
+    props: 'onClose',
+    desc: t.lang.drawer.api.drawerDesc.onClose,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['() => void']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
   }
 ])
 </script>

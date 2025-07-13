@@ -162,7 +162,29 @@ const dataSource = computed<ComponentApi[]>(() => [
     },
     required: t.lang.common.required.no,
     default: '-'
-  }
+  },
+  {
+    id: 'onCollapse',
+    props: 'onCollapse',
+    desc: t.lang.accordion.api.accordionDesc.onCollapse,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['( isCollapsed: boolean ) => void']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'onSelect',
+    props: 'onSelect',
+    desc: t.lang.accordion.api.accordionDesc.onSelect,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['() => void']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
 ])
 </script>
 

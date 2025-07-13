@@ -9,7 +9,8 @@ const dropdown_vn = {
       labelStyle: 'Style nội tuyến của nhãn',
       placement: 'Vị trí hiển thị danh sách thả xuống',
       items: 'Danh sách các mục trong dropdown',
-      trigger: 'Kiểu kích hoạt dropdown'
+      trigger: 'Kiểu kích hoạt dropdown',
+      onDropdown: 'Kích hoạt khi dropdown được nhấp hoặc di chuột vào'
     },
     itemDesc: {
       id: 'ID duy nhất của mục',

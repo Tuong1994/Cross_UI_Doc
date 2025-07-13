@@ -15,7 +15,9 @@ const accordion_vn = {
       type: 'Loại accordion, "default" hoặc "group"',
       bordered: 'Bật/tắt viền cho accordion',
       showLabelIcon: 'Hiển thị hoặc ẩn biểu tượng thu gọn nhãn',
-      isCollapsed: 'Bật/tắt trạng thái thu gọn nội dung'
+      isCollapsed: 'Bật/tắt trạng thái thu gọn nội dung',
+      onCollapse: 'Kích hoạt khi được nhấp',
+      onSelect: 'Dùng cho loại group, kích hoạt khi nhấp vào accordion cụ thể'
     }
   }
 }

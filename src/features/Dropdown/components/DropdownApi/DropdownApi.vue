@@ -98,6 +98,17 @@ const dataSource = computed<ComponentApi[]>(() => [
     required: t.lang.common.required.no,
     default: '-'
   },
+  {
+    id: 'onDropdown',
+    props: 'onDropdown',
+    desc: t.lang.dropdown.api.dropdownDesc.onDropdown,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['( isDropdown: boolean ) => void']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
 ])
 </script>
 
