@@ -27,6 +27,7 @@ import tabs_en from './ui/tabs'
 import toast_en from './ui/toast'
 import tooltip_en from './ui/tooltip'
 import typography_en from './ui/typography'
+import select_en from './control/select'
 
 const en = {
   common: common_en,
@@ -38,7 +39,6 @@ const en = {
   grid: grid_en,
   pagination: pagination_en,
   icon: icon_en,
-  form: form_en,
   typography: typography_en,
   divider: divider_en,
   flex: flex_en,
@@ -57,7 +57,9 @@ const en = {
   toast: toast_en,
   drawer: drawer_en,
   modal: modal_en,
-  loading: loading_en
+  loading: loading_en,
+  form: form_en,
+  select: select_en,
 }
 
 export type EN = typeof en

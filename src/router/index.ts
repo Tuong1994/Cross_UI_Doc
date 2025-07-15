@@ -224,7 +224,12 @@ const router = createRouter({
       path: routePaths.FORM,
       name: routeNames.FORM,
       component: () => import('../views/FormView.vue')
-    }
+    },
+    {
+      path: routePaths.SELECT,
+      name: routeNames.SELECT,
+      component: () => import('../views/SelectView.vue')
+    },
   ]
 })
 

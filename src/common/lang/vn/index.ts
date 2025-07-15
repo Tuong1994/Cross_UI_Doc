@@ -27,6 +27,7 @@ import tabs_vn from './ui/tabs'
 import toast_vn from './ui/toast'
 import tooltip_vn from './ui/tooltip'
 import typography_vn from './ui/typography'
+import select_vn from './control/select'
 
 const vn = {
   common: common_vn,
@@ -38,7 +39,6 @@ const vn = {
   grid: grid_vn,
   pagination: pagination_vn,
   icon: icon_vn,
-  form: form_vn,
   typography: typography_vn,
   divider: divider_vn,
   flex: flex_vn,
@@ -57,7 +57,9 @@ const vn = {
   toast: toast_vn,
   drawer: drawer_vn,
   modal: modal_vn,
-  loading: loading_vn
+  loading: loading_vn,
+  form: form_vn,
+  select: select_vn
 }
 
 export type VN = typeof vn
