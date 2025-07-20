@@ -5,6 +5,7 @@ import { ECodeElType } from '@/components/View/Code/enum'
 import type { ComponentApi } from '@/common/type'
 import TableLayout from '@/components/View/TableLayout/TableLayout.vue'
 import useLangStore from '@/stores/LangStore'
+import helper from '@/helper'
 
 const t = useLangStore()
 
@@ -15,7 +16,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.badge.api.badgeDesc.color,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['blue', 'red', 'green', 'orange', 'yellow', 'purple', 'pink']
+      codes: helper.getColorType()
     },
     required: t.lang.common.required.no,
     default: '-'
@@ -26,7 +27,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.badge.api.badgeDesc.shape,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['square', 'round']
+      codes: helper.getShapeType()
     },
     required: t.lang.common.required.no,
     default: '-'

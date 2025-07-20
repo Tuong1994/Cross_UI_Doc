@@ -5,6 +5,7 @@ import { buttonCatalogIds } from '../../repository/catalogIds'
 import type { ComponentApi } from '@/common/type'
 import TableLayout from '@/components/View/TableLayout/TableLayout.vue'
 import useLangStore from '@/stores/LangStore'
+import helper from '@/helper'
 
 const t = useLangStore()
 
@@ -26,7 +27,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.button.api.buttonDesc.color,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['blue', 'green', 'red', 'orange', 'yellow', 'pink', 'purple']
+      codes: helper.getColorType()
     },
     required: t.lang.common.required.no,
     default: '-'
@@ -37,7 +38,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.button.api.buttonDesc.sizes,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['sm', 'md', 'lg']
+      codes: helper.getSizeType()
     },
     required: t.lang.common.required.no,
     default: 'md'
@@ -48,7 +49,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.button.api.buttonDesc.shape,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['round', 'square']
+      codes: helper.getShapeType()
     },
     required: t.lang.common.required.no,
     default: 'square'

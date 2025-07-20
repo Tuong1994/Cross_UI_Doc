@@ -5,6 +5,7 @@ import { ECodeElType } from '@/components/View/Code/enum'
 import type { ComponentApi } from '@/common/type'
 import TableLayout from '@/components/View/TableLayout/TableLayout.vue'
 import useLangStore from '@/stores/LangStore'
+import helper from '@/helper'
 
 const t = useLangStore()
 
@@ -15,7 +16,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.loading.api.spinnerDesc.color,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['blue', 'green', 'red', 'orange', 'yellow', 'purple', 'pink', 'white', 'black']
+      codes: helper.getColorType('white', 'black')
     },
     required: t.lang.common.required.no,
     default: 'blue'

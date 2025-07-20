@@ -6,6 +6,7 @@ import { routePaths } from '@/router'
 import type { ComponentApi } from '@/common/type'
 import TableLayout from '@/components/View/TableLayout/TableLayout.vue'
 import useLangStore from '@/stores/LangStore'
+import helper from '@/helper'
 
 const t = useLangStore()
 
@@ -128,7 +129,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.modal.api.modalDesc.color,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['blue', 'green', 'red', 'orange', 'yellow', 'purple', 'pink']
+      codes: helper.getColorType()
     },
     required: t.lang.common.required.no,
     default: 'blue'
@@ -139,7 +140,7 @@ const dataSource = computed<ComponentApi[]>(() => [
     desc: t.lang.modal.api.modalDesc.sizes,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['sm', 'md', 'lg']
+      codes: helper.getSizeType()
     },
     required: t.lang.common.required.no,
     default: 'md'
