@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { Select } from '@/components/Control'
+import { Space } from '@/components/UI'
 import { selectBasicCode } from './code'
 import { selectCatalogIds } from '@/features/Control/Select/repository/catalogIds'
 import type { SelectOptions } from '@/components/Control/type'
@@ -17,7 +18,11 @@ const options = computed<SelectOptions>(() => [
 <template>
   <AnchorContent :id="selectCatalogIds.BASIC">
     <ShowCase title="Basic" :code="selectBasicCode">
-      <Select color="green" :options="options" />
+      <Space>
+        <Select color="green" :options="options" />
+        <Select color="green" :options="options" loading />
+        <Select color="green" :options="options" disabled />
+      </Space>
     </ShowCase>
   </AnchorContent>
 </template>

@@ -14,11 +14,16 @@ const options = computed<SelectOptions>(() => [
   { label: 'Item 7', value: 7 },
   { label: 'Item 8', value: 8 },
   { label: 'Item 9', value: 9 },
-  { label: 'Item 10', value: 10 },
+  { label: 'Item 10', value: 10 }
 ])
+
+const handleChangePage = (page: number) => {
+  console.log(page)
+}
 </script>
 
 <template>
-  <Select async color="green" :options="options" :total="100" :limit="10" />
+  <Select async color="green" :options="options" :total="100" :limit="10" @onChangePage="handleChangePage" />
 </template>
+
 `

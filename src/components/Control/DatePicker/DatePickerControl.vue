@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { withDefaults, useSlots, type StyleValue, computed } from 'vue'
+import { withDefaults, type StyleValue, computed } from 'vue'
 import { iconName } from '@/components/UI/Icon/constant.ts'
 import Icon from '@/components/UI/Icon/Icon.vue'
 import moment from 'moment'
@@ -7,6 +7,7 @@ import moment from 'moment'
 interface DatePickerControlProps {
   inputClassName?: string
   inputStyle?: StyleValue
+  disabled?: boolean
   hasAddonBefore: boolean
   hasAddonAfter: boolean
   dropdown: boolean
@@ -22,13 +23,13 @@ const props = withDefaults(defineProps<DatePickerControlProps>(), {
 
 const emits = defineEmits(['onDropdown', 'onResetInput'])
 
-const slots = useSlots()
-
 const dropdownClassName = computed<string>(() => (props.dropdown ? 'wrap-group-dropdown' : ''))
 
-const handleDropdown = () => emits('onDropdown')
-
 const handleResetInput = () => emits('onResetInput')
+
+const handleDropdown = () => {
+  if (!props.disabled) emits('onDropdown')
+}
 </script>
 
 <template>
