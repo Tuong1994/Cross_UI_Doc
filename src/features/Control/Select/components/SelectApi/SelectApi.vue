@@ -33,6 +33,17 @@ const dataSource = computed<ComponentApi[]>(() => [
     default: '-'
   },
   {
+    id: 'defaultTags',
+    props: 'defaultTags',
+    desc: t.lang.select.api.selectDesc.defaultTags,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['(string | number | boolean)[]']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
     id: 'name',
     props: 'name',
     desc: t.lang.select.api.selectDesc.name,

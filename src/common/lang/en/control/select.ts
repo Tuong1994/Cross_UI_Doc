@@ -10,6 +10,7 @@ const select_en = {
       inputStyle: 'Inline style for the input control',
       options: 'List of selectable options',
       defaultValue: 'Default selected value',
+      defaultTags: 'Default selected tags (used for select tag)',
       name: 'Name of the control',
       placeholder: 'Placeholder text for the input control',
       sizes: 'Size of the select input',
@@ -27,7 +28,7 @@ const select_en = {
       rule: 'Validation rule(s) for the select input',
       onChangeSelect: 'Triggered when an option is selected',
       onChangeSearch: 'Triggered when the search input value changes',
-      onChangePaging: 'Triggered when a pagination control is clicked'
+      onChangePage: 'Triggered when a pagination control is clicked'
     }
   }
 }

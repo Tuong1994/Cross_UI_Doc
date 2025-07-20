@@ -4,6 +4,7 @@ import { computed } from 'vue'
 import { Space } from '@/components/UI'
 import { Select } from '@/components/Control'
 import type { ControlColor, SelectOptions } from '@/components/Control/type'
+import utils from '@/utils'
 
 const colors = computed<ControlColor[]>(() => ['blue', 'green', 'red', 'orange', 'yellow', 'purple', 'pink'])
 
@@ -17,7 +18,7 @@ const options = computed<SelectOptions>(() => [
 <template>
   <Space>
     <Select v-for="color in colors" :key="color" :color="color" :options="options">
-      <template #label>{{ color }}</template>
+      <template #label>{{ utils.capitalizeFirstLetter(color) }}</template>
     </Select>
   </Space>
 </template>

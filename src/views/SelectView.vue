@@ -8,6 +8,8 @@ import SelectPaging from '@/features/Control/Select/components/SelectPaging/Sele
 import SelectShape from '@/features/Control/Select/components/SelectShape/SelectShape.vue'
 import SelectSize from '@/features/Control/Select/components/SelectSize/SelectSize.vue'
 import SelectApi from '@/features/Control/Select/components/SelectApi/SelectApi.vue'
+import SelectTags from '@/features/Control/Select/components/SelectTags/SelectTags.vue'
+import SelectTree from '@/features/Control/Select/components/SelectTree/SelectTree.vue'
 import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
@@ -27,6 +29,8 @@ const t = useLangStore()
       <SelectLabel />
       <SelectPaging />
       <SelectCustomDropdown />
+      <SelectTags />
+      <SelectTree />
     </template>
     <template #api>
       <SelectApi />

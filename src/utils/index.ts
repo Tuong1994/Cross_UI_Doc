@@ -16,6 +16,11 @@ const utils = {
     const node = ref.value
     if (node.style.maxHeight) node.style.maxHeight = ''
     else node.style.maxHeight = `${node.scrollHeight}px`
+  },
+
+  capitalizeFirstLetter: (str: string) => {
+    if (!str) return ''
+    return str.charAt(0).toUpperCase() + str.slice(1)
   }
 }
 

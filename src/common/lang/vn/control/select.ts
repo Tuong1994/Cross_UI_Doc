@@ -10,6 +10,7 @@ const select_vn = {
       inputStyle: 'Style nội tuyến cho trường nhập',
       options: 'Danh sách các tùy chọn có thể chọn',
       defaultValue: 'Giá trị được chọn mặc định',
+      defaultTags: 'Các thẻ được chọn mặc định (dùng cho chế độ chọn theo thẻ)',
       name: 'Tên của điều khiển (control)',
       placeholder: 'Văn bản gợi ý trong trường nhập',
       sizes: 'Kích thước của trường chọn (select)',
@@ -27,7 +28,7 @@ const select_vn = {
       rule: 'Luật xác thực cho trường chọn',
       onChangeSelect: 'Kích hoạt khi một tùy chọn được chọn',
       onChangeSearch: 'Kích hoạt khi giá trị trong ô tìm kiếm thay đổi',
-      onChangePaging: 'Kích hoạt khi điều khiển phân trang được nhấn'
+      onChangePage: 'Kích hoạt khi điều khiển phân trang được nhấn'
     }
   }
 }

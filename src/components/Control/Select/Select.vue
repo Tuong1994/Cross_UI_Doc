@@ -33,12 +33,12 @@ export interface SelectProps {
   async?: boolean
   loading?: boolean
   disabled?: boolean
-  total?: number
-  limit?: number
   required?: boolean
   optional?: boolean
   hasClear?: boolean
   hasSearch?: boolean
+  total?: number
+  limit?: number
   rule?: FormRule
 }
 

@@ -47,8 +47,6 @@ const useMenu = () => {
         { id: routeNames.INPUT_PASSWORD, label: 'Input Password', path: routePaths.INPUT_PASSWORD },
         { id: routeNames.TEXTAREA, label: 'Textarea', path: routePaths.TEXTAREA },
         { id: routeNames.SELECT, label: 'Select', path: routePaths.SELECT },
-        { id: routeNames.SELECT_TAG, label: 'Select Tag', path: routePaths.SELECT_TAG },
-        { id: routeNames.TREE_SELECT, label: 'Tree Select', path: routePaths.TREE_SELECT },
         { id: routeNames.DATEPICKER, label: 'Datepicker', path: routePaths.DATEPICKER },
         { id: routeNames.CHECKBOX, label: 'Checkbox', path: routePaths.CHECKBOX },
         { id: routeNames.RADIO, label: 'Radio', path: routePaths.RADIO },

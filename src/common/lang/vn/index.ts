@@ -59,7 +59,7 @@ const vn = {
   modal: modal_vn,
   loading: loading_vn,
   form: form_vn,
-  select: select_vn
+  select: select_vn,
 }
 
 export type VN = typeof vn

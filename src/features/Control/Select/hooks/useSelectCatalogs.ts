@@ -12,8 +12,10 @@ const useSelectCatalogs = () => {
     { id: selectCatalogIds.SIZE, title: 'Size' },
     { id: selectCatalogIds.SHAPE, title: 'Shape' },
     { id: selectCatalogIds.LABEL, title: 'Label' },
-    { id: selectCatalogIds.PAGING, title: 'Paging' },
+    { id: selectCatalogIds.PAGING, title: 'Pagination' },
     { id: selectCatalogIds.CUSTOM_DROPDOWN, title: 'Custom dropdown' },
+    { id: selectCatalogIds.TAGS, title: 'Tags' },
+    { id: selectCatalogIds.TREE, title: 'Tree' },
   ]
 
   const apiCatalogs: CatalogItems = [{ id: selectCatalogIds.SELECT_API, title: 'Select' }]
