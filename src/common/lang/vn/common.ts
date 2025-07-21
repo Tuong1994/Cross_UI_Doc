@@ -10,6 +10,9 @@ const common_vn = {
     no: 'không'
   },
   header: {
+    search: {
+      empty: 'Không tìm thấy components nào'
+    },
     mode: {
       light: 'Sáng',
       dark: 'Tối'

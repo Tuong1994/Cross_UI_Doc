@@ -1,0 +1,20 @@
+.header-search {
+  position: relative;
+  .search-dropdown {
+    width: $w-10 * 5;
+    padding: $p-1;
+    background: $bg-white;
+    border-radius: $rounded;
+    box-shadow: 0 0 10px $bg-gray;
+    transform: scaleY(0);
+    transform-origin: top;
+    position: absolute;
+    top: 110%;
+    left: 0;
+  }
+  .search-dropdown-active {
+    top: 110%;
+    transform: scaleY(1);
+    animation: dropdown $transition-time-xs $transition-fn;
+  }
+}

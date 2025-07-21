@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { defineProps, defineEmits } from 'vue'
 import { Drawer, Flex } from '@/components/UI'
+import { useViewPoint } from '@/hooks'
 import SideMenu from '../SideMenu/SideMenu.vue'
 import HeaderMode from './HeaderMode.vue'
 import HeaderTranslate from './HeaderTranslate.vue'
-import { useViewPoint } from '@/hooks'
 
 const { FlexRow, FlexCol } = Flex
 

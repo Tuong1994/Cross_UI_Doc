@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import { Button, Icon, Flex, Layout } from '@/components/UI'
+import { Button, Space, Icon, Flex, Layout } from '@/components/UI'
 import { iconName } from '@/components/UI/Icon/constant'
+import { useRouter } from 'vue-router'
 import { useViewPoint } from '@/hooks'
+import { routeNames } from '@/router'
 import Logo from '../Logo/Logo.vue'
 import HeaderMode from './HeaderMode.vue'
 import HeaderTranslate from './HeaderTranslate.vue'
 import HeaderMobile from './HeaderMobile.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
+import HeaderSearch from './HeaderSearch.vue'
 
 const { Head } = Layout
 
@@ -17,9 +20,13 @@ const layout = useLayoutStore()
 
 const { isPhone, isTablet } = useViewPoint()
 
+const { currentRoute } = useRouter()
+
 const openSide = ref<boolean>(false)
 
 const responsive = computed<boolean>(() => Boolean(isPhone.value || isTablet.value))
+
+const hasSearch = computed<boolean>(() => currentRoute.value.name !== routeNames.HOME)
 
 const handleOpenSide = () => (openSide.value = !openSide.value)
 </script>
@@ -28,7 +35,10 @@ const handleOpenSide = () => (openSide.value = !openSide.value)
   <Head>
     <FlexRow justify="between" aligns="middle">
       <FlexCol>
-        <Logo />
+        <Space size="lg">
+          <Logo />
+          <HeaderSearch v-if="hasSearch && !responsive" />
+        </Space>
       </FlexCol>
       <FlexCol :xs="0" :md="12" :lg="8" :span="6">
         <FlexRow>

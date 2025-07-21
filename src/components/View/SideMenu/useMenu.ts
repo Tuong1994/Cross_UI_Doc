@@ -1,4 +1,4 @@
-import { computed } from 'vue'
+import { computed, type Ref } from 'vue'
 import { routeNames, routePaths } from '@/router'
 import type { SideMenuItems } from './type'
 import useLangStore from '@/stores/LangStore'
@@ -82,7 +82,18 @@ const useMenu = () => {
     }
   ])
 
-  return menus
+  const filterMenus = (search: string) => {
+    if (!search) return menus.value
+    const newMenus = menus.value
+      .map((menu) => ({
+        ...menu,
+        items: menu.items.filter((item) => item.label.toLowerCase().includes(search.toLowerCase()))
+      }))
+      .filter((menu) => menu.items.length > 0)
+    return newMenus
+  }
+
+  return { menus, filterMenus }
 }
 
 export default useMenu

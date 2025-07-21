@@ -10,6 +10,9 @@ const common_en = {
     no: 'no'
   },
   header: {
+    search: {
+      empty: 'No components were found',
+    },
     mode: {
       light: 'Light',
       dark: 'Dark'
