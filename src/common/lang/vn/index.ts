@@ -28,6 +28,7 @@ import toast_vn from './ui/toast'
 import tooltip_vn from './ui/tooltip'
 import typography_vn from './ui/typography'
 import select_vn from './control/select'
+import input_vn from './control/input'
 
 const vn = {
   common: common_vn,
@@ -59,6 +60,7 @@ const vn = {
   modal: modal_vn,
   loading: loading_vn,
   form: form_vn,
+  input: input_vn,
   select: select_vn,
 }
 

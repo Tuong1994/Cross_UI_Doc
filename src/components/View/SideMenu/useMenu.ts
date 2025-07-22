@@ -42,9 +42,6 @@ const useMenu = () => {
       items: [
         { id: routeNames.FORM, label: 'Form', path: routePaths.FORM },
         { id: routeNames.INPUT, label: 'Input', path: routePaths.INPUT },
-        { id: routeNames.INPUT_NUMBER, label: 'Input Number', path: routePaths.INPUT_NUMBER },
-        { id: routeNames.INPUT_PHONE, label: 'Input Phone', path: routePaths.INPUT_PHONE },
-        { id: routeNames.INPUT_PASSWORD, label: 'Input Password', path: routePaths.INPUT_PASSWORD },
         { id: routeNames.TEXTAREA, label: 'Textarea', path: routePaths.TEXTAREA },
         { id: routeNames.SELECT, label: 'Select', path: routePaths.SELECT },
         { id: routeNames.DATEPICKER, label: 'Datepicker', path: routePaths.DATEPICKER },

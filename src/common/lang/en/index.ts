@@ -28,6 +28,7 @@ import toast_en from './ui/toast'
 import tooltip_en from './ui/tooltip'
 import typography_en from './ui/typography'
 import select_en from './control/select'
+import input_en from './control/input'
 
 const en = {
   common: common_en,
@@ -59,7 +60,8 @@ const en = {
   modal: modal_en,
   loading: loading_en,
   form: form_en,
-  select: select_en,
+  input: input_en,
+  select: select_en
 }
 
 export type EN = typeof en

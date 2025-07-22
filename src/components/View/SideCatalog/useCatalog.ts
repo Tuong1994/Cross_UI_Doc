@@ -29,6 +29,7 @@ import useDrawerCatalogs from '@/features/UI/Drawer/hooks/useDrawerCatalogs'
 import useModalCatalogs from '@/features/UI/Modal/hooks/useModalCatalogs'
 import useLoadingCatalogs from '@/features/UI/Loading/hooks/useLoadingCatalogs'
 import useSelectCatalogs from '@/features/Control/Select/hooks/useSelectCatalogs'
+import useInputCatalogs from '@/features/Control/Input/hooks/useInputCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -87,6 +88,8 @@ const useCatalog = () => {
 
   const formCatalogs = useFormCatalogs()
 
+  const inputCatalogs = useInputCatalogs()
+
   const selectCatalogs = useSelectCatalogs()
 
   watchEffect(() => {
@@ -117,6 +120,7 @@ const useCatalog = () => {
     if (routeName === routeNames.MODAL) return catalogStore.setCatalogs(modalCatalogs.value)
     if (routeName === routeNames.LOADING) return catalogStore.setCatalogs(loadingCatalogs.value)
     if (routeName === routeNames.FORM) return catalogStore.setCatalogs(formCatalogs.value)
+    if (routeName === routeNames.INPUT) return catalogStore.setCatalogs(inputCatalogs.value)
     if (routeName === routeNames.SELECT) return catalogStore.setCatalogs(selectCatalogs.value)
   })
 }

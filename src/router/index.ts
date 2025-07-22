@@ -16,9 +16,6 @@ export const routePaths = {
   PAGINATION: '/pagination',
   FORM: '/form',
   INPUT: '/input',
-  INPUT_NUMBER: '/inputNumber',
-  INPUT_PHONE: '/inputPhone',
-  INPUT_PASSWORD: '/inputPassword',
   TEXTAREA: '/textarea',
   SELECT: '/select',
   DATEPICKER: '/datepicker',
@@ -57,9 +54,6 @@ export const routeNames = {
   PAGINATION: 'pagination',
   FORM: 'form',
   INPUT: 'input',
-  INPUT_NUMBER: 'inputNumber',
-  INPUT_PHONE: 'inputPhone',
-  INPUT_PASSWORD: 'inputPassword',
   TEXTAREA: 'textarea',
   SELECT: 'select',
   DATEPICKER: 'datepicker',
@@ -220,6 +214,11 @@ const router = createRouter({
       path: routePaths.FORM,
       name: routeNames.FORM,
       component: () => import('../views/FormView.vue')
+    },
+    {
+      path: routePaths.INPUT,
+      name: routeNames.INPUT,
+      component: () => import('../views/InputView.vue')
     },
     {
       path: routePaths.SELECT,
