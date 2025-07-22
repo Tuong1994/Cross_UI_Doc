@@ -1,7 +1,7 @@
-const input_vn = {
-  desc: 'Thông qua chuột hoặc bàn phím để nhập nội dung, đây là trình bao trường biểu mẫu cơ bản nhất',
+const textarea_vn = {
+  desc: 'Đây là một ô nhập nhiều dòng dùng để nhập văn bản dài',
   api: {
-    inputDesc: {
+    textareaDesc: {
       rootClassName: 'Tên class của vùng bao ngoài',
       labelClassName: 'Tên class của nhãn',
       inputClassName: 'Tên class của ô nhập liệu',
@@ -18,6 +18,8 @@ const input_vn = {
       required: 'Đánh dấu trường là bắt buộc',
       optional: 'Đánh dấu trường là không bắt buộc',
       hasClear: 'Hiển thị nút xóa để đặt lại ô nhập',
+      rows: 'Xác định số dòng văn bản hiển thị trong ô nhập',
+      cols: 'Xác định số cột ký tự hiển thị trong ô nhập',
       rule: 'Quy tắc kiểm tra hợp lệ cho ô nhập',
       onInput: 'Kích hoạt khi giá trị ô nhập thay đổi',
       onBlur: 'Được kích hoạt khi ô nhập liệu mất tiêu điểm (mất focus)'
@@ -25,4 +27,4 @@ const input_vn = {
   }
 }
 
-export default input_vn
+export default textarea_vn

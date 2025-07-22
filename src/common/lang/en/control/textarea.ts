@@ -1,7 +1,7 @@
-const input_en = {
-  desc: 'Through mouse or keyboard input content, it is the most basic form field wrapper',
-   api: {
-    inputDesc: {
+const textarea_en = {
+  desc: "It's a multi-line text input for single long text",
+  api: {
+    textareaDesc: {
       rootClassName: 'Class name of the container',
       labelClassName: 'Class name of the label',
       inputClassName: 'Class name of the input control',
@@ -18,11 +18,13 @@ const input_en = {
       required: 'Mark the field as required',
       optional: 'Mark the field as optional',
       hasClear: 'Enable a clear button to reset the input',
+      rows: 'Specifies the number of visible text lines in the input',
+      cols: 'Specifies the number of visible character columns in the input',
       rule: 'Validation rule(s) for the input',
-      onInput: 'Triggered when the search input value changes',
+      onInput: 'Triggered when the input value changes',
       onBlur: 'Triggered when the input loses focus'
     }
   }
 }
 
-export default input_en
+export default textarea_en

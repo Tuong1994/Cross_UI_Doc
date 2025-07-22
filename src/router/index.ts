@@ -221,6 +221,11 @@ const router = createRouter({
       component: () => import('../views/InputView.vue')
     },
     {
+      path: routePaths.TEXTAREA,
+      name: routeNames.TEXTAREA,
+      component: () => import('../views/TextAreaView.vue')
+    },
+    {
       path: routePaths.SELECT,
       name: routeNames.SELECT,
       component: () => import('../views/SelectView.vue')
