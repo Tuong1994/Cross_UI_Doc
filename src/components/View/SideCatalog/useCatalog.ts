@@ -31,6 +31,7 @@ import useLoadingCatalogs from '@/features/UI/Loading/hooks/useLoadingCatalogs'
 import useSelectCatalogs from '@/features/Control/Select/hooks/useSelectCatalogs'
 import useInputCatalogs from '@/features/Control/Input/hooks/useInputCatalogs'
 import useTextAreaCatalogs from '@/features/Control/TextArea/hooks/useTextAreaCatalogs'
+import useDatepickerCatalogs from '@/features/Control/DatePicker/hooks/useDatepickerCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -95,6 +96,8 @@ const useCatalog = () => {
 
   const selectCatalogs = useSelectCatalogs()
 
+  const datepickerCatalogs = useDatepickerCatalogs()
+
   watchEffect(() => {
     const routeName = currentRoute.value.name
     if (routeName === routeNames.BUTTON) return catalogStore.setCatalogs(buttonCatalogs.value)
@@ -126,6 +129,7 @@ const useCatalog = () => {
     if (routeName === routeNames.INPUT) return catalogStore.setCatalogs(inputCatalogs.value)
     if (routeName === routeNames.TEXTAREA) return catalogStore.setCatalogs(textareaCatalogs.value)
     if (routeName === routeNames.SELECT) return catalogStore.setCatalogs(selectCatalogs.value)
+    if (routeName === routeNames.DATEPICKER) return catalogStore.setCatalogs(datepickerCatalogs.value)
   })
 }
 

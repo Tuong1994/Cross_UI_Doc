@@ -37,7 +37,7 @@ export const routePaths = {
   DRAWER: '/drawer',
   MODAL: '/modal',
   LOADING: '/loading'
-}
+} as const
 
 export const routeNames = {
   HOME: 'home',
@@ -75,7 +75,7 @@ export const routeNames = {
   DRAWER: 'drawer',
   MODAL: 'modal',
   LOADING: 'loading'
-}
+} as const
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -230,6 +230,11 @@ const router = createRouter({
       name: routeNames.SELECT,
       component: () => import('../views/SelectView.vue')
     },
+    {
+      path: routePaths.DATEPICKER,
+      name: routeNames.DATEPICKER,
+      component: () => import('../views/DatePickerView.vue')
+    }
   ]
 })
 

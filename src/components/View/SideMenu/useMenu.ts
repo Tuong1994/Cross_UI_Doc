@@ -1,4 +1,4 @@
-import { computed, type Ref } from 'vue'
+import { computed } from 'vue'
 import { routeNames, routePaths } from '@/router'
 import type { SideMenuItems } from './type'
 import useLangStore from '@/stores/LangStore'
@@ -44,7 +44,7 @@ const useMenu = () => {
         { id: routeNames.INPUT, label: 'Input', path: routePaths.INPUT },
         { id: routeNames.TEXTAREA, label: 'Textarea', path: routePaths.TEXTAREA },
         { id: routeNames.SELECT, label: 'Select', path: routePaths.SELECT },
-        { id: routeNames.DATEPICKER, label: 'Datepicker', path: routePaths.DATEPICKER },
+        { id: routeNames.DATEPICKER, label: 'DatePicker', path: routePaths.DATEPICKER },
         { id: routeNames.CHECKBOX, label: 'Checkbox', path: routePaths.CHECKBOX },
         { id: routeNames.RADIO, label: 'Radio', path: routePaths.RADIO },
         { id: routeNames.UPLOAD, label: 'Upload', path: routePaths.UPLOAD }
