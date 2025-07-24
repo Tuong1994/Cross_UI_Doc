@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
+import CheckBoxApi from '@/features/Control/CheckBox/components/CheckBoxApi/CheckBoxApi.vue'
 import CheckBoxBasic from '@/features/Control/CheckBox/components/CheckBoxBasic/CheckBoxBasic.vue'
 import CheckBoxColor from '@/features/Control/CheckBox/components/CheckBoxColor/CheckBoxColor.vue'
 import CheckBoxLabel from '@/features/Control/CheckBox/components/CheckBoxLabel/CheckBoxLabel.vue'
@@ -21,6 +22,8 @@ const t = useLangStore()
       <CheckBoxSize />
       <CheckBoxLabel />
     </template>
-    <template #api></template>
+    <template #api>
+      <CheckBoxApi />
+    </template>
   </PageLayout>
 </template>
