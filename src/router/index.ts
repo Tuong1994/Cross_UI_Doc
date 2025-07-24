@@ -234,7 +234,12 @@ const router = createRouter({
       path: routePaths.DATEPICKER,
       name: routeNames.DATEPICKER,
       component: () => import('../views/DatePickerView.vue')
-    }
+    },
+    {
+      path: routePaths.CHECKBOX,
+      name: routeNames.CHECKBOX,
+      component: () => import('../views/CheckBoxView.vue')
+    },
   ]
 })
 

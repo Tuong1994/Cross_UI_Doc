@@ -24,7 +24,7 @@ const handleFinish = (data: Data) => console.log(data)
     <InputPassword name="password">
       <template #label>Password</template>
     </InputPassword>
-    <Button type="submit">Submit</Button>
+    <Button :sizes="size" type="submit">Submit</Button>
   </Form>
 </template>
 `

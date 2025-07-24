@@ -31,6 +31,7 @@ import select_vn from './control/select'
 import input_vn from './control/input'
 import textarea_vn from './control/textarea'
 import datepicker_vn from './control/datapicker'
+import checkbox_vn from './control/checkbox'
 
 const vn = {
   common: common_vn,
@@ -65,7 +66,8 @@ const vn = {
   input: input_vn,
   textarea: textarea_vn,
   select: select_vn,
-  datepicker: datepicker_vn
+  datepicker: datepicker_vn,
+  checkbox: checkbox_vn
 }
 
 export type VN = typeof vn

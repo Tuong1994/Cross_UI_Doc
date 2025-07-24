@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { DatePicker } from '@/components/Control'
 import { Space } from '@/components/UI'
-import { datepickerSizeCode } from './code'
-import { datepickerCatalogIds } from '@/features/Control/DatePicker/repository/catalogIds'
+import { CheckBox } from '@/components/Control'
 import { useDisplayComponentSize } from '@/hooks'
+import { checkboxSizeCode } from './code'
+import { checkboxCatalogIds } from '@/features/Control/CheckBox/repository/catalogIds'
 import type { ComponentSize } from '@/common/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -13,20 +13,17 @@ const sizeContent = useDisplayComponentSize()
 </script>
 
 <template>
-  <AnchorContent :id="datepickerCatalogIds.SIZE">
-    <ShowCase title="Size" :code="datepickerSizeCode">
+  <AnchorContent :id="checkboxCatalogIds.SIZE">
+    <ShowCase title="Size" :code="checkboxSizeCode">
       <Space>
-        <DatePicker
+        <CheckBox
           v-for="size in helper.getSizeType()"
           :key="size"
-          :rootStyle="{ width: '200px' }"
           :sizes="size as ComponentSize"
           color="green"
         >
-          <template #label>
-            {{ sizeContent(size) }}
-          </template>
-        </DatePicker>
+          {{ sizeContent(size) }}
+        </CheckBox>
       </Space>
     </ShowCase>
   </AnchorContent>
