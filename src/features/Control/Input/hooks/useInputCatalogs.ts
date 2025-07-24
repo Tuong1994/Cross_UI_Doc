@@ -12,6 +12,9 @@ const useInputCatalogs = () => {
     { id: inputCatalogIds.SIZE, title: 'Size' },
     { id: inputCatalogIds.SHAPE, title: 'Shape' },
     { id: inputCatalogIds.LABEL, title: 'Label' },
+    { id: inputCatalogIds.PASSWORD, title: 'Password' },
+    { id: inputCatalogIds.NUMBER, title: 'Number' },
+    { id: inputCatalogIds.PHONE, title: 'Phone' },
   ]
 
   const apiCatalogs: CatalogItems = [{ id: inputCatalogIds.INPUT_API, title: 'Input' }]
