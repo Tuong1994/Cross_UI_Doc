@@ -33,6 +33,7 @@ import useInputCatalogs from '@/features/Control/Input/hooks/useInputCatalogs'
 import useTextAreaCatalogs from '@/features/Control/TextArea/hooks/useTextAreaCatalogs'
 import useDatepickerCatalogs from '@/features/Control/DatePicker/hooks/useDatepickerCatalogs'
 import useCheckBoxCatalogs from '@/features/Control/CheckBox/hooks/useCheckBoxCatalogs'
+import useRadioCatalogs from '@/features/Control/Radio/hooks/useRadioCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -101,6 +102,8 @@ const useCatalog = () => {
 
   const checkboxCatalogs = useCheckBoxCatalogs()
 
+  const radioCatalogs = useRadioCatalogs()
+
   watchEffect(() => {
     const routeName = currentRoute.value.name
     if (routeName === routeNames.BUTTON) return catalogStore.setCatalogs(buttonCatalogs.value)
@@ -134,6 +137,7 @@ const useCatalog = () => {
     if (routeName === routeNames.SELECT) return catalogStore.setCatalogs(selectCatalogs.value)
     if (routeName === routeNames.DATEPICKER) return catalogStore.setCatalogs(datepickerCatalogs.value)
     if (routeName === routeNames.CHECKBOX) return catalogStore.setCatalogs(checkboxCatalogs.value)
+    if (routeName === routeNames.RADIO) return catalogStore.setCatalogs(radioCatalogs.value)
   })
 }
 

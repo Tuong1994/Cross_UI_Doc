@@ -32,6 +32,7 @@ import input_en from './control/input'
 import textarea_en from './control/textarea'
 import datepicker_en from './control/datepicker'
 import checkbox_en from './control/checkbox'
+import radio_en from './control/radio'
 
 const en = {
   common: common_en,
@@ -67,7 +68,8 @@ const en = {
   textarea: textarea_en,
   select: select_en,
   datepicker: datepicker_en,
-  checkbox: checkbox_en
+  checkbox: checkbox_en,
+  radio: radio_en
 }
 
 export type EN = typeof en

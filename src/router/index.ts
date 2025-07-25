@@ -240,6 +240,11 @@ const router = createRouter({
       name: routeNames.CHECKBOX,
       component: () => import('../views/CheckBoxView.vue')
     },
+    {
+      path: routePaths.RADIO,
+      name: routeNames.RADIO,
+      component: () => import('../views/RadioView.vue')
+    }
   ]
 })
 
