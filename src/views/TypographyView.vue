@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Divider } from '@/components/UI'
+import { Divider, Typography } from '@/components/UI'
 import TitleAligns from '@/features/UI/Typography/components/Title/TitleAligns/TitleAligns.vue'
 import TitleBasic from '@/features/UI/Typography/components/Title/TitleBasic/TitleBasic.vue'
 import TitleItalic from '@/features/UI/Typography/components/Title/TitleItalic/TitleItalic.vue'
@@ -24,6 +24,8 @@ import ParagraphRemove from '@/features/UI/Typography/components/Paragraph/Parag
 import ParagraphApi from '@/features/UI/Typography/components/Paragraph/ParagraphApi/ParagraphApi.vue'
 import useLangStore from '@/stores/LangStore'
 
+const { Paragraph } = Typography
+
 const t = useLangStore()
 
 const importCodes = [
@@ -35,6 +37,7 @@ const importCodes = [
 <template>
   <PageLayout title="Typography" :importCode="importCodes" :desc="t.lang.typography.desc">
     <template #showcase>
+      <Paragraph :size="16" rootClassName="section-space">Title</Paragraph>
       <TitleBasic />
       <TitleLevel />
       <TitleVariant />
@@ -43,7 +46,7 @@ const importCodes = [
       <TitleItalic />
       <TitleUnderline />
       <TitleRemove />
-      <Divider />
+      <Paragraph :size="16" rootClassName="section-space">Paragraph</Paragraph>
       <ParagraphBasic />
       <ParagraphSize />
       <ParagraphStrong />

@@ -10,7 +10,7 @@ const { Title } = Typography
 
 <template>
   <AnchorContent :id="typographyCatalogIds.TITLE_UNDERLINE">
-    <ShowCase title="Title underline" :code="titleUnderlineCode">
+    <ShowCase title="Underline" :code="titleUnderlineCode">
       <Title underline>Heading</Title>
     </ShowCase>
   </AnchorContent>

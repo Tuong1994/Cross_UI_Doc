@@ -10,7 +10,7 @@ const { Title } = Typography
 
 <template>
   <AnchorContent :id="typographyCatalogIds.TITLE_VARIANT">
-    <ShowCase title="Title variant" :code="titleVariantCode">
+    <ShowCase title="Variant" :code="titleVariantCode">
       <Title variant="default">Heading</Title>
       <Title variant="secondary">Heading</Title>
       <Title variant="success">Heading</Title>

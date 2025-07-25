@@ -10,7 +10,7 @@ const { Title } = Typography
 
 <template>
   <AnchorContent :id="typographyCatalogIds.TITLE_WEIGHT">
-    <ShowCase title="Title weight" :code="titleWeightCode">
+    <ShowCase title="Weight" :code="titleWeightCode">
       <Title>Heading</Title>
       <Title :weight="800">Heading</Title>
     </ShowCase>

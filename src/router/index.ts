@@ -244,7 +244,12 @@ const router = createRouter({
       path: routePaths.RADIO,
       name: routeNames.RADIO,
       component: () => import('../views/RadioView.vue')
-    }
+    },
+    {
+      path: routePaths.UPLOAD,
+      name: routeNames.UPLOAD,
+      component: () => import('../views/UploadView.vue')
+    },
   ]
 })
 

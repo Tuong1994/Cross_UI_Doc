@@ -10,7 +10,7 @@ const { Title } = Typography
 
 <template>
   <AnchorContent :id="typographyCatalogIds.TITLE_BASIC">
-    <ShowCase title="Title basic" :code="titleBasicCode">
+    <ShowCase title="Basic" :code="titleBasicCode">
       <Title>Heading</Title>
     </ShowCase>
   </AnchorContent>
