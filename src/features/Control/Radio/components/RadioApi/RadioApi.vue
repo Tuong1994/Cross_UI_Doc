@@ -178,7 +178,7 @@ const dataSource = computed<ComponentApi[]>(() => [
   {
     id: 'onCheck',
     props: '@onCheck',
-    desc: t.lang.radio.api.radioDesc.onInput,
+    desc: t.lang.radio.api.radioDesc.onCheck,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['(value: string | number) => void']
