@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import { Typography } from '@/components/UI'
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
+import FileBasic from '@/features/Control/Upload/components/File/FileBasic/FileBasic.vue'
+import FileColor from '@/features/Control/Upload/components/File/FileColor/FileColor.vue'
+import FileShape from '@/features/Control/Upload/components/File/FileShape/FileShape.vue'
 import MultipleImageBasic from '@/features/Control/Upload/components/MultipleImage/MultipleImageBasic/MultipleImageBasic.vue'
+import MultipleImageColor from '@/features/Control/Upload/components/MultipleImage/MultipleImageColor/MultipleImageColor.vue'
+import MultipleImageShape from '@/features/Control/Upload/components/MultipleImage/MultipleImageShape/MultipleImageShape.vue'
+import SingleImageApi from '@/features/Control/Upload/components/SingleImage/SingleImageApi/SingleImageApi.vue'
 import SingleImageBasic from '@/features/Control/Upload/components/SingleImage/SingleImageBasic/SingleImageBasic.vue'
 import SingleImageColor from '@/features/Control/Upload/components/SingleImage/SingleImageColor/SingleImageColor.vue'
 import SingleImageShape from '@/features/Control/Upload/components/SingleImage/SingleImageShape/SingleImageShape.vue'
@@ -27,7 +33,15 @@ const importCodes = [
       <SingleImageShape />
       <Paragraph :size="16" rootClassName="section-space">Multiple image</Paragraph>
       <MultipleImageBasic />
+      <MultipleImageColor />
+      <MultipleImageShape />
+      <Paragraph :size="16" rootClassName="section-space">Files</Paragraph>
+      <FileBasic />
+      <FileColor />
+      <FileShape />
     </template>
-    <template #api></template>
+    <template #api>
+      <SingleImageApi />
+    </template>
   </PageLayout>
 </template>

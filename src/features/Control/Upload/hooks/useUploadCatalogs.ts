@@ -11,7 +11,11 @@ const useUploadCatalogs = () => {
     { id: uploadCatalogIds.SINGLE_IMAGE_UPLOAD_COLOR, title: 'Sgl-img upload color' },
     { id: uploadCatalogIds.SINGLE_IMAGE_UPLOAD_SHAPE, title: 'Sgl-img upload shape' },
     { id: uploadCatalogIds.MULTI_IMAGE_UPLOAD_BASIC, title: 'Multi-img upload basic' },
-    { id: uploadCatalogIds.FILES_UPLOAD_BASIC, title: 'Files upload basic' }
+    { id: uploadCatalogIds.MULTI_IMAGE_UPLOAD_COLOR, title: 'Multi-img upload color' },
+    { id: uploadCatalogIds.MULTI_IMAGE_UPLOAD_SHAPE, title: 'Multi-img upload shape' },
+    { id: uploadCatalogIds.FILES_UPLOAD_BASIC, title: 'Files upload basic' },
+    { id: uploadCatalogIds.FILES_UPLOAD_COLOR, title: 'Files upload color' },
+    { id: uploadCatalogIds.FILES_UPLOAD_SHAPE, title: 'Files upload shape' },
   ]
 
   const apiCatalogs: CatalogItems = [
