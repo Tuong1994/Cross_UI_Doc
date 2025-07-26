@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { Typography } from '@/components/UI'
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
+import FileApi from '@/features/Control/Upload/components/File/FileApi/FileApi.vue'
 import FileBasic from '@/features/Control/Upload/components/File/FileBasic/FileBasic.vue'
 import FileColor from '@/features/Control/Upload/components/File/FileColor/FileColor.vue'
 import FileShape from '@/features/Control/Upload/components/File/FileShape/FileShape.vue'
+import MultipleImageApi from '@/features/Control/Upload/components/MultipleImage/MultipleImageApi/MultipleImageApi.vue'
 import MultipleImageBasic from '@/features/Control/Upload/components/MultipleImage/MultipleImageBasic/MultipleImageBasic.vue'
 import MultipleImageColor from '@/features/Control/Upload/components/MultipleImage/MultipleImageColor/MultipleImageColor.vue'
 import MultipleImageShape from '@/features/Control/Upload/components/MultipleImage/MultipleImageShape/MultipleImageShape.vue'
@@ -42,6 +44,8 @@ const importCodes = [
     </template>
     <template #api>
       <SingleImageApi />
+      <MultipleImageApi />
+      <FileApi />
     </template>
   </PageLayout>
 </template>

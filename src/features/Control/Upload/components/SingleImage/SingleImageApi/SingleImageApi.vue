@@ -130,13 +130,25 @@ const dataSource = computed<ComponentApi[]>(() => [
     },
     required: t.lang.common.required.no,
     default: '-'
-  }
+  },
+  {
+    id: 'onUpload',
+    props: '@onUpload',
+    desc: t.lang.upload.api.uploadDesc.onUpload,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['(file: File) => void']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
 ])
 </script>
 
 <template>
   <TableLayout
     title="Single image upload"
+    rootClassName="section-space"
     :dataSource="dataSource"
     :id="uploadCatalogIds.SINGLE_IMAGE_UPLOAD_API"
   />

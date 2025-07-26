@@ -12,9 +12,9 @@ import type {
 import NoteMessage from '@/components/UI/NoteMessage/NoteMessage.vue'
 import UploadControl from './UploadControl.vue'
 import UploadFiles from './UploadFiles.vue'
-import utils from '@/utils'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 import useLangStore from '@/stores/LangStore'
+import utils from '@/utils'
 
 export interface FileUploadProps {
   rootClassName?: string
