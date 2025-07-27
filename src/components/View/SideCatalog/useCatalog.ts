@@ -35,6 +35,7 @@ import useDatepickerCatalogs from '@/features/Control/DatePicker/hooks/useDatepi
 import useCheckBoxCatalogs from '@/features/Control/CheckBox/hooks/useCheckBoxCatalogs'
 import useRadioCatalogs from '@/features/Control/Radio/hooks/useRadioCatalogs'
 import useUploadCatalogs from '@/features/Control/Upload/hooks/useUploadCatalogs'
+import useLayoutCatalogs from '@/features/UI/Layout/hooks/useLayoutCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -52,6 +53,8 @@ const useCatalog = () => {
   const flexCatalogs = useFlexCatalogs()
 
   const gridCatalogs = useGridCatalogs()
+
+  const layoutCatalogs = useLayoutCatalogs()
 
   const spaceCatalogs = useSpaceCatalogs()
 
@@ -115,6 +118,7 @@ const useCatalog = () => {
     if (routeName === routeNames.DIVIDER) return catalogStore.setCatalogs(dividerCatalogs.value)
     if (routeName === routeNames.FLEX) return catalogStore.setCatalogs(flexCatalogs.value)
     if (routeName === routeNames.GRID) return catalogStore.setCatalogs(gridCatalogs.value)
+    if (routeName === routeNames.LAYOUT) return catalogStore.setCatalogs(layoutCatalogs.value)
     if (routeName === routeNames.SPACE) return catalogStore.setCatalogs(spaceCatalogs.value)
     if (routeName === routeNames.BREADCRUMB) return catalogStore.setCatalogs(breadcrumbCatalogs.value)
     if (routeName === routeNames.DROPDOWN) return catalogStore.setCatalogs(dropdownCatalogs.value)

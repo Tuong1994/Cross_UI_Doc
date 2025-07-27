@@ -34,6 +34,7 @@ import datepicker_en from './control/datepicker'
 import checkbox_en from './control/checkbox'
 import radio_en from './control/radio'
 import upload_en from './control/upload'
+import layout_en from './ui/layout'
 
 const en = {
   common: common_en,
@@ -43,6 +44,7 @@ const en = {
   tabs: tabs_en,
   button: button_en,
   grid: grid_en,
+  layout: layout_en,
   pagination: pagination_en,
   icon: icon_en,
   typography: typography_en,

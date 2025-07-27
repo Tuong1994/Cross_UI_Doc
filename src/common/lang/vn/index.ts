@@ -34,6 +34,7 @@ import datepicker_vn from './control/datapicker'
 import checkbox_vn from './control/checkbox'
 import radio_vn from './control/radio'
 import upload_vn from './control/upload'
+import layout_vn from './ui/layout'
 
 const vn = {
   common: common_vn,
@@ -43,6 +44,7 @@ const vn = {
   tabs: tabs_vn,
   button: button_vn,
   grid: grid_vn,
+  layout: layout_vn,
   pagination: pagination_vn,
   icon: icon_vn,
   typography: typography_vn,

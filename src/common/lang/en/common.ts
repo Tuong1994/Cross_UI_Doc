@@ -1,5 +1,9 @@
 const common_en = {
   examples: 'Examples',
+  type: {
+    horizontal: 'Horizontal',
+    vertical: 'Vertical'
+  },
   size: {
     sm: 'Small',
     md: 'Medium',

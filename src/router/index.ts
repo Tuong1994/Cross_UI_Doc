@@ -116,6 +116,11 @@ const router = createRouter({
       component: () => import('../views/GridView.vue')
     },
     {
+      path: routePaths.LAYOUT,
+      name: routeNames.LAYOUT,
+      component: () => import('../views/LayoutView.vue')
+    },
+    {
       path: routePaths.SPACE,
       name: routeNames.SPACE,
       component: () => import('../views/SpaceView.vue')
