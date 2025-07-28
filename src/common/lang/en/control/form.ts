@@ -1,4 +1,5 @@
 const form_en = {
+  desc: 'Form component with data domain management. Includes data entry, validation, and corresponding styles',
   api: {
     formDesc: {
       initialValues: 'Data value of form',

@@ -11,8 +11,9 @@ const useFormCatalogs = () => {
     { id: formCatalogIds.COLOR, title: 'Color' },
     { id: formCatalogIds.SIZE, title: 'Size' },
     { id: formCatalogIds.SHAPE, title: 'Shape' },
-    { id: formCatalogIds.REQUIRED, title: 'Required' },
     { id: formCatalogIds.DISABLED, title: 'Disabled' },
+    { id: formCatalogIds.VALIDATION, title: 'Validation' },
+    { id: formCatalogIds.FORM_RULE, title: 'useFormRule' },
   ]
 
   const apiCatalogs: CatalogItems = [{ id: formCatalogIds.FORM_API, title: 'Form' }]

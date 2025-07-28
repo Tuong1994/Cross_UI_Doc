@@ -3,7 +3,8 @@ export const formCatalogIds = {
   SIZE: 'size',
   COLOR: 'color',
   SHAPE: 'shape',
-  REQUIRED: 'required',
   DISABLED: 'disabled',
+  VALIDATION: 'validation',
+  FORM_RULE: 'form-rule',
   FORM_API: 'form-api'
 } as const
