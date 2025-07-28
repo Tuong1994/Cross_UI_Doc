@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineProps, defineEmits, watch } from 'vue'
+import { defineProps, defineEmits } from 'vue'
 import { Drawer, Flex } from '@/components/UI'
 import { useViewPoint } from '@/hooks'
 import { useRouter } from 'vue-router'
@@ -17,13 +17,9 @@ defineProps<HeaderMobileProps>()
 
 const emits = defineEmits(['onClose'])
 
-const { currentRoute } = useRouter()
-
 const { isPhone } = useViewPoint()
 
 const handleClose = () => emits('onClose')
-
-watch(currentRoute, () => handleClose())
 </script>
 
 <template>
@@ -39,7 +35,7 @@ watch(currentRoute, () => handleClose())
       </FlexRow>
     </template>
     <template #body>
-      <SideMenu />
+      <SideMenu @onNavigate="handleClose" />
     </template>
   </Drawer>
 </template>

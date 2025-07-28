@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, type StyleValue } from 'vue'
 import { Layout, Section, Flex } from '@/components/UI'
 import { useRouter } from 'vue-router'
 import { routeNames } from '@/router'
@@ -19,22 +19,26 @@ const { currentRoute } = useRouter()
 
 const { screenWidth } = useViewPoint()
 
+const isNotHomeRoute = computed<boolean>(() => currentRoute.value.name !== routeNames.HOME)
+
 const responsive = computed<boolean>(() => screenWidth.value > LAPTOP)
 
-const showCatalog = computed<boolean>(() =>
-  Boolean(currentRoute.value.name !== routeNames.HOME && responsive.value)
-)
+const showSide = computed<boolean>(() => isNotHomeRoute.value)
+
+const showCatalog = computed<boolean>(() => Boolean(isNotHomeRoute.value && responsive.value))
+
+const contentStyle = computed<StyleValue | undefined>(() => (isNotHomeRoute.value ? undefined : { paddingLeft: 0, }))
 </script>
 
 <template>
   <Container>
     <Header />
     <Body>
-      <Side>
+      <Side v-if="showSide">
         <SideMenu />
       </Side>
-      <Content>
-        <Section>
+      <Content :rootStyle="contentStyle">
+        <Section rootClassName="app-content-wrapper">
           <FlexRow>
             <FlexCol :xs="24" :md="24" :lg="24" :span="showCatalog ? 20 : 24">
               <slot></slot>
