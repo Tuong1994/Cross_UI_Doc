@@ -6,11 +6,11 @@ import { useRouter } from 'vue-router'
 import { useViewPoint } from '@/hooks'
 import { routeNames } from '@/router'
 import Logo from '../Logo/Logo.vue'
+import HeaderSearch from './HeaderSearch.vue'
 import HeaderMode from './HeaderMode.vue'
 import HeaderTranslate from './HeaderTranslate.vue'
 import HeaderMobile from './HeaderMobile.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
-import HeaderSearch from './HeaderSearch.vue'
 
 const { Head } = Layout
 
@@ -41,11 +41,11 @@ const handleOpenSide = () => (openSide.value = !openSide.value)
         </Space>
       </FlexCol>
       <FlexCol :xs="0" :md="12" :lg="8" :span="6">
-        <FlexRow>
-          <FlexCol :md="10" :lg="10" :span="10">
+        <FlexRow justify="end">
+          <FlexCol :md="10" :lg="12" :span="8">
             <HeaderMode />
           </FlexCol>
-          <FlexCol :md="14" :lg="14" :span="14">
+          <FlexCol :md="10" :lg="12" :span="8">
             <HeaderTranslate />
           </FlexCol>
         </FlexRow>

@@ -2,8 +2,8 @@
 import { computed } from 'vue'
 import { Typography, Divider } from '@/components/UI'
 import SideMenuItem from './SideMenuItem.vue'
-import useMenu from './useMenu'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
+import useMenu from './useMenu'
 
 const { Paragraph } = Typography
 
