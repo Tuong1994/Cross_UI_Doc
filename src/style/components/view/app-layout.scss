@@ -1,5 +1,8 @@
 .app-content-wrapper {
   padding: $p-5 $p-5 * 5;
+  @include respond(laptop) {
+    padding: $p-5;
+  }
   @include respond(mdPhone) {
     padding: $p-5 $p-2;
   }

@@ -27,7 +27,9 @@ const showSide = computed<boolean>(() => isNotHomeRoute.value)
 
 const showCatalog = computed<boolean>(() => Boolean(isNotHomeRoute.value && responsive.value))
 
-const contentStyle = computed<StyleValue | undefined>(() => (isNotHomeRoute.value ? undefined : { paddingLeft: 0, }))
+const contentStyle = computed<StyleValue | undefined>(() =>
+  isNotHomeRoute.value ? undefined : { paddingLeft: 0 }
+)
 </script>
 
 <template>

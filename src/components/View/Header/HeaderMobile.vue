@@ -2,7 +2,6 @@
 import { defineProps, defineEmits } from 'vue'
 import { Drawer, Flex } from '@/components/UI'
 import { useViewPoint } from '@/hooks'
-import { useRouter } from 'vue-router'
 import SideMenu from '../SideMenu/SideMenu.vue'
 import HeaderMode from './HeaderMode.vue'
 import HeaderTranslate from './HeaderTranslate.vue'
