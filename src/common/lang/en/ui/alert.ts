@@ -1,6 +1,5 @@
 const alert_en = {
   desc: 'Display warning messages that require attention',
-  usage: 'Usage',
   api: {
     alertDesc: {
       rootClassName: 'Class name of container',

@@ -1,6 +1,5 @@
 const toast_vn = {
   desc: 'Hiển thị thông báo toàn cục như phản hồi sau thao tác của người dùng',
-  usage: 'Cách dùng',
   api: {
     toastMessageDesc: {
       rootClassName: 'Tên class của phần tử container',

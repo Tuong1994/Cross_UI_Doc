@@ -16,7 +16,7 @@ const t = useLangStore()
     <Paragraph :size="18" :weight="600" rootClassName="section-space">useAlert</Paragraph>
     <Card rootClassName="section-space">
       <template #head>
-        <Paragraph :size="16">{{ t.lang.alert.usage }}</Paragraph>
+        <Paragraph :size="16">{{ t.lang.common.usage }}</Paragraph>
       </template>
       <template #body>
         <CodeBlock :code="useAlertHookUsageCode" />

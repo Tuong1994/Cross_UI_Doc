@@ -1,6 +1,5 @@
 const toast_en = {
   desc: 'Display global messages as feedback in response to user operations',
-  usage: 'Usage',
   api: {
     toastMessageDesc: {
       rootClassName: 'Class name of container',

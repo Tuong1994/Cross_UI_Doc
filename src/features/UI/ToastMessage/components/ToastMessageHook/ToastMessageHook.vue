@@ -16,7 +16,7 @@ const t = useLangStore()
     <Paragraph rootClassName="section-space" :size="18" :weight="600">useMessage</Paragraph>
     <Card rootClassName="section-space">
       <template #head>
-        <Paragraph :size="16">{{ t.lang.toast.usage }}</Paragraph>
+        <Paragraph :size="16">{{ t.lang.common.usage }}</Paragraph>
       </template>
       <template #body>
         <CodeBlock :code="toastHookUsageCode" />
