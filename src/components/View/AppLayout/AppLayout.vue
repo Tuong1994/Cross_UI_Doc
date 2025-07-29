@@ -27,6 +27,8 @@ const showSide = computed<boolean>(() => isNotHomeRoute.value)
 
 const showCatalog = computed<boolean>(() => Boolean(isNotHomeRoute.value && responsive.value))
 
+const sectionClassName = computed<string>(() => (!isNotHomeRoute.value ? 'app-content-wrapper' : ''))
+
 const contentStyle = computed<StyleValue | undefined>(() =>
   isNotHomeRoute.value ? undefined : { paddingLeft: 0 }
 )
@@ -40,7 +42,7 @@ const contentStyle = computed<StyleValue | undefined>(() =>
         <SideMenu />
       </Side>
       <Content :rootStyle="contentStyle">
-        <Section rootClassName="app-content-wrapper">
+        <Section :rootClassName="sectionClassName">
           <FlexRow>
             <FlexCol :xs="24" :md="24" :lg="24" :span="showCatalog ? 20 : 24">
               <slot></slot>
