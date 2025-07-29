@@ -1,22 +1,20 @@
 <script setup lang="ts">
 import { Button, Space } from '@/components/UI'
 import { buttonColorCode } from './code'
-import { buttonCatalogIds } from '../../repository/catalogIds'
+import { buttonCatalogIds } from '@/features/UI/Button/repository/catalogIds'
+import type { ButtonColor } from '@/components/UI/Button/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
+import helper from '@/helper'
 </script>
 
 <template>
   <AnchorContent :id="buttonCatalogIds.COLOR">
     <ShowCase title="Color" :code="buttonColorCode">
       <Space>
-        <Button color="blue">Button</Button>
-        <Button color="green">Button</Button>
-        <Button color="red">Button</Button>
-        <Button color="orange">Button</Button>
-        <Button color="yellow">Button</Button>
-        <Button color="purple">Button</Button>
-        <Button color="pink">Button</Button>
+        <Button v-for="color in helper.getColorType()" :key="color" :color="color as ButtonColor">
+          Button
+        </Button>
       </Space>
     </ShowCase>
   </AnchorContent>

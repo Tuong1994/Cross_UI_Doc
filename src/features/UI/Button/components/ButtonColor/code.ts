@@ -1,10 +1,12 @@
 export const buttonColorCode = `
 <script setup lang="ts">
-    import { Button } from '@/components/UI'
+import { Button, Space } from '@/components/UI'
+import type { ButtonColor } from '@/components/UI/Button/type'
 </script>
 
 <template>
-    <Button color="blue">Button</Button>
+  <Space>
+    <Button v-for="color in helper.getColorType()" :key="color" :color="color as ButtonColor">Button</Button>
+  </Space>
 </template>
-
 `

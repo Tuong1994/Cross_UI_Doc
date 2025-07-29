@@ -4,6 +4,7 @@ import ButtonApi from '@/features/UI/Button/components/ButtonApi/ButtonApi.vue'
 import ButtonBasic from '@/features/UI/Button/components/ButtonBasic/ButtonBasic.vue'
 import ButtonColor from '@/features/UI/Button/components/ButtonColor/ButtonColor.vue'
 import ButtonDisabled from '@/features/UI/Button/components/ButtonDisabled/ButtonDisabled.vue'
+import ButtonGhost from '@/features/UI/Button/components/ButtonGhost/ButtonGhost.vue'
 import ButtonLoading from '@/features/UI/Button/components/ButtonLoading/ButtonLoading.vue'
 import ButtonShape from '@/features/UI/Button/components/ButtonShape/ButtonShape.vue'
 import ButtonSize from '@/features/UI/Button/components/ButtonSize/ButtonSize.vue'
@@ -20,6 +21,7 @@ const t = useLangStore()
       <ButtonColor />
       <ButtonSize />
       <ButtonShape />
+      <ButtonGhost />
       <ButtonLoading />
       <ButtonDisabled />
       <ButtonText />
