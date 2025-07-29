@@ -10,7 +10,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
   <AnchorContent :id="spaceCatalogIds.JUSTIFY">
     <ShowCase title="Justify" :code="spaceJustifyCode">
       <Divider>Left</Divider>
-      <Space justify="left">
+      <Space justify="start">
         <Card>
           <template #body> Lorem ipsum dolor sit amet. </template>
         </Card>
@@ -34,7 +34,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
         </Card>
       </Space>
       <Divider>Right</Divider>
-      <Space justify="right">
+      <Space justify="end">
         <Card>
           <template #body> Lorem ipsum dolor sit amet. </template>
         </Card>

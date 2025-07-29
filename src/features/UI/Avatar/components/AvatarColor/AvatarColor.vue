@@ -2,12 +2,13 @@
 import { Space, Avatar } from '@/components/UI'
 import { avatarColorCode } from './code'
 import { avatarCatalogIds } from '@/features/UI/Avatar/repository/catalogIds'
+import type { AvatarColor } from '@/components/UI/Avatar/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 const avatarSize = 50
 
-const avatarColors = ['blue', 'green', 'red', 'orange', 'yellow', 'purple', 'pink']
+const avatarColors: AvatarColor[] = ['blue', 'green', 'red', 'orange', 'yellow', 'purple', 'pink']
 </script>
 
 <template>

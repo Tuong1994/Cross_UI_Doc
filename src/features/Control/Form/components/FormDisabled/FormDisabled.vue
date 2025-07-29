@@ -3,6 +3,7 @@ import { Form, Input, InputPassword } from '@/components/Control'
 import { Button } from '@/components/UI'
 import { formDisabledCode } from './code'
 import { formCatalogIds } from '../../repository/catalogIds'
+import type { FormResult } from '@/components/Control/Form/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
@@ -19,7 +20,7 @@ const initialValues: Data = {
   password: ''
 }
 
-const handleFinish = (data: Data) => console.log(data)
+const handleFinish = (data: FormResult<Data>) => console.log(data)
 </script>
 
 <template>

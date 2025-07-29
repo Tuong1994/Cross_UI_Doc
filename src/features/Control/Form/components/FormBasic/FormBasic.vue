@@ -3,6 +3,7 @@ import { Form, Input, InputPassword, InputPhone, TextArea, Select, DatePicker } 
 import { Button } from '@/components/UI'
 import { formCatalogIds } from '../../repository/catalogIds'
 import { formBasicCode } from './code'
+import type { FormResult } from '@/components/Control/Form/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
@@ -29,7 +30,7 @@ const initialValues: Data = {
   birthday: new Date()
 }
 
-const handleFinish = (data: Data) => console.log(data)
+const handleFinish = (data: FormResult<Data>) => console.log(data)
 </script>
 
 <template>

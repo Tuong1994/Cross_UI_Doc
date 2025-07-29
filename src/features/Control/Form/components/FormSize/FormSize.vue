@@ -4,6 +4,7 @@ import { Form, Input, InputPassword } from '@/components/Control'
 import { formCatalogIds } from '../../repository/catalogIds'
 import { formSizeCode } from './code'
 import type { ComponentSize } from '@/common/type'
+import type { FormResult } from '@/components/Control/Form/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
@@ -24,7 +25,7 @@ const initialValues: Data = {
 
 const sizes: ComponentSize[] = ['sm', 'md', 'lg']
 
-const handleFinish = (data: Data) => console.log(data)
+const handleFinish = (data: FormResult<Data>) => console.log(data)
 </script>
 
 <template>

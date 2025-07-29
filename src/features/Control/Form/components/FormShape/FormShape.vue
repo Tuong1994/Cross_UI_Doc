@@ -4,6 +4,7 @@ import { Card, Button, Flex } from '@/components/UI'
 import { formCatalogIds } from '../../repository/catalogIds'
 import { formShapeCode } from './code'
 import type { ControlShape } from '@/components/Control/type'
+import type { FormResult } from '@/components/Control/Form/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
@@ -24,7 +25,7 @@ const initialValues: Data = {
 
 const shapes: ControlShape[] = ['round', 'square']
 
-const handleFinish = (data: Data) => console.log(data)
+const handleFinish = (data: FormResult<Data>) => console.log(data)
 </script>
 
 <template>

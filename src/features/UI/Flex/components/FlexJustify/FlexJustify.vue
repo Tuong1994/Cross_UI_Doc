@@ -4,12 +4,13 @@ import { flexCatalogIds } from '@/features/UI/Flex/repository/catalogIds'
 import { flexJustifyCode } from './code'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
+import type { ComponentJustify } from '@/common/type'
 
 const { Title, Paragraph } = Typography
 
 const { FlexRow, FlexCol } = Flex
 
-const justifies = ['start', 'center', 'end', 'between', 'around', 'evenly']
+const justifies: ComponentJustify[] = ['start', 'center', 'end', 'between', 'around', 'evenly']
 </script>
 
 <template>

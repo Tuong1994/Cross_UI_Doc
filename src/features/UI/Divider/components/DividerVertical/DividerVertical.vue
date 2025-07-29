@@ -2,10 +2,11 @@
 import { Divider, Badge, Space } from '@/components/UI'
 import { dividerVerticalCode } from './code'
 import { dividerCatalogIds } from '@/features/UI/Divider/repository/catalogIds'
+import type { BadgeColor } from '@/components/UI/Badge/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
-const badges = ['blue', 'green', 'red', 'orange', 'yellow', 'purple', 'pink']
+const badges: BadgeColor[] = ['blue', 'green', 'red', 'orange', 'yellow', 'purple', 'pink']
 </script>
 
 <template>

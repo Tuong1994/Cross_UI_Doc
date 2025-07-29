@@ -2,6 +2,7 @@
 import { Flex, Card, Typography } from '@/components/UI'
 import { flexCatalogIds } from '@/features/UI/Flex/repository/catalogIds'
 import { flexAlignsCode } from './code'
+import type { ComponentAligns } from '@/common/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
@@ -9,7 +10,7 @@ const { Title, Paragraph } = Typography
 
 const { FlexRow, FlexCol } = Flex
 
-const aligns = ['top', 'middle', 'bottom', 'baseline']
+const aligns: ComponentAligns[] = ['top', 'middle', 'bottom', 'baseline']
 </script>
 
 <template>

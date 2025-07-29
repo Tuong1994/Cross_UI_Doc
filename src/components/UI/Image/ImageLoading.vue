@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, type StyleValue } from 'vue'
+import { type StyleValue } from 'vue'
 import Spinner from '@/components/UI/Loading/Spinner.vue'
 
 interface ImageLoadingProps {

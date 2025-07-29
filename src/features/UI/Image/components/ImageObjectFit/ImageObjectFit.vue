@@ -2,13 +2,14 @@
 import { Divider, Image } from '@/components/UI'
 import { imageCatalogIds } from '@/features/UI/Image/repository/catalogIds'
 import { imageObjectFitCode } from './code'
+import type { ImageObjectFit } from '@/components/UI/Image/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 
-const imageFits = ['fill', 'contain', 'cover']
+const imageFits: ImageObjectFit[] = ['fill', 'contain', 'cover']
 
 const dividerContent = (fit: string) => {
   const content: Record<string, string> = {

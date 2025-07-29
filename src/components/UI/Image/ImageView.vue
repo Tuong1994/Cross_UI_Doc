@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, type StyleValue } from 'vue'
 import { iconName } from '@/components/UI/Icon/constant.ts'
-import type { ImageLazyType } from './Image.vue'
+import type { ImageLazyType } from './type'
 import type { ControlColor } from '@/components/Control/type'
 import Icon from '@/components/UI/Icon/Icon.vue'
 import CheckBox from '@/components/Control/CheckBox/CheckBox.vue'
