@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Typography } from '@/components/UI'
 import { typographyCatalogIds } from '@/features/UI/Typography/repository/catalogIds'
-import { paragraphUnderlineCode } from './code'
+import { paragraphUnderlineReactCode, paragraphUnderlineVueCode } from './code'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
@@ -10,7 +10,12 @@ const { Paragraph } = Typography
 
 <template>
   <AnchorContent :id="typographyCatalogIds.PARAGRAPH_UNDERLINE">
-    <ShowCase title="Underline" :code="paragraphUnderlineCode">
+    <ShowCase
+      title="Underline"
+      code=""
+      :vueCode="paragraphUnderlineVueCode"
+      :reactCode="paragraphUnderlineReactCode"
+    >
       <Paragraph underline>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ducimus magni recusandae assumenda
         harum minima ex cumque deleniti corrupti amet, eos provident possimus at dicta animi excepturi enim

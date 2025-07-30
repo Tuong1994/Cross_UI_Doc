@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Typography } from '@/components/UI'
 import { typographyCatalogIds } from '@/features/UI/Typography/repository/catalogIds'
-import { paragraphVariantCode } from './code'
+import { paragraphVariantReactCode, paragraphVariantVueCode } from './code'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
@@ -10,7 +10,7 @@ const { Paragraph } = Typography
 
 <template>
   <AnchorContent :id="typographyCatalogIds.PARAGRAPH_VARIANT">
-    <ShowCase title="Variant" :code="paragraphVariantCode">
+    <ShowCase title="Variant" code="" :vueCode="paragraphVariantVueCode" :reactCode="paragraphVariantReactCode">
       <Paragraph variant="default">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ducimus magni recusandae assumenda
         harum minima ex cumque deleniti corrupti amet, eos provident possimus at dicta animi excepturi enim

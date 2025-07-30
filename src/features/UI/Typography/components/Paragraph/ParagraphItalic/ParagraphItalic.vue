@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Typography } from '@/components/UI'
 import { typographyCatalogIds } from '@/features/UI/Typography/repository/catalogIds'
-import { paragraphItalicCode } from './code'
+import { paragraphItalicReactCode, paragraphItalicVueCode } from './code'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
@@ -10,7 +10,7 @@ const { Paragraph } = Typography
 
 <template>
   <AnchorContent :id="typographyCatalogIds.PARAGRAPH_ITALIC">
-    <ShowCase title="Italic" :code="paragraphItalicCode">
+    <ShowCase title="Italic" code="" :vueCode="paragraphItalicVueCode" :reactCode="paragraphItalicReactCode">
       <Paragraph italic>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ducimus magni recusandae assumenda
         harum minima ex cumque deleniti corrupti amet, eos provident possimus at dicta animi excepturi enim

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Typography } from '@/components/UI'
 import { typographyCatalogIds } from '@/features/UI/Typography/repository/catalogIds'
-import { titleRemoveCode } from '@/features/UI/Typography/components/Title/TitleRemove/code'
+import { titleRemoveReactCode, titleRemoveVueCode } from './code'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
@@ -10,7 +10,7 @@ const { Title } = Typography
 
 <template>
   <AnchorContent :id="typographyCatalogIds.TITLE_REMOVE">
-    <ShowCase title="Remove" :code="titleRemoveCode">
+    <ShowCase title="Remove" code="" :vueCode="titleRemoveVueCode" :reactCode="titleRemoveReactCode">
       <Title remove>Heading</Title>
     </ShowCase>
   </AnchorContent>
