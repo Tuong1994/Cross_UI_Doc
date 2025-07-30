@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Button, Space } from '@/components/UI'
-import { buttonBasicCode } from './code'
+import { buttonBasicReactCode, buttonBasicVueCode } from './code'
 import { buttonCatalogIds } from '../../repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="buttonCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="buttonBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="buttonBasicVueCode" :reactCode="buttonBasicReactCode">
       <Space>
         <Button>Button</Button>
         <Button ghost>Button</Button>
@@ -16,3 +16,5 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
     </ShowCase>
   </AnchorContent>
 </template>
+
+

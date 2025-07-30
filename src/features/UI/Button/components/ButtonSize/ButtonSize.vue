@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Button, Space } from '@/components/UI'
-import { buttonSizeCode } from './code'
+import { buttonSizeReactCode, buttonSizeVueCode } from './code'
 import { buttonCatalogIds } from '../../repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -11,7 +11,7 @@ const layout = useLayoutStore()
 
 <template>
   <AnchorContent :id="buttonCatalogIds.SIZE">
-    <ShowCase title="Size" :code="buttonSizeCode">
+    <ShowCase title="Size" code="" :vueCode="buttonSizeVueCode" :reactCode="buttonSizeReactCode">
       <Space>
         <Button :color="layout.color" sizes="sm">Button</Button>
         <Button :color="layout.color" sizes="md">Button</Button>
@@ -20,3 +20,5 @@ const layout = useLayoutStore()
     </ShowCase>
   </AnchorContent>
 </template>
+
+

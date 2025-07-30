@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { computed, withDefaults, defineProps } from 'vue'
-import { Table, Typography } from '@/components/UI'
+import { Table, Tabs, Typography } from '@/components/UI'
 import type { ComponentApi } from '@/common/type'
 import type { TableColumns } from '@/components/UI/Table/type'
 import type { ParagraphProps } from '@/components/UI/Typography/Paragraph.vue'
+import type { TabsItems } from '@/components/UI/Tabs/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import CodeTableCell, { type CodeTableCellProps } from '@/components/View/Code/CodeTableCell.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
@@ -16,16 +17,25 @@ interface TableLayoutProps {
   title?: string
   rootClassName?: string
   dataSource: ComponentApi[]
+  dataVue?: ComponentApi[]
+  dataReact?: ComponentApi[]
 }
 
 withDefaults(defineProps<TableLayoutProps>(), {
   rootClassName: '',
-  dataSource: () => []
+  dataSource: () => [],
+  dataVue: () => [],
+  dataReact: () => []
 })
 
 const t = useLangStore()
 
 const layout = useLayoutStore()
+
+const items = computed<TabsItems>(() => [
+  { id: 'vue', label: 'Vue', comName: 'vue' },
+  { id: 'react', label: 'React', comName: 'react' }
+])
 
 const columns = computed<TableColumns<ComponentApi>>(() => [
   {
@@ -89,6 +99,23 @@ const columns = computed<TableColumns<ComponentApi>>(() => [
     <Paragraph :lineHeight="40">
       {{ title }}
     </Paragraph>
-    <Table rootClassName="table-layout" :color="layout.color" :dataSource="dataSource" :columns="columns" />
+    <Tabs :color="layout.color" :items="items">
+      <template #content="tab">
+        <Table
+          v-if="tab.content.comName === 'vue'"
+          rootClassName="table-layout"
+          :color="layout.color"
+          :dataSource="dataVue"
+          :columns="columns"
+        />
+        <Table
+          v-if="tab.content.comName === 'react'"
+          rootClassName="table-layout"
+          :color="layout.color"
+          :dataSource="dataReact"
+          :columns="columns"
+        />
+      </template>
+    </Tabs>
   </AnchorContent>
 </template>

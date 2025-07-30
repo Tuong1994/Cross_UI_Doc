@@ -2,7 +2,7 @@
 import { computed, defineProps, ref } from 'vue'
 import { Card, Space, Button, Tooltip, Icon, Divider, Typography } from '@/components/UI'
 import { iconName } from '@/components/UI/Icon/constant'
-import CodeBlock from '../Code/CodeBlock.vue'
+import TabsCodeBlock from './TabsCodeBlock.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 
 const { Paragraph } = Typography
@@ -10,6 +10,8 @@ const { Paragraph } = Typography
 interface ShowCaseProps {
   title?: string
   code: string
+  vueCode?: string
+  reactCode?: string
 }
 
 defineProps<ShowCaseProps>()
@@ -33,7 +35,7 @@ const handleOpenCode = () => (showCode.value = !showCode.value)
     <template #body>
       <slot></slot>
       <Divider />
-      <Space justify="end">
+      <Space rootClassName="section-space" justify="end">
         <Tooltip>
           <template #title>
             <Button :color="layout.color" @click="handleOpenCode">
@@ -43,7 +45,7 @@ const handleOpenCode = () => (showCode.value = !showCode.value)
           <template #content>Code</template>
         </Tooltip>
       </Space>
-      <CodeBlock v-if="showCode" :code="code" />
+      <TabsCodeBlock v-if="showCode" :vueCode="vueCode as string" :reactCode="reactCode as string" />
     </template>
   </Card>
 </template>
