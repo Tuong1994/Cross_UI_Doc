@@ -68,5 +68,5 @@ const dataSource = computed<ComponentApi[]>(() => [
 </script>
 
 <template>
-  <TableLayout title="Icon" :dataSource="dataSource" :id="iconCatalogIds.ICON_API" />
+  <TableLayout title="Icon" :multiple="false" :dataSource="dataSource" :id="iconCatalogIds.ICON_API" />
 </template>

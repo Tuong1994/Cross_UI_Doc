@@ -16,6 +16,7 @@ interface TableLayoutProps {
   id: string
   title?: string
   rootClassName?: string
+  multiple?: boolean;
   dataSource: ComponentApi[]
   dataVue?: ComponentApi[]
   dataReact?: ComponentApi[]
@@ -23,6 +24,7 @@ interface TableLayoutProps {
 
 withDefaults(defineProps<TableLayoutProps>(), {
   rootClassName: '',
+  multiple: true,
   dataSource: () => [],
   dataVue: () => [],
   dataReact: () => []
@@ -99,7 +101,8 @@ const columns = computed<TableColumns<ComponentApi>>(() => [
     <Paragraph :lineHeight="40">
       {{ title }}
     </Paragraph>
-    <Tabs :color="layout.color" :items="items">
+    <Table v-if="!multiple" rootClassName="table-layout" :color="layout.color" :dataSource="dataSource" :columns="columns" />
+    <Tabs v-else :color="layout.color" :items="items">
       <template #content="tab">
         <Table
           v-if="tab.content.comName === 'vue'"
