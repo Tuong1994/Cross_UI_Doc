@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Divider, Badge, Space } from '@/components/UI'
-import { dividerVerticalCode } from './code'
+import { dividerVerticalReactCode, dividerVerticalVueCode } from './code'
 import { dividerCatalogIds } from '@/features/UI/Divider/repository/catalogIds'
 import type { BadgeColor } from '@/components/UI/Badge/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -11,7 +11,12 @@ const badges: BadgeColor[] = ['blue', 'green', 'red', 'orange', 'yellow', 'purpl
 
 <template>
   <AnchorContent :id="dividerCatalogIds.VERTICAL">
-    <ShowCase title="Vertical" :code="dividerVerticalCode">
+    <ShowCase
+      title="Vertical"
+      code=""
+      :vueCode="dividerVerticalVueCode"
+      :reactCode="dividerVerticalReactCode"
+    >
       <Space>
         <template v-for="(badge, idx) in badges" :key="badge">
           <Badge :color="badge">{{ badge }}</Badge>

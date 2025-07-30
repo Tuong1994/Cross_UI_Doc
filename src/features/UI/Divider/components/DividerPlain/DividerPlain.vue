@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import { Divider } from '@/components/UI'
 import { dividerCatalogIds } from '@/features/UI/Divider/repository/catalogIds'
-import { dividerPlainCode } from './code'
+import { dividerPlainReactCode, dividerPlainVueCode } from './code'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 </script>
 
 <template>
   <AnchorContent :id="dividerCatalogIds.PLAIN">
-    <ShowCase title="Plain" :code="dividerPlainCode">
+    <ShowCase title="Plain" code="" :vueCode="dividerPlainVueCode" :reactCode="dividerPlainReactCode">
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur dicta vitae deserunt rem mollitia,
         error eaque sed aperiam dolore inventore.
