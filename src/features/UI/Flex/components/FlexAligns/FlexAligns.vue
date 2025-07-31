@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Flex, Card, Typography } from '@/components/UI'
 import { flexCatalogIds } from '@/features/UI/Flex/repository/catalogIds'
-import { flexAlignsCode } from './code'
+import { flexAlignsReactCode, flexAlignsVueCode } from './code'
 import type { ComponentAligns } from '@/common/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -15,7 +15,7 @@ const aligns: ComponentAligns[] = ['top', 'middle', 'bottom', 'baseline']
 
 <template>
   <AnchorContent :id="flexCatalogIds.ALIGNS">
-    <ShowCase title="Aligns" :code="flexAlignsCode">
+    <ShowCase title="Aligns" code="" :vueCode="flexAlignsVueCode" :reactCode="flexAlignsReactCode">
       <Card v-for="align in aligns" :key="align" rootClassName="section-space">
         <template #body>
           <Title :level="6">{{ align }}</Title>

@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { Flex, Card, Typography } from '@/components/UI'
 import { flexCatalogIds } from '@/features/UI/Flex/repository/catalogIds'
-import { flexJustifyCode } from './code'
+import { flexJustifyReactCode, flexJustifyVueCode } from './code'
+import type { ComponentJustify } from '@/common/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
-import type { ComponentJustify } from '@/common/type'
 
 const { Title, Paragraph } = Typography
 
@@ -15,7 +15,7 @@ const justifies: ComponentJustify[] = ['start', 'center', 'end', 'between', 'aro
 
 <template>
   <AnchorContent :id="flexCatalogIds.JUSTIFY">
-    <ShowCase title="Justify" :code="flexJustifyCode">
+    <ShowCase title="Justify" code="" :vueCode="flexJustifyVueCode" :reactCode="flexJustifyReactCode">
       <Card v-for="justify in justifies" :key="justify" rootClassName="section-space">
         <template #body>
           <Title :level="6">{{ justify }}</Title>

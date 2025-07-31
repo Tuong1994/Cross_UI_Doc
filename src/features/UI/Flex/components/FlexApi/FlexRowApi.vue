@@ -8,7 +8,7 @@ import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 
-const dataSource = computed<ComponentApi[]>(() => [
+const dataVue = computed<ComponentApi[]>(() => [
   {
     id: 'justify',
     props: 'justify',
@@ -65,13 +65,73 @@ const dataSource = computed<ComponentApi[]>(() => [
     default: '-'
   }
 ])
+
+const dataReact = computed<ComponentApi[]>(() => [
+  {
+    id: 'justify',
+    props: 'justify',
+    desc: t.lang.flex.api.flexRowDesc.justify,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['start', 'center', 'end', 'between', 'around', 'evenly']
+    },
+    required: t.lang.common.required.no,
+    default: 'start'
+  },
+  {
+    id: 'aligns',
+    props: 'aligns',
+    desc: t.lang.flex.api.flexRowDesc.aligns,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['top', 'middle', 'bottom', 'baseline']
+    },
+    required: t.lang.common.required.no,
+    default: 'top'
+  },
+  {
+    id: 'gutters',
+    props: 'gutters',
+    desc: t.lang.flex.api.flexRowDesc.gutters,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['[number?, number?]']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'rootClassName',
+    props: 'rootClassName',
+    desc: t.lang.flex.api.flexRowDesc.rootClassName,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'rootStyle',
+    props: 'style',
+    desc: t.lang.flex.api.flexRowDesc.rootStyle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['React.CSSProperties']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  }
+])
 </script>
 
 <template>
   <TableLayout
     title="Flex row"
     rootClassName="section-space"
-    :dataSource="dataSource"
+    :dataSource="[]"
+    :dataVue="dataVue"
+    :dataReact="dataReact"
     :id="flexCatalogIds.FLEX_ROW_API"
   />
 </template>

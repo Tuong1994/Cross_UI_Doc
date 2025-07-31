@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Flex, Card, Typography } from '@/components/UI'
 import { flexCatalogIds } from '@/features/UI/Flex/repository/catalogIds'
-import { flexBasicCode } from './code'
+import { flexBasicReactCode, flexBasicVueCode } from './code'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 
@@ -12,7 +12,7 @@ const { FlexRow, FlexCol } = Flex
 
 <template>
   <AnchorContent :id="flexCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="flexBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="flexBasicVueCode" :reactCode="flexBasicReactCode"> 
       <FlexRow>
         <FlexCol :span="12">
           <Card>

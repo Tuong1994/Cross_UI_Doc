@@ -1,12 +1,13 @@
-export const flexAlignsCode = `
+export const flexAlignsVueCode = `
 <script setup lang="ts">
 import { Flex, Card, Typography } from '@/components/UI'
+import type { ComponentAligns } from '@/common/type'
 
 const { Title, Paragraph } = Typography
 
 const { FlexRow, FlexCol } = Flex
 
-const aligns = ['top', 'middle', 'bottom', 'baseline']
+const aligns: ComponentAligns[] = ['top', 'middle', 'bottom', 'baseline']
 </script>
 
 <template>
@@ -48,4 +49,55 @@ const aligns = ['top', 'middle', 'bottom', 'baseline']
     </template>
   </Card>
 </template>
+`
+
+export const flexAlignsReactCode = `
+import { Flex, Card, Typography } from "./components/UI";
+import { ComponentAligns } from "./common/type";
+
+const { Title, Paragraph } = Typography;
+
+const { FlexRow, FlexCol } = Flex;
+
+const App: React.FC = () => {
+  const aligns: ComponentAligns[] = ["top", "middle", "bottom", "baseline"];
+
+  const renderContent = () => {
+    return aligns.map((align) => (
+      <Card key={align}>
+        <Title level={6}>{align}</Title>
+        <FlexRow align={align}>
+          <FlexCol span={8}>
+            <Card>
+              <Paragraph>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, sit?
+              </Paragraph>
+            </Card>
+          </FlexCol>
+          <FlexCol span={8}>
+            <Card>
+              <Paragraph>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque assumenda blanditiis
+                architecto ab quis quaerat maiores, deleniti culpa repudiandae voluptas!
+              </Paragraph>
+            </Card>
+          </FlexCol>
+          <FlexCol span={8}>
+            <Card>
+              <Paragraph>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad ducimus mollitia id voluptatibus
+                impedit nesciunt esse. Fugiat necessitatibus quaerat, excepturi magnam, quasi commodi, rerum
+                modi ipsam neque omnis fugit nulla?
+              </Paragraph>
+            </Card>
+          </FlexCol>
+        </FlexRow>
+      </Card>
+    ));
+  };
+
+  return renderContent();
+};
+
+export default App;
 `

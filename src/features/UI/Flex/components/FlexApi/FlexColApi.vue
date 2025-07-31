@@ -8,7 +8,7 @@ import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 
-const dataSource = computed<ComponentApi[]>(() => [
+const dataVue = computed<ComponentApi[]>(() => [
   {
     id: 'span',
     props: 'span',
@@ -87,13 +87,94 @@ const dataSource = computed<ComponentApi[]>(() => [
     default: '-'
   }
 ])
+
+const dataReact = computed<ComponentApi[]>(() => [
+  {
+    id: 'span',
+    props: 'span',
+    desc: t.lang.flex.api.flexColDesc.span,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['number']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'xs',
+    props: 'xs',
+    desc: t.lang.flex.api.flexColDesc.xs,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['number']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'md',
+    props: 'md',
+    desc: t.lang.flex.api.flexColDesc.md,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['number']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'lg',
+    props: 'lg',
+    desc: t.lang.flex.api.flexColDesc.lg,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['number']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'isFill',
+    props: 'isFill',
+    desc: t.lang.flex.api.flexColDesc.isFill,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'rootClassName',
+    props: 'rootClassName',
+    desc: t.lang.flex.api.flexColDesc.rootClassName,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'rootStyle',
+    props: 'style',
+    desc: t.lang.flex.api.flexColDesc.rootStyle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['React.CSSProperties']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  }
+])
 </script>
 
 <template>
   <TableLayout
     title="Flex col"
-    rootClassName="section-space"
-    :dataSource="dataSource"
+    :dataSource="[]"
+    :dataVue="dataVue"
+    :dataReact="dataReact"
     :id="flexCatalogIds.FLEX_COL_API"
   />
 </template>
