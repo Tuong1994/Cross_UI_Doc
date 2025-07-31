@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Dropdown, Divider, Button } from '@/components/UI'
-import { dropdownPlacementCode } from './code'
+import { dropdownPlacementReactCode, dropdownPlacementVueCode } from './code'
 import { dropdownCatalogIds } from '@/features/UI/Dropdown/repository/catalogIds'
 import type { DropdownItems } from '@/components/UI/Dropdown/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -15,7 +15,7 @@ const items: DropdownItems = [
 
 <template>
   <AnchorContent :id="dropdownCatalogIds.PLACEMENT">
-    <ShowCase title="Placement" :code="dropdownPlacementCode">
+    <ShowCase title="Placement" code="" :vueCode="dropdownPlacementVueCode" :reactCode="dropdownPlacementReactCode">
       <Divider>Left</Divider>
       <Dropdown :items="items" placement="left">
         <template #label>

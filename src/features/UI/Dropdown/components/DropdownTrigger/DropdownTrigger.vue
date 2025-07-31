@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Dropdown, Button } from '@/components/UI'
-import { dropdownTriggerCode } from './code'
+import { dropdownTriggerReactCode, dropdownTriggerVueCode } from './code'
 import { dropdownCatalogIds } from '@/features/UI/Dropdown/repository/catalogIds'
 import type { DropdownItems } from '@/components/UI/Dropdown/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -15,7 +15,7 @@ const items: DropdownItems = [
 
 <template>
   <AnchorContent :id="dropdownCatalogIds.TRIGGER">
-    <ShowCase title="Trigger" :code="dropdownTriggerCode">
+    <ShowCase title="Trigger" code="" :vueCode="dropdownTriggerVueCode" :reactCode="dropdownTriggerReactCode">
       <Dropdown :items="items" trigger="click">
         <template #label>
           <Button>Click to dropdown</Button>

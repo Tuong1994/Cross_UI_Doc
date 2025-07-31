@@ -1,4 +1,4 @@
-export const dropdownBasicCode = `
+export const dropdownBasicVueCode = `
 <script setup lang="ts">
 import { Dropdown, Button } from '@/components/UI'
 import type { DropdownItems } from '@/components/UI/Dropdown/type'
@@ -22,4 +22,25 @@ const items: DropdownItems = [
     </template>
   </Dropdown>
 </template>
+`
+
+export const dropdownBasicReactCode = `
+import { Button, Dropdown } from "./components/UI";
+import { DropdownItems } from "./components/UI/Dropdown/type";
+
+const App: React.FC = () => {
+  const items: DropdownItems = [
+    { id: "item-1", label: "Item 1" },
+    { id: "item-2", label: "Item 2" },
+    { id: "item-3", label: "Item 3" },
+  ];
+
+  return (
+    <Dropdown items={items}>
+      <Button>Click to dropdown</Button>
+    </Dropdown>
+  );
+};
+
+export default App;
 `

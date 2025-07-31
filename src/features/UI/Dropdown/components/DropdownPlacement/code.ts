@@ -1,4 +1,4 @@
-export const dropdownPlacementCode = `
+export const dropdownPlacementVueCode = `
 <script setup lang="ts">
 import { Dropdown, Divider, Button } from '@/components/UI'
 import type { DropdownItems } from '@/components/UI/Dropdown/type'
@@ -34,4 +34,32 @@ const items: DropdownItems = [
     </template>
   </Dropdown>
 </template>
+`
+
+export const dropdownPlacementReactCode = `
+import { Button, Divider, Dropdown } from "./components/UI";
+import { DropdownItems } from "./components/UI/Dropdown/type";
+
+const App: React.FC = () => {
+  const items: DropdownItems = [
+    { id: "item-1", label: "Item 1" },
+    { id: "item-2", label: "Item 2" },
+    { id: "item-3", label: "Item 3" },
+  ];
+
+  return (
+    <>
+      <Divider>Left</Divider>
+      <Dropdown items={items} placement="left">
+        <Button>Dropdown</Button>
+      </Dropdown>
+      <Divider>Right</Divider>
+      <Dropdown items={items} placement="right">
+        <Button>Dropdown</Button>
+      </Dropdown>
+    </>
+  );
+};
+
+export default App;
 `

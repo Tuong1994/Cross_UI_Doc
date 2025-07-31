@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Dropdown, Button } from '@/components/UI'
-import { dropdownBasicCode } from './code'
+import { dropdownBasicReactCode, dropdownBasicVueCode } from './code'
 import { dropdownCatalogIds } from '@/features/UI/Dropdown/repository/catalogIds'
 import type { DropdownItems } from '@/components/UI/Dropdown/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -15,7 +15,7 @@ const items: DropdownItems = [
 
 <template>
   <AnchorContent :id="dropdownCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="dropdownBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="dropdownBasicVueCode" :reactCode="dropdownBasicReactCode">
       <Dropdown :items="items">
         <template #label>
           <Button>Click to dropdown</Button>

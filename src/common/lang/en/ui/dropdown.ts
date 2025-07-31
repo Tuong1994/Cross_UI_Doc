@@ -4,9 +4,10 @@ const dropdown_en = {
     dropdownDesc: {
       rootClassName: 'Class name of container',
       labelClassName: 'Class name of label',
-      boxClassName: 'Class name of dropdown',
+      dropdownClassName: 'Class name of dropdown',
       rootStyle: 'Inline style of container',
       labelStyle: 'Inline style of label',
+      dropdownStyle: 'Inline style of dropdown',
       placement: 'Dropdown placement',
       items: 'Dropdown item list',
       trigger: 'Dropdown trigger type',

@@ -10,9 +10,10 @@ type TriggerType = 'hover' | 'click'
 export interface DropdownProps {
   rootClassName?: string
   labelClassName?: string
-  boxClassName?: string
+  dropdownClassName?: string
   rootStyle?: StyleValue
   labelStyle?: StyleValue
+  dropdownStyle?: StyleValue
   placement?: Exclude<ComponentPlacement, 'top' | 'bottom'>
   items?: DropdownItems
   trigger?: TriggerType
@@ -69,7 +70,7 @@ watch(dropdown, (newValue) => emits('onDropdown', newValue))
     >
       <slot name="label"></slot>
     </div>
-    <div v-if="render" :class="['dropdown-list', activeClassName, boxClassName]">
+    <div v-if="render" :style="dropdownStyle" :class="['dropdown-list', activeClassName, dropdownClassName]">
       <slot v-if="hasDropdownSlot" name="dropdown" :items="items"></slot>
 
       <template v-else>

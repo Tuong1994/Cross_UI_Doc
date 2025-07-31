@@ -4,9 +4,10 @@ const dropdown_vn = {
     dropdownDesc: {
       rootClassName: 'Tên class của container',
       labelClassName: 'Tên class của nhãn',
-      boxClassName: 'Tên class của danh sách thả xuống',
+      dropdownClassName: 'Tên class của danh sách thả xuống',
       rootStyle: 'Style nội tuyến của container',
       labelStyle: 'Style nội tuyến của nhãn',
+      dropdownStyle: 'Style nội tuyến của danh sách thả xuống',
       placement: 'Vị trí hiển thị danh sách thả xuống',
       items: 'Danh sách các mục trong dropdown',
       trigger: 'Kiểu kích hoạt dropdown',
