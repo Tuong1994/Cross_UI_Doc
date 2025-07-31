@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Breadcrumb, Icon } from '@/components/UI'
-import { breadcrumbSeparatorCode } from './code'
+import { breadcrumbSeparatorReactCode, breadcrumbSeparatorVueCode } from './code'
 import { breadcrumbCatalogIds } from '@/features/UI/Breadcrumb/repository/catalogIds'
 import { iconName } from '@/components/UI/Icon/constant'
 import type { BreadcrumbItems } from '@/components/UI/Breadcrumb/type'
@@ -16,7 +16,12 @@ const items: BreadcrumbItems = [
 
 <template>
   <AnchorContent :id="breadcrumbCatalogIds.SEPARATOR">
-    <ShowCase title="Separator" :code="breadcrumbSeparatorCode">
+    <ShowCase
+      title="Separator"
+      code=""
+      :vueCode="breadcrumbSeparatorVueCode"
+      :reactCode="breadcrumbSeparatorReactCode"
+    >
       <Breadcrumb :items="items">
         <template #separator>
           <Icon :iconName="iconName.ANGLE_DOUBLE_RIGHT" />

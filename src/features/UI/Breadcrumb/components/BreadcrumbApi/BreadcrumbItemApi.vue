@@ -8,7 +8,7 @@ import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 
-const dataSource = computed<ComponentApi[]>(() => [
+const dataVue = computed<ComponentApi[]>(() => [
   {
     id: 'id',
     props: 'id',
@@ -63,14 +63,52 @@ const dataSource = computed<ComponentApi[]>(() => [
     },
     required: t.lang.common.required.no,
     default: '-'
+  }
+])
+
+const dataReact = computed<ComponentApi[]>(() => [
+  {
+    id: 'id',
+    props: 'id',
+    desc: t.lang.breadcrumb.api.itemDesc.id,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.yes,
+    default: '-'
   },
+  {
+    id: 'label',
+    props: 'label',
+    desc: t.lang.breadcrumb.api.itemDesc.label,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['ReactNode']
+    },
+    required: t.lang.common.required.yes,
+    default: '-'
+  },
+  {
+    id: 'actived',
+    props: 'actived',
+    desc: t.lang.breadcrumb.api.itemDesc.actived,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  }
 ])
 </script>
 
 <template>
   <TableLayout
     title="Breadcrumb Item"
-    :dataSource="dataSource"
+    :dataSource="[]"
+    :dataVue="dataVue"
+    :dataReact="dataReact"
     :id="breadcrumbCatalogIds.BREADCRUMB_ITEM_API"
   />
 </template>

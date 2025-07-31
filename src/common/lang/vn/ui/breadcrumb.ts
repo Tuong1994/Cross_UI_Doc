@@ -3,17 +3,18 @@ const breadcrumb_vn = {
   api: {
     breadcrumbDesc: {
       rootClassName: 'Tên class của container',
-      itemClassName: 'Tên class của từng mục',
+      itemClassName: 'Tên class của từng mục breadcrumb',
       rootStyle: 'Style nội tuyến của container',
-      itemStyle: 'Style nội tuyến của từng mục',
-      items: 'Danh sách các mục'
+      itemStyle: 'Style nội tuyến của từng mục breadcrumb',
+      items: 'Danh sách các mục breadcrumb',
+      separator: 'Thành phần phân cách giữa các mục'
     },
     itemDesc: {
       id: 'ID duy nhất của mục',
-      label: 'Nhãn của mục',
-      labelIcon: 'Biểu tượng nhãn của mục',
-      link: 'URL để điều hướng',
-      actived: 'Bật trạng thái hoạt động'
+      label: 'Nhãn văn bản của mục',
+      labelIcon: 'Biểu tượng hiển thị cùng với nhãn',
+      link: 'URL điều hướng',
+      actived: 'Xác định mục có đang được kích hoạt hay không'
     }
   }
 }

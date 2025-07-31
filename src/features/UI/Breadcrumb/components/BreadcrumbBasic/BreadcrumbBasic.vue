@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Breadcrumb } from '@/components/UI'
-import { breadcrumbBasicCode } from './code'
+import { breadcrumbBasicReactCode, breadcrumbBasicVueCode } from './code'
 import { breadcrumbCatalogIds } from '@/features/UI/Breadcrumb/repository/catalogIds'
 import type { BreadcrumbItems } from '@/components/UI/Breadcrumb/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -15,7 +15,7 @@ const items: BreadcrumbItems = [
 
 <template>
   <AnchorContent :id="breadcrumbCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="breadcrumbBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="breadcrumbBasicVueCode" :reactCode="breadcrumbBasicReactCode">
       <Breadcrumb :items="items" />
     </ShowCase>
   </AnchorContent>

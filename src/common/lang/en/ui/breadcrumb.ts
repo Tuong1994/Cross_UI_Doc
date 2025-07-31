@@ -2,18 +2,19 @@ const breadcrumb_en = {
   desc: 'Display the current location within a hierarchy. And allow going back to states higher up in the hierarchy',
   api: {
     breadcrumbDesc: {
-      rootClassName: 'Class name of container',
-      itemClassName: 'Class name of each item',
-      rootStyle: 'Inline style of container',
-      itemStyle: 'Inline style of each item',
-      items: 'List of items'
+      rootClassName: 'Class name of the container',
+      itemClassName: 'Class name of each breadcrumb item',
+      rootStyle: 'Inline styles for the container',
+      itemStyle: 'Inline styles for each breadcrumb item',
+      items: 'List of breadcrumb items',
+      separator: 'Separator component between items'
     },
     itemDesc: {
-      id: 'Unique ID of item',
-      label: 'Label of item',
-      labelIcon: 'Label icon of item',
-      link: 'URL to navigation',
-      actived: 'Enabled active status'
+      id: 'Unique ID of the item',
+      label: 'Text label of the item',
+      labelIcon: 'Icon displayed with the label',
+      link: 'Navigation URL',
+      actived: 'Indicates whether the item is active'
     }
   }
 }
