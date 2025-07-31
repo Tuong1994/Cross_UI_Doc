@@ -8,7 +8,7 @@ import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 
-const dataSource = computed<ComponentApi[]>(() => [
+const dataVue = computed<ComponentApi[]>(() => [
   {
     id: 'justify',
     props: 'justify',
@@ -65,8 +65,72 @@ const dataSource = computed<ComponentApi[]>(() => [
     default: '-'
   }
 ])
+
+const dataReact = computed<ComponentApi[]>(() => [
+  {
+    id: 'justify',
+    props: 'justify',
+    desc: t.lang.space.api.spaceDesc.justify,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['left', 'center', 'right']
+    },
+    required: t.lang.common.required.no,
+    default: 'left'
+  },
+  {
+    id: 'aligns',
+    props: 'aligns',
+    desc: t.lang.space.api.spaceDesc.aligns,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['top', 'middle', 'bottom']
+    },
+    required: t.lang.common.required.no,
+    default: 'top'
+  },
+  {
+    id: 'size',
+    props: 'size',
+    desc: t.lang.space.api.spaceDesc.size,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['number']
+    },
+    required: t.lang.common.required.no,
+    default: '10'
+  },
+  {
+    id: 'rootClassName',
+    props: 'rootClassName',
+    desc: t.lang.space.api.spaceDesc.rootClassName,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'rootStyle',
+    props: 'style',
+    desc: t.lang.space.api.spaceDesc.rootStyle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['React.CSSProperties']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  }
+])
 </script>
 
 <template>
-  <TableLayout title="Space" :dataSource="dataSource" :id="spaceCatalogIds.SPACE_API" />
+  <TableLayout
+    title="Space"
+    :dataSource="[]"
+    :dataVue="dataVue"
+    :dataReact="dataReact"
+    :id="spaceCatalogIds.SPACE_API"
+  />
 </template>

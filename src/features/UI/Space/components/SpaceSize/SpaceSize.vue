@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Space, Divider, Card } from '@/components/UI'
-import { spaceSizeCode } from './code'
+import { spaceSizeReactCode, spaceSizeVueCode } from './code'
 import { spaceCatalogIds } from '@/features/UI/Space/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -8,9 +8,9 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="spaceCatalogIds.SIZE">
-    <ShowCase title="Size" :code="spaceSizeCode">
+    <ShowCase title="Size" code="" :vueCode="spaceSizeVueCode" :reactCode="spaceSizeReactCode">
       <Divider>10</Divider>
-      <Space>
+      <Space :size="10">
         <Card>
           <template #body> Lorem ipsum dolor sit amet. </template>
         </Card>

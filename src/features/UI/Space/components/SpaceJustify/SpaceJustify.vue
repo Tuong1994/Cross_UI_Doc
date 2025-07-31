@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Space, Divider, Card } from '@/components/UI'
-import { spaceJustifyCode } from './code'
+import { spaceJustifyReactCode, spaceJustifyVueCode } from './code'
 import { spaceCatalogIds } from '@/features/UI/Space/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="spaceCatalogIds.JUSTIFY">
-    <ShowCase title="Justify" :code="spaceJustifyCode">
+    <ShowCase title="Justify" code="" :vueCode="spaceJustifyVueCode" :reactCode="spaceJustifyReactCode">
       <Divider>Left</Divider>
       <Space justify="start">
         <Card>

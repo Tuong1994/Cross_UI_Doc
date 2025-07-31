@@ -1,4 +1,4 @@
-export const spaceBasicCode = `
+export const spaceBasicVueCode = `
 <script setup lang="ts">
 import { Space, Card } from '@/components/UI'
 </script>
@@ -16,4 +16,20 @@ import { Space, Card } from '@/components/UI'
     </Card>
   </Space>
 </template>
+`
+
+export const spaceBasicReactCode = `
+import { Space, Card } from "./components/UI";
+
+const App: React.FC = () => {
+  return (
+    <Space>
+      <Card>Lorem ipsum dolor sit amet.</Card>
+      <Card>Lorem ipsum dolor sit amet.</Card>
+      <Card>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Card>
+    </Space>
+  );
+};
+
+export default App;
 `

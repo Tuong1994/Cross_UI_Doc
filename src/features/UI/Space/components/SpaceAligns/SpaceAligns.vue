@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Space, Divider, Card } from '@/components/UI'
-import { spaceAlignsCode } from './code'
+import { spaceAlignsReactCode, spaceAlignsVueCode } from './code'
 import { spaceCatalogIds } from '@/features/UI/Space/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="spaceCatalogIds.ALIGNS">
-    <ShowCase title="Aligns" :code="spaceAlignsCode">
+    <ShowCase title="Aligns" code="" :vueCode="spaceAlignsVueCode" :reactCode="spaceAlignsReactCode">
       <Divider>Top</Divider>
       <Space aligns="top">
         <Card>

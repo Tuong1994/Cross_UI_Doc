@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Space, Card } from '@/components/UI'
-import { spaceBasicCode } from './code'
+import { spaceBasicReactCode, spaceBasicVueCode } from './code'
 import { spaceCatalogIds } from '@/features/UI/Space/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="spaceCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="spaceBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="spaceBasicVueCode" :reactCode="spaceBasicReactCode">
       <Space>
         <Card>
           <template #body> Lorem ipsum dolor sit amet. </template>
