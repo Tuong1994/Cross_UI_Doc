@@ -2,11 +2,12 @@ const divider_en = {
   desc: 'A divider line separates different content',
   api: {
     dividerDesc: {
-      rootClassName: 'Class name of container',
-      rootStyle: 'Inline style of container',
-      type: 'Type of divider, horizontal or vertical',
-      placement: 'Divider content placement, bold as default',
-      plain: 'Divider content with plain text'
+      rootClassName: 'Class name of the container',
+      rootStyle: 'Inline styles for the container',
+      type: 'Type of the divider (horizontal or vertical)',
+      placement: 'Placement of the divider content (default is center)',
+      plain: 'Displays the divider content as plain text',
+      verticalSize: 'Height of the divider when using vertical type'
     }
   }
 }
