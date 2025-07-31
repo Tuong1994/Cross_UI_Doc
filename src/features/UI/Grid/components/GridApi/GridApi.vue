@@ -8,29 +8,7 @@ import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 
-const dataSource = computed<ComponentApi[]>(() => [
-  {
-    id: 'rootClassName',
-    props: 'rootClassName',
-    desc: t.lang.grid.api.gridDesc.rootClassName,
-    type: {
-      elType: ECodeElType.DEFAULT,
-      codes: ['string']
-    },
-    required: t.lang.common.required.no,
-    default: '-'
-  },
-  {
-    id: 'rootStyle',
-    props: 'rootStyle',
-    desc: t.lang.grid.api.gridDesc.rootStyle,
-    type: {
-      elType: ECodeElType.DEFAULT,
-      codes: ['string']
-    },
-    required: t.lang.common.required.no,
-    default: '-'
-  },
+const dataVue = computed<ComponentApi[]>(() => [
   {
     id: 'gap',
     props: 'gap',
@@ -85,10 +63,118 @@ const dataSource = computed<ComponentApi[]>(() => [
     },
     required: t.lang.common.required.no,
     default: '-'
+  },
+  {
+    id: 'rootClassName',
+    props: 'rootClassName',
+    desc: t.lang.grid.api.gridDesc.rootClassName,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'rootStyle',
+    props: 'rootStyle',
+    desc: t.lang.grid.api.gridDesc.rootStyle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  }
+])
+
+const dataReact = computed<ComponentApi[]>(() => [
+  {
+    id: 'gap',
+    props: 'gap',
+    desc: t.lang.grid.api.gridDesc.gap,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['[number, number]']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'xs',
+    props: 'xs',
+    desc: t.lang.grid.api.gridDesc.xs,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['number']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'md',
+    props: 'md',
+    desc: t.lang.grid.api.gridDesc.md,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['number']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'lg',
+    props: 'lg',
+    desc: t.lang.grid.api.gridDesc.lg,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['number']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'lg',
+    props: 'lg',
+    desc: t.lang.grid.api.gridDesc.lg,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['number']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'rootClassName',
+    props: 'rootClassName',
+    desc: t.lang.grid.api.gridDesc.rootClassName,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'rootStyle',
+    props: 'rootStyle',
+    desc: t.lang.grid.api.gridDesc.rootStyle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['React.CSSProperties']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
   }
 ])
 </script>
 
 <template>
-  <TableLayout title="Grid" :dataSource="dataSource" :id="gridCatalogIds.GRID_API" />
+  <TableLayout
+    title="Grid"
+    :dataSource="[]"
+    :dataVue="dataVue"
+    :dataReact="dataReact"
+    :id="gridCatalogIds.GRID_API"
+  />
 </template>
