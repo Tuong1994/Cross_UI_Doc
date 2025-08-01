@@ -110,12 +110,12 @@ const dataVue = computed<ComponentApi[]>(() => [
     default: '-'
   },
   {
-    id: 'onDropdown',
-    props: 'onDropdown',
-    desc: t.lang.dropdown.api.dropdownDesc.onDropdown,
+    id: 'onSelect',
+    props: '@onSelect',
+    desc: t.lang.dropdown.api.dropdownDesc.onSelect,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['( isDropdown: boolean ) => void']
+      codes: ['( item: DropdownItem ) => void']
     },
     required: t.lang.common.required.no,
     default: '-'
@@ -156,6 +156,17 @@ const dataReact = computed<ComponentApi[]>(() => [
     },
     required: t.lang.common.required.no,
     default: 'left'
+  },
+  {
+    id: 'defaultSelectedId',
+    props: 'defaultSelectedId',
+    desc: t.lang.dropdown.api.dropdownDesc.defaultSelectedId,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
   },
   {
     id: 'rootClassName',
@@ -224,12 +235,12 @@ const dataReact = computed<ComponentApi[]>(() => [
     default: '-'
   },
   {
-    id: 'onDropdown',
-    props: 'onDropdown',
-    desc: t.lang.dropdown.api.dropdownDesc.onDropdown,
+    id: 'onSelect',
+    props: '@onSelect',
+    desc: t.lang.dropdown.api.dropdownDesc.onSelect,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['( isDropdown: boolean ) => void']
+      codes: ['( item: DropdownItem ) => void']
     },
     required: t.lang.common.required.no,
     default: '-'
@@ -242,6 +253,8 @@ const dataReact = computed<ComponentApi[]>(() => [
     title="Dropdown"
     rootClassName="section-space"
     :dataSource="[]"
+    :dataVue="dataVue"
+    :dataReact="dataReact"
     :id="dropdownCatalogIds.DROPDOWN_API"
   />
 </template>

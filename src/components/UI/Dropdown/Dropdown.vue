@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, computed, withDefaults, defineEmits, useSlots, watch, type StyleValue } from 'vue'
+import { ref, computed, withDefaults, defineEmits, useSlots, type StyleValue } from 'vue'
 import type { ComponentPlacement } from '@/common/type.ts'
-import type { DropdownItems } from './type.ts'
+import type { DropdownItem, DropdownItems } from './type.ts'
 import { useRender, useClickOutside } from '@/hooks'
 import useLayoutStore from '../Layout/LayoutStore'
 
@@ -15,6 +15,7 @@ export interface DropdownProps {
   labelStyle?: StyleValue
   dropdownStyle?: StyleValue
   placement?: Exclude<ComponentPlacement, 'top' | 'bottom'>
+  defaultSelectedId?: string;
   items?: DropdownItems
   trigger?: TriggerType
 }
@@ -25,12 +26,15 @@ const props = withDefaults(defineProps<DropdownProps>(), {
   boxClassName: '',
   placement: 'left',
   trigger: 'click',
+  defaultSelectedId: '',
   items: () => []
 })
 
-const emits = defineEmits(['onDropdown'])
+const emits = defineEmits(['onSelect'])
 
 const dropdown = ref<boolean>(false)
+
+const selectedId = ref<string>(props.defaultSelectedId)
 
 const dropdownRef = ref<HTMLDivElement>()
 
@@ -52,7 +56,10 @@ const themeClassName = computed<string>(() => `dropdown-${layout.theme}`)
 
 const handleDropdown = () => (dropdown.value = !dropdown.value)
 
-watch(dropdown, (newValue) => emits('onDropdown', newValue))
+const handleSelect = (item: DropdownItem) => {
+  selectedId.value = item.id
+  emits('onSelect', item)
+}
 </script>
 
 <template>
@@ -74,7 +81,7 @@ watch(dropdown, (newValue) => emits('onDropdown', newValue))
       <slot v-if="hasDropdownSlot" name="dropdown" :items="items"></slot>
 
       <template v-else>
-        <div v-for="item in items" :key="item.id" class="list-item">
+        <div v-for="item in items" :key="item.id" :class="['list-item', selectedId === item.id ? 'list-item-selected' : '']" @click="handleSelect(item)">
           <slot name="item" :item="item.comName"></slot>
         </div>
       </template>
