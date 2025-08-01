@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Pagination } from '@/components/UI'
-import { paginationBasicCode } from './code'
+import { paginationBasicReactCode, paginationBasicVueCode } from './code'
 import { paginationCatalogIds } from '../../repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -11,7 +11,7 @@ const layout = useLayoutStore()
 
 <template>
   <AnchorContent :id="paginationCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="paginationBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="paginationBasicVueCode" :reactCode="paginationBasicReactCode">
       <Pagination :color="layout.color" :total="50" />
     </ShowCase>
   </AnchorContent>
