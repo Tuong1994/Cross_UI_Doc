@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Space, Avatar } from '@/components/UI'
-import { avatarLetterCode } from './code'
+import { avatarLetterReactCode, avatarLetterVueCode } from './code'
 import { avatarCatalogIds } from '@/features/UI/Avatar/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -10,7 +10,7 @@ const avatarSize = 50
 
 <template>
   <AnchorContent :id="avatarCatalogIds.LETTER">
-    <ShowCase title="Letter" :code="avatarLetterCode">
+    <ShowCase title="Letter" code="" :vueCode="avatarLetterVueCode" :reactCode="avatarLetterReactCode">
       <Space>
         <Avatar :size="avatarSize" letter="Apple" />
         <Avatar :size="avatarSize" letter="Banana" />

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Space, Avatar } from '@/components/UI'
-import { avatarColorCode } from './code'
+import { avatarColorReactCode, avatarColorVueCode } from './code'
 import { avatarCatalogIds } from '@/features/UI/Avatar/repository/catalogIds'
 import type { AvatarColor } from '@/components/UI/Avatar/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -13,7 +13,7 @@ const avatarColors: AvatarColor[] = ['blue', 'green', 'red', 'orange', 'yellow',
 
 <template>
   <AnchorContent :id="avatarCatalogIds.COLOR">
-    <ShowCase title="Color" :code="avatarColorCode">
+    <ShowCase title="Color" code="" :vueCode="avatarColorVueCode" :reactCode="avatarColorReactCode">
       <Space>
         <Avatar v-for="color in avatarColors" :key="color" :color="color" :size="avatarSize" />
       </Space>

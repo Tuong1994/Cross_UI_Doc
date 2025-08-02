@@ -1,4 +1,4 @@
-export const avatarShapeCode = `
+export const avatarShapeVueCode = `
 <script setup lang="ts">
 import { Space, Avatar } from '@/components/UI'
 
@@ -11,4 +11,21 @@ const avatarSize = 50
     <Avatar :size="avatarSize" shape="square" />
   </Space>
 </template>
+`
+
+export const avatarShapeReactCode = `
+import { Space, Avatar } from "./components/UI";
+
+const size = 50;
+
+const App: React.FC = () => {
+  return (
+    <Space>
+      <Avatar size={size} shape="circle" />
+      <Avatar size={size} shape="square" />
+    </Space>
+  );
+};
+
+export default App;
 `
