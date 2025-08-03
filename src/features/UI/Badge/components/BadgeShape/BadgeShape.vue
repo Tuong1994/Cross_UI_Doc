@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Space, Badge } from '@/components/UI'
-import { badgeShapeCode } from './code'
+import { badgeShapeReactCode, badgeShapeVueCode } from './code'
 import { badgeCatalogIds } from '@/features/UI/Badge/repository/catalogIds'
 import type { BadgeColor } from '@/components/UI/Badge/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -11,7 +11,7 @@ const colors: BadgeColor[] = ['blue', 'green', 'red', 'orange', 'yellow', 'purpl
 
 <template>
   <AnchorContent :id="badgeCatalogIds.SHAPE">
-    <ShowCase title="Shape" :code="badgeShapeCode">
+    <ShowCase title="Shape" code="" :vueCode="badgeShapeVueCode" :reactCode="badgeShapeReactCode">
       <Space rootClassName="section-space">
         <Badge v-for="color in colors" :key="color" :color="color" shape="square">Badge</Badge>
       </Space>
@@ -27,3 +27,4 @@ const colors: BadgeColor[] = ['blue', 'green', 'red', 'orange', 'yellow', 'purpl
     </ShowCase>
   </AnchorContent>
 </template>
+

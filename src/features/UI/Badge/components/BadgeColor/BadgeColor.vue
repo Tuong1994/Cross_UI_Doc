@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Space, Badge } from '@/components/UI'
-import { badgeColorCode } from './code'
+import { badgeColorReactCode, badgeColorVueCode } from './code'
 import { badgeCatalogIds } from '@/features/UI/Badge/repository/catalogIds'
 import type { BadgeColor } from '@/components/UI/Badge/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -11,7 +11,7 @@ const colors: BadgeColor[] = ['blue', 'green', 'red', 'orange', 'yellow', 'purpl
 
 <template>
   <AnchorContent :id="badgeCatalogIds.COLOR">
-    <ShowCase title="Color" :code="badgeColorCode">
+    <ShowCase title="Color" code="" :vueCode="badgeColorVueCode" :reactCode="badgeColorReactCode">
       <Space>
         <Badge v-for="color in colors" :key="color" :color="color">Badge</Badge>
       </Space>

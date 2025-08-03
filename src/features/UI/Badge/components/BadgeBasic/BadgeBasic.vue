@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Space, Badge } from '@/components/UI'
-import { badgeBasicCode } from './code'
+import { badgeBasicReactCode, badgeBasicVueCode } from './code'
 import { badgeCatalogIds } from '@/features/UI/Badge/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="badgeCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="badgeBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="badgeBasicVueCode" :reactCode="badgeBasicReactCode">
       <Space>
         <Badge>Badge</Badge>
         <Badge ghost>Badge</Badge>
