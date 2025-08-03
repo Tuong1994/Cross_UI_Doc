@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, type StyleValue } from 'vue'
 import { Carousel, Button } from '@/components/UI'
-import { carouselGalleryCode } from './code'
+import { carouselGalleryReactCode, carouselGalleryVueCode } from './code'
 import { carouselCatalogIds } from '@/features/UI/Carousel/repository/catalogIds'
 import type { CarouselItems } from '@/components/UI/Carousel/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -51,7 +51,7 @@ const handleOpen = () => (open.value = !open.value)
 
 <template>
   <AnchorContent :id="carouselCatalogIds.GALLERY">
-    <ShowCase title="Gallery" :code="carouselGalleryCode">
+    <ShowCase title="Gallery" code="" :vueCode="carouselGalleryVueCode" :reactCode="carouselGalleryReactCode">
       <Button @click="handleOpen">Open gallery</Button>
       <Gallery :open="open" :items="items" slideId="carouselGallery" @onClose="handleOpen">
         <template #content="item">

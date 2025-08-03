@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Carousel } from '@/components/UI'
-import { carouselBasicCode } from './code'
+import { carouselBasicReactCode, carouselBasicVueCode } from './code'
 import { carouselCatalogIds } from '@/features/UI/Carousel/repository/catalogIds'
 import type { StyleValue } from 'vue'
 import type { CarouselItems } from '@/components/UI/Carousel/type'
@@ -39,7 +39,7 @@ const slideStyle: StyleValue = {
 
 <template>
   <AnchorContent :id="carouselCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="carouselBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="carouselBasicVueCode" :reactCode="carouselBasicReactCode">
       <Horizontal :rootStyle="rootStyle" :items="items" slideId="carouselHorizontal">
         <template #content="item">
           <div v-if="item.slide === slideNames.slideOne" :style="slideStyle">Slide 1</div>

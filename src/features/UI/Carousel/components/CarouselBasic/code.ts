@@ -1,4 +1,4 @@
-export const carouselBasicCode = `
+export const carouselBasicVueCode = `
 <script setup lang="ts">
 import { Carousel } from '@/components/UI'
 import type { CarouselItems } from '@/components/UI/Carousel/type'
@@ -43,4 +43,39 @@ const slideStyle: StyleValue = {
     </template>
   </Horizontal>
 </template>
+`
+
+export const carouselBasicReactCode = `
+import { CSSProperties } from "react";
+import { Carousel } from "./components/UI";
+import { CarouselItems } from "./components/UI/Carousel/type";
+
+const { Horizontal } = Carousel;
+
+const App: React.FC = () => {
+  const style: CSSProperties = {
+    height: "400px",
+  };
+
+  const slideStyle: CSSProperties = {
+    width: "100%",
+    height: "100%",
+    background: "#444",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    border: "5px solid #ddd",
+    color: "#fff",
+  };
+
+  const items: CarouselItems = [
+    { id: "slide-1", content: <div style={slideStyle}>Slide 1</div> },
+    { id: "slide-2", content: <div style={slideStyle}>Slide 2</div> },
+    { id: "slide-3", content: <div style={slideStyle}>Slide 3</div> },
+  ];
+
+  return <Horizontal style={style} items={items} slideId="carouselHorizontal" />;
+};
+
+export default App;
 `

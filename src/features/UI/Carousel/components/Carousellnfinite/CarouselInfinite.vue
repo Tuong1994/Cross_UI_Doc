@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Carousel } from '@/components/UI'
 import { carouselCatalogIds } from '@/features/UI/Carousel/repository/catalogIds'
-import { carouselInfiniteCode } from './code'
+import { carouselInfiniteReactCode, carouselInfiniteVueCode } from './code'
 import type { StyleValue } from 'vue'
 import type { CarouselItems } from '@/components/UI/Carousel/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -39,7 +39,7 @@ const slideStyle: StyleValue = {
 
 <template>
   <AnchorContent :id="carouselCatalogIds.INFINITE">
-    <ShowCase title="Infinite" :code="carouselInfiniteCode">
+    <ShowCase title="Infinite" code="" :vueCode="carouselInfiniteVueCode" :reactCode="carouselInfiniteReactCode">
       <Horizontal infinite :rootStyle="rootStyle" :items="items" slideId="carouselInfinite">
         <template #content="item">
           <div v-if="item.slide === slideNames.slideOne" :style="slideStyle">Slide 1</div>

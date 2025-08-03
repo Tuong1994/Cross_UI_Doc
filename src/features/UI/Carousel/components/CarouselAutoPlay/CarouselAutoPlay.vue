@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Carousel } from '@/components/UI'
 import { carouselCatalogIds } from '@/features/UI/Carousel/repository/catalogIds'
-import { carouselAutoPlayCode } from './code'
+import { carouselAutoPlayReactCode, carouselAutoPlayVueCode } from './code'
 import type { StyleValue } from 'vue'
 import type { CarouselItems } from '@/components/UI/Carousel/type'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -39,7 +39,7 @@ const slideStyle: StyleValue = {
 
 <template>
   <AnchorContent :id="carouselCatalogIds.AUTO_PLAY">
-    <ShowCase title="Auto play" :code="carouselAutoPlayCode">
+    <ShowCase title="Auto play" code="" :vueCode="carouselAutoPlayVueCode" :reactCode="carouselAutoPlayReactCode">
       <Horizontal autoPlay :rootStyle="rootStyle" :items="items" slideId="carouselAutoPlay">
         <template #content="item">
           <div v-if="item.slide === slideNames.slideOne" :style="slideStyle">Slide 1</div>
