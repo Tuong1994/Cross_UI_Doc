@@ -8,8 +8,8 @@ import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 
-const dataSource = computed<ComponentApi[]>(() => [
-     {
+const dataVue = computed<ComponentApi[]>(() => [
+  {
     id: 'icon',
     props: 'icon',
     desc: t.lang.list.api.listItemDesc.icon,
@@ -65,8 +65,61 @@ const dataSource = computed<ComponentApi[]>(() => [
     default: '-'
   }
 ])
+
+const dataReact = computed<ComponentApi[]>(() => [
+  {
+    id: 'rootClassName',
+    props: 'rootClassName',
+    desc: t.lang.list.api.listItemDesc.rootClassName,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'contentClassName',
+    props: 'contentClassName',
+    desc: t.lang.list.api.listItemDesc.contentClassName,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'rootStyle',
+    props: 'style',
+    desc: t.lang.list.api.listItemDesc.rootStyle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['React.CSSProperties']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'contentStyle',
+    props: 'contentStyle',
+    desc: t.lang.list.api.listItemDesc.contentStyle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['React.CSSProperties']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  }
+])
 </script>
 
 <template>
-  <TableLayout title="List Item" :dataSource="dataSource" :id="listCatalogIds.LIST_API" />
+  <TableLayout
+    title="List Item"
+    :dataSource="[]"
+    :dataVue="dataVue"
+    :dataReact="dataReact"
+    :id="listCatalogIds.LIST_API"
+  />
 </template>
