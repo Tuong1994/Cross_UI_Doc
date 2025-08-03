@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Card } from '@/components/UI'
-import { cardBasicCode } from './code'
+import { cardBasicReactCode, cardBasicVueCode } from './code'
 import { cardCatalogIds } from '@/features/UI/Card/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="cardCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="cardBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="cardBasicVueCode" :reactCode="cardBasicReactCode">
       <Card>
         <template #body>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nam facilis vel libero dolorem ab

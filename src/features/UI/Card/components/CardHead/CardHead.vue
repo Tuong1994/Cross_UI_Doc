@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Card, Typography } from '@/components/UI'
-import { cardHeadCode } from './code'
+import { cardHeadReactCode, cardHeadVueCode } from './code'
 import { cardCatalogIds } from '@/features/UI/Card/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -10,7 +10,7 @@ const { Title } = Typography
 
 <template>
   <AnchorContent :id="cardCatalogIds.HEAD">
-    <ShowCase title="Head" :code="cardHeadCode">
+    <ShowCase title="Head" code="" :vueCode="cardHeadVueCode" :reactCode="cardHeadReactCode">
       <Card>
         <template #head>
           <Title :level="6">Card header</Title>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Card, Typography } from '@/components/UI'
-import { cardHoverableCode } from './code'
+import { cardHoverableReactCode, cardHoverableVueCode } from './code'
 import { cardCatalogIds } from '@/features/UI/Card/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -10,7 +10,7 @@ const { Title } = Typography
 
 <template>
   <AnchorContent :id="cardCatalogIds.HOVERABLE">
-    <ShowCase title="Hoverable" :code="cardHoverableCode">
+    <ShowCase title="Hoverable" code="" :vueCode="cardHoverableVueCode" :reactCode="cardHoverableReactCode">
       <Card hoverable>
         <template #head>
           <Title :level="6">Hover me</Title>

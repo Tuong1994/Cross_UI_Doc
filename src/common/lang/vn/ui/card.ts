@@ -4,11 +4,12 @@ const card_vn = {
     cardDesc: {
       rootClassName: 'Tên class của container',
       rootStyle: 'Style nội tuyến của container',
-      headClassName: 'Tên class của phần tiêu đề',
-      headStyle: 'Style nội tuyến của phần tiêu đề',
-      bodyClassName: 'Tên class của phần nội dung',
-      bodyStyle: 'Style nội tuyến của phần nội dung',
-      hoverable: 'Bật hiệu ứng hover'
+      headClassName: 'Tên class của phần tiêu đề thẻ',
+      headStyle: 'Style nội tuyến của phần tiêu đề thẻ',
+      bodyClassName: 'Tên class của phần nội dung thẻ',
+      bodyStyle: 'Style nội tuyến của phần nội dung thẻ',
+      hoverable: 'Bật hiệu ứng hover cho thẻ',
+      head: 'Văn bản hoặc component được sử dụng làm tiêu đề thẻ'
     }
   }
 }
