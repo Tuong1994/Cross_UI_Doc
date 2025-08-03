@@ -8,7 +8,7 @@ import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 
-const dataSource = computed<ComponentApi[]>(() => [
+const dataVue = computed<ComponentApi[]>(() => [
   {
     id: 'id',
     props: 'id',
@@ -43,12 +43,50 @@ const dataSource = computed<ComponentApi[]>(() => [
     default: '-'
   },
 ])
+
+const dataReact = computed<ComponentApi[]>(() => [
+  {
+    id: 'id',
+    props: 'id',
+    desc: t.lang.carousel.api.carouselItem.id,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.yes,
+    default: '-'
+  },
+  {
+    id: 'content',
+    props: 'content',
+    desc: t.lang.carousel.api.carouselItem.content,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['ReactNode']
+    },
+    required: t.lang.common.required.yes,
+    default: '-'
+  },
+  {
+    id: 'url',
+    props: 'url',
+    desc: t.lang.carousel.api.carouselItem.url,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+])
 </script>
 
 <template>
   <TableLayout
     title="Carousel Item"
-    :dataSource="dataSource"
+    :dataSource="[]"
+    :dataVue="dataVue"
+    :dataReact="dataReact"
     :id="carouselCatalogIds.CAROUSEL_ITEM_API"
   />
 </template>

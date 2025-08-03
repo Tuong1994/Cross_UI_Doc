@@ -8,7 +8,7 @@ import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 
-const dataSource = computed<ComponentApi[]>(() => [
+const dataVue = computed<ComponentApi[]>(() => [
   {
     id: 'items',
     props: 'items',
@@ -47,6 +47,17 @@ const dataSource = computed<ComponentApi[]>(() => [
     id: 'autoPlay',
     props: 'autoPlay',
     desc: t.lang.carousel.api.carouselApi.autoPlay,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'hasArrow',
+    props: 'hasArrow',
+    desc: t.lang.carousel.api.carouselApi.hasArrow,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['boolean']
@@ -209,13 +220,151 @@ const dataSource = computed<ComponentApi[]>(() => [
     default: '-'
   }
 ])
+
+const dataReact = computed<ComponentApi[]>(() => [
+  {
+    id: 'items',
+    props: 'items',
+    desc: t.lang.carousel.api.carouselApi.items,
+    type: {
+      elType: ECodeElType.ANCHOR,
+      link: carouselCatalogIds.CAROUSEL_ITEM_API,
+      codes: ['CarouselItems']
+    },
+    required: t.lang.common.required.no,
+    default: '[]'
+  },
+  {
+    id: 'slideId',
+    props: 'slideId',
+    desc: t.lang.carousel.api.carouselApi.slideId,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'infinite',
+    props: 'infinite',
+    desc: t.lang.carousel.api.carouselApi.infinite,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'autoPlay',
+    props: 'autoPlay',
+    desc: t.lang.carousel.api.carouselApi.autoPlay,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'hasArrow',
+    props: 'hasArrow',
+    desc: t.lang.carousel.api.carouselApi.hasArrow,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'hasManualStop',
+    props: 'hasManualStop',
+    desc: t.lang.carousel.api.carouselApi.hasManualStop,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'time',
+    props: 'time',
+    desc: t.lang.carousel.api.carouselApi.time,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['number']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'prevButtonIcon',
+    props: 'prevButtonIcon',
+    desc: t.lang.carousel.api.carouselApi.prevButtonIcon,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['ReactNode']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'nextButtonIcon',
+    props: 'nextButtonIcon',
+    desc: t.lang.carousel.api.carouselApi.nextButtonIcon,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['ReactNode']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'mode',
+    props: 'mode',
+    desc: t.lang.carousel.api.carouselApi.mode,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['dark', 'light']
+    },
+    required: t.lang.common.required.no,
+    default: 'dark'
+  },
+  {
+    id: 'rootClassName',
+    props: 'rootClassName',
+    desc: t.lang.carousel.api.carouselApi.rootClassName,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'rootStyle',
+    props: 'style',
+    desc: t.lang.carousel.api.carouselApi.rootStyle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['React.CSSProperties']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+])
 </script>
 
 <template>
   <TableLayout
     title="Carousel"
     rootClassName="section-space"
-    :dataSource="dataSource"
+    :dataSource="[]"
+    :dataVue="dataVue"
+    :dataReact="dataReact"
     :id="carouselCatalogIds.CAROUSEL_API"
   />
 </template>

@@ -17,7 +17,7 @@ const useCarouselCatalogs = () => {
 
   const apiCatalogs: CatalogItems = [
     { id: carouselCatalogIds.CAROUSEL_API, title: 'Carousel' },
-    { id: carouselCatalogIds.CAROUSEL_PRODUCT_API, title: 'Carousel product' },
+    { id: carouselCatalogIds.CAROUSEL_PRODUCT_GALLERY_API, title: 'Carousel product/gallery' },
     { id: carouselCatalogIds.CAROUSEL_ITEM_API, title: 'Carousel Item' },
   ]
 

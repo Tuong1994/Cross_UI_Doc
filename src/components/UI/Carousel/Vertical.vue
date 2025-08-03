@@ -22,6 +22,7 @@ export interface CarouselVerticalProps {
   infinite?: boolean
   autoPlay?: boolean
   hasManualStop?: boolean
+  hasArrow?: boolean
   prevButtonIcon?: string
   nextButtonIcon?: string
   mode?: 'dark' | 'light'
@@ -36,6 +37,7 @@ const props = withDefaults(defineProps<CarouselVerticalProps>(), {
   slideId: 'slide',
   mode: 'dark',
   time: 3000,
+  hasArrow: true,
   prevButtonIcon: iconName.ANGLE_UP,
   nextButtonIcon: iconName.ANGLE_DOWN,
   items: () => []
@@ -194,6 +196,7 @@ watchEffect((onStop) => {
 <template>
   <div :style="rootStyle" :class="['carousel', 'carousel-vertical', modeClassName, rootClassName]">
     <button
+      v-if="hasArrow"
       :style="prevBtnStyle"
       :disabled="prevBtnDisabled"
       :class="['carousel-action', prevBtnClassName, prevBtnDisabledClassName]"
@@ -202,6 +205,7 @@ watchEffect((onStop) => {
       <Icon :iconName="prevButtonIcon" :size="25" />
     </button>
     <button
+      v-if="hasArrow"
       :style="nextBtnStyle"
       :disabled="nextBtnDisabled"
       :class="['carousel-action', nextBtnClassName, nextBtnDisabledClassName]"
