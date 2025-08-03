@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Divider, Image } from '@/components/UI'
 import { imageCatalogIds } from '@/features/UI/Image/repository/catalogIds'
-import { imageObjectFitCode } from './code'
+import { imageObjectFitReactCode, imageObjectFitVueCode } from './code'
 import type { ImageObjectFit } from '@/components/UI/Image/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -23,7 +23,12 @@ const dividerContent = (fit: string) => {
 
 <template>
   <AnchorContent :id="imageCatalogIds.OBJECT_FIT">
-    <ShowCase title="Object fit" :code="imageObjectFitCode">
+    <ShowCase
+      title="Object fit"
+      code=""
+      :vueCode="imageObjectFitVueCode"
+      :reactCode="imageObjectFitReactCode"
+    >
       <template v-for="fit in imageFits" :key="fit">
         <Divider>
           {{ dividerContent(fit) }}

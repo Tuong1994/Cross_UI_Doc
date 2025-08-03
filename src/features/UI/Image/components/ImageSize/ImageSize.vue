@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { Divider, Image } from '@/components/UI'
-import { imageSizeCode } from './code'
+import { imageSizeReactCode, imageSizeVueCode } from './code'
 import { imageCatalogIds } from '@/features/UI/Image/repository/catalogIds'
 import { useDisplayComponentSize } from '@/hooks'
 import type { ComponentSize } from '@/common/type'
@@ -15,7 +15,7 @@ const sizeContent = useDisplayComponentSize()
 
 <template>
   <AnchorContent :id="imageCatalogIds.SIZE">
-    <ShowCase title="Size" :code="imageSizeCode">
+    <ShowCase title="Size" code="" :vueCode="imageSizeVueCode" :reactCode="imageSizeReactCode">
       <template v-for="size in imageSizes" :key="size">
         <Divider>
           {{ sizeContent(size) }}

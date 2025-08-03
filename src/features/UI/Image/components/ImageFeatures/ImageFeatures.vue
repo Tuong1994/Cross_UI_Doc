@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Image, Divider } from '@/components/UI'
-import { imageFeaturesCode } from './code'
+import { imageFeaturesReactCode, imageFeaturesVueCode } from './code'
 import { imageCatalogIds } from '@/features/UI/Image/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="imageCatalogIds.FEATURES">
-    <ShowCase title="Features" :code="imageFeaturesCode">
+    <ShowCase title="Features" code="" :vueCode="imageFeaturesVueCode" :reactCode="imageFeaturesReactCode">
       <Divider> Checkbox </Divider>
       <Image
         hasCheck

@@ -1,4 +1,4 @@
-export const imageFeaturesCode = `
+export const imageFeaturesVueCode = `
 <script setup lang="ts">
 import { Image, Divider } from '@/components/UI'
 </script>
@@ -21,4 +21,33 @@ import { Image, Divider } from '@/components/UI'
     :imgHeight="150"
   />
 </template>
+`
+
+export const imageFeaturesReactCode = `
+import { Image, Divider } from "./components/UI";
+
+const App: React.FC = () => {
+  return (
+    <>
+      <Divider> Checkbox </Divider>
+      <Image
+        hasCheck
+        checkboxColor="green"
+        src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrg&dpr=1"
+        imgWidth={150}
+        imgHeight={150}
+      />
+      <Divider> Viewer </Divider>
+      <Image
+        hasView
+        hasRemove
+        src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrg&dpr=1"
+        imgWidth={150}
+        imgHeight={150}
+      />
+    </>
+  );
+};
+
+export default App;
 `

@@ -2,18 +2,20 @@ const image_vn = {
   desc: 'Hình ảnh có thể xem trước',
   api: {
     imageDesc: {
-      rootClassName: 'Tên lớp của container',
-      rootStyle: 'Inline style của container',
-      size: 'Kích thước của hình ảnh',
-      imgWidth: 'Chiều rộng của hình ảnh',
-      imgHeight: 'Chiều cao của hình ảnh',
-      objectFit: 'Thay đổi kích thước hình ảnh để vừa với container',
-      lazyType: 'Kiểu tải hình ảnh lười (lazy load)',
+      rootClassName: 'Tên class của container',
+      rootStyle: 'Style nội tuyến của container',
+      size: 'Kích thước hình ảnh theo preset (tuỳ chọn)',
+      imgWidth: 'Chiều rộng tùy chỉnh của hình ảnh',
+      imgHeight: 'Chiều cao tùy chỉnh của hình ảnh',
+      objectFit: 'Chỉ định cách hình ảnh được co giãn để vừa với container',
+      lazyType: 'Loại tải ảnh lười (lazy loading)',
       src: 'URL của hình ảnh cần hiển thị',
-      hasView: 'Bật tính năng xem trước hình ảnh',
-      hasRemove: 'Bật tính năng xóa hình ảnh',
-      hasCheck: 'Bật tính năng chọn hình ảnh',
-      checkboxColor: 'Màu của ô chọn hình ảnh'
+      hasView: 'Bật chế độ xem ảnh',
+      hasRemove: 'Bật tính năng xoá ảnh',
+      hasCheck: 'Bật tính năng chọn ảnh bằng checkbox',
+      checkboxColor: 'Màu sắc của checkbox ảnh',
+      onCheck: 'Kích hoạt khi checkbox được chọn',
+      onRemove: 'Kích hoạt khi nút xoá được nhấn'
     }
   }
 }
