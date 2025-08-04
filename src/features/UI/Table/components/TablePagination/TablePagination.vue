@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Table, Image } from '@/components/UI'
-import { tablePaginationCode } from './code'
+import { tablePaginationReactCode, tablePaginationVueCode } from './code'
 import { tableCatalogIds } from '../../repository/catalogIds'
 import type { TableColumns } from '@/components/UI/Table/type'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -58,7 +58,7 @@ const columns: TableColumns<TableData> = [
 
 <template>
   <AnchorContent :id="tableCatalogIds.PAGINATION">
-    <ShowCase title="Pagination" :code="tablePaginationCode">
+    <ShowCase title="Pagination" code="" :vueCode="tablePaginationVueCode" :reactCode="tablePaginationReactCode">
       <Table
         hasPagination
         :color="layout.color"

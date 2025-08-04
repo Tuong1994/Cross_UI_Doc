@@ -1,4 +1,4 @@
-export const tableSelectionCode = `  
+export const tableSelectionVueCode = `  
 <script setup lang="ts">
 import { Table, Image } from '@/components/UI'
 import type { TableColumns } from '@/components/UI/Table/type'
@@ -57,4 +57,58 @@ const columns: TableColumns<TableData> = [
     :columns="columns"
   />
 </template>
+`
+
+export const tableSelectionReactCode = `
+import { Image, Table } from "./components/UI";
+import { Columns } from "./components/UI/Table/type";
+
+interface TableData {
+  id: string;
+  content: string;
+  productName: string;
+}
+
+const App: React.FC = () => {
+  const dataSource: TableData[] = [
+    {
+      id: "1",
+      content: "This is a comment 1",
+      productName: "Product 1",
+    },
+    {
+      id: "2",
+      content: "This is a comment 2",
+      productName: "Product 2",
+    },
+    {
+      id: "3",
+      content: "This is a comment 3",
+      productName: "Product 3",
+    },
+  ];
+
+  const columns: Columns<TableData> = [
+    {
+      id: "id",
+      dataIndex: "id",
+      title: "Image",
+      render: () => <Image imgWidth={50} imgHeight={50} />
+    },
+    {
+      id: "content",
+      dataIndex: "content",
+      title: "Content",
+    },
+    {
+      id: "productName",
+      dataIndex: "productName",
+      title: "Product",
+    },
+  ];
+
+  return <Table<TableData> hasRowSelection dataSource={dataSource} columns={columns} />;
+};
+
+export default App;
 `

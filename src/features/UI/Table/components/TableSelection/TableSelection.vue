@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Table, Image } from '@/components/UI'
-import { tableSelectionCode } from './code'
+import { tableSelectionReactCode, tableSelectionVueCode } from './code'
 import { tableCatalogIds } from '../../repository/catalogIds'
 import type { TableColumns } from '@/components/UI/Table/type'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -58,7 +58,7 @@ const columns: TableColumns<TableData> = [
 
 <template>
   <AnchorContent :id="tableCatalogIds.SELECTION">
-    <ShowCase title="Selection" :code="tableSelectionCode">
+    <ShowCase title="Selection" code="" :vueCode="tableSelectionVueCode" :reactCode="tableSelectionReactCode">
       <Table hasRowSelection :dataSource="dataSource" :columns="columns" :color="layout.color" />
     </ShowCase>
   </AnchorContent>

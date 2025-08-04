@@ -10,7 +10,7 @@ import helper from '@/helper'
 
 const t = useLangStore()
 
-const dataSource = computed<ComponentApi[]>(() => [
+const dataVue = computed<ComponentApi[]>(() => [
   {
     id: 'dataSource',
     props: 'dataSource',
@@ -212,6 +212,245 @@ const dataSource = computed<ComponentApi[]>(() => [
     default: '-'
   }
 ])
+
+const dataReact = computed<ComponentApi[]>(() => [
+  {
+    id: 'dataSource',
+    props: 'dataSource',
+    desc: t.lang.table.api.tableDesc.dataSource,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['object[]']
+    },
+    required: t.lang.common.required.yes,
+    default: '[]'
+  },
+  {
+    id: 'columns',
+    props: 'columns',
+    desc: t.lang.table.api.tableDesc.columns,
+    type: {
+      elType: ECodeElType.ANCHOR,
+      link: tableCatalogIds.COLUMN_API,
+      codes: ['TableColumns']
+    },
+    required: t.lang.common.required.yes,
+    default: '[]'
+  },
+  {
+    id: 'selection',
+    props: 'hasRowSelection',
+    desc: t.lang.table.api.tableDesc.hasRowSelection,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: 'false'
+  },
+  {
+    id: 'expand',
+    props: 'hasRowExpand',
+    desc: t.lang.table.api.tableDesc.hasExpand,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: 'false'
+  },
+  {
+    id: 'pagination',
+    props: 'hasPagination',
+    desc: t.lang.table.api.tableDesc.hasPagination,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: 'false'
+  },
+  {
+    id: 'hasFilter',
+    props: 'hasFilter',
+    desc: t.lang.table.api.tableDesc.hasFilter,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: 'false'
+  },
+  {
+    id: 'loading',
+    props: 'loading',
+    desc: t.lang.table.api.tableDesc.loading,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: 'false'
+  },
+  {
+    id: 'rowKey',
+    props: 'rowKey',
+    desc: t.lang.table.api.tableDesc.rowKey,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['React.Key']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'color',
+    props: 'color',
+    desc: t.lang.table.api.tableDesc.color,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: helper.getColorType()
+    },
+    required: t.lang.common.required.no,
+    default: 'blue'
+  },
+  {
+    id: 'rootClassName',
+    props: 'rootClassName',
+    desc: t.lang.table.api.tableDesc.rootClassName,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'rootStyle',
+    props: 'style',
+    desc: t.lang.table.api.tableDesc.rootStyle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['React.CSSProperties']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'filter',
+    props: 'filter',
+    desc: t.lang.table.api.tableDesc.filter,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['ReactNode']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'filterProps',
+    props: 'filterProps',
+    desc: t.lang.table.api.tableDesc.filterProps,
+    type: {
+      elType: ECodeElType.ANCHOR,
+      link: tableCatalogIds.TABLE_FILTER_API,
+      codes: ['TableFilterProps']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'paginationProps',
+    props: 'paginationProps',
+    desc: t.lang.table.api.tableDesc.paginationProps,
+    type: {
+      elType: ECodeElType.ROUTER,
+      link: routePaths.PAGINATION,
+      codes: ['PaginationProps']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'removeButtonProps',
+    props: 'removeButtonProps',
+    desc: t.lang.table.api.tableDesc.removeButtonProps,
+    type: {
+      elType: ECodeElType.ROUTER,
+      link: routePaths.BUTTON,
+      codes: ['ButtonProps']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'cancelButtonProps',
+    props: 'cancelButtonProps',
+    desc: t.lang.table.api.tableDesc.cancelButtonProps,
+    type: {
+      elType: ECodeElType.ROUTER,
+      link: routePaths.BUTTON,
+      codes: ['ButtonProps']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'removeButtonTitle',
+    props: 'removeButtonTitle',
+    desc: t.lang.table.api.tableDesc.removeButtonTitle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['ReactNode']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'cancelButtonTitle',
+    props: 'cancelButtonTitle',
+    desc: t.lang.table.api.tableDesc.cancelButtonTitle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['ReactNode']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'expandRowTable',
+    props: '@expandRowTable',
+    desc: t.lang.table.api.tableDesc.expandRowTable,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['(data: object) => ReactNode | null']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'onRowSelect',
+    props: '@onSelectRows',
+    desc: t.lang.table.api.tableDesc.onRowSelect,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['(keys: React.Key[]) => void']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'onChangePage',
+    props: '@onChangePage',
+    desc: t.lang.table.api.tableDesc.onChangePage,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['(page: number) => void']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  }
+])
 </script>
 
 <template>
@@ -219,6 +458,8 @@ const dataSource = computed<ComponentApi[]>(() => [
     title="Table"
     rootClassName="section-space"
     :id="tableCatalogIds.TABLE_API"
-    :dataSource="dataSource"
+    :dataSource="[]"
+    :dataVue="dataVue"
+    :dataReact="dataReact"
   />
 </template>

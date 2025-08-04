@@ -46,5 +46,10 @@ const dataSource = computed<ComponentApi[]>(() => [
 </script>
 
 <template>
-  <TableLayout title="Table Component" :id="tableCatalogIds.COMPONENT_API" :dataSource="dataSource" />
+  <TableLayout
+    title="Table Component (Vue)"
+    :multiple="false"
+    :id="tableCatalogIds.COMPONENT_API"
+    :dataSource="dataSource"
+  />
 </template>

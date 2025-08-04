@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Table, Image } from '@/components/UI'
-import { tableExpandCode } from './code'
+import { tableExpandReactCode, tableExpandVueCode } from './code'
 import { tableCatalogIds } from '../../repository/catalogIds'
 import type { TableColumns } from '@/components/UI/Table/type'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -101,7 +101,7 @@ const columns: TableColumns<TableData> = [
 
 <template>
   <AnchorContent :id="tableCatalogIds.EXPAND">
-    <ShowCase title="Expand Table" :code="tableExpandCode">
+    <ShowCase title="Expand Table" code="" :vueCode="tableExpandVueCode" :reactCode="tableExpandReactCode">
       <Table :dataSource="dataSource" :columns="columns" :color="layout.color" hasExpand>
         <template #expand="com">
           <Table :dataSource="com.expand.data.child" :columns="columns" :color="layout.color" />

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Table, Image, Space } from '@/components/UI'
 import { Input, Select } from '@/components/Control'
-import { tableFilterCode } from './code'
+import { tableFilterReactCode, tableFilterVueCode } from './code'
 import { tableCatalogIds } from '../../repository/catalogIds'
 import type { TableColumns } from '@/components/UI/Table/type'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -59,7 +59,7 @@ const columns: TableColumns<TableData> = [
 
 <template>
   <AnchorContent :id="tableCatalogIds.FILTER">
-    <ShowCase title="Filter" :code="tableFilterCode">
+    <ShowCase title="Filter" code="" :vueCode="tableFilterVueCode" :reactCode="tableFilterReactCode">
       <Table hasFilter :color="layout.color" :dataSource="dataSource" :columns="columns">
         <template #filter>
           <Space>
@@ -71,3 +71,5 @@ const columns: TableColumns<TableData> = [
     </ShowCase>
   </AnchorContent>
 </template>
+
+

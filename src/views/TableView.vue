@@ -8,6 +8,7 @@ import TablePagination from '@/features/UI/Table/components/TablePagination/Tabl
 import TableApi from '@/features/UI/Table/components/TableApi/TableApi.vue'
 import TableColumnApi from '@/features/UI/Table/components/TableApi/TableColumnApi.vue'
 import TableComponentApi from '@/features/UI/Table/components/TableApi/TableComponentApi.vue'
+import TableFilterApi from '@/features/UI/Table/components/TableApi/TableFilterApi.vue'
 import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
@@ -25,6 +26,7 @@ const t = useLangStore()
     <template #api>
       <TableApi />
       <TableColumnApi />
+      <TableFilterApi />
       <TableComponentApi />
     </template>
   </PageLayout>

@@ -8,7 +8,7 @@ import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 
-const dataSource = computed<ComponentApi[]>(() => [
+const dataVue = computed<ComponentApi[]>(() => [
   {
     id: 'id',
     props: 'id',
@@ -66,6 +66,53 @@ const dataSource = computed<ComponentApi[]>(() => [
     default: '-'
   }
 ])
+
+const dataReact = computed<ComponentApi[]>(() => [
+  {
+    id: 'id',
+    props: 'id',
+    desc: t.lang.table.api.columnDesc.id,
+    type: {
+      codes: ['string'],
+      elType: ECodeElType.DEFAULT
+    },
+    required: t.lang.common.required.yes,
+    default: '-'
+  },
+  {
+    id: 'title',
+    props: 'title',
+    desc: t.lang.table.api.columnDesc.title,
+    type: {
+      codes: ['string'],
+      elType: ECodeElType.DEFAULT
+    },
+    required: t.lang.common.required.yes,
+    default: '-'
+  },
+  {
+    id: 'dataIndex',
+    props: 'dataIndex',
+    desc: t.lang.table.api.columnDesc.dataIndex,
+    type: {
+      codes: ['keyof Record'],
+      elType: ECodeElType.DEFAULT
+    },
+    required: t.lang.common.required.yes,
+    default: '-'
+  },
+  {
+    id: 'render',
+    props: '@render',
+    desc: t.lang.table.api.columnDesc.render,
+    type: {
+      codes: ['(record: Record, idx: number) => string'],
+      elType: ECodeElType.DEFAULT
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  }
+])
 </script>
 
 <template>
@@ -73,6 +120,8 @@ const dataSource = computed<ComponentApi[]>(() => [
     rootClassName="section-space"
     title="Column"
     :id="tableCatalogIds.COLUMN_API"
-    :dataSource="dataSource"
+    :dataSource="[]"
+    :dataVue="dataVue"
+    :dataReact="dataReact"
   />
 </template>

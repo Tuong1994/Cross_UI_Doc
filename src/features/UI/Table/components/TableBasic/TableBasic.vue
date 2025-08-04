@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Table, Image } from '@/components/UI'
-import { tableBasicCode } from './code'
+import { tableBasicReactCode, tableBasicVueCode } from './code'
 import { tableCatalogIds } from '../../repository/catalogIds'
 import type { TableColumns } from '@/components/UI/Table/type'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -58,7 +58,7 @@ const columns: TableColumns<TableData> = [
 
 <template>
   <AnchorContent :id="tableCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="tableBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="tableBasicVueCode" :reactCode="tableBasicReactCode">
       <Table :dataSource="dataSource" :columns="columns" :color="layout.color" />
     </ShowCase>
   </AnchorContent>
