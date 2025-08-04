@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Alert, Space, Button } from '@/components/UI'
-import { alertTypeCode } from './code'
+import { alertTypeReactCode, alertTypeVueCode } from './code'
 import { alertCatalogIds } from '@/features/UI/Alert/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import useAlert from '@/components/UI/Alert/useAlert'
@@ -11,7 +11,7 @@ const alertApi = useAlert()
 
 <template>
   <AnchorContent :id="alertCatalogIds.TYPE">
-    <ShowCase title="Type" :code="alertTypeCode">
+    <ShowCase title="Type" code="" :vueCode="alertTypeVueCode" :reactCode="alertTypeReactCode">
       <Space>
         <Button color="green" @click="() => alertApi.success('This is a success message')">Success</Button>
         <Button color="red" @click="() => alertApi.error('This is a error message')">Error</Button>
