@@ -13,7 +13,7 @@ const useTabsCatalogs = () => {
 
   const apiCatalogs: CatalogItems = [
     { id: tabsCatalogIds.TABS_API, title: 'Tabs' },
-    { id: tabsCatalogIds.ITEM_API, title: 'Item' },
+    { id: tabsCatalogIds.ITEM_API, title: 'Tabs Item' },
   ]
 
   const tabsCatalogs = computed<Catalog[]>(() => [

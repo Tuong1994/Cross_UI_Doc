@@ -1,4 +1,4 @@
-export const tabsVerticalCode = `
+export const tabsVerticalVueCode = `
 <script setup lang="ts">
 import { Tabs } from '@/components/UI'
 import { iconName } from '@/components/UI/Icon/constant'
@@ -32,4 +32,39 @@ const tabItems = [
     </template>
   </Tabs>
 </template>
+`
+
+export const tabsVerticalReactCode = `
+import { FaBookmark } from "react-icons/fa";
+import { Tabs } from "./components/UI";
+import { TabsItems } from "./components/UI/Tabs/type";
+
+const App: React.FC = () => {
+  const items: TabsItems = [
+    {
+      id: "tab-1",
+      title: "Tab 1",
+      icon: <FaBookmark />,
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus tempore laborum labore, iure deleniti neque beatae asperiores suscipit cum adipisci excepturi impedit architecto culpa mollitia ratione doloribus modi quisquam autem enim perspiciatis molestias necessitatibus qui cupiditate.  Expedita, saepe fugiat autem reprehenderit tempore dolor cumque sit corporis numquam, similique excepturi laborum.",
+    },
+    {
+      id: "tab-2",
+      title: "Tab 2",
+      icon: <FaBookmark />,
+      content:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus tempore laborum labore, iure deleniti neque beatae asperiores suscipit cum adipisci excepturi impedit architecto culpa mollitia ratione doloribus modi quisquam autem enim perspiciatis molestias necessitatibus qui cupiditate.",
+    },
+    {
+      id: "tab-3",
+      title: "Tab 3",
+      icon: <FaBookmark />,
+      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus tempore laborum labore",
+    },
+  ];
+
+  return <Tabs type="vertical" color="blue" items={items} />;
+};
+
+export default App;
 `

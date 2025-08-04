@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Tabs } from '@/components/UI'
-import { tabsVerticalCode } from './code'
 import { iconName } from '@/components/UI/Icon/constant'
-import { tabsCatalogIds } from '../../respository/catalogIds'
+import { tabsVerticalReactCode, tabsVerticalVueCode } from './code'
+import { tabsCatalogIds } from '@/features/UI/Tabs/respository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
@@ -18,7 +18,7 @@ const tabItems = [
 
 <template>
   <AnchorContent :id="tabsCatalogIds.VERTICAL">
-    <ShowCase title="Vertical" :code="tabsVerticalCode">
+    <ShowCase title="Vertical" code="" :vueCode="tabsVerticalVueCode" :reactCode="tabsVerticalReactCode">
       <Tabs type="vertical" :color="layout.color" :items="tabItems">
         <template #content="tab">
           <div v-if="tab.content.comName === 'item-1'">

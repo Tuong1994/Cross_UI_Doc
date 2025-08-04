@@ -2,22 +2,24 @@ const tabs_vn = {
   desc: 'Tabs giúp dễ dàng khám phá và chuyển đổi giữa các chế độ xem khác nhau.',
   api: {
     tabsDesc: {
-      type: 'Loại tabs',
+      type: 'Kiểu hiển thị của tab (ví dụ: line, card)',
       items: 'Danh sách các tab cần hiển thị',
-      color: 'Màu sắc của tabs',
-      rootClassName: 'Tên css selector của container',
-      headClassName: 'Tên css selector của tiêu đề tab',
-      contentClassName: 'Tên css selector của nội dung tab',
-      rootStyle: 'Style nội tuyến của container',
-      headStyle: 'Style nội tuyến của tiêu đề tab',
-      contentStyle: 'Style nội tuyến của nội dung tab',
-      onSelectTab: 'Kích hoạt khi chọn một tab'
+      color: 'Chủ đề màu sắc của tab',
+      rootClassName: 'Tên class của phần tử bao ngoài (container)',
+      headClassName: 'Tên class của phần tiêu đề tab',
+      contentClassName: 'Tên class của phần nội dung tab',
+      rootStyle: 'Style nội tuyến cho container',
+      headStyle: 'Style nội tuyến cho phần tiêu đề tab',
+      contentStyle: 'Style nội tuyến cho phần nội dung tab',
+      defaultActiveId: 'ID của tab được kích hoạt mặc định',
+      onSelectTab: 'Kích hoạt khi người dùng chọn tab'
     },
     itemDesc: {
-      id: 'ID duy nhất của mục tab',
-      label: 'Nhãn cho tiêu đề tab',
-      labelIcon: 'Biểu tượng cho tiêu đề tab',
-      comName: 'Tên của component động cần hiển thị'
+      id: 'ID duy nhất của từng tab',
+      label: 'Nhãn tiêu đề hiển thị cho tab',
+      labelIcon: 'Biểu tượng hiển thị bên cạnh tiêu đề tab',
+      comName: 'Tên component động được render trong nội dung tab',
+      content: 'Nội dung văn bản hoặc component hiển thị trong phần nội dung tab'
     }
   }
 }
