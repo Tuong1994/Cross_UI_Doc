@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Accordion } from '@/components/UI'
-import { accordionGroupCode } from './code'
+import { accordionGroupReactCode, accordionGroupVueCode } from './code'
 import { accordionCatalogIds } from '@/features/UI/Accordion/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -29,7 +29,7 @@ const collapseId = ref<string>('')
 
 <template>
   <AnchorContent :id="accordionCatalogIds.GROUP">
-    <ShowCase title="Group" :code="accordionGroupCode">
+    <ShowCase title="Group" code="" :vueCode="accordionGroupVueCode" :reactCode="accordionGroupReactCode">
       <Accordion
         v-for="collapse in collapses"
         :key="collapse.id"

@@ -1,4 +1,4 @@
-export const accordionBasicCode = `
+export const accordionBasicVueCode = `
 <script setup lang="ts">
 import { Accordion } from '@/components/UI'
 </script>
@@ -28,4 +28,31 @@ import { Accordion } from '@/components/UI'
     cupiditate eveniet.
   </Accordion>
 </template>
+`
+
+export const accordionBasicReactCode = `
+import { Accordion } from "./components/UI";
+
+const App: React.FC = () => {
+  return (
+    <>
+      <Accordion label="Click to collapse">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate assumenda maxime odit
+        eveniet porro cupiditate ullam deleniti non consequatur.
+      </Accordion>
+      <Accordion label="Click to collapse">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laborum minima, animi vero quae
+        voluptatum repellat nihil ut asperiores aspernatur libero in vitae explicabo error saepe expedita illo
+        maiores? Modi iusto architecto natus sapiente omnis, quos magnam neque voluptas expedita, ipsa
+        voluptates nostrum autem, iste recusandae. Eveniet qui dolores accusantium mollitia ab, ipsum quidem
+        fugit id reiciendis corporis sequi, minima quibusdam. Culpa, labore! Corrupti nobis error sunt tempora
+        officia repudiandae dolor labore, odio eos, quibusdam harum veniam porro animi aut soluta voluptate
+        similique unde dicta eius. Mollitia, voluptate, odit, accusantium consequatur repellendus cupiditate
+        dolor hic libero quos vel ipsam quaerat!
+      </Accordion>
+    </>
+  );
+};
+
+export default App;
 `

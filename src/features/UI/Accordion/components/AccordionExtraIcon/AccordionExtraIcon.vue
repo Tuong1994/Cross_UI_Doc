@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Accordion } from '@/components/UI'
 import { iconName } from '@/components/UI/Icon/constant'
-import { accordionExtraIconCode } from './code'
+import { accordionExtraIconReactCode, accordionExtraIconVueCode } from './code'
 import { accordionCatalogIds } from '@/features/UI/Accordion/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -9,7 +9,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="accordionCatalogIds.EXTRA_ICON">
-    <ShowCase title="Extra icon" :code="accordionExtraIconCode">
+    <ShowCase title="Extra icon" code="" :vueCode="accordionExtraIconVueCode" :reactCode="accordionExtraIconReactCode">
       <Accordion rootClassName="section-space" label="Click to collapse" :extraIcon="iconName.BOOKMARK">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate assumenda maxime odit
         eveniet porro cupiditate ullam deleniti non consequatur.

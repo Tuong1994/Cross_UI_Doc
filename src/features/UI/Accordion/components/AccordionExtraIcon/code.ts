@@ -1,4 +1,4 @@
-export const accordionExtraIconCode = `
+export const accordionExtraIconVueCode = `
 <script setup lang="ts">
 import { Accordion } from '@/components/UI'
 import { iconName } from '@/components/UI/Icon/constant'
@@ -27,4 +27,25 @@ import { iconName } from '@/components/UI/Icon/constant'
     quidem?
   </Accordion>
 </template>
+`
+
+export const accordionExtraIconReactCode = `
+import { FaBookmark } from "react-icons/fa";
+import { Accordion } from "./components/UI";
+
+const App: React.FC = () => {
+  return (
+    <Accordion label="Click to collapse" extra={<FaBookmark />}>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est explicabo libero nostrum dolorum unde iste,
+      quis quae doloribus sit cumque eligendi, dignissimos eveniet excepturi numquam consectetur quo quibusdam
+      corporis voluptatibus nulla perferendis eius architecto quam omnis? Earum hic explicabo voluptates, nihil
+      laboriosam voluptatem accusamus accusantium. Esse, nam. Voluptatem tempora laborum magni quo rem a sint
+      omnis et labore neque ipsum dicta quod, in nam voluptatibus maiores quam provident, amet aliquid commodi
+      ipsa esse! Iure itaque, ducimus temporibus ad sint cumque, at labore nemo minima saepe dolores mollitia!
+      Ipsam aut accusamus, consequuntur porro iusto magni officiis non autem vel exercitationem facilis.
+    </Accordion>
+  );
+};
+
+export default App;
 `

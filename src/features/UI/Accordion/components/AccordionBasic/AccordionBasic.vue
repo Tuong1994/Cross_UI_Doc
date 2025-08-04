@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Accordion } from '@/components/UI'
-import { accordionBasicCode } from './code'
+import { accordionBasicReactCode, accordionBasicVueCode } from './code'
 import { accordionCatalogIds } from '@/features/UI/Accordion/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="accordionCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="accordionBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="accordionBasicVueCode" :reactCode="accordionBasicReactCode">
       <Accordion rootClassName="section-space" label="Click to collapse">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate assumenda maxime odit
         eveniet porro cupiditate ullam deleniti non consequatur.

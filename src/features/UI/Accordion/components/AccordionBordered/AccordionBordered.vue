@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Accordion } from '@/components/UI'
-import { accordionBorderedCode } from './code'
+import { accordionBorderedReactCode, accordionBorderedVueCode } from './code'
 import { accordionCatalogIds } from '@/features/UI/Accordion/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="accordionCatalogIds.BORDERED">
-    <ShowCase title="Bordered" :code="accordionBorderedCode">
+    <ShowCase title="Bordered" code="" :vueCode="accordionBorderedVueCode" :reactCode="accordionBorderedReactCode">
       <Accordion :bordered="false" rootClassName="section-space" label="Click to collapse">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laborum minima, animi vero quae
         voluptatum repellat nihil ut asperiores aspernatur libero in vitae explicabo error saepe expedita illo

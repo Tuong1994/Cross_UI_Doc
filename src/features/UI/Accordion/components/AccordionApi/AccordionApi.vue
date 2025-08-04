@@ -8,7 +8,7 @@ import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 
-const dataSource = computed<ComponentApi[]>(() => [
+const dataVue = computed<ComponentApi[]>(() => [
   {
     id: 'label',
     props: 'label',
@@ -165,7 +165,7 @@ const dataSource = computed<ComponentApi[]>(() => [
   },
   {
     id: 'onCollapse',
-    props: 'onCollapse',
+    props: '@onCollapse',
     desc: t.lang.accordion.api.accordionDesc.onCollapse,
     type: {
       elType: ECodeElType.DEFAULT,
@@ -176,7 +176,7 @@ const dataSource = computed<ComponentApi[]>(() => [
   },
   {
     id: 'onSelect',
-    props: 'onSelect',
+    props: '@onSelect',
     desc: t.lang.accordion.api.accordionDesc.onSelect,
     type: {
       elType: ECodeElType.DEFAULT,
@@ -184,10 +184,129 @@ const dataSource = computed<ComponentApi[]>(() => [
     },
     required: t.lang.common.required.no,
     default: '-'
+  }
+])
+
+const dataReact = computed<ComponentApi[]>(() => [
+  {
+    id: 'label',
+    props: 'label',
+    desc: t.lang.accordion.api.accordionDesc.label,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['ReactNode']
+    },
+    required: t.lang.common.required.no,
+    default: 'Accordion'
   },
+  {
+    id: 'extra',
+    props: 'extra',
+    desc: t.lang.accordion.api.accordionDesc.extraIcon,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['ReactNode']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'type',
+    props: 'type',
+    desc: t.lang.accordion.api.accordionDesc.type,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['default', 'group']
+    },
+    required: t.lang.common.required.no,
+    default: 'default'
+  },
+  {
+    id: 'bordered',
+    props: 'bordered',
+    desc: t.lang.accordion.api.accordionDesc.bordered,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: 'true'
+  },
+  {
+    id: 'showLabelIcon',
+    props: 'hasArrow',
+    desc: t.lang.accordion.api.accordionDesc.showLabelIcon,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: 'true'
+  },
+  {
+    id: 'isCollapsed',
+    props: 'isCollapsed',
+    desc: t.lang.accordion.api.accordionDesc.isCollapsed,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: 'false'
+  },
+  {
+    id: 'rootClassName',
+    props: 'rootClassName',
+    desc: t.lang.accordion.api.accordionDesc.rootClassName,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'rootStyle',
+    props: 'style',
+    desc: t.lang.accordion.api.accordionDesc.rootStyle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['React.CSSProperties']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'expandIcon',
+    props: '@expandIcon',
+    desc: t.lang.accordion.api.accordionDesc.expandIcon,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['( isCollapsed: boolean ) => void']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'onCollapse',
+    props: '@onCollapse',
+    desc: t.lang.accordion.api.accordionDesc.onCollapse,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['( isCollapsed: boolean ) => void']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  }
 ])
 </script>
 
 <template>
-  <TableLayout title="Accordion" :dataSource="dataSource" :id="accordionCatalogIds.ACCORDION_API" />
+  <TableLayout
+    title="Accordion"
+    :dataSource="[]"
+    :dataVue="dataVue"
+    :dataReact="dataReact"
+    :id="accordionCatalogIds.ACCORDION_API"
+  />
 </template>
