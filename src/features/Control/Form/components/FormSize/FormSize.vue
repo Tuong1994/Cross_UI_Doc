@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Button, Card, Flex } from '@/components/UI'
 import { Form, Input, InputPassword } from '@/components/Control'
-import { formCatalogIds } from '../../repository/catalogIds'
-import { formSizeCode } from './code'
+import { formSizeVueCode, formSizeReactCode } from './code'
+import { formCatalogIds } from '@/features/Control/Form/repository/catalogIds'
 import type { ComponentSize } from '@/common/type'
 import type { FormResult } from '@/components/Control/Form/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -30,7 +30,7 @@ const handleFinish = (data: FormResult<Data>) => console.log(data)
 
 <template>
   <AnchorContent :id="formCatalogIds.SIZE">
-    <ShowCase title="Size" :code="formSizeCode">
+    <ShowCase title="Size" code="" :vueCode="formSizeVueCode" :reactCode="formSizeReactCode">
       <FlexRow>
         <FlexCol v-for="size in sizes" :key="size" :span="8">
           <Card>
@@ -57,3 +57,5 @@ const handleFinish = (data: FormResult<Data>) => console.log(data)
     </ShowCase>
   </AnchorContent>
 </template>
+
+

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Form, Input, InputPassword } from '@/components/Control'
 import { Button } from '@/components/UI'
-import { formDisabledCode } from './code'
-import { formCatalogIds } from '../../repository/catalogIds'
+import { formDisabledReactCode, formDisabledVueCode } from './code'
+import { formCatalogIds } from '@/features/Control/Form/repository/catalogIds'
 import type { FormResult } from '@/components/Control/Form/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -25,7 +25,7 @@ const handleFinish = (data: FormResult<Data>) => console.log(data)
 
 <template>
   <AnchorContent :id="formCatalogIds.DISABLED">
-    <ShowCase title="Disabled" :code="formDisabledCode">
+    <ShowCase title="Disabled" code="" :vueCode="formDisabledVueCode" :reactCode="formDisabledReactCode">
       <Form
         disabled
         :color="layout.color"

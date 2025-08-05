@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Form, Input, InputPassword } from '@/components/Control'
 import { Card, Button, Flex } from '@/components/UI'
-import { formCatalogIds } from '../../repository/catalogIds'
-import { formShapeCode } from './code'
+import { formShapeReactCode, formShapeVueCode } from './code'
+import { formCatalogIds } from '@/features/Control/Form/repository/catalogIds'
 import type { ControlShape } from '@/components/Control/type'
 import type { FormResult } from '@/components/Control/Form/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -30,7 +30,7 @@ const handleFinish = (data: FormResult<Data>) => console.log(data)
 
 <template>
   <AnchorContent :id="formCatalogIds.SHAPE">
-    <ShowCase title="Shape" :code="formShapeCode">
+    <ShowCase title="Shape" code="" :vueCode="formShapeVueCode" :reactCode="formShapeReactCode">
       <FlexRow>
         <FlexCol v-for="shape in shapes" :key="shape" :span="12">
           <Card>
@@ -57,3 +57,5 @@ const handleFinish = (data: FormResult<Data>) => console.log(data)
     </ShowCase>
   </AnchorContent>
 </template>
+
+

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Form, Input, InputPassword, InputPhone, Select, DatePicker, Radio } from '@/components/Control'
 import { Button, Space } from '@/components/UI'
-import { formValidationCode } from './code'
+import { formValidationReactCode, formValidationVueCode } from './code'
 import { formCatalogIds } from '@/features/Control/Form/repository/catalogIds'
 import { useFormRule } from '@/hooks'
 import type { FormResult } from '@/components/Control/Form/type'
@@ -36,26 +36,27 @@ const handleFinish = (payload: FormResult<Data>) => console.log(payload)
 
 <template>
   <AnchorContent :id="formCatalogIds.VALIDATION">
-    <ShowCase title="Validation" :code="formValidationCode">
+    <ShowCase title="Validation" code="" :vueCode="formValidationVueCode" :reactCode="formValidationReactCode">
       <Form
         :color="layout.color"
         :initialValues="initialValues"
         :autoFocusValidation="false"
         @onFinish="handleFinish"
       >
-        <Input name="email" :rule="email()">
+        <Input required name="email" :rule="email()">
           <template #label>Email</template>
         </Input>
-        <InputPassword name="password" :rule="password()">
+        <InputPassword required name="password" :rule="password()">
           <template #label>Password</template>
         </InputPassword>
-        <InputPhone name="phone" :rule="phone()">
+        <InputPhone required name="phone" :rule="phone()">
           <template #label>Phone</template>
         </InputPhone>
-        <DatePicker name="birthday" :rule="requiredString()">
+        <DatePicker required name="birthday" :rule="requiredString()">
           <template #label>Birthday</template>
         </DatePicker>
         <Select
+          required
           name="role"
           :rule="requiredString()"
           :options="[
@@ -66,13 +67,11 @@ const handleFinish = (payload: FormResult<Data>) => console.log(payload)
           <template #label>Role</template>
         </Select>
         <Space>
-          <Radio name="gender" value="male" :rule="requiredString()">Male</Radio>
-          <Radio name="gender" value="female" :rule="requiredString()">Female</Radio>
+          <Radio required name="gender" value="male" :rule="requiredString()">Male</Radio>
+          <Radio required name="gender" value="female" :rule="requiredString()">Female</Radio>
         </Space>
         <Button type="submit">Submit</Button>
       </Form>
     </ShowCase>
   </AnchorContent>
 </template>
-
-

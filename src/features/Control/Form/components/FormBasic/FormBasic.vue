@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Form, Input, InputPassword, InputPhone, TextArea, Select, DatePicker } from '@/components/Control'
 import { Button } from '@/components/UI'
-import { formCatalogIds } from '../../repository/catalogIds'
-import { formBasicCode } from './code'
+import { formCatalogIds } from '@/features/Control/Form/repository/catalogIds'
+import { formBasicVueCode, formBasicReactCode } from './code'
 import type { FormResult } from '@/components/Control/Form/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -35,7 +35,7 @@ const handleFinish = (data: FormResult<Data>) => console.log(data)
 
 <template>
   <AnchorContent :id="formCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="formBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="formBasicVueCode" :reactCode="formBasicReactCode">
       <Form
         :color="layout.color"
         :initialValues="initialValues"

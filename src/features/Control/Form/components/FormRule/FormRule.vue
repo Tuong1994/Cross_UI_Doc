@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { Card, Typography } from '@/components/UI'
-import { formRuleCode } from './code'
+import { Typography } from '@/components/UI'
+import { formRuleReactCode, formRuleVueCode } from './code'
 import { formCatalogIds } from '@/features/Control/Form/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
-import CodeBlock from '@/components/View/Code/CodeBlock.vue'
-import CodeLine from '@/components/View/Code/CodeLine.vue'
+import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 import useLangStore from '@/stores/LangStore'
 
 const { Paragraph } = Typography
@@ -14,17 +13,10 @@ const t = useLangStore()
 
 <template>
   <AnchorContent :id="formCatalogIds.FORM_RULE">
-    <Card rootClassName="section-space">
+    <ShowCase :onlyCode="true" code="" :vueCode="formRuleVueCode" :reactCode="formRuleReactCode"> 
       <template #head>
         <Paragraph strong :size="16">useFormRule</Paragraph>
       </template>
-      <template #body>
-        <Paragraph strong>{{ t.lang.common.usage }}</Paragraph>
-        <CodeLine
-          code="const { requiredString, requiredNumber, minNumber, maxNumber, email, password, phone, match, yup } = useFormRule()"
-        />
-        <CodeBlock :code="formRuleCode" />
-      </template>
-    </Card>
+    </ShowCase>
   </AnchorContent>
 </template>
