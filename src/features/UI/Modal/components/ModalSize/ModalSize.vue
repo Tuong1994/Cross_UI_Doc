@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import { Modal, Space, Button } from '@/components/UI'
 import { modalCatalogIds } from '@/features/UI/Modal/repository/catalogIds'
-import { modalSizeCode } from './code'
+import { modalSizeReactCode, modalSizeVueCode } from './code'
 import type { ComponentSize } from '@/common/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -33,7 +33,7 @@ const handleOpenModal = (size: ComponentSize) => {
 
 <template>
   <AnchorContent :id="modalCatalogIds.SIZE">
-    <ShowCase title="Size" :code="modalSizeCode">
+    <ShowCase title="Size" code="" :vueCode="modalSizeVueCode" :reactCode="modalSizeReactCode">
       <Space>
         <Button v-for="size in sizes" color="green" @click="handleOpenModal(size)">
           {{ buttonTitle(size) }}

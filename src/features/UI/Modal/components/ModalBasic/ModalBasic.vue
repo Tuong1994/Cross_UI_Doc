@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Modal, Button } from '@/components/UI'
-import { modalBasicCode } from './code'
+import { modalBasicReactCode, modalBasicVueCode } from './code'
 import { modalCatalogIds } from '@/features/UI/Modal/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -13,7 +13,7 @@ const handleOpenModal = () => (open.value = !open.value)
 
 <template>
   <AnchorContent :id="modalCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="modalBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="modalBasicVueCode" :reactCode="modalBasicReactCode">
       <Button color="green" @click="handleOpenModal">Click me</Button>
       <Modal color="green" :open="open" @onClose="handleOpenModal">
         <template #head> Modal </template>

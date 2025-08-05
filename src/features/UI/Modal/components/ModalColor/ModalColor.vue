@@ -2,7 +2,7 @@
 import { computed, ref } from 'vue'
 import { Modal, Space, Button } from '@/components/UI'
 import { modalCatalogIds } from '@/features/UI/Modal/repository/catalogIds'
-import { modalColorCode } from './code'
+import { modalColorReactCode, modalColorVueCode } from './code'
 import type { ComponentColor } from '@/common/type'
 import type { ButtonColor } from '@/components/UI/Button/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -30,7 +30,7 @@ const handleOpenModal = (color: ComponentColor) => {
 
 <template>
   <AnchorContent :id="modalCatalogIds.COLOR">
-    <ShowCase title="Color" :code="modalColorCode">
+    <ShowCase title="Color" code="" :vueCode="modalColorVueCode" :reactCode="modalColorReactCode">
       <Space>
         <Button
           v-for="color in colors"
