@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ToastMessage, Button } from '@/components/UI'
-import { toastBasicCode } from './code'
+import { toastBasicReactCode, toastBasicVueCode } from './code'
 import { toastCatalogIds } from '@/features/UI/ToastMessage/repository/catalogIds'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -11,7 +11,7 @@ const messageApi = useMessage()
 
 <template>
   <AnchorContent :id="toastCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="toastBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="toastBasicVueCode" :reactCode="toastBasicReactCode">
       <Button color="green" @click="messageApi.success('This is a success message')">Show message</Button>
       <ToastMessage />
     </ShowCase>

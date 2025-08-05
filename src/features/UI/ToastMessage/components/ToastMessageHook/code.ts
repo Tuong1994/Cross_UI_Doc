@@ -1,4 +1,5 @@
-export const toastHookUsageCode = `
+// Vue
+export const toastHookUsageVueCode = `
 import { iconName } from '@/components/UI/Icon/constant'
 import useMessage from '@/components/UI/ToastMessage/useMessage'
 
@@ -14,7 +15,7 @@ messageApi.error('This is a error message')
 messageApi.warning('This is a warning message')
 messageApi.info('This is a info message')
 `
-export const toastHookCode = `
+export const toastHookVueCode = `
 import { watchEffect } from 'vue'
 import useToastStore, { type ToastOptions } from './ToastStore'
 
@@ -41,7 +42,7 @@ const useMessage = (options?: ToastOptions) => {
 export default useMessage
 `
 
-export const toastStoreCode = `
+export const toastStoreVueCode = `
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import { iconName } from '@/components/UI/Icon/constant'
@@ -77,7 +78,7 @@ const useToastStore = defineStore('toast', () => {
 export default useToastStore
 `
 
-export const toastTypeCode = `
+export const toastTypeVueCode = `
 export type ToastType = 'success' | 'error' | 'warning' | 'info'
 
 export type ToastMessage = {
@@ -87,4 +88,115 @@ export type ToastMessage = {
 }
 
 export type ToastMessages = ToastMessage[]
+`
+
+// React
+export const toastHookUsageReactCode = `
+import useMessage from "./components/UI/ToastMessage/useMessage";
+import {
+  HiOutlineCheckCircle as SuccessIcon,
+  HiOutlineXCircle as ErrorIcon,
+  HiOutlineInformationCircle as InfoIcon,
+} from "react-icons/hi2";
+import { PiWarningCircle as WarningIcon } from "react-icons/pi";
+
+const messageApi = useMessage({
+  successIcon: <SuccessIcon size={20} />,
+  errorIcon: <ErrorIcon size={20} />,
+  infoIcon: <InfoIcon size={20} />,
+  warningIcon: <WarningIcon size={20} />,
+});
+
+messageApi.success("This is a success message");
+messageApi.error("This is a error message");
+messageApi.warning("This is a warning message");
+messageApi.info("This is a info message");
+`
+
+export const toastHookReactCode = `
+import { useEffect } from "react";
+import useToastStore, { MessageOptions } from "./ToastStore";
+
+const useMessage = (options?: MessageOptions) => {
+  const [addToast, configOptions] = useToastStore((state) => [state.addToast, state.configOptions]);
+
+  useEffect(() => {
+    if (options) configOptions(options);
+  }, []);
+
+  const success = (message: string) => addToast("success", message);
+
+  const error = (message: string) => addToast("error", message);
+
+  const warning = (message: string) => addToast("warning", message);
+
+  const info = (message: string) => addToast("info", message);
+
+  const messageApi = { success, error, warning, info };
+
+  return messageApi;
+};
+
+export default useMessage;
+`
+
+export const toastStoreReactCode = `
+import { ReactNode } from "react";
+import { create, StateCreator } from "zustand";
+import { ToastMessage, ToastMessages, ToastType } from "./type";
+import {
+  HiOutlineCheckCircle as SuccessIcon,
+  HiOutlineXCircle as ErrorIcon,
+  HiOutlineInformationCircle as InfoIcon,
+} from "react-icons/hi2";
+import { PiWarningCircle as WarningIcon } from "react-icons/pi";
+import utils from "@/utils";
+
+export type MessageOptions = {
+  successIcon?: ReactNode;
+  errorIcon?: ReactNode;
+  warningIcon?: ReactNode;
+  infoIcon?: ReactNode;
+};
+
+interface ToastState {
+  toasts: ToastMessages;
+  options: MessageOptions;
+  addToast: (type: ToastType, message: string) => void;
+  removeToast: (id: string) => void;
+  configOptions: (options: MessageOptions) => void;
+}
+
+const store: StateCreator<ToastState> = (set) => ({
+  toasts: [],
+  options: {
+    successIcon: <SuccessIcon size={20} />,
+    errorIcon: <ErrorIcon size={20} />,
+    warningIcon: <WarningIcon size={20} />,
+    infoIcon: <InfoIcon size={20} />,
+  },
+  addToast: (type, message) => {
+    const newToast: ToastMessage = { id: utils.uuid(), type, message };
+    set((state) => ({ ...state, toasts: [newToast, ...state.toasts] }));
+  },
+  removeToast: (id) =>
+    set((state) => ({ ...state, toasts: [...state.toasts].filter((toast) => toast.id !== id) })),
+  configOptions: (options) => set((state) => ({ ...state, options: { ...state.options, ...options } })),
+});
+
+const useToastStore = create(store);
+
+export default useToastStore;
+`
+
+export const toastTypeReactCode = `
+export type ToastType = "success" | "error" | "warning" | "info";
+
+export type ToastMessage = {
+  id: string;
+  type: ToastType;
+  message: string;
+};
+
+export type ToastMessages = ToastMessage[];
 `
