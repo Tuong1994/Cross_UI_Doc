@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { Drawer, Button } from '@/components/UI'
-import { drawerBasicCode } from './code'
+import { drawerBasicReactCode, drawerBasicVueCode } from './code'
 import { drawerCatalogIds } from '@/features/UI/Drawer/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -13,7 +13,7 @@ const handleOpenDrawer = () => (open.value = !open.value)
 
 <template>
   <AnchorContent :id="drawerCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="drawerBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="drawerBasicVueCode" :reactCode="drawerBasicReactCode">
       <Button color="green" @click="handleOpenDrawer">Click me</Button>
       <Drawer :open="open" @onClose="handleOpenDrawer">
         <template #head> Drawer </template>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { drawerFullSizeCode } from './code'
+import { drawerFullSizeReactCode, drawerFullSizeVueCode } from './code'
 import { drawerCatalogIds } from '@/features/UI/Drawer/repository/catalogIds'
 import { Drawer, Button } from '@/components/UI'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -13,7 +13,7 @@ const handleOpenDrawer = () => (open.value = !open.value)
 
 <template>
   <AnchorContent :id="drawerCatalogIds.FULL">
-    <ShowCase title="Full size" :code="drawerFullSizeCode">
+    <ShowCase title="Full size" code="" :vueCode="drawerFullSizeVueCode" :reactCode="drawerFullSizeReactCode">
       <Button color="green" @click="handleOpenDrawer">Click me</Button>
       <Drawer full :open="open" @onClose="handleOpenDrawer">
         <template #head> Drawer </template>

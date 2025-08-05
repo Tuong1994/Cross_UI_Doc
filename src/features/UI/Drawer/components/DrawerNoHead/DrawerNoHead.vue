@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { drawerNoHeadCode } from './code'
+import { drawerNoHeadReactCode, drawerNoHeadVueCode } from './code'
 import { drawerCatalogIds } from '@/features/UI/Drawer/repository/catalogIds'
 import { Drawer, Button } from '@/components/UI'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -13,7 +13,7 @@ const handleOpenDrawer = () => (open.value = !open.value)
 
 <template>
   <AnchorContent :id="drawerCatalogIds.NO_HEAD">
-    <ShowCase title="No header" :code="drawerNoHeadCode">
+    <ShowCase title="No header" code="" :vueCode="drawerNoHeadVueCode" :reactCode="drawerNoHeadReactCode">
       <Button color="green" @click="handleOpenDrawer">Click me</Button>
       <Drawer :hasHead="false" :open="open" @onClose="handleOpenDrawer">
         <template #body>

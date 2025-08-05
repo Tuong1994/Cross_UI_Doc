@@ -8,7 +8,7 @@ import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 
-const dataSource = computed<ComponentApi[]>(() => [
+const dataVue = computed<ComponentApi[]>(() => [
   {
     id: 'open',
     props: 'open',
@@ -120,8 +120,127 @@ const dataSource = computed<ComponentApi[]>(() => [
     default: '-'
   }
 ])
+
+const dataReact = computed<ComponentApi[]>(() => [
+  {
+    id: 'open',
+    props: 'open',
+    desc: t.lang.drawer.api.drawerDesc.open,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'full',
+    props: 'full',
+    desc: t.lang.drawer.api.drawerDesc.full,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'hasHead',
+    props: 'hasHead',
+    desc: t.lang.drawer.api.drawerDesc.hasHead,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'rootClassName',
+    props: 'rootClassName',
+    desc: t.lang.drawer.api.drawerDesc.rootClassName,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'headClassName',
+    props: 'headClassName',
+    desc: t.lang.drawer.api.drawerDesc.headClassName,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'bodyClassName',
+    props: 'bodyClassName',
+    desc: t.lang.drawer.api.drawerDesc.bodyClassName,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'rootStyle',
+    props: 'style',
+    desc: t.lang.drawer.api.drawerDesc.rootStyle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['React.CSSProperties']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'headStyle',
+    props: 'headStyle',
+    desc: t.lang.drawer.api.drawerDesc.headStyle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['React.CSSProperties']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'bodyStyle',
+    props: 'bodyStyle',
+    desc: t.lang.drawer.api.drawerDesc.bodyStyle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['React.CSSProperties']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'onClose',
+    props: 'onClose',
+    desc: t.lang.drawer.api.drawerDesc.onClose,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['() => void']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  }
+])
 </script>
 
 <template>
-  <TableLayout title="Drawer" :dataSource="dataSource" :id="drawerCatalogIds.DRAWER_API" />
+  <TableLayout
+    title="Drawer"
+    :dataSource="[]"
+    :dataVue="dataVue"
+    :dataReact="dataReact"
+    :id="drawerCatalogIds.DRAWER_API"
+  />
 </template>
