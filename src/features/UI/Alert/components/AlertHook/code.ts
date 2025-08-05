@@ -81,6 +81,7 @@ const useAlertStore = defineStore('alert', () => {
 
 export default useAlertStore
 `
+
 export const alertTypeVueCode = `
 import type { ComponentPlacement } from '@/common/type'
 
