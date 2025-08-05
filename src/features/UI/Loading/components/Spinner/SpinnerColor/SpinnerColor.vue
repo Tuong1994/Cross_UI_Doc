@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { Loading, Space } from '@/components/UI'
-import { spinnerColorCode } from './code'
+import { spinnerColorReactCode, spinnerColorVueCode } from './code'
 import { loadingCatalogIds } from '@/features/UI/Loading/repository/catalogIds'
 import type { ComponentColor } from '@/common/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -23,7 +23,7 @@ const colors = computed<ComponentColor[]>(() => [
 
 <template>
   <AnchorContent :id="loadingCatalogIds.SPINNER_COLOR">
-    <ShowCase title="Spinner color" :code="spinnerColorCode">
+    <ShowCase title="Color" code="" :vueCode="spinnerColorVueCode" :reactCode="spinnerColorReactCode">
       <Space>
         <Spinner v-for="color in colors" :key="color" :color="color" :size="30" />
       </Space>

@@ -1,4 +1,4 @@
-export const skeletonBasicCode = `
+export const skeletonBasicVueCode = `
 <script setup lang="ts">
 import { Loading, Flex, Card, Divider } from '@/components/UI'
 
@@ -29,4 +29,37 @@ const { FlexRow, FlexCol } = Flex
     </FlexCol>
   </FlexRow>
 </template>
+`
+
+export const skeletonBasicReactCode = `
+import { Flex, Card, Divider, Loading } from "./components/UI";
+
+const { Skeleton } = Loading;
+
+const { FlexRow, FlexCol } = Flex;
+
+const App: React.FC = () => {
+  return (
+    <FlexRow>
+      <FlexCol xs={24} md={16} lg={14} span={8}>
+        <Card>
+          <Skeleton type="title" />
+          <Divider />
+          <FlexRow justify="between">
+            <FlexCol xs={8} md={8} lg={8} span={8}>
+              <Skeleton type="image" options={{ size: 100 }} />
+            </FlexCol>
+            <FlexCol xs={16} md={16} lg={16} span={16}>
+              <Skeleton type="paragraph" />
+            </FlexCol>
+          </FlexRow>
+          <Divider />
+          <Skeleton type="button" />
+        </Card>
+      </FlexCol>
+    </FlexRow>
+  );
+};
+
+export default App;
 `

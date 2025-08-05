@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Divider } from '@/components/UI'
+import { Typography } from '@/components/UI'
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
 import SkeletonApi from '@/features/UI/Loading/components/Skeleton/SkeletonApi/SkeletonApi.vue'
 import SkeletonButtonApi from '@/features/UI/Loading/components/Skeleton/SkeletonApi/SkeletonButtonApi.vue'
@@ -15,6 +15,8 @@ import SpinnerSize from '@/features/UI/Loading/components/Spinner/SpinnerSize/Sp
 import SpinnerType from '@/features/UI/Loading/components/Spinner/SpinnerType/SpinnerType.vue'
 import useLangStore from '@/stores/LangStore'
 
+const { Paragraph } = Typography
+
 const t = useLangStore()
 
 const importCodes = ["import { Loading } from '@/components/UI'", 'const { Spinner, Skeleton } = Loading']
@@ -23,11 +25,12 @@ const importCodes = ["import { Loading } from '@/components/UI'", 'const { Spinn
 <template>
   <PageLayout title="Loading" :importCode="importCodes" :desc="t.lang.loading.desc">
     <template #showcase>
+      <Paragraph :size="16" rootClassName="section-space">Spinner</Paragraph>
       <SpinnerBasic />
       <SpinnerColor />
       <SpinnerSize />
       <SpinnerType />
-      <Divider />
+      <Paragraph :size="16" rootClassName="section-space">Skeleton</Paragraph>
       <SkeletonBasic />
       <SkeletonType />
     </template>

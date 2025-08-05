@@ -46,5 +46,10 @@ const dataSource = computed<ComponentApi[]>(() => [
 </script>
 
 <template>
-  <TableLayout title="Skeleton Button" :dataSource="dataSource" :id="loadingCatalogIds.SKELETON_BUTTON_API" />
+  <TableLayout
+    title="Skeleton Button"
+    :dataVue="dataSource"
+    :dataReact="dataSource"
+    :id="loadingCatalogIds.SKELETON_BUTTON_API"
+  />
 </template>

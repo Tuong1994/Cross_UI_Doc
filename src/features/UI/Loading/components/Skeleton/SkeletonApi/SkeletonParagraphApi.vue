@@ -60,7 +60,8 @@ const dataSource = computed<ComponentApi[]>(() => [
   <TableLayout
     title="Skeleton Paragraph"
     rootClassName="section-space"
-    :dataSource="dataSource"
+    :dataVue="dataSource"
+    :dataReact="dataSource"
     :id="loadingCatalogIds.SKELETON_PARAGRAPH_API"
   />
 </template>
