@@ -16,7 +16,10 @@ const useFormCatalogs = () => {
     { id: formCatalogIds.FORM_RULE, title: 'useFormRule' },
   ]
 
-  const apiCatalogs: CatalogItems = [{ id: formCatalogIds.FORM_API, title: 'Form' }]
+  const apiCatalogs: CatalogItems = [
+    { id: formCatalogIds.FORM_API, title: 'Form' },
+    { id: formCatalogIds.FORM_ITEM_API, title: 'FormItem' },
+  ]
 
   const formCatalogs = computed<Catalog[]>(() => [
     { id: 'examples', groupTitle: t.lang.common.examples, items: exampleCatalogs },

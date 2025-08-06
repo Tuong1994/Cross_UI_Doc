@@ -9,6 +9,7 @@ import FormShape from '@/features/Control/Form/components/FormShape/FormShape.vu
 import FormSize from '@/features/Control/Form/components/FormSize/FormSize.vue'
 import FormRule from '@/features/Control/Form/components/FormRule/FormRule.vue'
 import useLangStore from '@/stores/LangStore'
+import FormItemApi from '@/features/Control/Form/components/FormApi/FormItemApi.vue'
 
 const t = useLangStore()
 </script>
@@ -26,6 +27,7 @@ const t = useLangStore()
     </template>
     <template #api>
       <FormApi />
+      <FormItemApi />
     </template>
   </PageLayout>
 </template>

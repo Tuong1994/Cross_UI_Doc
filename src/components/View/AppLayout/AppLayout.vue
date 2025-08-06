@@ -44,7 +44,7 @@ const contentStyle = computed<StyleValue | undefined>(() =>
       <Content :rootStyle="contentStyle">
         <Section :rootClassName="sectionClassName">
           <FlexRow>
-            <FlexCol :xs="24" :md="24" :lg="24" :span="showCatalog ? 20 : 24">
+            <FlexCol :xs="24" :md="24" :lg="24" :span="showCatalog ? 21 : 24">
               <slot></slot>
             </FlexCol>
           </FlexRow>

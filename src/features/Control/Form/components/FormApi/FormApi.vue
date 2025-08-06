@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { formCatalogIds } from '../../repository/catalogIds'
+import { formCatalogIds } from '@/features/Control/Form/repository/catalogIds'
 import { ECodeElType } from '@/components/View/Code/enum'
 import type { ComponentApi } from '@/common/type'
 import TableLayout from '@/components/View/TableLayout/TableLayout.vue'
@@ -173,6 +173,7 @@ const dataReact = computed<ComponentApi[]>(() => [
 <template>
   <TableLayout
     title="Form"
+    rootClassName="section-space"
     :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
