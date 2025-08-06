@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Space } from '@/components/UI'
 import { TextArea } from '@/components/Control'
-import { textareaSizeCode } from './code'
+import { textareaSizeReactCode, textareaSizeVueCode } from './code'
 import { textareaCatalogIds } from '@/features/Control/TextArea/repository/catalogIds'
 import { useDisplayComponentSize } from '@/hooks'
 import type { ComponentSize } from '@/common/type'
@@ -14,7 +14,7 @@ const sizeContent = useDisplayComponentSize()
 
 <template>
   <AnchorContent :id="textareaCatalogIds.SIZE">
-    <ShowCase title="Size" :code="textareaSizeCode">
+    <ShowCase title="Size" code="" :vueCode="textareaSizeVueCode" :reactCode="textareaSizeReactCode">
       <Space>
         <TextArea v-for="size in helper.getSizeType()" :key="size" :sizes="size as ComponentSize" color="green">
           <template #label>{{ sizeContent(size) }}</template>

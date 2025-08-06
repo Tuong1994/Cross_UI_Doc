@@ -1,4 +1,4 @@
-export const textareaLabelCode = `
+export const textareaLabelVueCode = `
 <script setup lang="ts">
 import { Space } from '@/components/UI'
 import { TextArea } from '@/components/Control'
@@ -7,14 +7,31 @@ import { TextArea } from '@/components/Control'
 <template>
   <Space>
     <TextArea color="green">
-      <template #label>TextArea</template>
+      <template #label>Textarea</template>
     </TextArea>
     <TextArea color="green" optional>
-      <template #label>TextArea optional</template>
+      <template #label>Textarea optional</template>
     </TextArea>
     <TextArea color="green" required>
-      <template #label>TextArea required</template>
+      <template #label>Textarea required</template>
     </TextArea>
   </Space>
 </template>
+`
+
+export const textareaLabelReactCode = `
+import { TextArea } from "@/components/Control";
+import { Space } from "./components/UI";
+
+const App: React.FC = () => {
+  return (
+    <Space>
+      <TextArea label="Textarea" />
+      <TextArea optional label="Textarea optional" />
+      <TextArea required label="Textarea required" />
+    </Space>
+  );
+};
+
+export default App;
 `

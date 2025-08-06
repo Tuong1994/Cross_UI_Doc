@@ -1,4 +1,4 @@
-export const textareaShapeCode = `
+export const textareaShapeVueCode = `
 <script setup lang="ts">
 import { Space } from '@/components/UI'
 import { TextArea } from '@/components/Control'
@@ -14,4 +14,24 @@ import utils from '@/utils'
     </TextArea>
   </Space>
 </template>
+`
+
+export const textareaShapeReactCode = `
+import { TextArea } from "@/components/Control";
+import { Space } from "./components/UI";
+import { ControlShape } from "./components/Control/type";
+
+const App: React.FC = () => {
+  const shapes: ControlShape[] = ["square", "round"];
+
+  return (
+    <Space>
+      {shapes.map((shape) => (
+        <TextArea key={shape} shape={shape} label={shape} />
+      ))}
+    </Space>
+  );
+};
+
+export default App;
 `

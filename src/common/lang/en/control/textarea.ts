@@ -21,8 +21,9 @@ const textarea_en = {
       rows: 'Specifies the number of visible text lines in the input',
       cols: 'Specifies the number of visible character columns in the input',
       rule: 'Validation rule(s) for the input',
+      label: 'Text or component for the input label',
       onInput: 'Triggered when the input value changes',
-      onBlur: 'Triggered when the input loses focus'
+      onBlur: 'Triggered when the input loses focus',
     }
   }
 }

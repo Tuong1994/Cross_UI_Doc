@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Space } from '@/components/UI'
 import { TextArea } from '@/components/Control'
-import { textareaLabelCode } from './code'
+import { textareaLabelReactCode, textareaLabelVueCode } from './code'
 import { textareaCatalogIds } from '@/features/Control/TextArea/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -9,16 +9,16 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="textareaCatalogIds.LABEL">
-    <ShowCase title="Label" :code="textareaLabelCode">
+    <ShowCase title="Label" code="" :vueCode="textareaLabelVueCode" :reactCode="textareaLabelReactCode">
       <Space>
         <TextArea color="green">
-          <template #label>TextArea</template>
+          <template #label>Textarea</template>
         </TextArea>
         <TextArea color="green" optional>
-          <template #label>TextArea optional</template>
+          <template #label>Textarea optional</template>
         </TextArea>
         <TextArea color="green" required>
-          <template #label>TextArea required</template>
+          <template #label>Textarea required</template>
         </TextArea>
       </Space>
     </ShowCase>

@@ -21,6 +21,7 @@ const textarea_vn = {
       rows: 'Xác định số dòng văn bản hiển thị trong ô nhập',
       cols: 'Xác định số cột ký tự hiển thị trong ô nhập',
       rule: 'Quy tắc kiểm tra hợp lệ cho ô nhập',
+      label: 'Văn bản hoặc component dùng làm nhãn cho input',
       onInput: 'Kích hoạt khi giá trị ô nhập thay đổi',
       onBlur: 'Được kích hoạt khi ô nhập liệu mất tiêu điểm (mất focus)'
     }

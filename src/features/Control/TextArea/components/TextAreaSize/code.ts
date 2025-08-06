@@ -1,4 +1,4 @@
-export const textareaSizeCode = `
+export const textareaSizeVueCode = `
 <script setup lang="ts">
 import { Space } from '@/components/UI'
 import { TextArea } from '@/components/Control'
@@ -17,4 +17,24 @@ const sizeContent = useDisplayComponentSize()
     </TextArea>
   </Space>
 </template>
+`
+
+export const textareaSizeReactCode = `
+import { TextArea } from "@/components/Control";
+import { Space } from "./components/UI";
+import { ComponentSize } from "./common/type";
+
+const App: React.FC = () => {
+  const sizes: ComponentSize[] = ["sm", "md", "lg"];
+
+  return (
+    <Space>
+      {sizes.map((size) => (
+        <TextArea key={size} sizes={size} label={size} />
+      ))}
+    </Space>
+  );
+};
+
+export default App;
 `

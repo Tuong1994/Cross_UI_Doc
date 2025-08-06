@@ -1,4 +1,4 @@
-export const textareaColorCode = `
+export const textareaColorVueCode = `
 <script setup lang="ts">
 import { Space } from '@/components/UI'
 import { TextArea } from '@/components/Control'
@@ -14,4 +14,24 @@ import utils from '@/utils'
     </TextArea>
   </Space>
 </template>
+`
+
+export const textareaColorReactCode = `
+import { TextArea } from "@/components/Control";
+import { Space } from "./components/UI";
+import { ControlColor } from "./components/Control/type";
+
+const App: React.FC = () => {
+  const colors: ControlColor[] = ["blue", "green", "red", "orange", "yellow", "purple", "pink"];
+
+  return (
+    <Space>
+      {colors.map((color) => (
+        <TextArea key={color} color={color} label={color} />
+      ))}
+    </Space>
+  );
+};
+
+export default App;
 `
