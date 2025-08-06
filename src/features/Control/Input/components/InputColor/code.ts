@@ -1,4 +1,4 @@
-export const inputColorCode = `
+export const inputColorVueCode = `
 <script setup lang="ts">
 import { Space } from '@/components/UI'
 import { Input } from '@/components/Control'
@@ -14,4 +14,24 @@ import utils from '@/utils'
     </Input>
   </Space>
 </template>
+`
+
+export const inputColorReactCode = `
+import { Input } from "@/components/Control";
+import { Space } from "@/components/UI";
+import { ControlColor } from "./components/Control/type";
+
+const App: React.FC = () => {
+  const colors: ControlColor[] = ["blue", "green", "red", "orange", "yellow", "purple", "pink"];
+
+  return (
+    <Space>
+      {colors.map((color) => (
+        <Input key={color} color={color} label={color} />
+      ))}
+    </Space>
+  );
+};
+
+export default App;
 `

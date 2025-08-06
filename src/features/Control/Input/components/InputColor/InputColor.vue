@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Space } from '@/components/UI'
 import { Input } from '@/components/Control'
-import { inputColorCode } from './code'
+import { inputColorReactCode, inputColorVueCode } from './code'
 import { inputCatalogIds } from '@/features/Control/Input/repository/catalogIds'
 import type { ControlColor } from '@/components/Control/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -12,7 +12,7 @@ import utils from '@/utils'
 
 <template>
   <AnchorContent :id="inputCatalogIds.COLOR">
-    <ShowCase title="Color" :code="inputColorCode">
+    <ShowCase title="Color" code="" :vueCode="inputColorVueCode" :reactCode="inputColorReactCode">
       <Space>
         <Input v-for="color in helper.getColorType()" :key="color" :color="color as ControlColor">
           <template #label>{{ utils.capitalizeFirstLetter(color) }}</template>

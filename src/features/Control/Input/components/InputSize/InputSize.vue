@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Space } from '@/components/UI'
 import { Input } from '@/components/Control'
-import { inputSizeCode } from './code'
+import { inputSizeReactCode, inputSizeVueCode } from './code'
 import { inputCatalogIds } from '@/features/Control/Input/repository/catalogIds'
 import { useDisplayComponentSize } from '@/hooks'
 import type { ComponentSize } from '@/common/type'
@@ -14,7 +14,7 @@ const sizeContent = useDisplayComponentSize()
 
 <template>
   <AnchorContent :id="inputCatalogIds.SIZE">
-    <ShowCase title="Size" :code="inputSizeCode">
+    <ShowCase title="Size" code="" :vueCode="inputSizeVueCode" :reactCode="inputSizeReactCode">
       <Space>
         <Input v-for="size in helper.getSizeType()" :key="size" :sizes="size as ComponentSize" color="green">
           <template #label>{{ sizeContent(size) }}</template>

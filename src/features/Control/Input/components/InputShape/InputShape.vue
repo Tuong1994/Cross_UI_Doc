@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Space } from '@/components/UI'
 import { Input } from '@/components/Control'
-import { inputShapeCode } from './code'
+import { inputShapeReactCode, inputShapeVueCode } from './code'
 import { inputCatalogIds } from '@/features/Control/Input/repository/catalogIds'
 import type { ControlShape } from '@/components/Control/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -12,7 +12,7 @@ import utils from '@/utils'
 
 <template>
   <AnchorContent :id="inputCatalogIds.SHAPE">
-    <ShowCase title="Shape" :code="inputShapeCode">
+    <ShowCase title="Shape" code="" :vueCode="inputShapeVueCode" :reactCode="inputShapeReactCode">
       <Space>
         <Input
           v-for="shape in helper.getShapeType()"

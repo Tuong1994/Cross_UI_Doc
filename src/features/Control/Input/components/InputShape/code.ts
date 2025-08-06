@@ -1,4 +1,4 @@
-export const inputShapeCode = `
+export const inputShapeVueCode = `
 <script setup lang="ts">
 import { Space } from '@/components/UI'
 import { Input } from '@/components/Control'
@@ -14,4 +14,24 @@ import utils from '@/utils'
     </Input>
   </Space>
 </template>
+`
+
+export const inputShapeReactCode = `
+import { Input } from "@/components/Control";
+import { Space } from "@/components/UI";
+import { ControlShape } from "./components/Control/type";
+
+const App: React.FC = () => {
+  const shapes: ControlShape[] = ["square", "round"];
+
+  return (
+    <Space>
+      {shapes.map((shape) => (
+        <Input key={shape} shape={shape} label={shape} />
+      ))}
+    </Space>
+  );
+};
+
+export default App;
 `

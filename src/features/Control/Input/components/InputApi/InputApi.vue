@@ -9,7 +9,7 @@ import helper from '@/helper'
 
 const t = useLangStore()
 
-const dataSource = computed<ComponentApi[]>(() => [
+const dataVue = computed<ComponentApi[]>(() => [
   {
     id: 'name',
     props: 'name',
@@ -218,10 +218,250 @@ const dataSource = computed<ComponentApi[]>(() => [
     },
     required: t.lang.common.required.no,
     default: '-'
+  }
+])
+
+const dataReact = computed<ComponentApi[]>(() => [
+  {
+    id: 'name',
+    props: 'name',
+    desc: t.lang.input.api.inputDesc.name,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
   },
+  {
+    id: 'placeholder',
+    props: 'placeholder',
+    desc: t.lang.input.api.inputDesc.placeholder,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'sizes',
+    props: 'sizes',
+    desc: t.lang.input.api.inputDesc.sizes,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: helper.getSizeType()
+    },
+    required: t.lang.common.required.no,
+    default: 'md'
+  },
+  {
+    id: 'color',
+    props: 'color',
+    desc: t.lang.input.api.inputDesc.color,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: helper.getColorType()
+    },
+    required: t.lang.common.required.no,
+    default: 'blue'
+  },
+  {
+    id: 'shape',
+    props: 'shape',
+    desc: t.lang.input.api.inputDesc.shape,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: helper.getShapeType()
+    },
+    required: t.lang.common.required.no,
+    default: 'square'
+  },
+  {
+    id: 'value',
+    props: 'value',
+    desc: t.lang.input.api.inputDesc.modelValue,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'disabled',
+    props: 'disabled',
+    desc: t.lang.input.api.inputDesc.disabled,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'required',
+    props: 'required',
+    desc: t.lang.input.api.inputDesc.required,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'optional',
+    props: 'optional',
+    desc: t.lang.input.api.inputDesc.optional,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'hasClear',
+    props: 'hasClear',
+    desc: t.lang.input.api.inputDesc.hasClear,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: 'true'
+  },
+  {
+    id: 'label',
+    props: 'label',
+    desc: t.lang.input.api.inputDesc.label,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['ReactNode']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'addonBefore',
+    props: 'addonBefore',
+    desc: t.lang.input.api.inputDesc.addonBefore,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['ReactNode']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'addonAfter',
+    props: 'addonAfter',
+    desc: t.lang.input.api.inputDesc.addonAfter,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['ReactNode']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'rootClassName',
+    props: 'rootClassName',
+    desc: t.lang.input.api.inputDesc.rootClassName,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'labelClassName',
+    props: 'labelClassName',
+    desc: t.lang.input.api.inputDesc.labelClassName,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'inputClassName',
+    props: 'inputClassName',
+    desc: t.lang.input.api.inputDesc.inputClassName,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'rootStyle',
+    props: 'rootStyle',
+    desc: t.lang.input.api.inputDesc.rootStyle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['React.CSSProperties']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'labelStyle',
+    props: 'labelStyle',
+    desc: t.lang.input.api.inputDesc.labelStyle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['React.CSSProperties']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'inputStyle',
+    props: 'inputStyle',
+    desc: t.lang.input.api.inputDesc.inputStyle,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['React.CSSProperties']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'onBlur',
+    props: '@onBlur',
+    desc: t.lang.textarea.api.textareaDesc.onBlur,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['(e: FocusEvent) => void']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'onInput',
+    props: '@onChangeInput',
+    desc: t.lang.input.api.inputDesc.onInput,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['(value: string) => void']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  }
 ])
 </script>
 
 <template>
-  <TableLayout title="Input" :dataSource="dataSource" :id="inputCatalogIds.INPUT_API" />
+  <TableLayout
+    title="Input"
+    :dataSource="[]"
+    :dataVue="dataVue"
+    :dataReact="dataReact"
+    :id="inputCatalogIds.INPUT_API"
+  />
 </template>

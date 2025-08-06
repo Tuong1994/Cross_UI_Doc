@@ -1,4 +1,4 @@
-export const inputSizeCode = `
+export const inputSizeVueCode = `
 <script setup lang="ts">
 import { Space } from '@/components/UI'
 import { Input } from '@/components/Control'
@@ -17,4 +17,24 @@ const sizeContent = useDisplayComponentSize()
     </Input>
   </Space>
 </template>
+`
+
+export const inputSizeReactCode = `
+import { Input } from "@/components/Control";
+import { Space } from "@/components/UI";
+import { ComponentSize } from "./common/type";
+
+const App: React.FC = () => {
+  const sizes: ComponentSize[] = ["sm", "md", "lg"];
+
+  return (
+    <Space>
+      {sizes.map((size) => (
+        <Input key={size} sizes={size} label={size} />
+      ))}
+    </Space>
+  );
+};
+
+export default App;
 `

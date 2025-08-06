@@ -1,6 +1,6 @@
 const input_en = {
   desc: 'Through mouse or keyboard input content, it is the most basic form field wrapper',
-   api: {
+  api: {
     inputDesc: {
       rootClassName: 'Class name of the container',
       labelClassName: 'Class name of the label',
@@ -8,7 +8,7 @@ const input_en = {
       rootStyle: 'Inline style for the container',
       labelStyle: 'Inline style for the label',
       inputStyle: 'Inline style for the input control',
-      modelValue: 'Default input value',
+      modelValue: 'Default value of the input',
       name: 'Name of the control',
       placeholder: 'Placeholder text for the input control',
       sizes: 'Size of the input',
@@ -19,8 +19,11 @@ const input_en = {
       optional: 'Mark the field as optional',
       hasClear: 'Enable a clear button to reset the input',
       rule: 'Validation rule(s) for the input',
-      onInput: 'Triggered when the search input value changes',
-      onBlur: 'Triggered when the input loses focus'
+      onInput: 'Triggered when the input value changes',
+      onBlur: 'Triggered when the input loses focus',
+      label: 'Text or component for the input label',
+      addonBefore: 'Text or component to display before the input',
+      addonAfter: 'Text or component to display after the input'
     }
   }
 }
