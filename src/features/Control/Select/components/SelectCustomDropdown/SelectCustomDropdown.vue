@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { Flex, Space, Icon } from '@/components/UI'
 import { Select } from '@/components/Control'
 import { iconName } from '@/components/UI/Icon/constant'
-import { selectCustomDropdownCode } from './code'
+import { selectCustomDropdownReactCode, selectCustomDropdownVueCode } from './code'
 import { selectCatalogIds } from '@/features/Control/Select/repository/catalogIds'
 import type { SelectOptions } from '@/components/Control/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -25,7 +25,7 @@ const handleSelect = (selectValue: string | number | boolean) => {
 
 <template>
   <AnchorContent :id="selectCatalogIds.CUSTOM_DROPDOWN">
-    <ShowCase title="Custom dropdown" :code="selectCustomDropdownCode">
+    <ShowCase title="Custom dropdown" code="" :vueCode="selectCustomDropdownVueCode" :reactCode="selectCustomDropdownReactCode">
       <Select color="green" :options="options">
         <template #dropdown="menu">
           <FlexRow

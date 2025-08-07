@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { Space } from '@/components/UI'
 import { SelectTag } from '@/components/Control'
-import { selectTagsCode } from './code'
+import { selectTagsReactCode, selectTagsVueCode } from './code'
 import { selectCatalogIds } from '@/features/Control/Select/repository/catalogIds'
 import type { ControlColor, SelectOptions } from '@/components/Control/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -23,7 +23,7 @@ const handleSelect = (tags: (string | number | boolean)[]) => {
 
 <template>
   <AnchorContent :id="selectCatalogIds.TAGS">
-    <ShowCase title="Tags" :code="selectTagsCode">
+    <ShowCase title="Tags" code="" :vueCode="selectTagsVueCode" :reactCode="selectTagsReactCode"> 
       <Space>
         <SelectTag
           v-for="color in helper.getColorType()"
@@ -38,3 +38,4 @@ const handleSelect = (tags: (string | number | boolean)[]) => {
     </ShowCase>
   </AnchorContent>
 </template>
+

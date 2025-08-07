@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { Space } from '@/components/UI'
 import { TreeSelect } from '@/components/Control'
-import { selectTreeCode } from './code'
+import { selectTreeReactCode, selectTreeVueCode } from './code'
 import { selectCatalogIds } from '@/features/Control/Select/repository/catalogIds'
 import type { ControlColor, SelectOptions } from '@/components/Control/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -27,7 +27,7 @@ const options = computed<SelectOptions>(() => [
 
 <template>
   <AnchorContent :id="selectCatalogIds.TREE">
-    <ShowCase title="Tree" :code="selectTreeCode">
+    <ShowCase title="Tree" code="" :vueCode="selectTreeVueCode" :reactCode="selectTreeReactCode">
       <Space>
         <TreeSelect
           v-for="color in helper.getColorType()"

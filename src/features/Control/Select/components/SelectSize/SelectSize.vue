@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { Space } from '@/components/UI'
 import { Select } from '@/components/Control'
-import { selectSizeCode } from './code'
+import { selectSizeVueCode, selectSizeReactCode } from './code'
 import { selectCatalogIds } from '@/features/Control/Select/repository/catalogIds'
 import { useDisplayComponentSize } from '@/hooks'
 import type { SelectOptions } from '@/components/Control/type'
@@ -22,7 +22,7 @@ const sizeContent = useDisplayComponentSize()
 
 <template>
   <AnchorContent :id="selectCatalogIds.SIZE">
-    <ShowCase title="Size" :code="selectSizeCode">
+    <ShowCase title="Size" code="" :vueCode="selectSizeVueCode" :reactCode="selectSizeReactCode">
       <Space>
         <Select
           v-for="size in helper.getSizeType()"

@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { Space } from '@/components/UI'
 import { Select } from '@/components/Control'
-import { selectShapeCode } from './code'
+import { selectShapeReactCode, selectShapeVueCode } from './code'
 import { selectCatalogIds } from '@/features/Control/Select/repository/catalogIds'
 import type { SelectOptions } from '@/components/Control/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -17,7 +17,7 @@ const options = computed<SelectOptions>(() => [
 
 <template>
   <AnchorContent :id="selectCatalogIds.SHAPE">
-    <ShowCase title="Shape" :code="selectShapeCode">
+    <ShowCase title="Shape" code="" :vueCode="selectShapeVueCode" :reactCode="selectShapeReactCode">
       <Space>
         <Select shape="square" color="green" :options="options">
           <template #label>Square</template>
@@ -29,3 +29,5 @@ const options = computed<SelectOptions>(() => [
     </ShowCase>
   </AnchorContent>
 </template>
+
+

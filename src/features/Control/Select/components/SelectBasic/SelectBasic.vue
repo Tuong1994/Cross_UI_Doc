@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { Select } from '@/components/Control'
 import { Space } from '@/components/UI'
-import { selectBasicCode } from './code'
+import { selectBasicReactCode, selectBasicVueCode } from './code'
 import { selectCatalogIds } from '@/features/Control/Select/repository/catalogIds'
 import type { SelectOptions } from '@/components/Control/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -21,7 +21,7 @@ const handleSelect = (selectedValue: string | number | boolean) => {
 
 <template>
   <AnchorContent :id="selectCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="selectBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="selectBasicVueCode" :reactCode="selectBasicReactCode">
       <Space>
         <Select color="green" :options="options" @onChangeSelect="handleSelect" />
         <Select color="green" :options="options" loading />

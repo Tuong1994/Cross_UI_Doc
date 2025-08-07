@@ -1,4 +1,4 @@
-export const selectLabelCode = ` 
+export const selectLabelVueCode = ` 
 <script setup lang="ts">
 import { computed } from 'vue'
 import { Space } from '@/components/UI'
@@ -25,4 +25,28 @@ const options = computed<SelectOptions>(() => [
     </Select>
   </Space>
 </template>
+`
+
+export const selectLabelReactCode = `
+import { Select } from "@/components/Control";
+import { Space } from "./components/UI";
+import { SelectOptions } from "./components/Control/type";
+
+const App: React.FC = () => {
+  const options: SelectOptions = [
+    { label: "Item 1", value: 1 },
+    { label: "Item 2", value: 2 },
+    { label: "Item 3", value: 3 },
+  ];
+
+  return (
+    <Space>
+      <Select options={options} label="Select" />
+      <Select optional options={options} label="Select optional" />
+      <Select required options={options} label="Select required" />
+    </Space>
+  );
+};
+
+export default App;
 `

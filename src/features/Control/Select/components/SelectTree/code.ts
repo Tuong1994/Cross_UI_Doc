@@ -1,4 +1,4 @@
-export const selectTreeCode = `
+export const selectTreeVueCode = `
 <script setup lang="ts">
 import { computed } from 'vue'
 import { Space } from '@/components/UI'
@@ -34,5 +34,38 @@ const options = computed<SelectOptions>(() => [
     </TreeSelect>
   </Space>
 </template>
+`
 
+export const selectTreeReactCode = `
+import { Space } from "./components/UI";
+import { TreeSelect } from "@/components/Control";
+import { ControlColor, SelectOptions } from "./components/Control/type";
+
+const App: React.FC = () => {
+  const colors: ControlColor[] = ["blue", "green", "red", "orange", "yellow", "purple", "pink"];
+
+  const options: SelectOptions = [
+    { label: "Item 1", value: 1 },
+    { label: "Item 2", value: 2 },
+    {
+      label: "Item 3",
+      value: 3,
+      children: [
+        { label: "Item child 1", value: 4 },
+        { label: "Item child 2", value: 5 },
+        { label: "Item child 3", value: 6 },
+      ],
+    },
+  ];
+
+  return (
+    <Space>
+      {colors.map((color) => (
+        <TreeSelect key={color} color={color} options={options} label={color} />
+      ))}
+    </Space>
+  );
+};
+
+export default App;
 `

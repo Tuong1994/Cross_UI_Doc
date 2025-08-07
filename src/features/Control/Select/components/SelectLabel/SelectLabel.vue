@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { Space } from '@/components/UI'
 import { Select } from '@/components/Control'
 import { selectCatalogIds } from '@/features/Control/Select/repository/catalogIds'
-import { selectLabelCode } from './code'
+import { selectLabelReactCode, selectLabelVueCode } from './code'
 import type { SelectOptions } from '@/components/Control/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -17,7 +17,7 @@ const options = computed<SelectOptions>(() => [
 
 <template>
   <AnchorContent :id="selectCatalogIds.LABEL">
-    <ShowCase title="Label" :code="selectLabelCode">
+    <ShowCase title="Label" code="" :vueCode="selectLabelVueCode" :reactCode="selectLabelReactCode">
       <Space>
         <Select color="green" :options="options">
           <template #label>Select</template>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { Select } from '@/components/Control'
-import { selectPagingCode } from './code'
+import { selectPagingReactCode, selectPagingVueCode } from './code'
 import { selectCatalogIds } from '@/features/Control/Select/repository/catalogIds'
 import type { SelectOptions } from '@/components/Control/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -27,7 +27,7 @@ const handleChangePage = (page: number) => {
 
 <template>
   <AnchorContent :id="selectCatalogIds.PAGING">
-    <ShowCase title="Pagination" :code="selectPagingCode">
+    <ShowCase title="Pagination" code="" :vueCode="selectPagingVueCode" :reactCode="selectPagingReactCode">
       <Select
         async
         color="green"
