@@ -1,4 +1,4 @@
-export const radioColorCode = `
+export const radioColorVueCode = `
 <script setup lang="ts">
 import { Space } from '@/components/UI'
 import { Radio } from '@/components/Control'
@@ -14,4 +14,22 @@ import utils from '@/utils'
     </Radio>
   </Space>
 </template>
+`
+
+export const radioColorReactCode = `
+import { Space } from "./components/UI";
+import { Radio } from "@/components/Control";
+import { ChoicesControlColor } from "./components/Control/type";
+
+const App: React.FC = () => {
+  const colors: ChoicesControlColor[] = ["blue", "green", "red", "orange", "yellow", "purple", "pink", 'black', 'white'];
+
+  return (
+    <Space>
+      {colors.map(color => <Radio key={color} color={color} label={color} checked />)}
+    </Space>
+  );
+};
+
+export default App;
 `

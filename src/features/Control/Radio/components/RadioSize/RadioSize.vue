@@ -2,7 +2,7 @@
 import { Space } from '@/components/UI'
 import { Radio } from '@/components/Control'
 import { useDisplayComponentSize } from '@/hooks'
-import { radioSizeCode } from './code'
+import { radioSizeReactCode, radioSizeVueCode } from './code'
 import { radioCatalogIds } from '@/features/Control/Radio/repository/catalogIds'
 import type { ComponentSize } from '@/common/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -14,7 +14,7 @@ const sizeContent = useDisplayComponentSize()
 
 <template>
   <AnchorContent :id="radioCatalogIds.SIZE">
-    <ShowCase title="Size" :code="radioSizeCode">
+    <ShowCase title="Size" code="" :vueCode="radioSizeVueCode" :reactCode="radioSizeReactCode">
       <Space>
         <Radio
           v-for="size in helper.getSizeType()"

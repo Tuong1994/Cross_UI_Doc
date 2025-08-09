@@ -38,7 +38,7 @@ const dataVue = computed<ComponentApi[]>(() => [
     desc: t.lang.checkbox.api.checkboxDesc.color,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: helper.getColorType()
+      codes: helper.getColorType('black', 'white')
     },
     required: t.lang.common.required.no,
     default: 'blue'
@@ -228,7 +228,7 @@ const dataReact = computed<ComponentApi[]>(() => [
     desc: t.lang.checkbox.api.checkboxDesc.color,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: helper.getColorType()
+      codes: helper.getColorType('black', 'white')
     },
     required: t.lang.common.required.no,
     default: 'blue'

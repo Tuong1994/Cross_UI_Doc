@@ -8,7 +8,8 @@ const radio_vn = {
       rootStyle: 'Kiểu nội tuyến cho vùng chứa',
       labelStyle: 'Kiểu nội tuyến cho nhãn',
       controlStyle: 'Kiểu nội tuyến cho điều khiển radio',
-      value: 'Giá trị mặc định được chọn',
+      value: 'Giá trị mặc định của radio',
+      checked: 'Trạng thái mặc định (được chọn hay không) của radio',
       name: 'Tên của điều khiển',
       sizes: 'Kích thước của radio',
       color: 'Chủ đề màu của radio',
@@ -16,6 +17,7 @@ const radio_vn = {
       required: 'Đánh dấu trường là bắt buộc',
       optional: 'Đánh dấu trường là không bắt buộc',
       rule: 'Quy tắc xác thực cho radio',
+      label: 'Nội dung hoặc component hiển thị nhãn (label) cho checkbox',
       onCheck: 'Kích hoạt khi radio được nhấn',
       onBlur: 'Kích hoạt khi radio mất focus'
     }

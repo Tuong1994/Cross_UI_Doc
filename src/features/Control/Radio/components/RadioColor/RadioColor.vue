@@ -2,7 +2,7 @@
 import { Space } from '@/components/UI'
 import { Radio } from '@/components/Control'
 import { radioCatalogIds } from '@/features/Control/Radio/repository/catalogIds'
-import { radioColorCode } from './code'
+import { radioColorReactCode, radioColorVueCode } from './code'
 import type { ControlColor } from '@/components/Control/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -12,7 +12,7 @@ import utils from '@/utils'
 
 <template>
   <AnchorContent :id="radioCatalogIds.COLOR">
-    <ShowCase title="Color" :code="radioColorCode">
+    <ShowCase title="Color" code="" :vueCode="radioColorVueCode" :reactCode="radioColorReactCode">
       <Space>
         <Radio v-for="color in helper.getColorType('black', 'white')" :key="color" :color="color as ControlColor" checked>
           {{ utils.capitalizeFirstLetter(color) }}
