@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { DatePicker } from '@/components/Control'
-import { datepickerBasicCode } from './code'
+import { datepickerBasicReactCode, datepickerBasicVueCode } from './code'
 import { datepickerCatalogIds } from '@/features/Control/DatePicker/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
+import { Space } from '@/components/UI'
 
 const handleSelect = (date: Date) => {
   console.log(date)
@@ -12,9 +13,11 @@ const handleSelect = (date: Date) => {
 
 <template>
   <AnchorContent :id="datepickerCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="datepickerBasicCode">
-      <DatePicker color="green" rootClassName="section-space" @onChangeSelect="handleSelect" />
-      <DatePicker color="green" disabled />
+    <ShowCase title="Basic" code="" :vueCode="datepickerBasicVueCode" :reactCode="datepickerBasicReactCode">
+      <Space>
+        <DatePicker :rootStyle="{ width: '250px' }" color="green" @onChangeSelect="handleSelect" />
+        <DatePicker :rootStyle="{ width: '250px' }" color="green" disabled />
+      </Space>
     </ShowCase>
   </AnchorContent>
 </template>

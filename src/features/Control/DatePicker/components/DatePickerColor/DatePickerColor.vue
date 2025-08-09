@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { DatePicker } from '@/components/Control'
 import { Space } from '@/components/UI'
-import { datepickerColorCode } from './code'
+import { datepickerColorReactCode, datepickerColorVueCode } from './code'
 import { datepickerCatalogIds } from '@/features/Control/DatePicker/repository/catalogIds'
 import type { ControlColor } from '@/components/Control/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -12,7 +12,7 @@ import utils from '@/utils'
 
 <template>
   <AnchorContent :id="datepickerCatalogIds.COLOR">
-    <ShowCase title="Color" :code="datepickerColorCode">
+    <ShowCase title="Color" code="" :vueCode="datepickerColorVueCode" :reactCode="datepickerColorReactCode">
       <Space>
         <DatePicker
           v-for="color in helper.getColorType()"

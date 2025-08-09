@@ -1,4 +1,4 @@
-export const datepickerMinMaxCode = `
+export const datepickerMinMaxVueCode = `
 <script setup lang="ts">
 import { DatePicker } from '@/components/Control'
 import { Divider } from '@/components/UI'
@@ -21,4 +21,24 @@ const t = useLangStore()
   </Divider>
   <DatePicker color="green" min="2025-07-10" max="today" :rootStyle="{ width: '250px' }" />
 </template>
+`
+
+export const datepickerMinMaxReactCode = `
+import { Divider } from "./components/UI";
+import { DatePicker } from "@/components/Control";
+
+const App: React.FC = () => {
+  return (
+    <>
+      <Divider>Specifies the minimum selectable dates</Divider>
+      <DatePicker rootClassName="section-space" color="green" min="today" rootStyle={{ width: "250px" }} />
+      <Divider>Specifies the maximum selectable dates</Divider>
+      <DatePicker rootClassName="section-space" color="green" max="today" rootStyle={{ width: "250px" }} />
+      <Divider>Specifies the minimum and maximum selectable dates</Divider>
+      <DatePicker color="green" min="2025-07-10" max="today" rootStyle={{ width: "250px" }} />
+    </>
+  );
+};
+
+export default App;
 `

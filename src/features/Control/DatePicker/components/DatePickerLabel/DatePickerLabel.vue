@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { DatePicker } from '@/components/Control'
 import { Space } from '@/components/UI'
-import { datepickerLabelCode } from './code'
+import { datepickerLabelReactCode, datepickerLabelVueCode } from './code'
 import { datepickerCatalogIds } from '@/features/Control/DatePicker/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -9,7 +9,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="datepickerCatalogIds.LABEL">
-    <ShowCase title="Label" :code="datepickerLabelCode">
+    <ShowCase title="Label" code="" :vueCode="datepickerLabelVueCode" :reactCode="datepickerLabelReactCode">
       <Space>
         <DatePicker :rootStyle="{ width: '250px' }">
           <template #label>DatePicker</template>

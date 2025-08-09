@@ -1,4 +1,4 @@
-export const datepickerColorCode = `
+export const datepickerColorVueCode = `
 <script setup lang="ts">
 import { DatePicker } from '@/components/Control'
 import { Space } from '@/components/UI'
@@ -21,4 +21,24 @@ import utils from '@/utils'
     </DatePicker>
   </Space>
 </template>
+`
+
+export const datepickerColorReactCode = `
+import { Space } from "./components/UI";
+import { DatePicker } from "@/components/Control";
+import { ControlColor } from "./components/Control/type";
+
+const App: React.FC = () => {
+  const colors: ControlColor[] = ["blue", "green", "red", "orange", "yellow", "purple", "pink"];
+
+  return (
+    <Space>
+      {colors.map((color) => (
+        <DatePicker key={color} color={color} rootStyle={{ width: "250px" }} label={color} />
+      ))}
+    </Space>
+  );
+};
+
+export default App;
 `

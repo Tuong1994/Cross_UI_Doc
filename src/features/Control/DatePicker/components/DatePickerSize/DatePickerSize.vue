@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { DatePicker } from '@/components/Control'
 import { Space } from '@/components/UI'
-import { datepickerSizeCode } from './code'
+import { datepickerSizeReactCode, datepickerSizeVueCode } from './code'
 import { datepickerCatalogIds } from '@/features/Control/DatePicker/repository/catalogIds'
 import { useDisplayComponentSize } from '@/hooks'
 import type { ComponentSize } from '@/common/type'
@@ -14,7 +14,7 @@ const sizeContent = useDisplayComponentSize()
 
 <template>
   <AnchorContent :id="datepickerCatalogIds.SIZE">
-    <ShowCase title="Size" :code="datepickerSizeCode">
+    <ShowCase title="Size" code="" :vueCode="datepickerSizeVueCode" :reactCode="datepickerSizeReactCode">
       <Space>
         <DatePicker
           v-for="size in helper.getSizeType()"

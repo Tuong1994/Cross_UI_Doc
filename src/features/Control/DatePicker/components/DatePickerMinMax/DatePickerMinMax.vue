@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import { DatePicker } from '@/components/Control'
 import { Divider } from '@/components/UI'
+import { datepickerMinMaxReactCode, datepickerMinMaxVueCode } from './code'
+import { datepickerCatalogIds } from '@/features/Control/DatePicker/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
-import useLangStore from '@/stores/LangStore'
-import { datepickerCatalogIds } from '../../repository/catalogIds'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
-import { datepickerMinMaxCode } from './code'
+import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 </script>
 
 <template>
   <AnchorContent :id="datepickerCatalogIds.MIN_MAX">
-    <ShowCase title="Min/Max" :code="datepickerMinMaxCode">
+    <ShowCase title="Min/Max" code="" :vueCode="datepickerMinMaxVueCode" :reactCode="datepickerMinMaxReactCode">
       <Divider>
         {{ t.lang.datepicker.dateRange.min }}
       </Divider>

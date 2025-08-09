@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { DatePicker } from '@/components/Control'
 import { Space } from '@/components/UI'
-import { datepickerShapeCode } from './code'
+import { datepickerShapeReactCode, datepickerShapeVueCode } from './code'
 import { datepickerCatalogIds } from '@/features/Control/DatePicker/repository/catalogIds'
 import type { ControlShape } from '@/components/Control/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -12,7 +12,7 @@ import utils from '@/utils'
 
 <template>
   <AnchorContent :id="datepickerCatalogIds.SHAPE">
-    <ShowCase title="Shape" :code="datepickerShapeCode">
+    <ShowCase title="Shape" code="" :vueCode="datepickerShapeVueCode" :reactCode="datepickerShapeReactCode">
       <Space>
         <DatePicker
           v-for="shape in helper.getShapeType()"
