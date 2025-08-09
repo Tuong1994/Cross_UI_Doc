@@ -1,4 +1,4 @@
-export const checkboxSizeCode = `
+export const checkboxSizeVueCode = `
 <script setup lang="ts">
 import { Space } from '@/components/UI'
 import { CheckBox } from '@/components/Control'
@@ -16,4 +16,24 @@ const sizeContent = useDisplayComponentSize()
     </CheckBox>
   </Space>
 </template>
+`
+
+export const checkboxSizeReactCode = `
+import { ComponentSize } from "./common/type";
+import { Space } from "./components/UI";
+import { CheckBox } from "@/components/Control";
+
+const App: React.FC = () => {
+  const sizes: ComponentSize[] = ["sm", "md", "lg"];
+
+  return (
+    <Space>
+      {sizes.map((size) => (
+        <CheckBox key={size} sizes={size} label={size} />
+      ))}
+    </Space>
+  );
+};
+
+export default App;
 `

@@ -2,7 +2,7 @@
 import { Space } from '@/components/UI'
 import { CheckBox } from '@/components/Control'
 import { checkboxCatalogIds } from '@/features/Control/CheckBox/repository/catalogIds'
-import { checkboxColorCode } from './code'
+import { checkboxColorReactCode, checkboxColorVueCode } from './code'
 import type { ControlColor } from '@/components/Control/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -12,7 +12,7 @@ import utils from '@/utils'
 
 <template>
   <AnchorContent :id="checkboxCatalogIds.COLOR">
-    <ShowCase title="Color" :code="checkboxColorCode">
+    <ShowCase title="Color" code="" :vueCode="checkboxColorVueCode" :reactCode="checkboxColorReactCode">
       <Space>
         <CheckBox v-for="color in helper.getColorType('black', 'white')" :key="color" :color="color as ControlColor" checked>
           {{ utils.capitalizeFirstLetter(color) }}

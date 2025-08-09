@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Space } from '@/components/UI'
 import { Radio } from '@/components/Control'
-import { radioBasicCode } from './code'
+import { radioBasicReactCode, radioBasicVueCode } from './code'
 import { radioCatalogIds } from '@/features/Control/Radio/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -13,7 +13,7 @@ const handleChange = (role: string) => {
 
 <template>
   <AnchorContent :id="radioCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="radioBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="radioBasicReactCode" :reactCode="radioBasicVueCode">
       <Space>
         <Radio name="role" color="green" value="admin" @onInput="handleChange">Admin</Radio>
         <Radio name="role" color="green" value="user" @onInput="handleChange">User</Radio>
