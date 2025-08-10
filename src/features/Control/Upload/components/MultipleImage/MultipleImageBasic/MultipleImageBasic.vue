@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Upload } from '@/components/Control'
 import { uploadCatalogIds } from '@/features/Control/Upload/repository/catalogIds'
-import { multipleImageBasicCode } from './code'
+import { multipleImageBasicReactCode, multipleImageBasicVueCode } from './code'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
@@ -16,7 +16,12 @@ const handleUpload = (files: File[]) => {
 
 <template>
   <AnchorContent :id="uploadCatalogIds.MULTI_IMAGE_UPLOAD_BASIC">
-    <ShowCase title="Basic" :code="multipleImageBasicCode">
+    <ShowCase
+      title="Basic"
+      code=""
+      :vueCode="multipleImageBasicVueCode"
+      :reactCode="multipleImageBasicReactCode"
+    >
       <MultipleImageUpload
         color="green"
         rootClassName="section-space"

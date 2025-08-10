@@ -2,28 +2,29 @@ const upload_vn = {
   desc: 'Dùng để chọn và tải lên tập tin hoặc kéo và thả tập tin',
   api: {
     uploadDesc: {
-      rootClassName: 'Tên lớp của vùng chứa',
-      controlClassName: 'Tên lớp của thành phần điều khiển',
-      rootStyle: 'Kiểu inline cho vùng chứa',
-      controlStyle: 'Kiểu inline cho thành phần điều khiển',
-      shape: 'Hình dạng của thành phần tải lên',
-      color: 'Chủ đề màu của thành phần tải lên',
-      limit: 'Kích thước tối đa của tập tin cho phép',
-      fileAccepted: 'Các loại tập tin được chấp nhận (ví dụ: .jpg, .png)',
-      disabled: 'Vô hiệu hóa thành phần tải lên',
-      onUpload: 'Kích hoạt khi các tập tin được tải lên'
+      rootClassName: 'Tên class của phần tử bao bọc',
+      controlClassName: 'Tên class của control',
+      rootStyle: 'Style inline cho phần tử bao bọc',
+      controlStyle: 'Style inline cho control',
+      shape: 'Hình dạng của component upload',
+      color: 'Chủ đề màu sắc của component upload',
+      limit: 'Dung lượng tệp tối đa cho phép',
+      fileAccepted: 'Các loại tệp được chấp nhận (ví dụ: .jpg, .png)',
+      disabled: 'Vô hiệu hóa component upload',
+      onUpload: 'Được gọi khi tệp được tải lên'
     },
     singleDesc: {
-      loading: 'Trạng thái đang tải của thành phần',
+      loading: 'Trạng thái tải của component',
       defaultImageUrl: 'URL ảnh mặc định'
     },
     multiDesc: {
       defaultImages: 'Danh sách URL ảnh mặc định',
-      maxUpload: 'Số lượng tập tin tối đa có thể tải lên',
-      onRemoveDefaultImage: 'Kích hoạt khi một tập tin trong danh sách mặc định bị xóa'
+      maxUpload: 'Số lượng tệp tối đa có thể tải lên',
+      onRemoveDefaultImage: 'Được gọi khi xóa một tệp khỏi danh sách mặc định'
     },
     fileDesc: {
-      multiple: 'Cho phép tải lên nhiều tập tin'
+      multiple: 'Cho phép tải lên nhiều tệp',
+      label: 'Nội dung hoặc component cho nhãn (label) tải tệp'
     }
   }
 }

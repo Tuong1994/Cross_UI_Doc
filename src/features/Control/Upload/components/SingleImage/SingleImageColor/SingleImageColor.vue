@@ -2,7 +2,7 @@
 import { Upload } from '@/components/Control'
 import { Typography, Space } from '@/components/UI'
 import { uploadCatalogIds } from '@/features/Control/Upload/repository/catalogIds'
-import { singleImageColorCode } from './code'
+import { singleImageColorReactCode, singleImageColorVueCode } from './code'
 import type { ControlColor } from '@/components/Control/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -18,7 +18,7 @@ const { Paragraph } = Typography
 
 <template>
   <AnchorContent :id="uploadCatalogIds.SINGLE_IMAGE_UPLOAD_COLOR">
-    <ShowCase title="Color" :code="singleImageColorCode">
+    <ShowCase title="Color" code="" :vueCode="singleImageColorVueCode" :reactCode="singleImageColorReactCode">
       <Space size="md">
         <div v-for="color in helper.getColorType()" :key="color">
           <Paragraph>{{ utils.capitalizeFirstLetter(color) }}</Paragraph>

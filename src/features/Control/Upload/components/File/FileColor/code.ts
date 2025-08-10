@@ -1,4 +1,4 @@
-export const fileColorCode = `
+export const fileColorVueCode = `
 <script setup lang="ts">
 import { Upload } from '@/components/Control'
 import { Space, Typography } from '@/components/UI'
@@ -19,4 +19,31 @@ const { Paragraph } = Typography
     </div>
   </Space>
 </template>
+`
+
+export const fileColorReactCode = `
+import { Upload } from "@/components/Control";
+import { Space, Typography } from "./components/UI";
+import { ControlColor } from "./components/Control/type";
+
+const { Paragraph } = Typography;
+
+const { FileUpload } = Upload;
+
+const App: React.FC = () => {
+  const colors: ControlColor[] = ["blue", "green", "red", "orange", "yellow", "purple", "pink"];
+
+  return (
+    <Space>
+      {colors.map((color) => (
+        <div key={color}>
+          <Paragraph>{color}</Paragraph>
+          <FileUpload color={color} />
+        </div>
+      ))}
+    </Space>
+  );
+};
+
+export default App;
 `

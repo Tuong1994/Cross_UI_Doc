@@ -1,4 +1,4 @@
-export const singleImageShapeCode = `
+export const singleImageShapeVueCode = `
 <script setup lang="ts">
 import { Upload } from '@/components/Control'
 import { Typography, Space } from '@/components/UI'
@@ -21,4 +21,33 @@ const { Paragraph } = Typography
     </div>
   </Space>
 </template>
+`
+
+export const singleImageShapeReactCode = `
+import { ControlShape } from "./components/Control/type";
+import { Space, Typography } from "./components/UI";
+import { Upload } from "@/components/Control";
+
+const { ImageUpload } = Upload;
+
+const { Paragraph } = Typography;
+
+const { SingleImageUpload } = ImageUpload;
+
+const App: React.FC = () => {
+  const shapes: ControlShape[] = ["square", "round"];
+
+  return (
+    <Space size="md">
+      {shapes.map((shape) => (
+        <div key={shape}>
+          <Paragraph>{shape}</Paragraph>
+          <SingleImageUpload shape={shape} />
+        </div>
+      ))}
+    </Space>
+  );
+};
+
+export default App;
 `

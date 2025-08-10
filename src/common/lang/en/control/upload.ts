@@ -10,7 +10,7 @@ const upload_en = {
       color: 'Color theme of the upload component',
       limit: 'Maximum file size allowed',
       fileAccepted: 'Accepted file types (e.g., .jpg, .png)',
-      disabled: 'Disables the upload component',
+      disabled: 'Disable the upload component',
       onUpload: 'Triggered when files are uploaded'
     },
     singleDesc: {
@@ -23,7 +23,8 @@ const upload_en = {
       onRemoveDefaultImage: 'Triggered when a file from the default list is removed'
     },
     fileDesc: {
-      multiple: 'Enables uploading multiple files'
+      multiple: 'Enable uploading multiple files',
+      label: 'Text or component for the file upload label'
     }
   }
 }

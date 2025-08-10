@@ -1,4 +1,4 @@
-export const singleImageColorCode = `
+export const singleImageColorVueCode = `
 <script setup lang="ts">
 import { Upload } from '@/components/Control'
 import { Typography, Space } from '@/components/UI'
@@ -21,4 +21,33 @@ const { Paragraph } = Typography
     </div>
   </Space>
 </template>
+`
+
+export const singleImageColorReactCode = `
+import { ControlColor } from "./components/Control/type";
+import { Space, Typography } from "./components/UI";
+import { Upload } from "@/components/Control";
+
+const { ImageUpload } = Upload;
+
+const { Paragraph } = Typography;
+
+const { SingleImageUpload } = ImageUpload;
+
+const App: React.FC = () => {
+  const colors: ControlColor[] = ["blue", "green", "red", "orange", "yellow", "purple", "pink"];
+
+  return (
+    <Space size="md">
+      {colors.map((color) => (
+        <div key={color}>
+          <Paragraph>{color}</Paragraph>
+          <SingleImageUpload color={color} />
+        </div>
+      ))}
+    </Space>
+  );
+};
+
+export default App;
 `

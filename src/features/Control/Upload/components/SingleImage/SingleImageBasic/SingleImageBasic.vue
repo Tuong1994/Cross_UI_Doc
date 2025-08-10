@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Upload } from '@/components/Control'
 import { Space } from '@/components/UI'
-import { singleImageBasicCode } from './code'
+import { singleImageBasicReactCode, singleImageBasicVueCode } from './code'
 import { uploadCatalogIds } from '@/features/Control/Upload/repository/catalogIds'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
@@ -17,7 +17,7 @@ const handleUpload = (file: File) => {
 
 <template>
   <AnchorContent :id="uploadCatalogIds.SINGLE_IMAGE_UPLOAD_BASIC">
-    <ShowCase title="Basic" :code="singleImageBasicCode">
+    <ShowCase title="Basic" code="" :vueCode="singleImageBasicVueCode" :reactCode="singleImageBasicReactCode">
       <Space>
         <SingleImageUpload
           defaultImageUrl="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrg&dpr=1"

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Upload } from '@/components/Control'
 import { Typography, Space } from '@/components/UI'
-import { singleImageShapeCode } from './code'
+import { singleImageShapeReactCode, singleImageShapeVueCode } from './code'
 import { uploadCatalogIds } from '@/features/Control/Upload/repository/catalogIds'
 import type { ControlShape } from '@/components/Control/type'
 import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
@@ -18,7 +18,7 @@ const { Paragraph } = Typography
 
 <template>
   <AnchorContent :id="uploadCatalogIds.SINGLE_IMAGE_UPLOAD_SHAPE">
-    <ShowCase title="Shape" :code="singleImageShapeCode">
+    <ShowCase title="Shape" code="" :vueCode="singleImageShapeVueCode" :reactCode="singleImageShapeReactCode">
       <Space size="md">
         <div v-for="shape in helper.getShapeType()" :key="shape">
           <Paragraph>{{ utils.capitalizeFirstLetter(shape) }}</Paragraph>
