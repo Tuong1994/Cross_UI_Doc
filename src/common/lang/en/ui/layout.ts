@@ -17,11 +17,11 @@ const layout_en = {
       color: 'Color theme of the layout'
     },
     headDesc: {
-      fixed: 'Enables fixed header mode'
+      fixed: 'Enable fixed header mode'
     },
     sideDesc: {
-      collapsable: 'Enables sidebar collapsible mode',
-      hasCollapseButton: 'Shows or hides the collapse button',
+      collapsable: 'Enable sidebar collapsible mode',
+      hasCollapseButton: 'Show or hide the collapse button',
       onCollapse: 'Triggered when the collapse button is clicked'
     },
     menuDesc: {
@@ -29,7 +29,9 @@ const layout_en = {
       itemStyle: 'Inline styles for the menu item',
       items: 'List of menu items',
       type: 'Type of the menu',
-      color: 'Color theme of the menu'
+      color: 'Color theme of the menu',
+      defaultActiveId: 'Default active ID',
+      onSelectMenu: 'Triggered when a menu item is selected'
     },
     menuItemDesc: {
       id: 'Unique ID of the menu item',
@@ -37,7 +39,7 @@ const layout_en = {
       labelIcon: 'Icon displayed alongside the menu label',
       type: 'Type of the menu item',
       path: 'Route path for the menu item',
-      isRoot: 'Indicates whether the menu item is a root item',
+      isRoot: 'Indicate whether the menu item is a root item',
       children: 'List of nested submenu items'
     }
   }

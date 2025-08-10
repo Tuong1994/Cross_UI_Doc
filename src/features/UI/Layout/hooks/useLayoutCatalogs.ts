@@ -8,7 +8,7 @@ const useLayoutCatalogs = () => {
 
   const examplesCatalogs: CatalogItems = [
     { id: layoutCatalogIds.BASIC, title: 'Basic' },
-    { id: layoutCatalogIds.HOOK, title: 'useLayoutStore' },
+    { id: layoutCatalogIds.HOOK, title: 'Layout hook' },
   ]
 
   const apiCatalogs: CatalogItems = [

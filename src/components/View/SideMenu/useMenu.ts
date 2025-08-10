@@ -12,8 +12,8 @@ const useMenu = () => {
       category: t.lang.menu.general,
       items: [
         { id: routeNames.BUTTON, label: 'Button', path: routePaths.BUTTON },
-        { id: routeNames.ICON, label: 'Icon', path: routePaths.ICON },
-        { id: routeNames.TYPOGRAPHY, label: 'Typography', path: routePaths.TYPOGRAPHY }
+        { id: routeNames.TYPOGRAPHY, label: 'Typography', path: routePaths.TYPOGRAPHY },
+        { id: routeNames.ICON, label: 'Icon (Vue)', path: routePaths.ICON }
       ]
     },
     {

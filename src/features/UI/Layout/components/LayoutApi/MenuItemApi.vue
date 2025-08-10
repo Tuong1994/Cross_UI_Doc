@@ -8,7 +8,7 @@ import useLangStore from '@/stores/LangStore'
 
 const t = useLangStore()
 
-const dataSource = computed<ComponentApi[]>(() => [
+const dataVue = computed<ComponentApi[]>(() => [
   {
     id: 'id',
     props: 'id',
@@ -87,8 +87,60 @@ const dataSource = computed<ComponentApi[]>(() => [
     default: '[]'
   }
 ])
+
+const dataReact = computed<ComponentApi[]>(() => [
+  {
+    id: 'id',
+    props: 'id',
+    desc: t.lang.layout.api.menuItemDesc.id,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['string']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'label',
+    props: 'label',
+    desc: t.lang.layout.api.menuItemDesc.label,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['ReactNode']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'labelIcon',
+    props: 'icon',
+    desc: t.lang.layout.api.menuItemDesc.labelIcon,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['ReactNode']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'children',
+    props: 'children',
+    desc: t.lang.layout.api.menuItemDesc.children,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['MenuItems']
+    },
+    required: t.lang.common.required.no,
+    default: '[]'
+  }
+])
 </script>
 
 <template>
-  <TableLayout title="MenuItems" :dataSource="dataSource" :id="layoutCatalogIds.MENU_ITEM_API" />
+  <TableLayout
+    title="MenuItems"
+    :dataVue="dataVue"
+    :dataReact="dataReact"
+    :id="layoutCatalogIds.MENU_ITEM_API"
+  />
 </template>

@@ -10,35 +10,37 @@ const layout_vn = {
   api: {
     commonDesc: {
       rootClassName: 'Tên class của phần tử bao bọc',
-      rootStyle: 'Style nội tuyến cho phần tử bao bọc'
+      rootStyle: 'Style inline cho phần tử bao bọc'
     },
     containerDesc: {
-      theme: 'Giao diện bố cục (chế độ sáng hoặc tối)',
-      color: 'Chủ đề màu của bố cục'
+      theme: 'Chủ đề bố cục (chế độ sáng hoặc tối)',
+      color: 'Chủ đề màu sắc của bố cục'
     },
     headDesc: {
-      fixed: 'Bật chế độ cố định phần đầu trang'
+      fixed: 'Bật chế độ cố định header'
     },
     sideDesc: {
-      collapsable: 'Bật chế độ thu gọn thanh bên',
+      collapsable: 'Bật chế độ thu gọn sidebar',
       hasCollapseButton: 'Hiển thị hoặc ẩn nút thu gọn',
       onCollapse: 'Được gọi khi nhấn nút thu gọn'
     },
     menuDesc: {
       itemClassName: 'Tên class của mục menu',
-      itemStyle: 'Style nội tuyến cho mục menu',
+      itemStyle: 'Style inline cho mục menu',
       items: 'Danh sách các mục menu',
       type: 'Kiểu menu',
-      color: 'Chủ đề màu của menu'
+      color: 'Chủ đề màu sắc của menu',
+      defaultActiveId: 'ID mặc định được chọn',
+      onSelectMenu: 'Được gọi khi một mục menu được chọn'
     },
     menuItemDesc: {
       id: 'ID duy nhất của mục menu',
       label: 'Nhãn văn bản của mục menu',
       labelIcon: 'Biểu tượng hiển thị cùng với nhãn menu',
-      type: 'Loại của mục menu',
-      path: 'Đường dẫn định tuyến của mục menu',
-      isRoot: 'Cho biết mục menu có phải là mục gốc hay không',
-      children: 'Danh sách các mục menu con lồng bên trong'
+      type: 'Kiểu mục menu',
+      path: 'Đường dẫn route của mục menu',
+      isRoot: 'Xác định mục menu có phải là mục gốc hay không',
+      children: 'Danh sách các mục con (submenu)'
     }
   }
 }
