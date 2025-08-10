@@ -16,13 +16,13 @@ const props = withDefaults(defineProps<CodeTableCellProps>(), {
   codes: () => []
 })
 
-const badgeStyle = computed<StyleValue>(() => ({ fontSize: `${props.size}px` }))
+const badgeStyle = computed<StyleValue>(() => ({ fontSize: `${props.size}px`, color: '#222' }))
 </script>
 
 <template>
   <Space :size="5" aligns="middle">
     <Space v-for="(code, idx) in codes" :key="idx" :size="5" aligns="middle">
-      <Badge v-if="elType === 'default'" ghost shape="square" color="pink" :rootStyle="badgeStyle">
+      <Badge v-if="elType === 'default'" shape="square" :rootStyle="badgeStyle">
         {{ code }}
       </Badge>
       <a v-else-if="elType === 'anchor'" :href="`#${link}`">

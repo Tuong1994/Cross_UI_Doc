@@ -61,8 +61,9 @@ import {
   faLayerGroup,
   faMoon,
   faCode,
-  faCopy,
+  faCopy
 } from '@fortawesome/free-solid-svg-icons'
+import { faReact, faVuejs } from '@fortawesome/free-brands-svg-icons'
 
 export const iconList = () => {
   return library.add(
@@ -128,5 +129,7 @@ export const iconList = () => {
     faMoon,
     faCode,
     faCopy,
+    faReact,
+    faVuejs
   )
 }

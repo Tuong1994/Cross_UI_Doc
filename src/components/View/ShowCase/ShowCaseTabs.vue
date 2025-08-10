@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, defineProps, withDefaults } from 'vue'
 import { Tabs } from '@/components/UI'
+import { iconBrandsName, iconType } from '@/components/UI/Icon/constant'
 import type { TabsItems } from '@/components/UI/Tabs/type'
 import CodeBlock from '../Code/CodeBlock.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
@@ -18,8 +19,18 @@ withDefaults(defineProps<TabsCodeBlockProps>(), {
 const layout = useLayoutStore()
 
 const items = computed<TabsItems>(() => [
-  { id: 'vue', label: 'Vue', comName: 'vue' },
-  { id: 'react', label: 'React', comName: 'react' }
+  {
+    id: 'vue',
+    label: 'Vue',
+    labelIcon: { type: iconType.FAB, iconName: iconBrandsName.VUE },
+    comName: 'vue'
+  },
+  {
+    id: 'react',
+    label: 'React',
+    labelIcon: { type: iconType.FAB, iconName: iconBrandsName.REACT },
+    comName: 'react'
+  }
 ])
 </script>
 

@@ -10,9 +10,9 @@ import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 const layout = useLayoutStore()
 
 const tabItems = [
-  { id: 'item-1', label: 'Item 1', comName: 'item-1', labelIcon: iconName.USER },
-  { id: 'item-2', label: 'Item 2', comName: 'item-2', labelIcon: iconName.USER },
-  { id: 'item-3', label: 'Item 3', comName: 'item-3', labelIcon: iconName.USER }
+  { id: 'item-1', label: 'Item 1', comName: 'item-1', labelIcon: { iconName: iconName.USER } },
+  { id: 'item-2', label: 'Item 2', comName: 'item-2', labelIcon: { iconName: iconName.USER } },
+  { id: 'item-3', label: 'Item 3', comName: 'item-3', labelIcon: { iconName: iconName.USER } }
 ]
 </script>
 

@@ -59,7 +59,7 @@ watch(search, (newValue) => {
           <FlexRow>
             <FlexCol v-for="item in menu.items" :key="item.id">
               <RouterLink :to="String(item.path)">
-                <Button :color="layout.color" ghost>
+                <Button :color="layout.color">
                   {{ item.label }}
                 </Button>
               </RouterLink>

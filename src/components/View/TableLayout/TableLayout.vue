@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, withDefaults, defineProps } from 'vue'
 import { Table, Tabs, Typography } from '@/components/UI'
+import { iconBrandsName, iconType } from '@/components/UI/Icon/constant'
 import type { ComponentApi } from '@/common/type'
 import type { TableColumns } from '@/components/UI/Table/type'
 import type { ParagraphProps } from '@/components/UI/Typography/Paragraph.vue'
@@ -16,7 +17,7 @@ interface TableLayoutProps {
   id: string
   title?: string
   rootClassName?: string
-  multiple?: boolean;
+  multiple?: boolean
   dataSource: ComponentApi[]
   dataVue?: ComponentApi[]
   dataReact?: ComponentApi[]
@@ -35,8 +36,18 @@ const t = useLangStore()
 const layout = useLayoutStore()
 
 const items = computed<TabsItems>(() => [
-  { id: 'vue', label: 'Vue', comName: 'vue' },
-  { id: 'react', label: 'React', comName: 'react' }
+  {
+    id: 'vue',
+    label: 'Vue',
+    labelIcon: { type: iconType.FAB, iconName: iconBrandsName.VUE },
+    comName: 'vue'
+  },
+  {
+    id: 'react',
+    label: 'React',
+    labelIcon: { type: iconType.FAB, iconName: iconBrandsName.REACT },
+    comName: 'react'
+  }
 ])
 
 const columns = computed<TableColumns<ComponentApi>>(() => [
@@ -101,7 +112,13 @@ const columns = computed<TableColumns<ComponentApi>>(() => [
     <Paragraph :lineHeight="40">
       {{ title }}
     </Paragraph>
-    <Table v-if="!multiple" rootClassName="table-layout" :color="layout.color" :dataSource="dataSource" :columns="columns" />
+    <Table
+      v-if="!multiple"
+      rootClassName="table-layout"
+      :color="layout.color"
+      :dataSource="dataSource"
+      :columns="columns"
+    />
     <Tabs v-else :color="layout.color" :items="items">
       <template #content="tab">
         <Table
