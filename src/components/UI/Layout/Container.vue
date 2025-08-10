@@ -14,7 +14,7 @@ export interface LayoutContainerProps {
 const props = withDefaults(defineProps<LayoutContainerProps>(), {
   rootClassName: '',
   theme: ELayoutTheme.LIGHT,
-  color: 'green'
+  color: 'purple'
 })
 
 const layout = useLayoutStore()

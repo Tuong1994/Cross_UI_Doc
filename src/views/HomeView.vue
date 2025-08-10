@@ -25,8 +25,8 @@ const search = ref<string>('')
 <template>
   <HomeParticles />
   <div :style="{ position: 'relative' }">
-    <Title>Vue Components</Title>
-    <Paragraph :size="18">
+    <Title aligns="center">CrossUI</Title>
+    <Paragraph aligns="center" :size="18">
       {{ t.lang.home.desc }}
     </Paragraph>
     <Divider />
@@ -49,7 +49,7 @@ const search = ref<string>('')
             <FlexRow>
               <FlexCol v-for="item in menu.items" :key="item.id">
                 <RouterLink :to="String(item.path)">
-                  <Button :color="layout.color" ghost>
+                  <Button :color="layout.color">
                     {{ item.label }}
                   </Button>
                 </RouterLink>
