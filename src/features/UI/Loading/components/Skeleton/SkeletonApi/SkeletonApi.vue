@@ -85,7 +85,6 @@ const dataReact = computed<ComponentApi[]>(() => [
   <TableLayout
     title="Skeleton"
     rootClassName="section-space"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="loadingCatalogIds.SKELETON_API"

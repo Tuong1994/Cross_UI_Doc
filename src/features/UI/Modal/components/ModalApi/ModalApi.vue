@@ -517,11 +517,5 @@ const dataReact = computed<ComponentApi[]>(() => [
 </script>
 
 <template>
-  <TableLayout
-    title="Modal"
-    :dataSource="[]"
-    :dataVue="dataVue"
-    :dataReact="dataReact"
-    :id="modalCatalogIds.MODAL_API"
-  />
+  <TableLayout title="Modal" :dataVue="dataVue" :dataReact="dataReact" :id="modalCatalogIds.MODAL_API" />
 </template>

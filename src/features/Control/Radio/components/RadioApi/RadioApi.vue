@@ -54,7 +54,7 @@ const dataVue = computed<ComponentApi[]>(() => [
     required: t.lang.common.required.no,
     default: '-'
   },
-   {
+  {
     id: 'checked',
     props: 'checked',
     desc: t.lang.radio.api.radioDesc.checked,
@@ -369,11 +369,5 @@ const dataReact = computed<ComponentApi[]>(() => [
 </script>
 
 <template>
-  <TableLayout
-    title="Radio"
-    :dataSource="[]"
-    :dataVue="dataVue"
-    :dataReact="dataReact"
-    :id="radioCatalogIds.RADIO_API"
-  />
+  <TableLayout title="Radio" :dataVue="dataVue" :dataReact="dataReact" :id="radioCatalogIds.RADIO_API" />
 </template>

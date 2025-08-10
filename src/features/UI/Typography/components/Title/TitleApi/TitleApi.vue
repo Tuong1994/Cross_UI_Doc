@@ -218,7 +218,6 @@ const dataReact = computed<ComponentApi[]>(() => [
     title="Title"
     rootClassName="section-space"
     :id="typographyCatalogIds.TITLE_API"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
   />

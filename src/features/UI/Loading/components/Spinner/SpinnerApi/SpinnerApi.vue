@@ -119,7 +119,6 @@ const dataReact = computed<ComponentApi[]>(() => [
   <TableLayout
     title="Spinner"
     rootClassName="section-space"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="loadingCatalogIds.SPINNER_API"

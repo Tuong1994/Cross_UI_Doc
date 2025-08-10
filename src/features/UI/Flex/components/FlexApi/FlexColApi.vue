@@ -170,11 +170,5 @@ const dataReact = computed<ComponentApi[]>(() => [
 </script>
 
 <template>
-  <TableLayout
-    title="Flex col"
-    :dataSource="[]"
-    :dataVue="dataVue"
-    :dataReact="dataReact"
-    :id="flexCatalogIds.FLEX_COL_API"
-  />
+  <TableLayout title="Flex col" :dataVue="dataVue" :dataReact="dataReact" :id="flexCatalogIds.FLEX_COL_API" />
 </template>

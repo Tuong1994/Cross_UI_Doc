@@ -174,7 +174,6 @@ const dataReact = computed<ComponentApi[]>(() => [
   <TableLayout
     title="Form"
     rootClassName="section-space"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="formCatalogIds.FORM_API"

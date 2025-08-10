@@ -130,7 +130,7 @@ const dataVue = computed<ComponentApi[]>(() => [
     },
     required: t.lang.common.required.no,
     default: '-'
-  },
+  }
 ])
 
 const dataReact = computed<ComponentApi[]>(() => [
@@ -255,7 +255,7 @@ const dataReact = computed<ComponentApi[]>(() => [
     },
     required: t.lang.common.required.no,
     default: '-'
-  },
+  }
 ])
 </script>
 
@@ -263,7 +263,6 @@ const dataReact = computed<ComponentApi[]>(() => [
   <TableLayout
     title="Carousel Product/Gallery"
     rootClassName="section-space"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="carouselCatalogIds.CAROUSEL_PRODUCT_GALLERY_API"

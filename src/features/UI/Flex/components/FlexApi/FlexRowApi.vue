@@ -129,7 +129,6 @@ const dataReact = computed<ComponentApi[]>(() => [
   <TableLayout
     title="Flex row"
     rootClassName="section-space"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="flexCatalogIds.FLEX_ROW_API"

@@ -282,7 +282,6 @@ const dataReact = computed<ComponentApi[]>(() => [
 <template>
   <TableLayout
     title="Paragraph"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="typographyCatalogIds.PARAGRAPH_API"

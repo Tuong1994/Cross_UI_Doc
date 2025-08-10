@@ -30,7 +30,7 @@ const dataVue = computed<ComponentApi[]>(() => [
     },
     required: t.lang.common.required.yes,
     default: '-'
-  },
+  }
 ])
 
 const dataReact = computed<ComponentApi[]>(() => [
@@ -55,14 +55,13 @@ const dataReact = computed<ComponentApi[]>(() => [
     },
     required: t.lang.common.required.yes,
     default: '-'
-  },
+  }
 ])
 </script>
 
 <template>
   <TableLayout
     title="Dropdown Item"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="dropdownCatalogIds.DROPDOWN_ITEM_API"

@@ -304,7 +304,6 @@ const dataReact = computed<ComponentApi[]>(() => [
 <template>
   <TableLayout
     title="Accordion"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="accordionCatalogIds.ACCORDION_API"

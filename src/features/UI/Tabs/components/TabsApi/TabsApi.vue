@@ -254,7 +254,6 @@ const dataReact = computed<ComponentApi[]>(() => [
     title="Tabs"
     rootClassName="section-space"
     :id="tabsCatalogIds.TABS_API"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
   />

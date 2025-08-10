@@ -184,7 +184,6 @@ const dataReact = computed<ComponentApi[]>(() => [
   <TableLayout
     title="List"
     rootClassName="section-space"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="listCatalogIds.LIST_API"

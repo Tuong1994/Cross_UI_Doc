@@ -481,7 +481,6 @@ const dataReact = computed<ComponentApi[]>(() => [
 <template>
   <TableLayout
     title="TextArea"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="textareaCatalogIds.TEXTAREA_API"

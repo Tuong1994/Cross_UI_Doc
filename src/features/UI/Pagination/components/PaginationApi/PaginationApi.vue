@@ -327,7 +327,6 @@ const dataReact = computed<ComponentApi[]>(() => [
 <template>
   <TableLayout
     title="Pagination"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="paginationCatalogIds.PAGINATION_API"

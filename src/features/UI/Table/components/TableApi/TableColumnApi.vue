@@ -120,7 +120,6 @@ const dataReact = computed<ComponentApi[]>(() => [
     rootClassName="section-space"
     title="Column"
     :id="tableCatalogIds.COLUMN_API"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
   />

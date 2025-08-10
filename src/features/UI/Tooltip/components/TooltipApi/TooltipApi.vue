@@ -195,7 +195,6 @@ const dataReact = computed<ComponentApi[]>(() => [
 <template>
   <TableLayout
     title="Tooltip"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="tooltipCatalogIds.TOOLTIP_API"

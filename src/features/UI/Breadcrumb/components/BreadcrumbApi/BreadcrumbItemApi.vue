@@ -106,7 +106,6 @@ const dataReact = computed<ComponentApi[]>(() => [
 <template>
   <TableLayout
     title="Breadcrumb Item"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="breadcrumbCatalogIds.BREADCRUMB_ITEM_API"

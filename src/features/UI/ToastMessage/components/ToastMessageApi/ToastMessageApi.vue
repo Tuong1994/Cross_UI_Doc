@@ -128,7 +128,6 @@ const dataReact = computed<ComponentApi[]>(() => [
 <template>
   <TableLayout
     title="Toast Message"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="toastCatalogIds.TOAST_API"

@@ -60,11 +60,5 @@ const dataReact = computed<ComponentApi[]>(() => [
 </script>
 
 <template>
-  <TableLayout
-    title="Alert"
-    :dataSource="[]"
-    :dataVue="dataVue"
-    :dataReact="dataReact"
-    :id="alertCatalogIds.ALERT_API"
-  />
+  <TableLayout title="Alert" :dataVue="dataVue" :dataReact="dataReact" :id="alertCatalogIds.ALERT_API" />
 </template>

@@ -139,7 +139,6 @@ const dataReact = computed<ComponentApi[]>(() => [
 <template>
   <TableLayout
     title="Divider"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="dividerCatalogIds.DIVIDER_API"

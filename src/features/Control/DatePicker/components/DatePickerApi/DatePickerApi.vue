@@ -470,7 +470,6 @@ const dataReact = computed<ComponentApi[]>(() => [
 <template>
   <TableLayout
     title="DatePicker"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="datepickerCatalogIds.DATEPICKER_API"

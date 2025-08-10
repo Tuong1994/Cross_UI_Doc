@@ -115,11 +115,5 @@ const dataReact = computed<ComponentApi[]>(() => [
 </script>
 
 <template>
-  <TableLayout
-    title="List Item"
-    :dataSource="[]"
-    :dataVue="dataVue"
-    :dataReact="dataReact"
-    :id="listCatalogIds.LIST_API"
-  />
+  <TableLayout title="List Item" :dataVue="dataVue" :dataReact="dataReact" :id="listCatalogIds.LIST_API" />
 </template>

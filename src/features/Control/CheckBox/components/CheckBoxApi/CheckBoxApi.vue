@@ -393,7 +393,6 @@ const dataReact = computed<ComponentApi[]>(() => [
 <template>
   <TableLayout
     title="CheckBox"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="checkboxCatalogIds.CHECKBOX_API"

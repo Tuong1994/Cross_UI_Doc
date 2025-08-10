@@ -458,7 +458,6 @@ const dataReact = computed<ComponentApi[]>(() => [
     title="Table"
     rootClassName="section-space"
     :id="tableCatalogIds.TABLE_API"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
   />

@@ -41,7 +41,7 @@ const dataVue = computed<ComponentApi[]>(() => [
     },
     required: t.lang.common.required.no,
     default: '-'
-  },
+  }
 ])
 
 const dataReact = computed<ComponentApi[]>(() => [
@@ -77,14 +77,13 @@ const dataReact = computed<ComponentApi[]>(() => [
     },
     required: t.lang.common.required.no,
     default: '-'
-  },
+  }
 ])
 </script>
 
 <template>
   <TableLayout
     title="Carousel Item"
-    :dataSource="[]"
     :dataVue="dataVue"
     :dataReact="dataReact"
     :id="carouselCatalogIds.CAROUSEL_ITEM_API"
