@@ -10,7 +10,7 @@ const { Title } = Typography
 
 <template>
   <AnchorContent :id="typographyCatalogIds.TITLE_ALIGNS">
-    <ShowCase title="Aligns" code="" :vueCode="titleAlignsVueCode" :reactCode="titleAlignsReactCode">
+    <ShowCase title="Aligns" :vueCode="titleAlignsVueCode" :reactCode="titleAlignsReactCode">
       <Title aligns="justify">Justify</Title>
       <Title aligns="left">Left</Title>
       <Title aligns="center">Center</Title>

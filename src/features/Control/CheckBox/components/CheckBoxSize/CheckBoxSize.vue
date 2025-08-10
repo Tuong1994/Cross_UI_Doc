@@ -14,7 +14,7 @@ const sizeContent = useDisplayComponentSize()
 
 <template>
   <AnchorContent :id="checkboxCatalogIds.SIZE">
-    <ShowCase title="Size" code="" :vueCode="checkboxSizeVueCode" :reactCode="checkboxSizeReactCode">
+    <ShowCase title="Size" :vueCode="checkboxSizeVueCode" :reactCode="checkboxSizeReactCode">
       <Space>
         <CheckBox
           v-for="size in helper.getSizeType()"

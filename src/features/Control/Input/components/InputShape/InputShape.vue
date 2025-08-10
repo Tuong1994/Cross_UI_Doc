@@ -12,7 +12,7 @@ import utils from '@/utils'
 
 <template>
   <AnchorContent :id="inputCatalogIds.SHAPE">
-    <ShowCase title="Shape" code="" :vueCode="inputShapeVueCode" :reactCode="inputShapeReactCode">
+    <ShowCase title="Shape" :vueCode="inputShapeVueCode" :reactCode="inputShapeReactCode">
       <Space>
         <Input
           v-for="shape in helper.getShapeType()"

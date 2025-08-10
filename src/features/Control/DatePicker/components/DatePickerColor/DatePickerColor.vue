@@ -12,7 +12,7 @@ import utils from '@/utils'
 
 <template>
   <AnchorContent :id="datepickerCatalogIds.COLOR">
-    <ShowCase title="Color" code="" :vueCode="datepickerColorVueCode" :reactCode="datepickerColorReactCode">
+    <ShowCase title="Color" :vueCode="datepickerColorVueCode" :reactCode="datepickerColorReactCode">
       <Space>
         <DatePicker
           v-for="color in helper.getColorType()"

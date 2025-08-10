@@ -11,7 +11,7 @@ const alertApi = useAlert()
 
 <template>
   <AnchorContent :id="alertCatalogIds.TYPE">
-    <ShowCase title="Type" code="" :vueCode="alertTypeVueCode" :reactCode="alertTypeReactCode">
+    <ShowCase title="Type" :vueCode="alertTypeVueCode" :reactCode="alertTypeReactCode">
       <Space>
         <Button color="green" @click="() => alertApi.success('This is a success message')">Success</Button>
         <Button color="red" @click="() => alertApi.error('This is a error message')">Error</Button>

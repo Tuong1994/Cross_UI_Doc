@@ -58,7 +58,7 @@ const columns: TableColumns<TableData> = [
 
 <template>
   <AnchorContent :id="tableCatalogIds.SELECTION">
-    <ShowCase title="Selection" code="" :vueCode="tableSelectionVueCode" :reactCode="tableSelectionReactCode">
+    <ShowCase title="Selection" :vueCode="tableSelectionVueCode" :reactCode="tableSelectionReactCode">
       <Table hasRowSelection :dataSource="dataSource" :columns="columns" :color="layout.color" />
     </ShowCase>
   </AnchorContent>

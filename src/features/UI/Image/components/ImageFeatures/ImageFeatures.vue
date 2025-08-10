@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="imageCatalogIds.FEATURES">
-    <ShowCase title="Features" code="" :vueCode="imageFeaturesVueCode" :reactCode="imageFeaturesReactCode">
+    <ShowCase title="Features" :vueCode="imageFeaturesVueCode" :reactCode="imageFeaturesReactCode">
       <Divider> Checkbox </Divider>
       <Image
         hasCheck

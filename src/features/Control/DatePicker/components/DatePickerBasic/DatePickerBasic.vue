@@ -13,7 +13,7 @@ const handleSelect = (date: Date) => {
 
 <template>
   <AnchorContent :id="datepickerCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="datepickerBasicVueCode" :reactCode="datepickerBasicReactCode">
+    <ShowCase title="Basic" :vueCode="datepickerBasicVueCode" :reactCode="datepickerBasicReactCode">
       <Space>
         <DatePicker :rootStyle="{ width: '250px' }" color="green" @onChangeSelect="handleSelect" />
         <DatePicker :rootStyle="{ width: '250px' }" color="green" disabled />

@@ -17,7 +17,7 @@ const handleUpload = (file: File) => {
 
 <template>
   <AnchorContent :id="uploadCatalogIds.SINGLE_IMAGE_UPLOAD_BASIC">
-    <ShowCase title="Basic" code="" :vueCode="singleImageBasicVueCode" :reactCode="singleImageBasicReactCode">
+    <ShowCase title="Basic" :vueCode="singleImageBasicVueCode" :reactCode="singleImageBasicReactCode">
       <Space>
         <SingleImageUpload
           defaultImageUrl="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrg&dpr=1"

@@ -23,7 +23,7 @@ const colors = computed<ComponentColor[]>(() => [
 
 <template>
   <AnchorContent :id="loadingCatalogIds.SPINNER_COLOR">
-    <ShowCase title="Color" code="" :vueCode="spinnerColorVueCode" :reactCode="spinnerColorReactCode">
+    <ShowCase title="Color" :vueCode="spinnerColorVueCode" :reactCode="spinnerColorReactCode">
       <Space>
         <Spinner v-for="color in colors" :key="color" :color="color" :size="30" />
       </Space>

@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="cardCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="cardBasicVueCode" :reactCode="cardBasicReactCode">
+    <ShowCase title="Basic" :vueCode="cardBasicVueCode" :reactCode="cardBasicReactCode">
       <Card>
         <template #body>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nam facilis vel libero dolorem ab

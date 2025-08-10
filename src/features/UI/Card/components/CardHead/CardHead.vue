@@ -10,7 +10,7 @@ const { Title } = Typography
 
 <template>
   <AnchorContent :id="cardCatalogIds.HEAD">
-    <ShowCase title="Head" code="" :vueCode="cardHeadVueCode" :reactCode="cardHeadReactCode">
+    <ShowCase title="Head" :vueCode="cardHeadVueCode" :reactCode="cardHeadReactCode">
       <Card>
         <template #head>
           <Title :level="6">Card header</Title>

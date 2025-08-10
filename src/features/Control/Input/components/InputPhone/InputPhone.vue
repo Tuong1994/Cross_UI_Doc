@@ -11,7 +11,7 @@ const phone = ref<string>('')
 
 <template>
   <AnchorContent :id="inputCatalogIds.PHONE">
-    <ShowCase title="Phone" code="" :vueCode="inputPhoneVueCode" :reactCode="inputPhoneReactCode">
+    <ShowCase title="Phone" :vueCode="inputPhoneVueCode" :reactCode="inputPhoneReactCode">
       <InputPhone v-model="phone" :rootStyle="{ width: '250px' }" color="green" />
     </ShowCase>
   </AnchorContent>

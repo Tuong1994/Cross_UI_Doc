@@ -59,7 +59,7 @@ const columns: TableColumns<TableData> = [
 
 <template>
   <AnchorContent :id="tableCatalogIds.FILTER">
-    <ShowCase title="Filter" code="" :vueCode="tableFilterVueCode" :reactCode="tableFilterReactCode">
+    <ShowCase title="Filter" :vueCode="tableFilterVueCode" :reactCode="tableFilterReactCode">
       <Table hasFilter :color="layout.color" :dataSource="dataSource" :columns="columns">
         <template #filter>
           <Space>

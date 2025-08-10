@@ -11,7 +11,7 @@ const placements: ComponentPlacement[] = ['top', 'bottom', 'left', 'right']
 
 <template>
   <AnchorContent :id="tooltipCatalogIds.PLACEMENT">
-    <ShowCase title="Placement" code="" :vueCode="tooltipPlacementVueCode" :reactCode="tooltipPlacementReactCode">
+    <ShowCase title="Placement" :vueCode="tooltipPlacementVueCode" :reactCode="tooltipPlacementReactCode">
       <template v-for="placement in placements" :key="placement">
         <Divider>{{ placement }}</Divider>
         <Space justify="center">

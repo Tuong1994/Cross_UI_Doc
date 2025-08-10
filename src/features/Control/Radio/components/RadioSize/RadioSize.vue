@@ -14,7 +14,7 @@ const sizeContent = useDisplayComponentSize()
 
 <template>
   <AnchorContent :id="radioCatalogIds.SIZE">
-    <ShowCase title="Size" code="" :vueCode="radioSizeVueCode" :reactCode="radioSizeReactCode">
+    <ShowCase title="Size" :vueCode="radioSizeVueCode" :reactCode="radioSizeReactCode">
       <Space>
         <Radio
           v-for="size in helper.getSizeType()"

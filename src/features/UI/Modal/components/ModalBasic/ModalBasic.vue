@@ -13,7 +13,7 @@ const handleOpenModal = () => (open.value = !open.value)
 
 <template>
   <AnchorContent :id="modalCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="modalBasicVueCode" :reactCode="modalBasicReactCode">
+    <ShowCase title="Basic" :vueCode="modalBasicVueCode" :reactCode="modalBasicReactCode">
       <Button color="green" @click="handleOpenModal">Click me</Button>
       <Modal color="green" :open="open" @onClose="handleOpenModal">
         <template #head> Modal </template>

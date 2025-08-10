@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="paginationCatalogIds.GHOST">
-    <ShowCase title="Ghost" code="" :vueCode="paginationGhostVueCode" :reactCode="paginationGhostReactCode">
+    <ShowCase title="Ghost" :vueCode="paginationGhostVueCode" :reactCode="paginationGhostReactCode">
       <Pagination ghost color="blue" :total="50" />
       <Divider />
       <Pagination ghost color="green" :total="50" />

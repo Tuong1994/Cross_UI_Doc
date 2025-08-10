@@ -27,7 +27,7 @@ const handleFinish = (data: FormResult<Data>) => console.log(data)
 
 <template>
   <AnchorContent :id="formCatalogIds.COLOR">
-    <ShowCase title="Color" code="" :vueCode="formColorVueCode" :reactCode="formColorReactCode">
+    <ShowCase title="Color" :vueCode="formColorVueCode" :reactCode="formColorReactCode">
       <FlexRow>
         <FlexCol v-for="color in colors" :key="color" :span="8">
           <Card>

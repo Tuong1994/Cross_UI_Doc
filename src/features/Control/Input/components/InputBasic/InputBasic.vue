@@ -12,7 +12,7 @@ const inputValue = ref<string>('')
 
 <template>
   <AnchorContent :id="inputCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="inputBasicVueCode" :reactCode="inputBasicReactCode">
+    <ShowCase title="Basic" :vueCode="inputBasicVueCode" :reactCode="inputBasicReactCode">
       <Space>
         <Input v-model="inputValue" color="green" />
         <Input color="green" disabled />

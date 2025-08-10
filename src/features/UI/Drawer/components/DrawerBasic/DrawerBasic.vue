@@ -13,7 +13,7 @@ const handleOpenDrawer = () => (open.value = !open.value)
 
 <template>
   <AnchorContent :id="drawerCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="drawerBasicVueCode" :reactCode="drawerBasicReactCode">
+    <ShowCase title="Basic" :vueCode="drawerBasicVueCode" :reactCode="drawerBasicReactCode">
       <Button color="green" @click="handleOpenDrawer">Click me</Button>
       <Drawer :open="open" @onClose="handleOpenDrawer">
         <template #head> Drawer </template>

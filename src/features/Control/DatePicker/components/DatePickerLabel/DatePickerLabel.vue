@@ -9,7 +9,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="datepickerCatalogIds.LABEL">
-    <ShowCase title="Label" code="" :vueCode="datepickerLabelVueCode" :reactCode="datepickerLabelReactCode">
+    <ShowCase title="Label" :vueCode="datepickerLabelVueCode" :reactCode="datepickerLabelReactCode">
       <Space>
         <DatePicker :rootStyle="{ width: '250px' }">
           <template #label>DatePicker</template>

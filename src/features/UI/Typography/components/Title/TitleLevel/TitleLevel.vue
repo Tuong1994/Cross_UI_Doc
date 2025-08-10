@@ -10,7 +10,7 @@ const { Title } = Typography
 
 <template>
   <AnchorContent :id="typographyCatalogIds.TITLE_LEVEL">
-    <ShowCase title="Level" code="" :vueCode="titleLevelVueCode" :reactCode="titleLevelReactCode">
+    <ShowCase title="Level" :vueCode="titleLevelVueCode" :reactCode="titleLevelReactCode">
       <Title :level="1">Heading</Title>
       <Title :level="2">Heading</Title>
       <Title :level="3">Heading</Title>

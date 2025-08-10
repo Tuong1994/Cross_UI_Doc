@@ -10,7 +10,7 @@ const { Paragraph } = Typography
 
 <template>
   <AnchorContent :id="layoutCatalogIds.HOOK">
-    <ShowCase :onlyCode="true" code="" :vueCode="layoutHookVueCode" :reactCode="layoutHookReactCode">
+    <ShowCase :onlyCode="true" :vueCode="layoutHookVueCode" :reactCode="layoutHookReactCode">
       <template #head>
         <Paragraph strong :size="16">Layout hook</Paragraph>
       </template>

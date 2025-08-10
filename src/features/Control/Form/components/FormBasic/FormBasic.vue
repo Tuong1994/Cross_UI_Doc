@@ -35,7 +35,7 @@ const handleFinish = (data: FormResult<Data>) => console.log(data)
 
 <template>
   <AnchorContent :id="formCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="formBasicVueCode" :reactCode="formBasicReactCode">
+    <ShowCase title="Basic" :vueCode="formBasicVueCode" :reactCode="formBasicReactCode">
       <Form
         :color="layout.color"
         :initialValues="initialValues"

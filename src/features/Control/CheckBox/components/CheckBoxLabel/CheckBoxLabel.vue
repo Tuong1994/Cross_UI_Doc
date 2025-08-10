@@ -9,7 +9,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="checkboxCatalogIds.LABEL">
-    <ShowCase title="Label" code="" :vueCode="checkboxLabelVueCode" :reactCode="checkboxLabelReactCode">
+    <ShowCase title="Label" :vueCode="checkboxLabelVueCode" :reactCode="checkboxLabelReactCode">
       <Space>
         <CheckBox color="green">Checkbox</CheckBox>
         <CheckBox color="green" optional>Checkbox optional</CheckBox>

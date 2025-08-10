@@ -29,7 +29,7 @@ const collapseId = ref<string>('')
 
 <template>
   <AnchorContent :id="accordionCatalogIds.GROUP">
-    <ShowCase title="Group" code="" :vueCode="accordionGroupVueCode" :reactCode="accordionGroupReactCode">
+    <ShowCase title="Group" :vueCode="accordionGroupVueCode" :reactCode="accordionGroupReactCode">
       <Accordion
         v-for="collapse in collapses"
         :key="collapse.id"

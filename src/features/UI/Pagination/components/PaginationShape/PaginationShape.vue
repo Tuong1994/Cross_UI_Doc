@@ -11,7 +11,7 @@ const layout = useLayoutStore()
 
 <template>
   <AnchorContent :id="paginationCatalogIds.SHAPE">
-    <ShowCase title="Shape" code="" :vueCode="paginationShapeVueCode" :reactCode="paginationShapeReactCode">
+    <ShowCase title="Shape" :vueCode="paginationShapeVueCode" :reactCode="paginationShapeReactCode">
       <Pagination shape="round" :color="layout.color" :total="50" />
       <Divider />
       <Pagination shape="square" :color="layout.color" :total="50" />

@@ -13,7 +13,7 @@ const t = useLangStore()
 
 <template>
   <AnchorContent :id="formCatalogIds.FORM_RULE">
-    <ShowCase :onlyCode="true" code="" :vueCode="formRuleVueCode" :reactCode="formRuleReactCode"> 
+    <ShowCase :onlyCode="true" :vueCode="formRuleVueCode" :reactCode="formRuleReactCode"> 
       <template #head>
         <Paragraph strong :size="16">useFormRule</Paragraph>
       </template>

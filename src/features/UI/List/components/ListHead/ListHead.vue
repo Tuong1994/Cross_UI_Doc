@@ -10,7 +10,7 @@ const { List, ListItem } = UList
 
 <template>
   <AnchorContent :id="listCatalogIds.HEAD">
-    <ShowCase title="Header" code="" :vueCode="listHeadVueCode" :reactCode="listHeadReactCode">
+    <ShowCase title="Header" :vueCode="listHeadVueCode" :reactCode="listHeadReactCode">
       <List>
         <template #head>List title</template>
         <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quidem?</ListItem>

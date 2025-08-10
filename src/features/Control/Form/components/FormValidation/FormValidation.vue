@@ -36,7 +36,7 @@ const handleFinish = (payload: FormResult<Data>) => console.log(payload)
 
 <template>
   <AnchorContent :id="formCatalogIds.VALIDATION">
-    <ShowCase title="Validation" code="" :vueCode="formValidationVueCode" :reactCode="formValidationReactCode">
+    <ShowCase title="Validation" :vueCode="formValidationVueCode" :reactCode="formValidationReactCode">
       <Form
         :color="layout.color"
         :initialValues="initialValues"

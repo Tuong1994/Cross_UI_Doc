@@ -39,7 +39,7 @@ const slideStyle: StyleValue = {
 
 <template>
   <AnchorContent :id="carouselCatalogIds.AUTO_PLAY">
-    <ShowCase title="Auto play" code="" :vueCode="carouselAutoPlayVueCode" :reactCode="carouselAutoPlayReactCode">
+    <ShowCase title="Auto play" :vueCode="carouselAutoPlayVueCode" :reactCode="carouselAutoPlayReactCode">
       <Horizontal autoPlay :rootStyle="rootStyle" :items="items" slideId="carouselAutoPlay">
         <template #content="item">
           <div v-if="item.slide === slideNames.slideOne" :style="slideStyle">Slide 1</div>

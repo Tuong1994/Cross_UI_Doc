@@ -18,7 +18,7 @@ const tabItems = [
 
 <template>
   <AnchorContent :id="tabsCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="tabsBasicVueCode" :reactCode="tabsBasicReactCode">
+    <ShowCase title="Basic" :vueCode="tabsBasicVueCode" :reactCode="tabsBasicReactCode">
       <Tabs :color="layout.color" :items="tabItems">
         <template #content="tab">
           <div v-if="tab.content.comName === 'item-1'">

@@ -15,7 +15,7 @@ const items: DropdownItems = [
 
 <template>
   <AnchorContent :id="dropdownCatalogIds.PLACEMENT">
-    <ShowCase title="Placement" code="" :vueCode="dropdownPlacementVueCode" :reactCode="dropdownPlacementReactCode">
+    <ShowCase title="Placement" :vueCode="dropdownPlacementVueCode" :reactCode="dropdownPlacementReactCode">
       <Divider>Left</Divider>
       <Dropdown :items="items" placement="left">
         <template #label>

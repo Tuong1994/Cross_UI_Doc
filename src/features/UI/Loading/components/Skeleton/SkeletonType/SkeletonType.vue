@@ -10,7 +10,7 @@ const { Skeleton } = Loading
 
 <template>
   <AnchorContent :id="loadingCatalogIds.SKELETON_TYPE">
-    <ShowCase title="Type" code="" :vueCode="skeletonTypeVueCode" :reactCode="skeletonTypeReactCode">
+    <ShowCase title="Type" :vueCode="skeletonTypeVueCode" :reactCode="skeletonTypeReactCode">
       <Divider>Title</Divider>
       <Skeleton type="title" />
       <Divider>Paragraph</Divider>

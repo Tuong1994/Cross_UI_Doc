@@ -15,7 +15,7 @@ const aligns: ComponentAligns[] = ['top', 'middle', 'bottom', 'baseline']
 
 <template>
   <AnchorContent :id="flexCatalogIds.ALIGNS">
-    <ShowCase title="Aligns" code="" :vueCode="flexAlignsVueCode" :reactCode="flexAlignsReactCode">
+    <ShowCase title="Aligns" :vueCode="flexAlignsVueCode" :reactCode="flexAlignsReactCode">
       <Card v-for="align in aligns" :key="align" rootClassName="section-space">
         <template #body>
           <Title :level="6">{{ align }}</Title>

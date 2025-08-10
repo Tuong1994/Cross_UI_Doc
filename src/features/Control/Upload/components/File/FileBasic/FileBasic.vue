@@ -14,7 +14,7 @@ const handleUpload = (files: File[]) => {
 
 <template>
   <AnchorContent :id="uploadCatalogIds.FILES_UPLOAD_BASIC">
-    <ShowCase title="Basic" code="" :vueCode="fileBasicVueCode" :reactCode="fileBasicReactCode">
+    <ShowCase title="Basic" :vueCode="fileBasicVueCode" :reactCode="fileBasicReactCode">
       <FileUpload color="green" @onUpload="handleUpload" />
     </ShowCase>
   </AnchorContent>

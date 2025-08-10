@@ -14,7 +14,7 @@ const sizeContent = useDisplayComponentSize()
 
 <template>
   <AnchorContent :id="textareaCatalogIds.SIZE">
-    <ShowCase title="Size" code="" :vueCode="textareaSizeVueCode" :reactCode="textareaSizeReactCode">
+    <ShowCase title="Size" :vueCode="textareaSizeVueCode" :reactCode="textareaSizeReactCode">
       <Space>
         <TextArea v-for="size in helper.getSizeType()" :key="size" :sizes="size as ComponentSize" color="green">
           <template #label>{{ sizeContent(size) }}</template>

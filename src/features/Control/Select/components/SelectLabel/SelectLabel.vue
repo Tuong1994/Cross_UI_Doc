@@ -17,7 +17,7 @@ const options = computed<SelectOptions>(() => [
 
 <template>
   <AnchorContent :id="selectCatalogIds.LABEL">
-    <ShowCase title="Label" code="" :vueCode="selectLabelVueCode" :reactCode="selectLabelReactCode">
+    <ShowCase title="Label" :vueCode="selectLabelVueCode" :reactCode="selectLabelReactCode">
       <Space>
         <Select color="green" :options="options">
           <template #label>Select</template>

@@ -101,7 +101,7 @@ const columns: TableColumns<TableData> = [
 
 <template>
   <AnchorContent :id="tableCatalogIds.EXPAND">
-    <ShowCase title="Expand Table" code="" :vueCode="tableExpandVueCode" :reactCode="tableExpandReactCode">
+    <ShowCase title="Expand Table" :vueCode="tableExpandVueCode" :reactCode="tableExpandReactCode">
       <Table :dataSource="dataSource" :columns="columns" :color="layout.color" hasExpand>
         <template #expand="com">
           <Table :dataSource="com.expand.data.child" :columns="columns" :color="layout.color" />

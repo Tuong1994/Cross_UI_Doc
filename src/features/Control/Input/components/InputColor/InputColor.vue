@@ -12,7 +12,7 @@ import utils from '@/utils'
 
 <template>
   <AnchorContent :id="inputCatalogIds.COLOR">
-    <ShowCase title="Color" code="" :vueCode="inputColorVueCode" :reactCode="inputColorReactCode">
+    <ShowCase title="Color" :vueCode="inputColorVueCode" :reactCode="inputColorReactCode">
       <Space>
         <Input v-for="color in helper.getColorType()" :key="color" :color="color as ControlColor">
           <template #label>{{ utils.capitalizeFirstLetter(color) }}</template>

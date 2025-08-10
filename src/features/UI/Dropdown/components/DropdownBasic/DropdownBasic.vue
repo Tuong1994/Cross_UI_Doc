@@ -15,7 +15,7 @@ const items: DropdownItems = [
 
 <template>
   <AnchorContent :id="dropdownCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="dropdownBasicVueCode" :reactCode="dropdownBasicReactCode">
+    <ShowCase title="Basic" :vueCode="dropdownBasicVueCode" :reactCode="dropdownBasicReactCode">
       <Dropdown :items="items">
         <template #label>
           <Button>Click to dropdown</Button>

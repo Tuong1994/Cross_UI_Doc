@@ -10,7 +10,7 @@ const { Spinner } = Loading
 
 <template>
   <AnchorContent :id="loadingCatalogIds.SPINNER_SIZE">
-    <ShowCase title="Size" code="" :vueCode="spinnerSizeVueCode" :reactCode="spinnerSizeReactCode">
+    <ShowCase title="Size" :vueCode="spinnerSizeVueCode" :reactCode="spinnerSizeReactCode">
       <Space aligns="middle">
         <Spinner />
         <Spinner :size="30" />

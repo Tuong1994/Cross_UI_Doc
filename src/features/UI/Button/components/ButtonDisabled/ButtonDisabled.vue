@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="buttonCatalogIds.DISABLED">
-    <ShowCase title="Disabled" code="" :vueCode="buttonDisabledVueCode" :reactCode="buttonDisabledReactCode">
+    <ShowCase title="Disabled" :vueCode="buttonDisabledVueCode" :reactCode="buttonDisabledReactCode">
       <Button disabled>Button</Button>
     </ShowCase>
   </AnchorContent>

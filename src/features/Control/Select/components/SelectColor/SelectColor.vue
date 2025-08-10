@@ -20,7 +20,7 @@ const options = computed<SelectOptions>(() => [
 
 <template>
   <AnchorContent :id="selectCatalogIds.COLOR">
-    <ShowCase title="Color" code="" :vueCode="selectColorVueCode" :reactCode="selectColorReactCode">
+    <ShowCase title="Color" :vueCode="selectColorVueCode" :reactCode="selectColorReactCode">
       <Space>
         <Select v-for="color in colors" :key="color" :color="color" :options="options">
           <template #label>{{ utils.capitalizeFirstLetter(color) }}</template>

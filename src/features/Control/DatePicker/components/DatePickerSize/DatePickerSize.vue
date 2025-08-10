@@ -14,7 +14,7 @@ const sizeContent = useDisplayComponentSize()
 
 <template>
   <AnchorContent :id="datepickerCatalogIds.SIZE">
-    <ShowCase title="Size" code="" :vueCode="datepickerSizeVueCode" :reactCode="datepickerSizeReactCode">
+    <ShowCase title="Size" :vueCode="datepickerSizeVueCode" :reactCode="datepickerSizeReactCode">
       <Space>
         <DatePicker
           v-for="size in helper.getSizeType()"

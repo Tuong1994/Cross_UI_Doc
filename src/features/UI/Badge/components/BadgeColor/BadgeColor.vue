@@ -11,7 +11,7 @@ const colors: BadgeColor[] = ['blue', 'green', 'red', 'orange', 'yellow', 'purpl
 
 <template>
   <AnchorContent :id="badgeCatalogIds.COLOR">
-    <ShowCase title="Color" code="" :vueCode="badgeColorVueCode" :reactCode="badgeColorReactCode">
+    <ShowCase title="Color" :vueCode="badgeColorVueCode" :reactCode="badgeColorReactCode">
       <Space>
         <Badge v-for="color in colors" :key="color" :color="color">Badge</Badge>
       </Space>

@@ -11,7 +11,7 @@ const password = ref<string>('')
 
 <template>
   <AnchorContent :id="inputCatalogIds.PASSWORD">
-    <ShowCase title="Password" code="" :vueCode="inputPasswordVueCode" :reactCode="inputPasswordReactCode">
+    <ShowCase title="Password" :vueCode="inputPasswordVueCode" :reactCode="inputPasswordReactCode">
       <InputPassword v-model="password" :rootStyle="{ width: '250px' }" color="green" />
     </ShowCase>
   </AnchorContent>

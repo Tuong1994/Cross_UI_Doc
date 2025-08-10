@@ -11,7 +11,7 @@ const layout = useLayoutStore()
 
 <template>
   <AnchorContent :id="buttonCatalogIds.SHAPE">
-    <ShowCase title="Shape" code="" :vueCode="buttonShapeVueCode" :reactCode="buttonShapeReactCode">
+    <ShowCase title="Shape" :vueCode="buttonShapeVueCode" :reactCode="buttonShapeReactCode">
       <Space>
         <Button :color="layout.color" shape="square">Button</Button>
         <Button :color="layout.color" shape="round">Button</Button>

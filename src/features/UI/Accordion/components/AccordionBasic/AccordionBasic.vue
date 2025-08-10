@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="accordionCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="accordionBasicVueCode" :reactCode="accordionBasicReactCode">
+    <ShowCase title="Basic" :vueCode="accordionBasicVueCode" :reactCode="accordionBasicReactCode">
       <Accordion rootClassName="section-space" label="Click to collapse">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate assumenda maxime odit
         eveniet porro cupiditate ullam deleniti non consequatur.

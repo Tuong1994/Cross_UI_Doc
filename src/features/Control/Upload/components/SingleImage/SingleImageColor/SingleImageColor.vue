@@ -18,7 +18,7 @@ const { Paragraph } = Typography
 
 <template>
   <AnchorContent :id="uploadCatalogIds.SINGLE_IMAGE_UPLOAD_COLOR">
-    <ShowCase title="Color" code="" :vueCode="singleImageColorVueCode" :reactCode="singleImageColorReactCode">
+    <ShowCase title="Color" :vueCode="singleImageColorVueCode" :reactCode="singleImageColorReactCode">
       <Space size="md">
         <div v-for="color in helper.getColorType()" :key="color">
           <Paragraph>{{ utils.capitalizeFirstLetter(color) }}</Paragraph>

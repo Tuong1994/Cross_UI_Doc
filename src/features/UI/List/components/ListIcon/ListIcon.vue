@@ -11,7 +11,7 @@ const { List, ListItem } = UList
 
 <template>
   <AnchorContent :id="listCatalogIds.ICON">
-    <ShowCase title="Icon" code="" :vueCode="listIconVueCode" :reactCode="listIconReactCode">
+    <ShowCase title="Icon" :vueCode="listIconVueCode" :reactCode="listIconReactCode">
       <List :icon="iconName.THUMBS_UP">
         <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quidem?</ListItem>
         <ListItem>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, quidem?</ListItem>

@@ -25,7 +25,7 @@ const handleFinish = (data: FormResult<Data>) => console.log(data)
 
 <template>
   <AnchorContent :id="formCatalogIds.DISABLED">
-    <ShowCase title="Disabled" code="" :vueCode="formDisabledVueCode" :reactCode="formDisabledReactCode">
+    <ShowCase title="Disabled" :vueCode="formDisabledVueCode" :reactCode="formDisabledReactCode">
       <Form
         disabled
         :color="layout.color"

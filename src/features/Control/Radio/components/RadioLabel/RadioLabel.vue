@@ -9,7 +9,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="radioCatalogIds.LABEL">
-    <ShowCase title="Label" code="" :vueCode="radioLabelVueCode" :reactCode="radioLabelReactCode">
+    <ShowCase title="Label" :vueCode="radioLabelVueCode" :reactCode="radioLabelReactCode">
       <Space>
         <Radio name="label" color="green">Radio</Radio>
         <Radio name="label" color="green" optional>Radio optional</Radio>

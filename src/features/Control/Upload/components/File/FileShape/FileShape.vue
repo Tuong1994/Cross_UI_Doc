@@ -16,7 +16,7 @@ const { Paragraph } = Typography
 
 <template>
   <AnchorContent :id="uploadCatalogIds.FILES_UPLOAD_SHAPE">
-    <ShowCase title="Shape" code="" :vueCode="fileShapeVueCode" :reactCode="fileShapeReactCode">
+    <ShowCase title="Shape" :vueCode="fileShapeVueCode" :reactCode="fileShapeReactCode">
       <Space>
         <div v-for="shape in helper.getShapeType()" :key="shape">
           <Paragraph>{{ utils.capitalizeFirstLetter(shape) }}</Paragraph>

@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="imageCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="imageBasicVueCode" :reactCode="imageBasicReactCode">
+    <ShowCase title="Basic" :vueCode="imageBasicVueCode" :reactCode="imageBasicReactCode">
       <Image
         src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrg&dpr=1"
         :imgWidth="150"

@@ -10,7 +10,7 @@ const { Title } = Typography
 
 <template>
   <AnchorContent :id="typographyCatalogIds.TITLE_REMOVE">
-    <ShowCase title="Remove" code="" :vueCode="titleRemoveVueCode" :reactCode="titleRemoveReactCode">
+    <ShowCase title="Remove" :vueCode="titleRemoveVueCode" :reactCode="titleRemoveReactCode">
       <Title remove>Heading</Title>
     </ShowCase>
   </AnchorContent>

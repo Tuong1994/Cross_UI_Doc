@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="dividerCatalogIds.CONTENT">
-    <ShowCase title="Content" code="" :vueCode="dividerContentVueCode" :reactCode="dividerContentReactCode">
+    <ShowCase title="Content" :vueCode="dividerContentVueCode" :reactCode="dividerContentReactCode">
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur dicta vitae deserunt rem mollitia,
         error eaque sed aperiam dolore inventore.

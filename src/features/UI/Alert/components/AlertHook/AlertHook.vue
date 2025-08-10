@@ -33,19 +33,19 @@ const t = useLangStore()
         <Paragraph :size="16">{{ t.lang.common.usage }}</Paragraph>
       </template>
     </ShowCase>
-    <ShowCase code="" :onlyCode="true" :vueCode="useAlertHookVueCode" :reactCode="useAlertHookReactCode">
+    <ShowCase :onlyCode="true" :vueCode="useAlertHookVueCode" :reactCode="useAlertHookReactCode">
       <template #head>
         <Paragraph :size="16">Hook</Paragraph>
         <Paragraph italic variant="secondary">@/components/UI/Alert/useAlert</Paragraph>
       </template>
     </ShowCase>
-    <ShowCase code="" :onlyCode="true" :vueCode="alertStoreVueCode" :reactCode="alertStoreReactCode">
+    <ShowCase :onlyCode="true" :vueCode="alertStoreVueCode" :reactCode="alertStoreReactCode">
       <template #head>
         <Paragraph :size="16">AlertStore</Paragraph>
         <Paragraph italic variant="secondary">@/components/UI/Alert/AlertStore</Paragraph>
       </template>
     </ShowCase>
-    <ShowCase code="" :onlyCode="true" :vueCode="alertTypeVueCode" :reactCode="alertTypeReactCode">
+    <ShowCase :onlyCode="true" :vueCode="alertTypeVueCode" :reactCode="alertTypeReactCode">
       <template #head>
         <Paragraph :size="16">Type</Paragraph>
         <Paragraph italic variant="secondary">@/components/UI/Alert/type</Paragraph>

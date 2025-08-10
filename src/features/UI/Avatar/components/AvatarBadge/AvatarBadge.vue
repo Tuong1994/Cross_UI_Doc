@@ -10,7 +10,7 @@ const avatarSize = 50
 
 <template>
   <AnchorContent :id="avatarCatalogIds.BADGE">
-    <ShowCase title="Badge" code="" :vueCode="avatarBadgeVueCode" :reactCode="avatarBadgeReactCode">
+    <ShowCase title="Badge" :vueCode="avatarBadgeVueCode" :reactCode="avatarBadgeReactCode">
       <Space>
         <Avatar :size="avatarSize" badge="1" />
         <Avatar :size="avatarSize" badge="999999" />

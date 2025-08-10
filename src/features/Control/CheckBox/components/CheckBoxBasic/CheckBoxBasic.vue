@@ -13,7 +13,7 @@ const handleChange = (role: string) => {
 
 <template>
   <AnchorContent :id="checkboxCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="checkboxBasicVueCode" :reactCode="checkboxBasicReactCode">
+    <ShowCase title="Basic" :vueCode="checkboxBasicVueCode" :reactCode="checkboxBasicReactCode">
       <Space>
         <CheckBox color="green" value="admin" @onInput="handleChange">Admin</CheckBox>
         <CheckBox color="green" value="user" @onInput="handleChange">User</CheckBox>

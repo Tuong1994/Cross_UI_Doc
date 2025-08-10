@@ -15,7 +15,7 @@ const items: BreadcrumbItems = [
 
 <template>
   <AnchorContent :id="breadcrumbCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="breadcrumbBasicVueCode" :reactCode="breadcrumbBasicReactCode">
+    <ShowCase title="Basic" :vueCode="breadcrumbBasicVueCode" :reactCode="breadcrumbBasicReactCode">
       <Breadcrumb :items="items" />
     </ShowCase>
   </AnchorContent>

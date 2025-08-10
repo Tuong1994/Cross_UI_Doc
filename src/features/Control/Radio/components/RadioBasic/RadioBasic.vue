@@ -13,7 +13,7 @@ const handleChange = (role: string) => {
 
 <template>
   <AnchorContent :id="radioCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="radioBasicReactCode" :reactCode="radioBasicVueCode">
+    <ShowCase title="Basic" :vueCode="radioBasicReactCode" :reactCode="radioBasicVueCode">
       <Space>
         <Radio name="role" color="green" value="admin" @onInput="handleChange">Admin</Radio>
         <Radio name="role" color="green" value="user" @onInput="handleChange">User</Radio>

@@ -10,7 +10,7 @@ const avatarSize = 50
 
 <template>
   <AnchorContent :id="avatarCatalogIds.SHAPE">
-    <ShowCase title="Shape" code="" :vueCode="avatarShapeVueCode" :reactCode="avatarShapeReactCode">
+    <ShowCase title="Shape" :vueCode="avatarShapeVueCode" :reactCode="avatarShapeReactCode">
       <Space>
         <Avatar :size="avatarSize" shape="circle" />
         <Avatar :size="avatarSize" shape="square" />

@@ -8,7 +8,7 @@ import AnchorContent from '@/components/View/AnchorLink/AnchorContent.vue'
 
 <template>
   <AnchorContent :id="avatarCatalogIds.SIZE">
-    <ShowCase title="Size" code="" :vueCode="avatarSizeVueCode" :reactCode="avatarSizeReactCode">
+    <ShowCase title="Size" :vueCode="avatarSizeVueCode" :reactCode="avatarSizeReactCode">
       <Space>
         <Avatar :size="20" />
         <Avatar :size="40" />

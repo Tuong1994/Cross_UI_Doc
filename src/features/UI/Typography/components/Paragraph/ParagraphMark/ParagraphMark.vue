@@ -10,7 +10,7 @@ const { Paragraph } = Typography
 
 <template>
   <AnchorContent :id="typographyCatalogIds.PARAGRAPH_MARK">
-    <ShowCase title="Mark" code="" :vueCode="paragraphMarkVueCode" :reactCode="paragraphMarkReactCode">
+    <ShowCase title="Mark" :vueCode="paragraphMarkVueCode" :reactCode="paragraphMarkReactCode">
       <Paragraph mark>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ducimus magni recusandae assumenda
         harum minima ex cumque deleniti corrupti amet, eos provident possimus at dicta animi excepturi enim

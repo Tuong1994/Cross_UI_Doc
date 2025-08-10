@@ -10,7 +10,7 @@ const { Title, Paragraph } = Typography
 
 <template>
   <AnchorContent :id="typographyCatalogIds.PARAGRAPH_ALIGNS">
-    <ShowCase title="Aligns" code="" :vueCode="paragraphAlignsVueCode" :reactCode="paragraphAlignsReactCode">
+    <ShowCase title="Aligns" :vueCode="paragraphAlignsVueCode" :reactCode="paragraphAlignsReactCode">
       <Title :level="6" aligns="justify">Justify</Title>
       <Paragraph aligns="justify">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ducimus magni recusandae assumenda

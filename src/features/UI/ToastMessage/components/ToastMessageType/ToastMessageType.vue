@@ -11,7 +11,7 @@ const messageApi = useMessage()
 
 <template>
   <AnchorContent :id="toastCatalogIds.TYPE">
-    <ShowCase title="Type" code="" :vueCode="toastTypeVueCode" :reactCode="toastTypeReactCode">
+    <ShowCase title="Type" :vueCode="toastTypeVueCode" :reactCode="toastTypeReactCode">
       <Space>
         <Button color="green" @click="messageApi.success('This is a success message')">Success</Button>
         <Button color="red" @click="messageApi.error('This is a error message')">Error</Button>

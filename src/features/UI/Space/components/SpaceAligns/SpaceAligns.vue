@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="spaceCatalogIds.ALIGNS">
-    <ShowCase title="Aligns" code="" :vueCode="spaceAlignsVueCode" :reactCode="spaceAlignsReactCode">
+    <ShowCase title="Aligns" :vueCode="spaceAlignsVueCode" :reactCode="spaceAlignsReactCode">
       <Divider>Top</Divider>
       <Space aligns="top">
         <Card>

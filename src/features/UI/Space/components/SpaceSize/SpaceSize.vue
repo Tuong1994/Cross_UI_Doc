@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="spaceCatalogIds.SIZE">
-    <ShowCase title="Size" code="" :vueCode="spaceSizeVueCode" :reactCode="spaceSizeReactCode">
+    <ShowCase title="Size" :vueCode="spaceSizeVueCode" :reactCode="spaceSizeReactCode">
       <Divider>10</Divider>
       <Space :size="10">
         <Card>

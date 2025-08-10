@@ -33,7 +33,7 @@ const handleOpenModal = (size: ComponentSize) => {
 
 <template>
   <AnchorContent :id="modalCatalogIds.SIZE">
-    <ShowCase title="Size" code="" :vueCode="modalSizeVueCode" :reactCode="modalSizeReactCode">
+    <ShowCase title="Size" :vueCode="modalSizeVueCode" :reactCode="modalSizeReactCode">
       <Space>
         <Button v-for="size in sizes" color="green" @click="handleOpenModal(size)">
           {{ buttonTitle(size) }}

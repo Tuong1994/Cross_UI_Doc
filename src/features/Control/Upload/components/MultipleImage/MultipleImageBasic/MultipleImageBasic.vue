@@ -18,7 +18,6 @@ const handleUpload = (files: File[]) => {
   <AnchorContent :id="uploadCatalogIds.MULTI_IMAGE_UPLOAD_BASIC">
     <ShowCase
       title="Basic"
-      code=""
       :vueCode="multipleImageBasicVueCode"
       :reactCode="multipleImageBasicReactCode"
     >

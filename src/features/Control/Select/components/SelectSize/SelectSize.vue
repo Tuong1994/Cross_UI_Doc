@@ -22,7 +22,7 @@ const sizeContent = useDisplayComponentSize()
 
 <template>
   <AnchorContent :id="selectCatalogIds.SIZE">
-    <ShowCase title="Size" code="" :vueCode="selectSizeVueCode" :reactCode="selectSizeReactCode">
+    <ShowCase title="Size" :vueCode="selectSizeVueCode" :reactCode="selectSizeReactCode">
       <Space>
         <Select
           v-for="size in helper.getSizeType()"

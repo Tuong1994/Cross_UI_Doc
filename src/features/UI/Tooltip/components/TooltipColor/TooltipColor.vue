@@ -11,7 +11,7 @@ const colors: TooltipColor[] = ['blue', 'red', 'green', 'orange', 'yellow', 'pur
 
 <template>
   <AnchorContent :id="tooltipCatalogIds.COLOR">
-    <ShowCase title="Color" code="" :vueCode="tooltipColorVueCode" :reactCode="tooltipColorReactCode">
+    <ShowCase title="Color" :vueCode="tooltipColorVueCode" :reactCode="tooltipColorReactCode">
       <Space>
         <Tooltip v-for="color in colors" :key="color" :color="color">
           <template #title>

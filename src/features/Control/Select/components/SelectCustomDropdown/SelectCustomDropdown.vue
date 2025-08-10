@@ -25,7 +25,7 @@ const handleSelect = (selectValue: string | number | boolean) => {
 
 <template>
   <AnchorContent :id="selectCatalogIds.CUSTOM_DROPDOWN">
-    <ShowCase title="Custom dropdown" code="" :vueCode="selectCustomDropdownVueCode" :reactCode="selectCustomDropdownReactCode">
+    <ShowCase title="Custom dropdown" :vueCode="selectCustomDropdownVueCode" :reactCode="selectCustomDropdownReactCode">
       <Select color="green" :options="options">
         <template #dropdown="menu">
           <FlexRow

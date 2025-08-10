@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="gridCatalogIds.GAP">
-    <ShowCase title="Gap" code="" :vueCode="gridGapVueCode" :reactCode="gridGapReactCode">
+    <ShowCase title="Gap" :vueCode="gridGapVueCode" :reactCode="gridGapReactCode">
       <Grid :gap="[20, 40]" :xs="2" :md="4" :lg="6" :span="8">
         <Card v-for="item in 24"></Card>
       </Grid>

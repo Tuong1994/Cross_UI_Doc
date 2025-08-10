@@ -15,7 +15,7 @@ const sizeContent = useDisplayComponentSize()
 
 <template>
   <AnchorContent :id="imageCatalogIds.SIZE">
-    <ShowCase title="Size" code="" :vueCode="imageSizeVueCode" :reactCode="imageSizeReactCode">
+    <ShowCase title="Size" :vueCode="imageSizeVueCode" :reactCode="imageSizeReactCode">
       <template v-for="size in imageSizes" :key="size">
         <Divider>
           {{ sizeContent(size) }}

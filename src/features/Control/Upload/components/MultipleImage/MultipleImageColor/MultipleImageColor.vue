@@ -18,7 +18,6 @@ const { MultipleImageUpload } = ImageUpload
   <AnchorContent :id="uploadCatalogIds.MULTI_IMAGE_UPLOAD_COLOR">
     <ShowCase
       title="Color"
-      code=""
       :vueCode="multipleImageColorVueCode"
       :reactCode="multipleImageColorReactCode"
     >

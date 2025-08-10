@@ -12,7 +12,7 @@ import utils from '@/utils'
 
 <template>
   <AnchorContent :id="radioCatalogIds.COLOR">
-    <ShowCase title="Color" code="" :vueCode="radioColorVueCode" :reactCode="radioColorReactCode">
+    <ShowCase title="Color" :vueCode="radioColorVueCode" :reactCode="radioColorReactCode">
       <Space>
         <Radio v-for="color in helper.getColorType('black', 'white')" :key="color" :color="color as ControlColor" checked>
           {{ utils.capitalizeFirstLetter(color) }}

@@ -12,7 +12,7 @@ const t = useLangStore()
 
 <template>
   <AnchorContent :id="datepickerCatalogIds.MIN_MAX">
-    <ShowCase title="Min/Max" code="" :vueCode="datepickerMinMaxVueCode" :reactCode="datepickerMinMaxReactCode">
+    <ShowCase title="Min/Max" :vueCode="datepickerMinMaxVueCode" :reactCode="datepickerMinMaxReactCode">
       <Divider>
         {{ t.lang.datepicker.dateRange.min }}
       </Divider>

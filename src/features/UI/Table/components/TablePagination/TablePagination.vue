@@ -58,7 +58,7 @@ const columns: TableColumns<TableData> = [
 
 <template>
   <AnchorContent :id="tableCatalogIds.PAGINATION">
-    <ShowCase title="Pagination" code="" :vueCode="tablePaginationVueCode" :reactCode="tablePaginationReactCode">
+    <ShowCase title="Pagination" :vueCode="tablePaginationVueCode" :reactCode="tablePaginationReactCode">
       <Table
         hasPagination
         :color="layout.color"

@@ -10,7 +10,7 @@ const { Paragraph } = Typography
 
 <template>
   <AnchorContent :id="typographyCatalogIds.PARAGRAPH_STRONG">
-    <ShowCase title="Strong" code="" :vueCode="paragraphStrongVueCode" :reactCode="paragraphStrongReactCode">
+    <ShowCase title="Strong" :vueCode="paragraphStrongVueCode" :reactCode="paragraphStrongReactCode">
       <Paragraph strong>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ducimus magni recusandae assumenda
         harum minima ex cumque deleniti corrupti amet, eos provident possimus at dicta animi excepturi enim

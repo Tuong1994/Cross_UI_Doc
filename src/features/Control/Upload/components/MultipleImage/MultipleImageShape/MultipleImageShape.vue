@@ -18,7 +18,6 @@ const { MultipleImageUpload } = ImageUpload
   <AnchorContent :id="uploadCatalogIds.MULTI_IMAGE_UPLOAD_SHAPE">
     <ShowCase
       title="Shape"
-      code=""
       :vueCode="multipleImageShapeVueCode"
       :reactCode="multipleImageShapeReactCode"
     >

@@ -10,7 +10,7 @@ const { Title } = Typography
 
 <template>
   <AnchorContent :id="cardCatalogIds.HOVERABLE">
-    <ShowCase title="Hoverable" code="" :vueCode="cardHoverableVueCode" :reactCode="cardHoverableReactCode">
+    <ShowCase title="Hoverable" :vueCode="cardHoverableVueCode" :reactCode="cardHoverableReactCode">
       <Card hoverable>
         <template #head>
           <Title :level="6">Hover me</Title>

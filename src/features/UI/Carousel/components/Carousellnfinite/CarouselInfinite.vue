@@ -39,7 +39,7 @@ const slideStyle: StyleValue = {
 
 <template>
   <AnchorContent :id="carouselCatalogIds.INFINITE">
-    <ShowCase title="Infinite" code="" :vueCode="carouselInfiniteVueCode" :reactCode="carouselInfiniteReactCode">
+    <ShowCase title="Infinite" :vueCode="carouselInfiniteVueCode" :reactCode="carouselInfiniteReactCode">
       <Horizontal infinite :rootStyle="rootStyle" :items="items" slideId="carouselInfinite">
         <template #content="item">
           <div v-if="item.slide === slideNames.slideOne" :style="slideStyle">Slide 1</div>

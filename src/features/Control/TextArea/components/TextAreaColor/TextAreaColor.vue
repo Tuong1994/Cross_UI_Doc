@@ -12,7 +12,7 @@ import utils from '@/utils'
 
 <template>
   <AnchorContent :id="textareaCatalogIds.COLOR">
-    <ShowCase title="Color" code="" :vueCode="textareaColorVueCode" :reactCode="textareaColorReactCode">
+    <ShowCase title="Color" :vueCode="textareaColorVueCode" :reactCode="textareaColorReactCode">
       <Space>
         <TextArea v-for="color in helper.getColorType()" :key="color" :color="color as ControlColor">
           <template #label>{{ utils.capitalizeFirstLetter(color) }}</template>

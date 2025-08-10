@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="tooltipCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="tooltipBasicVueCode" :reactCode="tooltipBasicReactCode">
+    <ShowCase title="Basic" :vueCode="tooltipBasicVueCode" :reactCode="tooltipBasicReactCode">
       <Tooltip>
         <template #title>
           <Button>Hover me</Button>

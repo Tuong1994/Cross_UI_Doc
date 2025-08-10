@@ -11,7 +11,7 @@ const nums = ref<number>(0)
 
 <template>
   <AnchorContent :id="inputCatalogIds.NUMBER">
-    <ShowCase title="Number" code="" :vueCode="inputNumberVueCode" :reactCode="inputNumberReactCode">
+    <ShowCase title="Number" :vueCode="inputNumberVueCode" :reactCode="inputNumberReactCode">
       <InputNumber v-model="nums" :rootStyle="{ width: '250px' }" color="green" />
     </ShowCase>
   </AnchorContent>

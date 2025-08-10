@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="accordionCatalogIds.BORDERED">
-    <ShowCase title="Bordered" code="" :vueCode="accordionBorderedVueCode" :reactCode="accordionBorderedReactCode">
+    <ShowCase title="Bordered" :vueCode="accordionBorderedVueCode" :reactCode="accordionBorderedReactCode">
       <Accordion :bordered="false" rootClassName="section-space" label="Click to collapse">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laborum minima, animi vero quae
         voluptatum repellat nihil ut asperiores aspernatur libero in vitae explicabo error saepe expedita illo

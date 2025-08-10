@@ -27,7 +27,7 @@ const options = computed<SelectOptions>(() => [
 
 <template>
   <AnchorContent :id="selectCatalogIds.TREE">
-    <ShowCase title="Tree" code="" :vueCode="selectTreeVueCode" :reactCode="selectTreeReactCode">
+    <ShowCase title="Tree" :vueCode="selectTreeVueCode" :reactCode="selectTreeReactCode">
       <Space>
         <TreeSelect
           v-for="color in helper.getColorType()"

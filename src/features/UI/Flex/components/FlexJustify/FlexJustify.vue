@@ -15,7 +15,7 @@ const justifies: ComponentJustify[] = ['start', 'center', 'end', 'between', 'aro
 
 <template>
   <AnchorContent :id="flexCatalogIds.JUSTIFY">
-    <ShowCase title="Justify" code="" :vueCode="flexJustifyVueCode" :reactCode="flexJustifyReactCode">
+    <ShowCase title="Justify" :vueCode="flexJustifyVueCode" :reactCode="flexJustifyReactCode">
       <Card v-for="justify in justifies" :key="justify" rootClassName="section-space">
         <template #body>
           <Title :level="6">{{ justify }}</Title>

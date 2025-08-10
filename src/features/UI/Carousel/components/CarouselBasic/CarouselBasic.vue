@@ -39,7 +39,7 @@ const slideStyle: StyleValue = {
 
 <template>
   <AnchorContent :id="carouselCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="carouselBasicVueCode" :reactCode="carouselBasicReactCode">
+    <ShowCase title="Basic" :vueCode="carouselBasicVueCode" :reactCode="carouselBasicReactCode">
       <Horizontal :rootStyle="rootStyle" :items="items" slideId="carouselHorizontal">
         <template #content="item">
           <div v-if="item.slide === slideNames.slideOne" :style="slideStyle">Slide 1</div>

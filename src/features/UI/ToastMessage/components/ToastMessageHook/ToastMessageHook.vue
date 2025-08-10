@@ -23,24 +23,24 @@ const t = useLangStore()
 <template>
   <AnchorContent :id="toastCatalogIds.HOOK">
     <Paragraph rootClassName="section-space" :size="18" :weight="600">useMessage</Paragraph>
-    <ShowCase :onlyCode="true" code="" :vueCode="toastHookUsageVueCode" :reactCode="toastHookUsageReactCode">
+    <ShowCase :onlyCode="true" :vueCode="toastHookUsageVueCode" :reactCode="toastHookUsageReactCode">
       <template #head>
         <Paragraph :size="16">{{ t.lang.common.usage }}</Paragraph>
       </template>
     </ShowCase>
-    <ShowCase :onlyCode="true" code="" :vueCode="toastHookVueCode" :reactCode="toastHookReactCode">
+    <ShowCase :onlyCode="true" :vueCode="toastHookVueCode" :reactCode="toastHookReactCode">
       <template #head>
         <Paragraph :size="16">useMessage</Paragraph>
         <Paragraph italic variant="secondary">@/components/UI/ToastMessage/useMessage</Paragraph>
       </template>
     </ShowCase>
-    <ShowCase :onlyCode="true" code="" :vueCode="toastStoreVueCode" :reactCode="toastStoreReactCode">
+    <ShowCase :onlyCode="true" :vueCode="toastStoreVueCode" :reactCode="toastStoreReactCode">
       <template #head>
         <Paragraph :size="16">ToastStore</Paragraph>
         <Paragraph italic variant="secondary">@/components/UI/ToastMessage/ToastStore</Paragraph>
       </template>
     </ShowCase>
-    <ShowCase :onlyCode="true" code="" :vueCode="toastTypeVueCode" :reactCode="toastTypeReactCode">
+    <ShowCase :onlyCode="true" :vueCode="toastTypeVueCode" :reactCode="toastTypeReactCode">
       <template #head>
         <Paragraph :size="16">Type</Paragraph>
         <Paragraph italic variant="secondary">@/components/UI/ToastMessage/type</Paragraph>

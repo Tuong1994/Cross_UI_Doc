@@ -9,7 +9,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="accordionCatalogIds.EXTRA_ICON">
-    <ShowCase title="Extra icon" code="" :vueCode="accordionExtraIconVueCode" :reactCode="accordionExtraIconReactCode">
+    <ShowCase title="Extra icon" :vueCode="accordionExtraIconVueCode" :reactCode="accordionExtraIconReactCode">
       <Accordion rootClassName="section-space" label="Click to collapse" :extraIcon="iconName.BOOKMARK">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate assumenda maxime odit
         eveniet porro cupiditate ullam deleniti non consequatur.

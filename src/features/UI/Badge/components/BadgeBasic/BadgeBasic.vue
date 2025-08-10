@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="badgeCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="badgeBasicVueCode" :reactCode="badgeBasicReactCode">
+    <ShowCase title="Basic" :vueCode="badgeBasicVueCode" :reactCode="badgeBasicReactCode">
       <Space>
         <Badge>Badge</Badge>
         <Badge ghost>Badge</Badge>

@@ -12,7 +12,7 @@ import utils from '@/utils'
 
 <template>
   <AnchorContent :id="datepickerCatalogIds.SHAPE">
-    <ShowCase title="Shape" code="" :vueCode="datepickerShapeVueCode" :reactCode="datepickerShapeReactCode">
+    <ShowCase title="Shape" :vueCode="datepickerShapeVueCode" :reactCode="datepickerShapeReactCode">
       <Space>
         <DatePicker
           v-for="shape in helper.getShapeType()"

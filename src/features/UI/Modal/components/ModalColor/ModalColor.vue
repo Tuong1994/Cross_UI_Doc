@@ -30,7 +30,7 @@ const handleOpenModal = (color: ComponentColor) => {
 
 <template>
   <AnchorContent :id="modalCatalogIds.COLOR">
-    <ShowCase title="Color" code="" :vueCode="modalColorVueCode" :reactCode="modalColorReactCode">
+    <ShowCase title="Color" :vueCode="modalColorVueCode" :reactCode="modalColorReactCode">
       <Space>
         <Button
           v-for="color in colors"

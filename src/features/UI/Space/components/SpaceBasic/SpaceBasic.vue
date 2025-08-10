@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="spaceCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="spaceBasicVueCode" :reactCode="spaceBasicReactCode">
+    <ShowCase title="Basic" :vueCode="spaceBasicVueCode" :reactCode="spaceBasicReactCode">
       <Space>
         <Card>
           <template #body> Lorem ipsum dolor sit amet. </template>

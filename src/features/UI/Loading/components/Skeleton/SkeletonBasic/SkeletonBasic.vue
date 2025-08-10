@@ -12,7 +12,7 @@ const { FlexRow, FlexCol } = Flex
 
 <template>
   <AnchorContent :id="loadingCatalogIds.SKELETON_BASIC">
-    <ShowCase title="Basic" code="" :vueCode="skeletonBasicVueCode" :reactCode="skeletonBasicReactCode">
+    <ShowCase title="Basic" :vueCode="skeletonBasicVueCode" :reactCode="skeletonBasicReactCode">
       <FlexRow>
         <FlexCol :xs="24" :md="16" :lg="14" :span="8">
           <Card>

@@ -30,7 +30,7 @@ const handleFinish = (data: FormResult<Data>) => console.log(data)
 
 <template>
   <AnchorContent :id="formCatalogIds.SIZE">
-    <ShowCase title="Size" code="" :vueCode="formSizeVueCode" :reactCode="formSizeReactCode">
+    <ShowCase title="Size" :vueCode="formSizeVueCode" :reactCode="formSizeReactCode">
       <FlexRow>
         <FlexCol v-for="size in sizes" :key="size" :span="8">
           <Card>

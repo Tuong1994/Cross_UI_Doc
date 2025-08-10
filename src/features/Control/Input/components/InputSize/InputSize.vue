@@ -14,7 +14,7 @@ const sizeContent = useDisplayComponentSize()
 
 <template>
   <AnchorContent :id="inputCatalogIds.SIZE">
-    <ShowCase title="Size" code="" :vueCode="inputSizeVueCode" :reactCode="inputSizeReactCode">
+    <ShowCase title="Size" :vueCode="inputSizeVueCode" :reactCode="inputSizeReactCode">
       <Space>
         <Input v-for="size in helper.getSizeType()" :key="size" :sizes="size as ComponentSize" color="green">
           <template #label>{{ sizeContent(size) }}</template>

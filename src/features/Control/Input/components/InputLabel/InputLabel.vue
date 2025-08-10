@@ -9,7 +9,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="inputCatalogIds.LABEL">
-    <ShowCase title="Label" code="" :vueCode="inputLabelVueCode" :reactCode="inputLabelReactCode">
+    <ShowCase title="Label" :vueCode="inputLabelVueCode" :reactCode="inputLabelReactCode">
       <Space>
         <Input color="green">
           <template #label>Input</template>

@@ -13,7 +13,7 @@ const avatarColors: AvatarColor[] = ['blue', 'green', 'red', 'orange', 'yellow',
 
 <template>
   <AnchorContent :id="avatarCatalogIds.COLOR">
-    <ShowCase title="Color" code="" :vueCode="avatarColorVueCode" :reactCode="avatarColorReactCode">
+    <ShowCase title="Color" :vueCode="avatarColorVueCode" :reactCode="avatarColorReactCode">
       <Space>
         <Avatar v-for="color in avatarColors" :key="color" :color="color" :size="avatarSize" />
       </Space>

@@ -51,7 +51,7 @@ const handleOpen = () => (open.value = !open.value)
 
 <template>
   <AnchorContent :id="carouselCatalogIds.GALLERY">
-    <ShowCase title="Gallery" code="" :vueCode="carouselGalleryVueCode" :reactCode="carouselGalleryReactCode">
+    <ShowCase title="Gallery" :vueCode="carouselGalleryVueCode" :reactCode="carouselGalleryReactCode">
       <Button @click="handleOpen">Open gallery</Button>
       <Gallery :open="open" :items="items" slideId="carouselGallery" @onClose="handleOpen">
         <template #content="item">

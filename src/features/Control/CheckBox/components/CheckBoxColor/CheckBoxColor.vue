@@ -12,7 +12,7 @@ import utils from '@/utils'
 
 <template>
   <AnchorContent :id="checkboxCatalogIds.COLOR">
-    <ShowCase title="Color" code="" :vueCode="checkboxColorVueCode" :reactCode="checkboxColorReactCode">
+    <ShowCase title="Color" :vueCode="checkboxColorVueCode" :reactCode="checkboxColorReactCode">
       <Space>
         <CheckBox v-for="color in helper.getColorType('black', 'white')" :key="color" :color="color as ControlColor" checked>
           {{ utils.capitalizeFirstLetter(color) }}

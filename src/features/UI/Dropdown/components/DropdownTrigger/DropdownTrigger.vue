@@ -15,7 +15,7 @@ const items: DropdownItems = [
 
 <template>
   <AnchorContent :id="dropdownCatalogIds.TRIGGER">
-    <ShowCase title="Trigger" code="" :vueCode="dropdownTriggerVueCode" :reactCode="dropdownTriggerReactCode">
+    <ShowCase title="Trigger" :vueCode="dropdownTriggerVueCode" :reactCode="dropdownTriggerReactCode">
       <Dropdown :items="items" trigger="click">
         <template #label>
           <Button>Click to dropdown</Button>

@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="spaceCatalogIds.JUSTIFY">
-    <ShowCase title="Justify" code="" :vueCode="spaceJustifyVueCode" :reactCode="spaceJustifyReactCode">
+    <ShowCase title="Justify" :vueCode="spaceJustifyVueCode" :reactCode="spaceJustifyReactCode">
       <Divider>Left</Divider>
       <Space justify="start">
         <Card>

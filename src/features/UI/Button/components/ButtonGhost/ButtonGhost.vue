@@ -10,7 +10,7 @@ import helper from '@/helper'
 
 <template>
   <AnchorContent :id="buttonCatalogIds.GHOST">
-    <ShowCase title="Ghost" code="" :vueCode="buttonGhostVueCode" :reactCode="buttonGhostReactCode">
+    <ShowCase title="Ghost" :vueCode="buttonGhostVueCode" :reactCode="buttonGhostReactCode">
       <Space rootClassName="section-space">
         <Button
           v-for="color in helper.getColorType()"

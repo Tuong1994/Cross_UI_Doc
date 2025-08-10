@@ -58,7 +58,7 @@ const columns: TableColumns<TableData> = [
 
 <template>
   <AnchorContent :id="tableCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="tableBasicVueCode" :reactCode="tableBasicReactCode">
+    <ShowCase title="Basic" :vueCode="tableBasicVueCode" :reactCode="tableBasicReactCode">
       <Table :dataSource="dataSource" :columns="columns" :color="layout.color" />
     </ShowCase>
   </AnchorContent>

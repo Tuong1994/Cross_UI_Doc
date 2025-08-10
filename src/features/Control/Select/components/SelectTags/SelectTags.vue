@@ -23,7 +23,7 @@ const handleSelect = (tags: (string | number | boolean)[]) => {
 
 <template>
   <AnchorContent :id="selectCatalogIds.TAGS">
-    <ShowCase title="Tags" code="" :vueCode="selectTagsVueCode" :reactCode="selectTagsReactCode"> 
+    <ShowCase title="Tags" :vueCode="selectTagsVueCode" :reactCode="selectTagsReactCode"> 
       <Space>
         <SelectTag
           v-for="color in helper.getColorType()"

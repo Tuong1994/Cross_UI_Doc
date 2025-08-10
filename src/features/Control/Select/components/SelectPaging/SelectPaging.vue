@@ -27,7 +27,7 @@ const handleChangePage = (page: number) => {
 
 <template>
   <AnchorContent :id="selectCatalogIds.PAGING">
-    <ShowCase title="Pagination" code="" :vueCode="selectPagingVueCode" :reactCode="selectPagingReactCode">
+    <ShowCase title="Pagination" :vueCode="selectPagingVueCode" :reactCode="selectPagingReactCode">
       <Select
         async
         color="green"

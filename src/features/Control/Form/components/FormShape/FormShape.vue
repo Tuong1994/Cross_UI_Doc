@@ -30,7 +30,7 @@ const handleFinish = (data: FormResult<Data>) => console.log(data)
 
 <template>
   <AnchorContent :id="formCatalogIds.SHAPE">
-    <ShowCase title="Shape" code="" :vueCode="formShapeVueCode" :reactCode="formShapeReactCode">
+    <ShowCase title="Shape" :vueCode="formShapeVueCode" :reactCode="formShapeReactCode">
       <FlexRow>
         <FlexCol v-for="shape in shapes" :key="shape" :span="12">
           <Card>

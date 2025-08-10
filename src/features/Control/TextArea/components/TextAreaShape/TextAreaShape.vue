@@ -12,7 +12,7 @@ import utils from '@/utils'
 
 <template>
   <AnchorContent :id="textareaCatalogIds.SHAPE">
-    <ShowCase title="Shape" code="" :vueCode="textareaShapeVueCode" :reactCode="textareaShapeReactCode">
+    <ShowCase title="Shape" :vueCode="textareaShapeVueCode" :reactCode="textareaShapeReactCode">
       <Space>
         <TextArea
           v-for="shape in helper.getShapeType()"

@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import { computed, defineProps, ref } from 'vue'
-import { Card, Typography } from '@/components/UI'
+import { computed, defineProps, withDefaults } from 'vue'
+import { Card } from '@/components/UI'
 import ShowCaseTabs from './ShowCaseTabs.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 import ShowCaseHead from './ShowCaseHead.vue'
 import ShowCaseContent from './ShowCaseContent.vue'
 
-const { Paragraph } = Typography
-
 interface ShowCaseProps {
   title?: string
   onlyCode?: boolean
-  code: string
-  vueCode?: string
-  reactCode?: string
+  vueCode: string
+  reactCode: string
 }
 
-defineProps<ShowCaseProps>()
+withDefaults(defineProps<ShowCaseProps>(), {
+  vueCode: '',
+  reactCode: ''
+})
 
 const layout = useLayoutStore()
 
@@ -35,7 +35,7 @@ const rootClassName = computed<string>(() => `show-case show-case-${layout.theme
     <template #body>
       <slot></slot>
       <ShowCaseContent v-if="!onlyCode" :vueCode="vueCode" :reactCode="reactCode" />
-      <ShowCaseTabs v-else :vueCode="vueCode as string" :reactCode="reactCode as string" />
+      <ShowCaseTabs v-else :vueCode="vueCode" :reactCode="reactCode" />
     </template>
   </Card>
 </template>

@@ -9,7 +9,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="textareaCatalogIds.LABEL">
-    <ShowCase title="Label" code="" :vueCode="textareaLabelVueCode" :reactCode="textareaLabelReactCode">
+    <ShowCase title="Label" :vueCode="textareaLabelVueCode" :reactCode="textareaLabelReactCode">
       <Space>
         <TextArea color="green">
           <template #label>Textarea</template>

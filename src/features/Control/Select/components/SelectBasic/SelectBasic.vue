@@ -21,7 +21,7 @@ const handleSelect = (selectedValue: string | number | boolean) => {
 
 <template>
   <AnchorContent :id="selectCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="selectBasicVueCode" :reactCode="selectBasicReactCode">
+    <ShowCase title="Basic" :vueCode="selectBasicVueCode" :reactCode="selectBasicReactCode">
       <Space>
         <Select color="green" :options="options" @onChangeSelect="handleSelect" />
         <Select color="green" :options="options" loading />

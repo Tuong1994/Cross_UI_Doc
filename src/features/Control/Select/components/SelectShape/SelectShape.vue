@@ -17,7 +17,7 @@ const options = computed<SelectOptions>(() => [
 
 <template>
   <AnchorContent :id="selectCatalogIds.SHAPE">
-    <ShowCase title="Shape" code="" :vueCode="selectShapeVueCode" :reactCode="selectShapeReactCode">
+    <ShowCase title="Shape" :vueCode="selectShapeVueCode" :reactCode="selectShapeReactCode">
       <Space>
         <Select shape="square" color="green" :options="options">
           <template #label>Square</template>

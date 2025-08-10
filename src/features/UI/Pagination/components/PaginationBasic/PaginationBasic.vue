@@ -11,7 +11,7 @@ const layout = useLayoutStore()
 
 <template>
   <AnchorContent :id="paginationCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="paginationBasicVueCode" :reactCode="paginationBasicReactCode">
+    <ShowCase title="Basic" :vueCode="paginationBasicVueCode" :reactCode="paginationBasicReactCode">
       <Pagination :color="layout.color" :total="50" />
     </ShowCase>
   </AnchorContent>

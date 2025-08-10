@@ -8,7 +8,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="gridCatalogIds.BASIC">
-    <ShowCase title="Basic" code="" :vueCode="gridBasicVueCode" :reactCode="gridBasicReactCode">
+    <ShowCase title="Basic" :vueCode="gridBasicVueCode" :reactCode="gridBasicReactCode">
       <Grid :xs="2" :md="4" :lg="6" :span="8">
         <Card v-for="item in 24"></Card>
       </Grid>

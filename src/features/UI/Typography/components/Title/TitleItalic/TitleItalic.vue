@@ -10,7 +10,7 @@ const { Title } = Typography
 
 <template>
   <AnchorContent :id="typographyCatalogIds.TITLE_ITALIC">
-    <ShowCase title="Italic" code="" :vueCode="titleItalicVueCode" :reactCode="titleItalicReactCode">
+    <ShowCase title="Italic" :vueCode="titleItalicVueCode" :reactCode="titleItalicReactCode">
       <Title italic :level="1">Heading</Title>
       <Title italic :level="2">Heading</Title>
       <Title italic :level="3">Heading</Title>

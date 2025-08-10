@@ -9,7 +9,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="accordionCatalogIds.LABEL_ICON">
-    <ShowCase title="Label icon" code="" :vueCode="accordionLabelIconVueCode" :reactCode="accordionLabelIconReactCode">
+    <ShowCase title="Label icon" :vueCode="accordionLabelIconVueCode" :reactCode="accordionLabelIconReactCode">
       <Accordion label="Click to collapse" :labelIcon="iconName.CIRCLE_INFO">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus voluptate assumenda maxime odit
         eveniet porro cupiditate ullam deleniti non consequatur.
