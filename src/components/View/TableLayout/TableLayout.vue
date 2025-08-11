@@ -18,7 +18,7 @@ interface TableLayoutProps {
   title?: string
   rootClassName?: string
   multiple?: boolean
-  dataSource: ComponentApi[]
+  dataSource?: ComponentApi[]
   dataVue?: ComponentApi[]
   dataReact?: ComponentApi[]
 }

@@ -20,18 +20,18 @@ const badgeStyle = computed<StyleValue>(() => ({ fontSize: `${props.size}px`, co
 </script>
 
 <template>
-  <Space :size="5" aligns="middle">
+  <Space :size="5" aligns="middle" rootClassName="code-table-cell">
     <Space v-for="(code, idx) in codes" :key="idx" :size="5" aligns="middle">
-      <Badge v-if="elType === 'default'" shape="square" :rootStyle="badgeStyle">
+      <Badge v-if="elType === 'default'" shape="square" :rootStyle="badgeStyle" rootClassName="table-cell-item">
         {{ code }}
       </Badge>
       <a v-else-if="elType === 'anchor'" :href="`#${link}`">
-        <Button sizes="sm" color="blue">
+        <Button sizes="sm" color="blue" rootClassName="table-cell-item">
           {{ code }}
         </Button>
       </a>
       <RouterLink v-else :to="link as string">
-        <Button sizes="sm" color="blue">
+        <Button sizes="sm" color="blue" rootClassName="table-cell-item">
           {{ code }}
         </Button>
       </RouterLink>

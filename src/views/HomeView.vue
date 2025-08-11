@@ -24,15 +24,20 @@ const search = ref<string>('')
 
 <template>
   <HomeParticles />
-  <div :style="{ position: 'relative' }">
-    <Title aligns="center">CrossUI</Title>
+  <div class="home">
+    <Title aligns="center" rootClassName="home-title">CrossUI</Title>
     <Paragraph aligns="center" :size="18">
       {{ t.lang.home.desc }}
     </Paragraph>
     <Divider />
-    <FlexRow>
+    <FlexRow justify="center">
       <FlexCol :xs="24" :md="14" :lg="14" :span="10">
-        <Input v-model="search" :placeholder="t.lang.common.form.placeholder.search" :color="layout.color" sizes="lg">
+        <Input
+          v-model="search"
+          :placeholder="t.lang.common.form.placeholder.search"
+          :color="layout.color"
+          sizes="lg"
+        >
           <template #addonBefore>
             <Icon :iconName="iconName.SEARCH" />
           </template>

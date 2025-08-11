@@ -14,6 +14,9 @@
   }
   .block-content {
     transition: background-color $transition-time-sm $transition-fn;
+    * {
+      font-family: 'Fira Code', monospace;
+    }
   }
 }
 
@@ -27,6 +30,9 @@
   .line-content {
     white-space: normal;
     transition: background-color $transition-time-sm $transition-fn;
+    * {
+      font-family: 'Fira Code', monospace;
+    }
   }
   .line-action {
     opacity: 0;
@@ -40,4 +46,14 @@
 .hljs {
   padding: $p-1 - 0.5 !important;
   border-radius: $rounded;
+}
+
+// Code Table Cell
+.code-table-cell {
+  .table-cell-item {
+    font-family: 'Fira Code', monospace;
+    * {
+      font-family: 'Fira Code', monospace;
+    }
+  }
 }

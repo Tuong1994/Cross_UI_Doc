@@ -1,12 +1,23 @@
-.home-menu {
-  margin-top: $m-3;
-  .menu-group {
-    margin-bottom: $m-2;
-    .group-category {
+.home {
+  position: relative;
+  .home-title {
+    font-size: 8rem;
+    background: $bg-purple-gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  .home-menu {
+    margin-top: $m-3;
+    .menu-group {
+      margin-bottom: $m-2;
+      .group-category {
         margin-bottom: $m-1;
-    }
-    &:last-child {
-      margin: 0;
+      }
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 }
