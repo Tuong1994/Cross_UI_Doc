@@ -7,17 +7,23 @@ import { ELayoutTheme } from '@/components/UI/Layout/enum'
 import type { ControlColor, SelectOptions } from '@/components/Control/type'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
 import useLangStore from '@/stores/LangStore'
+import useLoadingLayerStore from '../LoadingLayer/LoadingLayerStore'
 
 const t = useLangStore()
 
 const layout = useLayoutStore()
+
+const layer = useLoadingLayerStore()
 
 const options = computed<SelectOptions>(() => [
   { label: t.lang.common.header.mode.light, value: ELayoutTheme.LIGHT },
   { label: t.lang.common.header.mode.dark, value: ELayoutTheme.DARK }
 ])
 
-const handleSelect = (theme: ELayoutTheme) => layout.switchTheme(theme)
+const handleSelect = async (theme: ELayoutTheme) => {
+  await layer.trigger()
+  layout.switchTheme(theme)
+}
 </script>
 
 <template>

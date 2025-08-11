@@ -9,7 +9,7 @@ import ShowCase from '@/components/View/ShowCase/ShowCase.vue'
 
 <template>
   <AnchorContent :id="iconCatalogIds.BASIC">
-    <ShowCase title="Basic" :code="iconBasicCode">
+    <ShowCase :multiple="false" title="Basic" :code="iconBasicCode">
       <Space>
         <Icon :iconName="iconName.USER" />
         <Icon :iconName="iconName.GEAR" />

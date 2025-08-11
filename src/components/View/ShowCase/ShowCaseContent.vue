@@ -4,13 +4,18 @@ import { Divider, Tooltip, Button, Icon, Space } from '@/components/UI'
 import { iconName } from '@/components/UI/Icon/constant'
 import ShowCaseTabs from './ShowCaseTabs.vue'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
+import CodeBlock from '../Code/CodeBlock.vue'
 
 interface ShowCaseContentProps {
+  multiple?: boolean
+  code?: string
   vueCode?: string
   reactCode?: string
 }
 
 withDefaults(defineProps<ShowCaseContentProps>(), {
+  multiple: true,
+  code: '',
   vueCode: '',
   reactCode: ''
 })
@@ -34,5 +39,10 @@ const handleOpenCode = () => (showCode.value = !showCode.value)
       <template #content>Code</template>
     </Tooltip>
   </Space>
-  <ShowCaseTabs v-if="showCode" :vueCode="vueCode as string" :reactCode="reactCode as string" />
+  <template v-if="!multiple">
+    <CodeBlock v-if="showCode" :code="code" />
+  </template>
+  <template v-else>
+    <ShowCaseTabs v-if="showCode" :vueCode="vueCode as string" :reactCode="reactCode as string" />
+  </template>
 </template>

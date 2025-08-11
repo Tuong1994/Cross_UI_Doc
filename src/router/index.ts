@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import useLoadingLayerStore from '@/components/View/LoadingLayer/LoadingLayerStore'
 
 export const routePaths = {
   HOME: '/',
@@ -254,8 +255,12 @@ const router = createRouter({
       path: routePaths.UPLOAD,
       name: routeNames.UPLOAD,
       component: () => import('../views/UploadView.vue')
-    },
-  ]
+    }
+  ],
+  scrollBehavior: (to, from, savedPosition) => {
+    if (savedPosition) return savedPosition
+    return { top: 0 }
+  }
 })
 
 export default router

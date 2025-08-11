@@ -8,12 +8,12 @@ import useLoadingLayerStore from './components/View/LoadingLayer/LoadingLayerSto
 
 const layer = useLoadingLayerStore()
 
-onBeforeMount(() => layer.trigger())
+onBeforeMount(() => layer.initialLoad())
 </script>
 
 <template>
   <LoadingLayer />
-  <FlexProvider>
+  <FlexProvider v-if="layer.isReady">
     <AppLayout>
       <RouterView />
     </AppLayout>

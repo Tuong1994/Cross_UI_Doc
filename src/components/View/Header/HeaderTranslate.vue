@@ -7,17 +7,23 @@ import { ELang } from '@/common/enum'
 import type { ControlColor, SelectOptions } from '@/components/Control/type'
 import useLangStore from '@/stores/LangStore'
 import useLayoutStore from '@/components/UI/Layout/LayoutStore'
+import useLoadingLayerStore from '../LoadingLayer/LoadingLayerStore'
 
 const t = useLangStore()
 
 const layout = useLayoutStore()
+
+const layer = useLoadingLayerStore()
 
 const options = computed<SelectOptions>(() => [
   { label: t.lang.common.header.translate.en, value: ELang.EN },
   { label: t.lang.common.header.translate.vn, value: ELang.VN }
 ])
 
-const handleSelect = (locale: ELang) => t.switchLang(locale)
+const handleSelect = async (locale: ELang) => {
+  await layer.trigger()
+  t.switchLang(locale)
+}
 </script>
 
 <template>
