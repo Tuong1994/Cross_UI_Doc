@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { computed, withDefaults, type StyleValue } from 'vue'
-import type { ComponentColor, ComponentSize } from '@/common/type.ts'
+import type { ComponentSize } from '@/common/type.ts'
+import type { SwitchColor } from './type';
 
 export interface SwitchProps {
   rootClassName?: string
   rootStyle?: StyleValue
-  color?: Exclude<ComponentColor, "black" | "white" | "gray">
+  switched?: boolean;
   sizes?: ComponentSize
+  color?: SwitchColor
 }
 
 const props = withDefaults(defineProps<SwitchProps>(), {
@@ -31,6 +33,7 @@ const handleSwitch = (e: Event) => {
   <input
     type="checkbox"
     :style="rootStyle"
+    :checked="switched"
     :class="['switch', colorClassName, sizeClassName, rootClassName]"
     @input="handleSwitch"
   />

@@ -35,6 +35,7 @@ import checkbox_en from './control/checkbox'
 import radio_en from './control/radio'
 import upload_en from './control/upload'
 import layout_en from './ui/layout'
+import switch_en from './ui/switch'
 
 const en = {
   common: common_en,
@@ -73,7 +74,8 @@ const en = {
   datepicker: datepicker_en,
   checkbox: checkbox_en,
   radio: radio_en,
-  upload: upload_en
+  upload: upload_en,
+  switch: switch_en,
 }
 
 export type EN = typeof en

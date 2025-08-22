@@ -35,6 +35,7 @@ import checkbox_vn from './control/checkbox'
 import radio_vn from './control/radio'
 import upload_vn from './control/upload'
 import layout_vn from './ui/layout'
+import switch_vn from './ui/switch'
 
 const vn = {
   common: common_vn,
@@ -73,7 +74,8 @@ const vn = {
   datepicker: datepicker_vn,
   checkbox: checkbox_vn,
   radio: radio_vn,
-  upload: upload_vn
+  upload: upload_vn,
+  switch: switch_vn
 }
 
 export type VN = typeof vn

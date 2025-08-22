@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import useLoadingLayerStore from '@/components/View/LoadingLayer/LoadingLayerStore'
 
 export const routePaths = {
   HOME: '/',
   BUTTON: '/button',
+  SWITCH: '/switch',
   ICON: '/icon',
   TYPOGRAPHY: '/typography',
   DIVIDER: '/divider',
@@ -43,6 +43,7 @@ export const routePaths = {
 export const routeNames = {
   HOME: 'home',
   BUTTON: 'button',
+  SWITCH: 'switch',
   ICON: 'icon',
   TYPOGRAPHY: 'typography',
   DIVIDER: 'divider',
@@ -90,6 +91,11 @@ const router = createRouter({
       path: routePaths.BUTTON,
       name: routeNames.BUTTON,
       component: () => import('../views/ButtonView.vue')
+    },
+    {
+      path: routePaths.SWITCH,
+      name: routeNames.SWITCH,
+      component: () => import ('../views/SwitchView.vue')
     },
     {
       path: routePaths.ICON,

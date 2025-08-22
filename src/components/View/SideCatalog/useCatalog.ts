@@ -36,6 +36,7 @@ import useCheckBoxCatalogs from '@/features/Control/CheckBox/hooks/useCheckBoxCa
 import useRadioCatalogs from '@/features/Control/Radio/hooks/useRadioCatalogs'
 import useUploadCatalogs from '@/features/Control/Upload/hooks/useUploadCatalogs'
 import useLayoutCatalogs from '@/features/UI/Layout/hooks/useLayoutCatalogs'
+import useSwitchCatalogs from '@/features/UI/Switch/hooks/useSwitchCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -43,6 +44,8 @@ const useCatalog = () => {
   const { currentRoute } = useRouter()
 
   const buttonCatalogs = useButtonCatalogs()
+
+  const switchCatalogs = useSwitchCatalogs()
 
   const iconCatalogs = useIconCatalogs()
 
@@ -113,6 +116,7 @@ const useCatalog = () => {
   watchEffect(() => {
     const routeName = currentRoute.value.name
     if (routeName === routeNames.BUTTON) return catalogStore.setCatalogs(buttonCatalogs.value)
+    if (routeName === routeNames.SWITCH) return catalogStore.setCatalogs(switchCatalogs.value)
     if (routeName === routeNames.ICON) return catalogStore.setCatalogs(iconCatalogs.value)
     if (routeName === routeNames.TYPOGRAPHY) return catalogStore.setCatalogs(typographyCatalogs.value)
     if (routeName === routeNames.DIVIDER) return catalogStore.setCatalogs(dividerCatalogs.value)
