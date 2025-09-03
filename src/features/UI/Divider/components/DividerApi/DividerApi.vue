@@ -43,6 +43,28 @@ const dataVue = computed<ComponentApi[]>(() => [
     default: '-'
   },
   {
+    id: 'dashed',
+    props: 'dashed',
+    desc: t.lang.divider.api.dividerDesc.dashed,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'verticalSize',
+    props: 'verticalSize',
+    desc: t.lang.divider.api.dividerDesc.verticalSize,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['number']
+    },
+    required: t.lang.common.required.no,
+    default: '20'
+  },
+  {
     id: 'rootClassName',
     props: 'rootClassName',
     desc: t.lang.divider.api.dividerDesc.rootClassName,
@@ -93,6 +115,17 @@ const dataReact = computed<ComponentApi[]>(() => [
     id: 'plain',
     props: 'plain',
     desc: t.lang.divider.api.dividerDesc.plain,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['boolean']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'dashed',
+    props: 'dashed',
+    desc: t.lang.divider.api.dividerDesc.dashed,
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['boolean']

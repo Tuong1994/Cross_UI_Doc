@@ -9,8 +9,10 @@ const useDividerCatalogs = () => {
   const exampleCatalogs: CatalogItems = [
     { id: dividerCatalogIds.HORIZONTAL, title: 'Horizontal' },
     { id: dividerCatalogIds.CONTENT, title: 'Content' },
+    { id: dividerCatalogIds.PLACEMENT, title: 'Placement' },
     { id: dividerCatalogIds.PLAIN, title: 'Plain' },
-    { id: dividerCatalogIds.VERTICAL, title: 'Vertical' }
+    { id: dividerCatalogIds.VERTICAL, title: 'Vertical' },
+    { id: dividerCatalogIds.DASHED, title: 'Dashed' },
   ]
 
   const apiCatalogs: CatalogItems = [{ id: dividerCatalogIds.DIVIDER_API, title: 'Divider' }]

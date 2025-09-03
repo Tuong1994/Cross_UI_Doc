@@ -9,7 +9,7 @@ const badges = ['blue', 'green', 'red', 'orange', 'yellow', 'purple', 'pink']
   <Space>
     <template v-for="(badge, idx) in badges" :key="badge">
       <Badge :color="badge">{{ badge }}</Badge>
-      <Divider v-if="idx < badges.length - 1" type="vertical" />
+      <Divider v-if="idx < badges.length - 1" :verticalSize="20" type="vertical" />
     </template>
   </Space>
 </template>
@@ -26,7 +26,7 @@ const App: React.FC = () => {
     return badges.map((badge, idx) => (
       <>
         <Badge color={badge}>{badge}</Badge>
-        {idx < badges.length - 1 && <Divider type="vertical" />}
+        {idx < badges.length - 1 && <Divider type="vertical" verticalSize={20} />}
       </>
     ));
   };

@@ -7,6 +7,7 @@ const divider_vn = {
       type: 'Loại divider (ngang hoặc dọc)',
       placement: 'Vị trí của nội dung divider (mặc định là giữa)',
       plain: 'Hiển thị nội dung divider dưới dạng văn bản thường',
+      dashed: 'Hiển thị đường viền của divider với kiểu gạch ngang',
       verticalSize: 'Chiều cao của divider khi dùng kiểu dọc'
     }
   }
