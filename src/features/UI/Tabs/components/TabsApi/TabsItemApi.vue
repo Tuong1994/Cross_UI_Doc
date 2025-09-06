@@ -48,7 +48,7 @@ const dataVue = computed<ComponentApi[]>(() => [
     desc: t.lang.tabs.api.itemDesc.labelIcon,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['string']
+      codes: ['ItemLabelIcon']
     },
     required: t.lang.common.required.no,
     default: '-'
