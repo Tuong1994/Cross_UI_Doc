@@ -64,6 +64,17 @@ const dataVue = computed<ComponentApi[]>(() => [
     },
     required: t.lang.common.required.no,
     default: '-'
+  },
+  {
+    id: 'onSwitch',
+    props: '@onSwitch',
+    desc: t.lang.switch.api.switchDesc.onSwitch,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['(switched: boolean) => void']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
   }
 ])
 
@@ -119,6 +130,17 @@ const dataReact = computed<ComponentApi[]>(() => [
     type: {
       elType: ECodeElType.DEFAULT,
       codes: ['React.CSSProperties']
+    },
+    required: t.lang.common.required.no,
+    default: '-'
+  },
+  {
+    id: 'onSwitch',
+    props: '@onSwitch',
+    desc: t.lang.switch.api.switchDesc.onSwitch,
+    type: {
+      elType: ECodeElType.DEFAULT,
+      codes: ['(switched: boolean) => void']
     },
     required: t.lang.common.required.no,
     default: '-'
