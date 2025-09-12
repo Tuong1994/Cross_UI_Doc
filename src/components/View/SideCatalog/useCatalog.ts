@@ -37,6 +37,7 @@ import useRadioCatalogs from '@/features/Control/Radio/hooks/useRadioCatalogs'
 import useUploadCatalogs from '@/features/Control/Upload/hooks/useUploadCatalogs'
 import useLayoutCatalogs from '@/features/UI/Layout/hooks/useLayoutCatalogs'
 import useSwitchCatalogs from '@/features/UI/Switch/hooks/useSwitchCatalogs'
+import useBgFloatingCatalogs from '@/features/UI/BgFloating/hooks/useBgFloatingCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -113,6 +114,8 @@ const useCatalog = () => {
 
   const uploadCatalogs = useUploadCatalogs()
 
+  const bgFloatingCatalogs = useBgFloatingCatalogs()
+
   watchEffect(() => {
     const routeName = currentRoute.value.name
     if (routeName === routeNames.BUTTON) return catalogStore.setCatalogs(buttonCatalogs.value)
@@ -150,6 +153,7 @@ const useCatalog = () => {
     if (routeName === routeNames.CHECKBOX) return catalogStore.setCatalogs(checkboxCatalogs.value)
     if (routeName === routeNames.RADIO) return catalogStore.setCatalogs(radioCatalogs.value)
     if (routeName === routeNames.UPLOAD) return catalogStore.setCatalogs(uploadCatalogs.value)
+    if (routeName === routeNames.BG_FLOATING) return catalogStore.setCatalogs(bgFloatingCatalogs.value)
   })
 }
 

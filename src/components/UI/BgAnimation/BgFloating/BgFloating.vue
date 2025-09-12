@@ -10,12 +10,14 @@ interface BgFloadingProps {
   color?: LayoutColor
   shape?: BgFloatingShape
   count?: number
+  zIndex?: number;
   fullScreen?: boolean
 }
 
 const props = withDefaults(defineProps<BgFloadingProps>(), {
   color: 'blue',
   shape: 'square',
+  zIndex: 0,
   count: 80,
   fullScreen: false
 })
@@ -40,6 +42,7 @@ const itemStyles = computed<StyleValue[]>(() => {
       animationDuration: `${duration}s`,
       animationDelay: `${Math.random() * 20}s`,
       borderRadius: props.shape === 'square' ? (Math.random() > 0.7 ? '6px' : '3px') : '50%',
+      zIndex: props.zIndex,
     }
   })
 })
