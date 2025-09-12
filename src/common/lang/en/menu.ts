@@ -4,7 +4,8 @@ const menu_en = {
   navigation: 'Navigation',
   dataEntry: 'Data Entry',
   dataDisplay: 'Data Display',
-  feedback: 'Feedback'
+  feedback: 'Feedback',
+  backgrounds: 'Backgrounds'
 }
 
 export default menu_en

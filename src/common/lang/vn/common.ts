@@ -1,6 +1,6 @@
 const common_vn = {
   examples: 'Các ví dụ',
- usage: 'Cách dùng',
+  usage: 'Cách dùng',
   type: {
     horizontal: 'Bố cục ngang',
     vertical: 'Bố cục dọc'

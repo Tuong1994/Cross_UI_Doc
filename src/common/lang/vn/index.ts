@@ -18,7 +18,7 @@ import icon_vn from './ui/icon'
 import image_vn from './ui/image'
 import list_vn from './ui/list'
 import loading_vn from './ui/loading'
-import menu_vn from './ui/menu'
+import menu_vn from './menu'
 import modal_vn from './ui/modal'
 import pagination_vn from './ui/pagination'
 import space_vn from './ui/space'
@@ -36,6 +36,7 @@ import radio_vn from './control/radio'
 import upload_vn from './control/upload'
 import layout_vn from './ui/layout'
 import switch_vn from './ui/switch'
+import backgrounds_vn from './ui/backgrounds'
 
 const vn = {
   common: common_vn,
@@ -75,7 +76,8 @@ const vn = {
   checkbox: checkbox_vn,
   radio: radio_vn,
   upload: upload_vn,
-  switch: switch_vn
+  switch: switch_vn,
+  backgrounds: backgrounds_vn
 }
 
 export type VN = typeof vn

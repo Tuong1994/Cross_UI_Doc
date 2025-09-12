@@ -37,7 +37,9 @@ export const routePaths = {
   MESSAGE: '/message',
   DRAWER: '/drawer',
   MODAL: '/modal',
-  LOADING: '/loading'
+  LOADING: '/loading',
+  BG_FLOATING: '/bgFloating',
+  BG_PARTICLES: '/bgParticles'
 } as const
 
 export const routeNames = {
@@ -76,7 +78,9 @@ export const routeNames = {
   MESSAGE: 'message',
   DRAWER: 'drawer',
   MODAL: 'modal',
-  LOADING: 'loading'
+  LOADING: 'loading',
+  BG_FLOATING: 'bgFloating',
+  BG_PARTICLES: 'bgParticles',
 } as const
 
 const router = createRouter({
@@ -261,6 +265,11 @@ const router = createRouter({
       path: routePaths.UPLOAD,
       name: routeNames.UPLOAD,
       component: () => import('../views/UploadView.vue')
+    },
+    {
+      path: routePaths.BG_FLOATING,
+      name: routeNames.BG_FLOATING,
+      component: () => import('../views/BgFloatingView.vue')
     }
   ],
   scrollBehavior: (to, from, savedPosition) => {

@@ -4,7 +4,8 @@ const menu_vn = {
   navigation: 'Điều hướng',
   dataEntry: 'Nhập liệu',
   dataDisplay: 'Hiển thị dữ liệu',
-  feedback: 'Phản hồi'
+  feedback: 'Phản hồi',
+  backgrounds: 'Hình nền'
 }
 
 export default menu_vn

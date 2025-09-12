@@ -77,6 +77,14 @@ const useMenu = () => {
         { id: routeNames.MODAL, label: 'Modal', path: routePaths.MODAL },
         { id: routeNames.LOADING, label: 'Loading', path: routePaths.LOADING }
       ]
+    },
+    {
+      id: 'backgrounds',
+      category: t.lang.menu.backgrounds,
+      items: [
+        { id: routeNames.BG_FLOATING, label: 'Floating', path: routePaths.BG_FLOATING },
+        { id: routeNames.BG_PARTICLES, label: 'Particles', path: routePaths.BG_PARTICLES }
+      ]
     }
   ])
 

@@ -18,7 +18,7 @@ import icon_en from './ui/icon'
 import image_en from './ui/image'
 import list_en from './ui/list'
 import loading_en from './ui/loading'
-import menu_en from './ui/menu'
+import menu_en from './menu'
 import modal_en from './ui/modal'
 import pagination_en from './ui/pagination'
 import space_en from './ui/space'
@@ -36,6 +36,7 @@ import radio_en from './control/radio'
 import upload_en from './control/upload'
 import layout_en from './ui/layout'
 import switch_en from './ui/switch'
+import backgrounds_en from './ui/backgrounds'
 
 const en = {
   common: common_en,
@@ -76,6 +77,7 @@ const en = {
   radio: radio_en,
   upload: upload_en,
   switch: switch_en,
+  backgrounds: backgrounds_en,
 }
 
 export type EN = typeof en
