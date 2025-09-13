@@ -270,7 +270,12 @@ const router = createRouter({
       path: routePaths.BG_FLOATING,
       name: routeNames.BG_FLOATING,
       component: () => import('../views/BgFloatingView.vue')
-    }
+    },
+    {
+      path: routePaths.BG_PARTICLES,
+      name: routeNames.BG_PARTICLES,
+      component: () => import('../views/BgParticlesView.vue')
+    },
   ],
   scrollBehavior: (to, from, savedPosition) => {
     if (savedPosition) return savedPosition

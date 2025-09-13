@@ -6,7 +6,7 @@ const { BgFloating } = BgAnimation
 </script>
 
 <template>
-  <div :style="{width: '100%', height: '300px'}">
+  <div :style="{ width: '100%', height: '300px', borderRadius: '6px', overflow: 'hidden' }">
     <BgFloating />
   </div>
 </template>
@@ -19,7 +19,7 @@ const { BgFloating } = BgAnimation;
 
 const App: React.FC = () => {
   return (
-    <div style={{ width: "100%", height: "300px" }}>
+    <div style={{ width: "100%", height: "300px", borderRadius: '6px', overflow: 'hidden' }}>
       <BgFloating />
     </div>
   );

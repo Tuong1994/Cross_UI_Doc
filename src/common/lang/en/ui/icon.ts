@@ -2,7 +2,7 @@ const icon_en = {
   usage: {
     title: 'Add icon',
     desc: {
-      prefix: 'Icon base on',
+      prefix: 'Icon is based on',
       suffix: 'library'
     },
     libs: 'All new icon will be addded in this file',

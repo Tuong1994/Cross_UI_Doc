@@ -15,7 +15,7 @@ const shapes = helper.getShapeType()
     <Divider>
       {{ utils.capitalizeFirstLetter(shape) }}
     </Divider>
-    <div :style="{ width: '100%', height: '300px' }">
+    <div :style="{ width: '100%', height: '300px', borderRadius: '6px', overflow: 'hidden' }">
       <BgFloating :shape="shape as BgFloatingShape" />
     </div>
   </template>
@@ -35,7 +35,7 @@ const App: React.FC = () => {
   return shapes.map((shape) => (
     <Fragment key={shape}>
       <Divider>{shape}</Divider>
-      <div style={{ width: "100%", height: "300px" }}>
+      <div style={{ width: "100%", height: "300px", borderRadius: '6px', overflow: 'hidden' }}>
         <BgFloating shape={shape} />
       </div>
     </Fragment>

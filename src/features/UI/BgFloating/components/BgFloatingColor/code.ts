@@ -15,7 +15,7 @@ const colors = helper.getColorType()
     <Divider>
       {{ utils.capitalizeFirstLetter(color) }}
     </Divider>
-    <div :style="{ width: '100%', height: '300px' }">
+    <div :style="{ width: '100%', height: '300px', borderRadius: '6px', overflow: 'hidden' }">
       <BgFloating :color="color as LayoutColor" />
     </div>
   </template>
@@ -35,7 +35,7 @@ const App: React.FC = () => {
   return colors.map((color) => (
     <Fragment key={color}>
       <Divider>{color}</Divider>
-      <div style={{ width: "100%", height: "300px" }}>
+      <div style={{ width: "100%", height: "300px", borderRadius: '6px', overflow: 'hidden' }}>
         <BgFloating color={color} />
       </div>
     </Fragment>

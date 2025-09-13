@@ -38,6 +38,7 @@ import useUploadCatalogs from '@/features/Control/Upload/hooks/useUploadCatalogs
 import useLayoutCatalogs from '@/features/UI/Layout/hooks/useLayoutCatalogs'
 import useSwitchCatalogs from '@/features/UI/Switch/hooks/useSwitchCatalogs'
 import useBgFloatingCatalogs from '@/features/UI/BgFloating/hooks/useBgFloatingCatalogs'
+import useBgParticlesCatalogs from '@/features/UI/BgParticles/hooks/useBgParticlesCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -116,6 +117,8 @@ const useCatalog = () => {
 
   const bgFloatingCatalogs = useBgFloatingCatalogs()
 
+  const bgParticlesCatalogs = useBgParticlesCatalogs()
+
   watchEffect(() => {
     const routeName = currentRoute.value.name
     if (routeName === routeNames.BUTTON) return catalogStore.setCatalogs(buttonCatalogs.value)
@@ -154,6 +157,7 @@ const useCatalog = () => {
     if (routeName === routeNames.RADIO) return catalogStore.setCatalogs(radioCatalogs.value)
     if (routeName === routeNames.UPLOAD) return catalogStore.setCatalogs(uploadCatalogs.value)
     if (routeName === routeNames.BG_FLOATING) return catalogStore.setCatalogs(bgFloatingCatalogs.value)
+    if (routeName === routeNames.BG_PARTICLES) return catalogStore.setCatalogs(bgParticlesCatalogs.value)
   })
 }
 

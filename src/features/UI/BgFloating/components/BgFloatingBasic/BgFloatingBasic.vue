@@ -11,7 +11,7 @@ const { BgFloating } = BgAnimation
 <template>
   <AnchorContent :id="bgFloatingCatalogIds.BASIC">
     <ShowCase title="Basic" :vueCode="bgFloatingBasicVueCode" :reactCode="bgFloatingBasicReactCode">
-      <div :style="{ width: '100%', height: '300px' }">
+      <div :style="{ width: '100%', height: '300px', borderRadius: '6px', overflow: 'hidden' }">
         <BgFloating color="purple" />
       </div>
     </ShowCase>

@@ -20,7 +20,7 @@ const shapes = helper.getShapeType()
         <Divider>
           {{ utils.capitalizeFirstLetter(shape) }}
         </Divider>
-        <div :style="{ width: '100%', height: '300px' }">
+        <div :style="{ width: '100%', height: '300px', borderRadius: '6px', overflow: 'hidden' }">
           <BgFloating color="purple" :shape="shape as BgFloatingShape" />
         </div>
       </template>
