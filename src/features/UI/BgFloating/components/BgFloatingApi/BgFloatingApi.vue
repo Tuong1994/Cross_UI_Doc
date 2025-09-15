@@ -63,7 +63,7 @@ const dataVue = computed<ComponentApi[]>(() => [
       codes: ['boolean']
     },
     required: t.lang.common.required.no,
-    default: '-'
+    default: 'true'
   },
   {
     id: 'rootClassName',
@@ -143,7 +143,7 @@ const dataReact = computed<ComponentApi[]>(() => [
       codes: ['boolean']
     },
     required: t.lang.common.required.no,
-    default: '-'
+    default: 'true'
   },
   {
     id: 'rootClassName',

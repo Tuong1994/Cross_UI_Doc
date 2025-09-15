@@ -1,6 +1,7 @@
 import { computed, ref, watchEffect } from 'vue'
 import type { ISourceOptions } from '@tsparticles/engine'
 import type { ParticlesOptionParams } from '../type'
+import type { LayoutColor } from '../../Layout/type'
 import linksConfig from './sourceOptions/linksOptions'
 import bubbleConfig from './sourceOptions/bubbleOptions'
 import grabsConfig from './sourceOptions/grabsOptions'
@@ -9,8 +10,9 @@ import twinkleConfig from './sourceOptions/twinkleOptions'
 import useLayoutStore from '../../Layout/LayoutStore'
 
 type Config = {
-  layoutColor?: boolean
+  hasColor?: boolean
   fullScreen?: boolean
+  color?: LayoutColor
 }
 
 const colorWhite = '#fff'
@@ -27,8 +29,8 @@ const useParticles = (config?: Config) => {
   const layout = useLayoutStore()
 
   const particlesTheme = ref<ParticlesOptionParams>({
-    backgroundColor: '',
-    color: ''
+    color: '',
+    backgroundColor: ''
   })
 
   const bgColors = computed<Record<string, string>>(() => ({
@@ -41,28 +43,11 @@ const useParticles = (config?: Config) => {
     pink: colorPink
   }))
 
-  const defaultConfig = computed<Config | undefined>(() => config)
+  const defaultConfig = computed<Config>(() => (config ? config : { hasColor: false, fullScreen: false }))
 
-  const optionsParams = computed(() => {
-    return { backgroundColor: particlesTheme.value.backgroundColor, color: particlesTheme.value.color }
-  })
-
-  const linksOptions = computed<ISourceOptions>(() => linksConfig(optionsParams))
-
-  const bubbleOptions = computed<ISourceOptions>(() => bubbleConfig(optionsParams))
-
-  const grabsOptions = computed<ISourceOptions>(() => grabsConfig(optionsParams))
-
-  const collideOptions = computed<ISourceOptions>(() => collideConfig(optionsParams))
-
-  const twinkleOptions = computed<ISourceOptions>(() => twinkleConfig(optionsParams))
-
-  const particlesLoaded = async (container: any) => {
-    console.log('Particles container loaded', container)
-  }
-
+  // Set dark/light mode -> work when don't apply color theme
   watchEffect(() => {
-    if (defaultConfig?.value?.layoutColor) return
+    if (defaultConfig.value.hasColor) return
     if (layout.theme === 'light') {
       particlesTheme.value = {
         ...particlesTheme.value,
@@ -80,17 +65,51 @@ const useParticles = (config?: Config) => {
     }
   })
 
+  // Set theme -> disabled dark/light mode
   watchEffect(() => {
-    if (!defaultConfig?.value?.layoutColor) return
+    if (!defaultConfig.value.hasColor) return
+    const { color } = defaultConfig.value
     particlesTheme.value = {
       ...particlesTheme.value,
-      backgroundColor: bgColors.value[layout.color],
+      backgroundColor: bgColors.value[color ? color : layout.color],
       color: colorWhite,
       fullScreen: defaultConfig?.value?.fullScreen
     }
   })
 
-  return { particlesTheme, particlesLoaded, linksOptions, bubbleOptions, grabsOptions, collideOptions, twinkleOptions }
+  const optionsParams = computed<ParticlesOptionParams>(() => {
+    const defaultParams = { fullScreen: defaultConfig.value.fullScreen }
+    if (!defaultConfig.value.hasColor) return defaultParams
+    return {
+      ...defaultParams,
+      backgroundColor: particlesTheme.value.backgroundColor,
+      color: particlesTheme.value.color
+    }
+  })
+
+  const linksOptions = computed<ISourceOptions>(() => linksConfig(optionsParams))
+
+  const bubbleOptions = computed<ISourceOptions>(() => bubbleConfig(optionsParams))
+
+  const grabsOptions = computed<ISourceOptions>(() => grabsConfig(optionsParams))
+
+  const collideOptions = computed<ISourceOptions>(() => collideConfig(optionsParams))
+
+  const twinkleOptions = computed<ISourceOptions>(() => twinkleConfig(optionsParams))
+
+  const particlesLoaded = async (container: any) => {
+    console.log('Particles container loaded', container)
+  }
+
+  return {
+    particlesTheme,
+    particlesLoaded,
+    linksOptions,
+    bubbleOptions,
+    grabsOptions,
+    collideOptions,
+    twinkleOptions
+  }
 }
 
 export default useParticles

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { Space, Button, Typography } from '@/components/UI'
 import PageLayout from '@/components/View/PageLayout/PageLayout.vue'
+import BgParticlesBasic from '@/features/UI/BgParticles/components/BgParticlesBasic/BgParticlesBasic.vue'
+import BgParticlesColor from '@/features/UI/BgParticles/components/BgParticlesColor/BgParticlesColor.vue'
 import useLangStore from '@/stores/LangStore'
 
 const { Paragraph } = Typography
@@ -24,6 +26,8 @@ const importCodes = ["import { BgAmination } from '@/components/UI'", 'const { B
         </Button>
         <Paragraph italic>{{ t.lang.backgrounds.particles.desc.suffix }}</Paragraph>
       </Space>
+      <BgParticlesBasic />
+      <BgParticlesColor />
     </template>
     <template #api></template>
   </PageLayout>
