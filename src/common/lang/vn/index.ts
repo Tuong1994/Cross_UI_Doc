@@ -37,6 +37,7 @@ import upload_vn from './control/upload'
 import layout_vn from './ui/layout'
 import switch_vn from './ui/switch'
 import backgrounds_vn from './ui/backgrounds'
+import dynamicGrid_vn from './ui/dynamicGrid'
 
 const vn = {
   common: common_vn,
@@ -77,7 +78,8 @@ const vn = {
   radio: radio_vn,
   upload: upload_vn,
   switch: switch_vn,
-  backgrounds: backgrounds_vn
+  backgrounds: backgrounds_vn,
+  dynamicGrid: dynamicGrid_vn
 }
 
 export type VN = typeof vn

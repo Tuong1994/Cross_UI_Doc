@@ -207,7 +207,7 @@ const dataReact = computed<ComponentApi[]>(() => [
     desc: t.lang.dropdown.api.dropdownDesc.rootStyle,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['StyleValue']
+      codes: ['React.CSSProperties']
     },
     required: t.lang.common.required.no,
     default: '-'
@@ -218,7 +218,7 @@ const dataReact = computed<ComponentApi[]>(() => [
     desc: t.lang.dropdown.api.dropdownDesc.labelStyle,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['StyleValue']
+      codes: ['React.CSSProperties']
     },
     required: t.lang.common.required.no,
     default: '-'
@@ -229,7 +229,7 @@ const dataReact = computed<ComponentApi[]>(() => [
     desc: t.lang.dropdown.api.dropdownDesc.dropdownStyle,
     type: {
       elType: ECodeElType.DEFAULT,
-      codes: ['StyleValue']
+      codes: ['React.CSSProperties']
     },
     required: t.lang.common.required.no,
     default: '-'

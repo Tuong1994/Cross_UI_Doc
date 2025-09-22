@@ -37,6 +37,7 @@ import upload_en from './control/upload'
 import layout_en from './ui/layout'
 import switch_en from './ui/switch'
 import backgrounds_en from './ui/backgrounds'
+import dynamicGrid_en from './ui/dynamicGrid'
 
 const en = {
   common: common_en,
@@ -78,6 +79,7 @@ const en = {
   upload: upload_en,
   switch: switch_en,
   backgrounds: backgrounds_en,
+  dynamicGrid: dynamicGrid_en,
 }
 
 export type EN = typeof en

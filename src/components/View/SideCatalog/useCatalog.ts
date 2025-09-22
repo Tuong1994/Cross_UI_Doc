@@ -39,6 +39,7 @@ import useLayoutCatalogs from '@/features/UI/Layout/hooks/useLayoutCatalogs'
 import useSwitchCatalogs from '@/features/UI/Switch/hooks/useSwitchCatalogs'
 import useBgFloatingCatalogs from '@/features/UI/BgFloating/hooks/useBgFloatingCatalogs'
 import useBgParticlesCatalogs from '@/features/UI/BgParticles/hooks/useBgParticlesCatalogs'
+import useDynamicGridCatalogs from '@/features/UI/DynamicGrid/hooks/useDynamicGridCatalogs'
 
 const useCatalog = () => {
   const catalogStore = useCatalogStore()
@@ -58,6 +59,8 @@ const useCatalog = () => {
   const flexCatalogs = useFlexCatalogs()
 
   const gridCatalogs = useGridCatalogs()
+
+  const dynamicGridCatalogs = useDynamicGridCatalogs()
 
   const layoutCatalogs = useLayoutCatalogs()
 
@@ -128,6 +131,7 @@ const useCatalog = () => {
     if (routeName === routeNames.DIVIDER) return catalogStore.setCatalogs(dividerCatalogs.value)
     if (routeName === routeNames.FLEX) return catalogStore.setCatalogs(flexCatalogs.value)
     if (routeName === routeNames.GRID) return catalogStore.setCatalogs(gridCatalogs.value)
+    if (routeName === routeNames.DYNAMIC_GRID) return catalogStore.setCatalogs(dynamicGridCatalogs.value)
     if (routeName === routeNames.LAYOUT) return catalogStore.setCatalogs(layoutCatalogs.value)
     if (routeName === routeNames.SPACE) return catalogStore.setCatalogs(spaceCatalogs.value)
     if (routeName === routeNames.BREADCRUMB) return catalogStore.setCatalogs(breadcrumbCatalogs.value)

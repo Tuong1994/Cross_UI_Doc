@@ -10,6 +10,7 @@ export const routePaths = {
   DIVIDER: '/divider',
   FLEX: '/flex',
   GRID: '/grid',
+  DYNAMIC_GRID: '/dynamicGrid',
   LAYOUT: '/layout',
   SPACE: '/space',
   BREADCRUMB: '/breadcrumb',
@@ -51,6 +52,7 @@ export const routeNames = {
   DIVIDER: 'divider',
   FLEX: 'flex',
   GRID: 'grid',
+  DYNAMIC_GRID: 'dynamicGrid',
   LAYOUT: 'layout',
   SPACE: 'space',
   BREADCRUMB: 'breadcrumb',
@@ -80,7 +82,7 @@ export const routeNames = {
   MODAL: 'modal',
   LOADING: 'loading',
   BG_FLOATING: 'bgFloating',
-  BG_PARTICLES: 'bgParticles',
+  BG_PARTICLES: 'bgParticles'
 } as const
 
 const router = createRouter({
@@ -99,7 +101,7 @@ const router = createRouter({
     {
       path: routePaths.SWITCH,
       name: routeNames.SWITCH,
-      component: () => import ('../views/SwitchView.vue')
+      component: () => import('../views/SwitchView.vue')
     },
     {
       path: routePaths.ICON,
@@ -125,6 +127,11 @@ const router = createRouter({
       path: routePaths.GRID,
       name: routeNames.GRID,
       component: () => import('../views/GridView.vue')
+    },
+    {
+      path: routePaths.DYNAMIC_GRID,
+      name: routeNames.DYNAMIC_GRID,
+      component: () => import('../views/DynamicGridView.vue')
     },
     {
       path: routePaths.LAYOUT,
@@ -275,7 +282,7 @@ const router = createRouter({
       path: routePaths.BG_PARTICLES,
       name: routeNames.BG_PARTICLES,
       component: () => import('../views/BgParticlesView.vue')
-    },
+    }
   ],
   scrollBehavior: (to, from, savedPosition) => {
     if (savedPosition) return savedPosition

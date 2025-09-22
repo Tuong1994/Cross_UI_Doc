@@ -24,6 +24,7 @@ const useMenu = () => {
         { id: routeNames.DIVIDER, label: 'Divider', path: routePaths.DIVIDER },
         { id: routeNames.FLEX, label: 'Flex', path: routePaths.FLEX },
         { id: routeNames.GRID, label: 'Grid', path: routePaths.GRID },
+        { id: routeNames.DYNAMIC_GRID, label: 'Dynamic Grid', path: routePaths.DYNAMIC_GRID },
         { id: routeNames.LAYOUT, label: 'Layout', path: routePaths.LAYOUT },
         { id: routeNames.SPACE, label: 'Space', path: routePaths.SPACE }
       ]
